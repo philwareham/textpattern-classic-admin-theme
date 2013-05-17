@@ -583,7 +583,6 @@ textarea {
 	-webkit-appearance: none;
 	border-radius: 0;
 	-webkit-background-clip: padding;
-	-khtml-background-clip: padding-box;
 	-moz-background-clip: padding;
 	background-clip: padding-box;
 	margin: 0;
@@ -658,11 +657,6 @@ textarea[disabled],
 	color: #bbb !important;
 	background-color: #fafafa !important;
 	cursor: default;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none; 
-	user-select: none;
 }
 
 /* additional input field widths */
@@ -726,7 +720,6 @@ input[type="button"],
 	display: inline-block;
 	-webkit-appearance: none;
 	-webkit-background-clip: padding;
-	-khtml-background-clip: padding-box;
 	-moz-background-clip: padding;
 	background-clip: padding-box;
 	cursor: pointer;
@@ -1049,7 +1042,6 @@ body {
 	border-top: 1px solid #f8c225;
 	border-bottom: 1px solid #d9a307;
 	background-color: #ffda44;
-	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffda44), color-stop(100%, #f8c225));
 	background-image: -webkit-linear-gradient(#ffda44, #f8c225);
 	background-image: -moz-linear-gradient(#ffda44, #f8c225);
 	background-image: -o-linear-gradient(#ffda44, #f8c225);
