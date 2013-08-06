@@ -1552,3 +1552,7 @@ html[lang="zh-tw"] {
 [dir="rtl"] .txp-list thead .desc a {
 	background-position: left -36px;
 }
+
+[dir="rtl"] .txp-grid-cell {
+	text-align: right;
+}
