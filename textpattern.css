@@ -315,6 +315,26 @@ figcaption {
 }
 
 
+/* Support for non-latin languages
+   ========================================================================== */
+
+html[lang="ja-jp"] {
+	font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+}
+
+html[lang="ko-kr"] {
+	font-family: GulimChe, Gulim, sans-serif;
+}
+
+html[lang="zh-cn"] {
+	font-family: SimHei, sans-serif;
+}
+
+html[lang="zh-tw"] {
+	font-family: PMingLiU, sans-serif;
+}
+
+
 /* Embedded content
    ========================================================================== */
 
@@ -951,8 +971,17 @@ td {
 	padding: 0.3em 1em 0.3em 0;
 }
 
+[dir="rtl"] .txp-list th,
+[dir="rtl"] .txp-list td {
+	padding: 0.3em 0 0.3em 1em;
+}
+
 .txp-list td:last-child {
 	padding-right: 0;
+}
+
+[dir="rtl"] .txp-list td:last-child {
+	padding-left: 0;
 }
 
 .txp-list thead th,
@@ -962,6 +991,11 @@ td {
 
 .txp-list thead a {
 	margin-right: 14px;
+}
+
+[dir="rtl"] .txp-list thead a {
+	margin-right: 0;
+	margin-left: 14px;
 }
 
 .txp-list thead .asc a,
@@ -1097,6 +1131,10 @@ body {
 	margin: 0.2em 2em;
 }
 
+[dir="rtl"] #navpop {
+    float: left;
+}
+
 .nav-tabs {
 	text-align: center;
 }
@@ -1170,6 +1208,11 @@ body {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+}
+
+[dir="rtl"] .txp-accessibility {
+	left: auto;
+	right: -1000em;
 }
 
 .txp-control-panel {
@@ -1552,24 +1595,4 @@ div.code {
 	content: "";
 	display: table;
 	clear: both;
-}
-
-
-/* Support for non-latin languages
-   ========================================================================== */
-
-html[lang="ja-jp"] {
-	font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-}
-
-html[lang="ko-kr"] {
-	font-family: GulimChe, Gulim, sans-serif;
-}
-
-html[lang="zh-cn"] {
-	font-family: SimHei, sans-serif;
-}
-
-html[lang="zh-tw"] {
-	font-family: PMingLiU, sans-serif;
 }
