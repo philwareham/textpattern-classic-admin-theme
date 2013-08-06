@@ -315,26 +315,6 @@ figcaption {
 }
 
 
-/* Support for non-latin languages
-   ========================================================================== */
-
-html[lang="ja-jp"] {
-	font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-}
-
-html[lang="ko-kr"] {
-	font-family: GulimChe, Gulim, sans-serif;
-}
-
-html[lang="zh-cn"] {
-	font-family: SimHei, sans-serif;
-}
-
-html[lang="zh-tw"] {
-	font-family: PMingLiU, sans-serif;
-}
-
-
 /* Embedded content
    ========================================================================== */
 
@@ -1530,4 +1510,45 @@ div.code {
 	content: "";
 	display: table;
 	clear: both;
+}
+
+
+/* Support for non-latin languages
+   ========================================================================== */
+
+html[lang="ja-jp"] {
+	font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+}
+
+html[lang="ko-kr"] {
+	font-family: GulimChe, Gulim, sans-serif;
+}
+
+html[lang="zh-cn"] {
+	font-family: SimHei, sans-serif;
+}
+
+html[lang="zh-tw"] {
+	font-family: PMingLiU, sans-serif;
+}
+
+
+/* Support for right-to-left languages
+   ========================================================================== */
+
+.rtl caption {
+	text-align: right;
+}
+
+.rtl th,
+.rtl td {
+	text-align: right;
+}
+
+.rtl .txp-list thead .asc a {
+	background-position: left 2px;
+}
+
+.rtl .txp-list thead .desc a {
+	background-position: left -36px;
 }
