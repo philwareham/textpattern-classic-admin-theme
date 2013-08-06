@@ -1536,19 +1536,19 @@ html[lang="zh-tw"] {
 /* Support for right-to-left languages
    ========================================================================== */
 
-.rtl caption {
+[dir="rtl"] caption {
 	text-align: right;
 }
 
-.rtl th,
-.rtl td {
+[dir="rtl"] th,
+[dir="rtl"] td {
 	text-align: right;
 }
 
-.rtl .txp-list thead .asc a {
+[dir="rtl"] .txp-list thead .asc a {
 	background-position: left 2px;
 }
 
-.rtl .txp-list thead .desc a {
+[dir="rtl"] .txp-list thead .desc a {
 	background-position: left -36px;
 }
