@@ -280,8 +280,10 @@ pre {
 	overflow-x: auto;
 }
 
+code,
 .code {
-	padding: 0.2em;
+	direction: ltr;
+	unicode-bidi: embed;
 }
 
 pre code,
