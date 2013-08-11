@@ -1161,7 +1161,7 @@ body {
 }
 
 [dir="rtl"] #navpop {
-    float: left;
+	float: left;
 }
 
 .nav-tabs {
