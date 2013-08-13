@@ -1449,10 +1449,14 @@ span.spinner {
 
 #view_modes li {
 	display: inline-block;
-	margin-right: 0.75em;
+	margin: 0 0.75em 0 0;
 	border: 1px solid #ccc;
 	width: 24px;
 	height: 24px;
+}
+
+[dir="rtl"] #view_modes li {
+	margin: 0 0 0 0.75em;
 }
 
 #view_modes a {
