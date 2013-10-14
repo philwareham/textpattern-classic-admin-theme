@@ -540,18 +540,18 @@ legend {
 /* colour placeholder text (Webkit) */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-	color: #999;
+	color: #888;
 }
 
 /* colour placeholder text (Mozilla) */
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-	color: #999;
+	color: #888;
 }
 
 /* colour placeholder text when using polyfill */
 span.placeholder {
-	color: #999;
+	color: #888;
 }
 
 /* removes inner padding and search cancel button in Safari5+ and Chrome on OS X */
@@ -1520,7 +1520,7 @@ span.spinner {
    ========================================================================== */
 
 .unpublished {
-	color: #999999;
+	color: #888;
 }
 
 
