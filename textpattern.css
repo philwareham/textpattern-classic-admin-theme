@@ -607,6 +607,16 @@ textarea {
     vertical-align: baseline;
 }
 
+input[type="color"] {
+    padding: 0;
+}
+
+/* fix the cursor style for Chrome's increment/decrement buttons */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
 textarea {
     width: 100%;
     min-height: 5.18181818181818em;
@@ -718,6 +728,13 @@ input.exp_second {
 
 /* Buttons
    ========================================================================== */
+
+/* address inconsistent `text-transform` inheritance for `button` in Chrome, Safari5+, and IE6+
+   address `overflow` set to `hidden` in IE8-10. */
+button {
+    text-transform: none;
+    overflow: visible;
+}
 
 button,
 input[type="reset"],
