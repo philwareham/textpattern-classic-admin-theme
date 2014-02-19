@@ -4,7 +4,7 @@
  * Textpattern Content Management System
  * http://textpattern.com
  *
- * Copyright (C) 2013 The Textpattern Development Team
+ * Copyright (C) 2014 The Textpattern Development Team
  *
  * This file is part of Textpattern.
  *
@@ -34,9 +34,7 @@ class classic_theme extends theme
 		$out[] = '<link rel="stylesheet" href="'.$this->url.'textpattern.min.css">';
 		$out[] = '<meta name="generator" content="Textpattern CMS">';
 		$out[] = '<script src="vendors/modernizr/modernizr/modernizr.js"></script>';
-		$out[] = '<!--[if lt IE 9]>';
-		$out[] = '<link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui-ie8.min.css">';
-		$out[] = '<![endif]-->'.n;
+		$out[] = '<!--[if lt IE 9]><link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui-ie8.min.css"><![endif]-->'.n;
 
 		return join(n, $out);
 	}
