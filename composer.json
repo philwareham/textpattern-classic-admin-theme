@@ -1,26 +1,26 @@
 {
-	"name": "philwareham/classic",
-	"description": "Classic admin-side theme for Textpattern CMS",
-	"keywords": ["textpattern", "admin", "theme"],
-	"homepage": "https://github.com/philwareham/txp-classic-admin-theme",
-	"license": "GPL-2.0",
-	"type": "textpattern-admin-theme",
-	"authors": [
-		{
-			"name": "Phil Wareham",
-			"homepage": "http://twitter.com/philwareham",
-			"role": "Developer"
-		}
-	],
-	"support": {
-		"issues": "https://github.com/philwareham/txp-classic-admin-theme/issues",
-		"source": "https://github.com/philwareham/txp-classic-admin-theme"
-	},
-	"autoload": {
-		"files": []
-	},
-	"require": {
-		"textpattern/lock": ">=4.6.0,4.6.*@dev",
-		"textpattern/installer": "*"
+    "name": "philwareham/classic",
+    "description": "Classic admin-side theme for Textpattern CMS",
+    "keywords": ["textpattern", "admin", "theme"],
+    "homepage": "https://github.com/philwareham/txp-classic-admin-theme",
+    "license": "GPL-2.0",
+    "type": "textpattern-admin-theme",
+    "authors": [
+        {
+            "name": "Phil Wareham",
+            "homepage": "http://twitter.com/philwareham",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/philwareham/txp-classic-admin-theme/issues",
+        "source": "https://github.com/philwareham/txp-classic-admin-theme"
+    },
+    "autoload": {
+        "files": []
+    },
+    "require": {
+        "textpattern/lock": ">=4.6.0,4.6.*@dev",
+        "textpattern/installer": "*"
     }
 }
