@@ -16,11 +16,13 @@
         "issues": "https://github.com/philwareham/txp-classic-admin-theme/issues",
         "source": "https://github.com/philwareham/txp-classic-admin-theme"
     },
-    "autoload": {
-        "files": []
-    },
     "require": {
         "textpattern/lock": ">=4.6.0,4.6.*@dev",
         "textpattern/installer": "*"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.x-dev"
+        }
     }
 }

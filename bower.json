@@ -1,0 +1,10 @@
+{
+    "name": "txp-classic-admin-theme",
+    "directory": "bower_components",
+    "dependencies": {
+        "google-code-prettify": "1.0.1"
+    },
+    "ignore": [
+        "mockups/"
+    ]
+}
