@@ -1,0 +1,88 @@
+// set Compass minimum browser support and caniuse thresholds
+
+$graceful-usage-threshold:     1;
+$critical-usage-threshold:     0.1;
+$supported-browsers:           ("chrome", "firefox", "ie", "safari");
+$browser-minimum-versions:     ("chrome": "22", "firefox": "16", "ie": "8", "safari": "5");
+$debug-browser-support:        true;
+
+// use the Kellum method for hiding text
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+
+$hide-text-direction:         right;
+
+// font families
+
+$font-serif:                  Cambria, Georgia, serif;
+$font-sans-serif:             "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$font-mono:                   Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+
+// typography grid
+
+$base-font-size:              12px;
+$base-line-height:            18px;
+
+// layout grid (not responsive)
+
+$grid-gutter:                 1em; // 12px
+$standard-column:             44em; // 528px / 12px
+$text-column:                 62em; // 744px / 12px
+$container-max-width:         124em; // 1488px / 13px
+
+// text colours
+
+$color-text:                  #000000;
+$color-text-footnote:         #888888;
+$color-text-inverse:          #ffffff;
+
+// interaction colours
+
+$color-link:                  #996633;
+$color-link-hover:            #b16f2e;
+$color-link-focus:            #5b9dd9;
+$color-selecting:             lighten($color-link, 50%);
+$color-selected:              lighten($color-link, 56%);
+
+// borders
+
+$color-border:                #cccccc;
+$default-border-radius:       0.5em; // 6px / 12px
+
+// shadows
+
+$default-box-shadow-color:    rgba(#000000, 0.2);
+$default-box-shadow-h-offset: 0;
+$default-box-shadow-v-offset: 0;
+$default-box-shadow-blur:     0.5em;
+$inset-highlighting:          inset 0 1px 0 rgba(#ffffff, 0.25);
+$text-shadow-light:           1px 1px 0 rgba(#ffffff, 0.5);
+$text-shadow-dark:            -1px -1px 0 rgba(#000000, 0.1);
+
+// neutral colours
+
+$color-background:            #ffffff;
+$color-background-box:        #e5e5e5;
+$color-gradient-from:         #eeeeee;
+$color-gradient-to:           darken($color-gradient-from, 6.5%);
+$color-gradient-border:       darken($color-gradient-from, 13.5%);
+
+// accent colours (change these to make a new colourscheme)
+
+$color-gradient2-from:        #ffda44;
+$color-gradient2-to:          darken($color-gradient2-from, 15%);
+$color-highlight-box:         #fff9e1;
+
+// alert colours
+
+$color-success-text:          #238c23;
+$color-success-background:    #dff0d8;
+$color-success-border:        darken($color-success-background, 20%);
+$color-warning-text:          #cb8f02;
+$color-warning-background:    #fff6d3;
+$color-warning-border:        darken($color-warning-background, 20%);
+$color-error-text:            #9d261d;
+$color-error-background:      #f2dede;
+$color-error-border:          darken($color-error-background, 12%);
+$color-info-text:             #3a87ad;
+$color-info-background:       #e7f6fc;
+$color-info-border:           darken($color-info-background, 12%);
