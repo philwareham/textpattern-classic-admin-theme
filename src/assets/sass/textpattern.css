@@ -1231,30 +1231,6 @@ div.multi-edit {
     text-align: center;
 }
 
-/* inline grids */
-
-.txp-grid {
-    text-align: center;
-    margin-bottom: 0.5em;
-}
-
-.txp-grid-cell {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    text-align: left;
-    max-width: 26em;
-    vertical-align: top;
-    margin: 0 0.125em 0.25em;
-    border: 1px solid #cccccc;
-    padding: 0 1em;
-    display: inline-block;
-}
-
-[dir="rtl"] .txp-grid-cell {
-    text-align: right;
-}
-
 .restricted-area {
     margin: 3em auto auto;
     text-align: center;

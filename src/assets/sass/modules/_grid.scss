@@ -1,0 +1,112 @@
+/* Singularity Grid System
+   ========================================================================== */
+
+@include add-grid(12);
+@include add-gutter(0.3);
+
+.txp-layout-1col {
+    @include grid-span(12, 1);
+
+    clear: both;
+}
+
+.txp-layout-2col-cell-1 {
+    @include grid-span(6, 1);
+
+    clear: both;
+}
+
+.txp-layout-2col-cell-2 {
+    @include grid-span(6, 7);
+}
+
+.txp-layout-4col-cell-1 {
+    @include grid-span(3, 1);
+
+    clear: both;
+}
+
+.txp-layout-4col-cell-1alt {
+    @include grid-span(3, 1);
+
+    clear: both;
+}
+
+.txp-layout-4col-cell-2 {
+    @include grid-span(3, 4);
+}
+
+.txp-layout-4col-cell-3 {
+    @include grid-span(3, 7);
+}
+
+.txp-layout-4col-cell-4 {
+    @include grid-span(3, 10);
+}
+
+.txp-layout-4col-cell-4alt {
+    @include grid-span(3, 10);
+}
+
+.txp-layout-4col-cell-1-2 {
+    @include grid-span(6, 1);
+
+    clear: both;
+}
+
+.txp-layout-4col-cell-2-3 {
+    @include grid-span(6, 4);
+}
+
+.txp-layout-4col-cell-3-4 {
+    @include grid-span(6, 7);
+}
+
+.txp-layout-4col-cell-1-2-3 {
+    @include grid-span(9, 1);
+
+    clear: both;
+}
+
+.txp-layout-4col-cell-2-3-4 {
+    @include grid-span(9, 4);
+}
+
+/* text columns (fixed proportion cell) */
+.txp-layout-textbox {
+    clear: both;
+    margin: 0 auto;
+    max-width: $text-column;
+}
+
+/* Deprecated @ 4.6 - use `.txp-layout-textbox` instead */
+.text-column {
+    clear: both;
+    margin: 0 auto;
+    max-width: $text-column;
+}
+
+
+/* Inline grids
+   ========================================================================== */
+
+.txp-grid {
+    text-align: center;
+    margin-bottom: 0.5em; // 6px / 12px
+}
+
+.txp-grid-cell {
+    @include box-sizing(border-box);
+
+    display: inline-block;
+    margin: 0 0.1666667em 0.3333333em; // 2px / 12px and 4px / 12px
+    border: 1px solid $color-border;
+    padding: 0 1em;
+    max-width: 26em; // 312px / 12px
+    text-align: left;
+    vertical-align: top;
+}
+
+[dir="rtl"] .txp-grid-cell {
+    text-align: right;
+}
