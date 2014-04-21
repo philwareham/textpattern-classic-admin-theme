@@ -1,0 +1,71 @@
+/* Links
+   ========================================================================== */
+
+/**
+ * 1. Remove default underline style from non-hover state links.
+ * 2. Specify link colour.
+ * 3. Remove the gray background color from active links in IE 10.
+ */
+
+a {
+    /* 1 */
+    text-decoration: none;
+    /* 2 */
+    color: $color-link;
+    /* 3 */
+    background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ * Specify link state colours.
+ */
+
+a {
+    &:hover,
+    &:active {
+        outline: 0;
+        text-decoration: underline;
+        color: $color-link-hover;
+    }
+
+    &:focus {
+        outline: thin dotted $color-link-focus;
+    }
+
+    &.busy {
+        visibility: hidden;
+    }
+}
+
+/**
+ * Additional styling for popup help links.
+ *
+ * Example HTML:
+ *
+ * <a class="pophelp">i</a>
+ */
+
+.pophelp,
+.pophelpsubtle {
+    @include border-radius(50%);
+
+    border: 1px solid;
+    border-color: #dddddd #bbbbbb #bbbbbb #dddddd;
+    padding: 0 0.5em;
+    font-weight: normal;
+}
+
+/**
+ * Additional styling for popup help links in table headers.
+ */
+
+.txp-list thead th a.pophelp {
+    display: inline;
+    color: $color-link;
+
+    &:hover {
+        color: $color-link-hover;
+        text-decoration: underline;
+    }
+}
