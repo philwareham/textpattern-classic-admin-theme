@@ -1,0 +1,184 @@
+/* Tables
+   ========================================================================== */
+
+/**
+ * Allow overflow scroll on tables.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-listtables">
+ *     <table></table>
+ * </div>
+ */
+
+.txp-listtables {
+    overflow-x: auto;
+}
+
+/**
+ * Consistent tables.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**
+ * Styling of table captions.
+ */
+
+caption {
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+/**
+ * Swap caption alignment in RTL languages.
+ */
+
+[dir="rtl"] caption {
+    text-align: right;
+}
+
+/**
+ * Make table cells align top and left by default.
+ */
+
+th,
+td {
+    vertical-align: top;
+    text-align: left;
+    padding: 0;
+}
+
+/**
+ * Swap table cell text alignments in RTL languages.
+ */
+
+[dir="rtl"] th,
+[dir="rtl"] td {
+    text-align: right;
+}
+
+/**
+ * Listing tables.
+ *
+ * Example HTML:
+ *
+ * <table class="txp-list">
+ *     <thead>
+ *         <tr>
+ *             <th class="multi-edit" scope="col"></th>
+ *             <th class="asc scope="col"></th>
+ *             <th scope="col"></th>
+ *         </tr>
+ *     </thead>
+ *     <tfoot>
+ *         <tr>
+ *             <td colspan="3"></td>
+ *         </tr>
+ *     </tfoot>
+ *     <tbody>
+ *         <tr>
+ *             <th class="multi-edit" scope="row"></th>
+ *             <td></td>
+ *             <td></td>
+ *         </tr>
+ *         <tr class="selected">
+ *             <th class="multi-edit" scope="row"></th>
+ *             <td></td>
+ *             <td></td>
+ *         </tr>
+ *     </tbody>
+ * </table>
+ */
+
+.txp-list {
+    width: 100%;
+
+    th,
+    td {
+        padding: 0.3em 1em 0.3em 0;
+
+        [dir="rtl"] & {
+            padding: 0.3em 0 0.3em 1em;
+        }
+    }
+
+    td:last-child {
+        padding: 0.3em 0;
+    }
+
+    .multi-edit {
+        width: 18px;
+    }
+
+    tbody {
+        border-top: 1px solid $color-border;
+
+        tr.selected {
+            background: $color-selected;
+        }
+
+        th {
+            font-weight: normal;
+            border-bottom: 1px solid $color-border;
+        }
+
+        td {
+            border-bottom: 1px solid $color-border;
+        }
+    }
+
+    thead {
+        th,
+        td {
+            vertical-align: bottom;
+        }
+
+        th {
+            a {
+                margin-right: 14px;
+
+                [dir="rtl"] & {
+                    margin-right: 0;
+                    margin-left: 14px;
+                }
+            }
+
+            &.asc a,
+            &.desc a {
+                margin-right: 0;
+                padding-right: 14px;
+                background: url("../img/arrow-up-down.svg") no-repeat;
+
+                [dir="rtl"] & {
+                    margin-left: 0;
+                    padding-right: 0;
+                    padding-left: 14px;
+                }
+            }
+
+            &.asc a {
+                background-position: right 2px;
+
+                [dir="rtl"] & {
+                    background-position: left 2px;
+                }
+            }
+
+            &.desc a {
+                background-position: right -36px;
+
+                [dir="rtl"] & {
+                    background-position: left -36px;
+                }
+            }
+        }
+    }
+
+    .id {
+        white-space: nowrap;
+    }
+}
