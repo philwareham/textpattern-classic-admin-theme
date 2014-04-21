@@ -4,6 +4,23 @@
 @include add-grid(12);
 @include add-gutter(0.3);
 
+/**
+ * Generate sizes all for grid column cells.
+ *
+ * Because this is desktop-only, all cells span variations are defined.
+ * This design is non-responsive.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-layout-1col"></div>
+ *
+ * <div class="txp-layout-2col-cell-1">
+ * <div class="txp-layout-2col-cell-2">
+ *
+ * <div class="txp-layout-4col-cell-1-2-3"></div>
+ * <div class="txp-layout-4col-cell-4alt"></div>
+ */
+
 .txp-layout-1col {
     @include grid-span(12, 1);
 
@@ -72,14 +89,27 @@
     @include grid-span(9, 4);
 }
 
-/* text columns (fixed proportion cell) */
+/**
+ * Text columns (fixed proportion cell)
+ *
+ * Example HTML:
+ *
+ * <div class="txp-layout-textbox">
+ */
+
 .txp-layout-textbox {
     clear: both;
     margin: 0 auto;
     max-width: $text-column;
 }
 
-/* Deprecated @ 4.6 - use `.txp-layout-textbox` instead */
+/**
+ * Text columns (fixed proportion cell) - OLD.
+ *
+ * @deprecated in 4.6.0
+ * @see        .txp-layout-textbox
+ */
+
 .text-column {
     clear: both;
     margin: 0 auto;
@@ -89,6 +119,27 @@
 
 /* Inline grids
    ========================================================================== */
+
+/**
+ * Rudimentary inline grid type layouts.
+ *
+ * As this layout uses `inline-block`, you will need to collapse the white
+ * space between each `.txp-grid-cell` to negate any unwanted margin between the
+ * cells. Once CSS3 flexbox module is more settled and has improved browser
+ * support, this layout type can be made more robust.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-grid">
+ *     <div class="txp-grid-cell" style="width:10em;">
+ *         Content
+ *     </div><div class="txp-grid-cell" style="width:10em;">
+ *         Content
+ *     </div><div class="txp-grid-cell" style="width:10em;">
+ *         Content
+ *     </div>
+ * </div>
+ */
 
 .txp-grid {
     text-align: center;
@@ -106,6 +157,10 @@
     text-align: left;
     vertical-align: top;
 }
+
+/**
+ * Align grid cells to right in RTL languages.
+ */
 
 [dir="rtl"] .txp-grid-cell {
     text-align: right;
