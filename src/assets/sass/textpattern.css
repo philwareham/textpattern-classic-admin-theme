@@ -1,3 +1,11 @@
+html {
+    -webkit-tap-highlight-color: rgba($color-link-hover, 0.5);
+    /* prevent iOS text size adjust after orientation change, without disabling user zoom */
+    -webkit-text-size-adjust: 100%;
+    /* as above, for Windows Phone */
+    -ms-text-size-adjust: 100%;
+}
+
 /* Clearfix
    ========================================================================== */
 .clearfix:after,
@@ -9,81 +17,6 @@
     display: table;
     clear: both;
     border-collapse: collapse;
-}
-
-
-/* Layout grids
-   ========================================================================== */
-
-/* layout grid container - must only contain `.txp-layout-grid` or `.txp-layout-cell` components as children */
-.txp-layout-grid {
-    display: block;
-    padding: 0;
-    margin: 0 -1em;
-    /* remove inter-unit whitespace for all non-monospace font-families */
-    letter-spacing: -0.34em;
-    /* protect against WebKit bug with optimizelegibility */
-    text-rendering: optimizespeed;
-}
-
-/* Opera hack */
-.opera:-o-prefocus,
-.txp-layout-grid {
-    word-spacing: -0.43em;
-}
-
-.txp-layout-grid > div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0 1em;
-    /* reset text defaults */
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-rendering: auto;
-}
-
-/* layout grid cells - no explicit width by default, apply `.txp-layout-x-y` classes below */
-.txp-layout-cell {
-    display: inline-block;
-    margin: 0;
-    width: 100%;
-    /* controls vertical positioning of units */
-    vertical-align: top;
-}
-
-/* reset vertical margin on nested layout grids */
-.txp-layout-grid .txp-layout-grid .grid__cell {
-    margin-top: -1em;
-}
-
-/* proportional layout cells */
-.txp-layout-1-4 {
-    width: 25%;
-}
-
-.txp-layout-2-4 {
-    width: 50%;
-}
-
-.txp-layout-3-4 {
-    width: 75%;
-}
-
-/* text columns (fixed proportion cell) */
-.txp-layout-textbox {
-    margin: 0 auto;
-    max-width: 58em;
-}
-
-.txp-layout-grid > div.txp-layout-textbox {
-    padding: 0;
-}
-
-/* Deprecated @ 4.6 - use .txp-layout-textbox instead */
-.text-column {
-    margin: 0 auto;
-    max-width: 58em;
 }
 
 
