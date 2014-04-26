@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Classic theme design patterns (RTL) 4.6 &#124; Textpattern CMS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <link rel="stylesheet" href="../dist/classic/assets/css/textpattern.css">
     <link rel="stylesheet" href="assets/css/design-patterns.css">
     <script src="assets/js/modernizr.js"></script>
@@ -12,7 +12,11 @@
     <script src="assets/js/jquery-ui.js"></script>
     <script src="assets/js/prettify/prettify.js"></script>
     <script src="assets/js/design-patterns.js"></script>
-    <!--[if lt IE 9]><script src="assets/js/selectivizr.min.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+        <script src="../doc/assets/js/selectivizr.min.js"></script>
+        <link rel="stylesheet" href="../docs/assets/css/jquery-ui-ie8.min.css">
+        <link rel="stylesheet" href="../dist/classic/assets/css/ie8.css">
+    <![endif]-->
 </head>
 <body>
 
@@ -42,7 +46,29 @@
             <li><a href="#ui-doc-forms">Forms</a></li>
             <li><a href="#ui-doc-buttons">Buttons</a></li>
             <li><a href="#ui-doc-edit-panes">Edit panes and panels</a></li>
-            <li><a href="#ui-doc-jquery-ui">jQuery UI widgets</a></li>
+            <li>
+                <a href="#ui-doc-jquery-ui">jQuery UI widgets</a>
+                <ol>
+                    <li><a href="#ui-doc-jquery-ui--draggable">Interactions: Draggable</a></li>
+                    <li><a href="#ui-doc-jquery-ui--resizable">Interactions: Resizable</a></li>
+                    <li><a href="#ui-doc-jquery-ui--selectable">Interactions: Selectable</a></li>
+                    <li><a href="#ui-doc-jquery-ui--sortable">Interactions: Sortable</a></li>
+                    <li><a href="#ui-doc-jquery-ui--accordion">Widgets: Accordion</a></li>
+                    <li><a href="#ui-doc-jquery-ui--autocomplete">Widgets: Autocomplete</a></li>
+                    <li><a href="#ui-doc-jquery-ui--button">Widgets: Button</a></li>
+                    <li><a href="#ui-doc-jquery-ui--datepicker">Widgets: Datepicker</a></li>
+                    <li><a href="#ui-doc-jquery-ui--dialog">Widgets: Dialog</a></li>
+                    <li><a href="#ui-doc-jquery-ui--menu">Widgets: Menu</a></li>
+                    <li><a href="#ui-doc-jquery-ui--progressbar">Widget: Progressbar</a></li>
+                    <li><a href="#ui-doc-jquery-ui--selectmenu">Widgets: Selectmenu</a></li>
+                    <li><a href="#ui-doc-jquery-ui--slider">Widgets: Slider</a></li>
+                    <li><a href="#ui-doc-jquery-ui--spinner">Widgets: Spinner</a></li>
+                    <li><a href="#ui-doc-jquery-ui--tabs">Widgets: Tabs</a></li>
+                    <li><a href="#ui-doc-jquery-ui--tooltip">Widgets: Tooltip</a></li>
+                    <li><a href="#ui-doc-jquery-ui--icons">Styles: Icons</a></li>
+                    <li><a href="#ui-doc-jquery-ui--overlay">Styles: Overlay and shadow</a></li>
+                </ol>
+            </li>
             <li><a href="#ui-doc-misc">Miscellaneous</a></li>
         </ol>
 
@@ -53,17 +79,17 @@
             <h2>Neutral colours</h2>
             <div class="txp-grid">
                 <div class="txp-grid-cell" style="width:8em;background:#f7f7f7;">
-                    <p><code>#f7f7f7</code></p>
+                    <p><code dir="ltr">#f7f7f7</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#eeeeee;">
-                    <p><code>#eeeeee</code></p>
+                    <p><code dir="ltr">#eeeeee</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#dddddd;">
-                    <p><code>#dddddd</code></p>
+                    <p><code dir="ltr">#dddddd</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#cccccc;">
-                    <p><code>#cccccc</code></p>
+                    <p><code dir="ltr">#cccccc</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#999999;">
-                    <p><code>#999999</code></p>
+                    <p><code dir="ltr">#999999</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#333333;">
-                    <p><code>#333333</code></p>
+                    <p><code dir="ltr">#333333</code></p>
                 </div>
             </div>
 
@@ -71,32 +97,32 @@
             <div class="txp-grid">
 
                 <div class="txp-grid-cell" style="width:8em;background:#fff9e1;">
-                    <p><code>#fff9e1</code></p>
+                    <p><code dir="ltr">#fff9e1</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#fff6d3;">
-                    <p><code>#fff6d3</code></p>
+                    <p><code dir="ltr">#fff6d3</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#ffefaf;">
-                    <p><code>#ffefaf</code></p>
+                    <p><code dir="ltr">#ffefaf</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#ffe88b;">
-                    <p><code>#ffe88b</code></p>
+                    <p><code dir="ltr">#ffe88b</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#ffda44;">
-                    <p><code>#ffda44</code></p>
+                    <p><code dir="ltr">#ffda44</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#f6c600;">
-                    <p><code>#f6c600</code></p>
+                    <p><code dir="ltr">#f6c600</code></p>
                 </div>
             </div>
 
             <h2>Interaction colours</h2>
             <div class="txp-grid">
                 <div class="txp-grid-cell" style="width:8em;background:#e3edfc;">
-                    <p><code>#e3edfc</code></p>
+                    <p><code dir="ltr">#e3edfc</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#c7dbfa;">
-                    <p><code>#c7dbfa</code></p>
+                    <p><code dir="ltr">#c7dbfa</code></p>
                 </div><div class="txp-grid-cell" style="width:8em;background:#5b9dd9;">
-                    <p><code>#5b9dd9</code></p>
-                </div><div class="txp-grid-cell" style="width:8em;background:#996633;">
-                    <p><code>#996633</code></p>
-                </div><div class="txp-grid-cell" style="width:8em;background:#b16f2e;">
-                    <p><code>#b16f2e</code></p>
+                    <p><code dir="ltr">#5b9dd9</code></p>
+                </div><div class="txp-grid-cell" style="width:8em;background:#0066ff;">
+                    <p><code dir="ltr">#0066ff</code></p>
+                </div><div class="txp-grid-cell" style="width:8em;background:#114eb1;">
+                    <p><code dir="ltr">#114eb1</code></p>
                 </div>
             </div>
         </div>
@@ -106,8 +132,8 @@
             <h1>Columns and grids</h1>
 
             <h2>Page layout columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.6</span></h2>
-            <p>Responsive page layout grid system based on <a href="https://github.com/Team-Sass/Singularity" rel="external" title="Go to the Singularity GitHub project">Singularity</a>.</p>
-            <pre class="prettyprint linenums"><code class="language-html">&lt;div class=""txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
+            <p>Responsive page layout grid system based on <a rel="external" href="https://github.com/Team-Sass/Singularity" title="Go to the Singularity GitHub project">Singularity</a>.</p>
+            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class=""txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
 
 &lt;div class="txp-layout-2col-cell-1"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
 &lt;div class="txp-layout-2col-cell-2"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
@@ -170,14 +196,14 @@
     <div class="txp-layout-textbox">
         <div>
             <h2>Text columns <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
-            <p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code>.plugin-help</code> <span class="information">4.4.x</span> and <code>.text-column</code> <span class="information">4.5</span> classes.</p>
-            <pre class="prettyprint linenums"><code class="language-html">&lt;div class="txp-layout-textbox"&gt;
+            <p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code dir="ltr">.plugin-help</code> <span class="information">4.4.x</span> and <code dir="ltr">.text-column</code> <span class="information">4.5</span> classes.</p>
+            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="txp-layout-textbox"&gt;
     &lt;p&gt;...content here...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
             <div class="box">Text column (independent of grid columns)</div>
 
             <h2>Inline grids <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <pre class="prettyprint linenums"><code>&lt;div class="txp-grid"&gt;
+            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="txp-grid"&gt;
     &lt;div class="txp-grid-cell" [width, see below]>
         &lt;p>Grid item 1&lt;/p>
     &lt;/div>&lt;div class="txp-grid-cell" [width, see notes]>
@@ -214,9 +240,9 @@
 
             <p>Rudimentary inline grid type layouts—works best if inner content is of equal quantity (such as a grid of images). If you want to utilise this layout then there are some prerequisites:</p>
             <ol>
-                <li>You must define a specific width for each <code>.txp-grid-cell</code>, either as a <code>class</code> attribute or <code>style</code> attribute, otherwise the cell width fits to the block content within it.</li>
-                <li>The <code>.txp-grid-cell</code> should have a maximum width of no more than 294px (or its equivalent em measurement).</li>
-                <li>As this layout uses <code>inline-block</code>, you will need to collapse the white space between each <code>.txp-grid-cell</code> to negate any unwanted margin between the cells.</li>
+                <li>You must define a specific width for each <code dir="ltr">.txp-grid-cell</code>, either as a <code dir="ltr">class</code> attribute or <code dir="ltr">style</code> attribute, otherwise the cell width fits to the block content within it.</li>
+                <li>The <code dir="ltr">.txp-grid-cell</code> should have a maximum width of no more than 294px (or its equivalent em measurement).</li>
+                <li>As this layout uses <code dir="ltr">inline-block</code>, you will need to collapse the white space between each <code dir="ltr">.txp-grid-cell</code> to negate any unwanted margin between the cells.</li>
             </ol>
             <p>Once CSS3 flexbox module is more settled and has improved browser support, this layout type can be made more robust.</p>
 
@@ -226,12 +252,12 @@
         <div class="text-section" id="ui-doc-headings">
             <h1>Headings <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
 
-            <p><code class="prettyprint">&lt;h1 class="txp-heading"&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;h1 class="txp-heading"&gt;</code></p>
             <h1 class="txp-heading">h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 heading 1</h1>
-            <p>Top level headings in the Textpattern admin area, we advise adding the <code>class="txp-heading"</code> attribute which allows advanced users to optionally hide headings throughout the admin area.</p>
-            <p><code class="prettyprint">&lt;h2&gt;</code></p>
+            <p>Top level headings in the Textpattern admin area, we advise adding the <code dir="ltr">class="txp-heading"</code> attribute which allows advanced users to optionally hide headings throughout the admin area.</p>
+            <p><code class="prettyprint" dir="ltr">&lt;h2&gt;</code></p>
             <h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
-            <p><code class="prettyprint">&lt;h3&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;h3&gt;</code></p>
             <h3>h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3</h3>
 
         </div>
@@ -240,7 +266,7 @@
         <div class="text-section" id="ui-doc-paragraphs">
             <h1>Paragraphs</h1>
 
-            <p><code class="prettyprint">&lt;p&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;p&gt;</code></p>
             <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper.</strong> Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
             <p>Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci.</p>
 
@@ -250,70 +276,70 @@
         <div class="text-section" id="ui-doc-textsemantics">
             <h1>Text-level semantics</h1>
 
-            <p><code class="prettyprint">&lt;a&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;a&gt;</code></p>
             <p>The <a href="#">a element</a> example</p>
 
-            <p><code class="prettyprint">&lt;abbr&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;abbr&gt;</code></p>
             <p>The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples</p>
 
-            <p><code class="prettyprint">&lt;b&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;b&gt;</code></p>
             <p>The <b>b element</b> example</p>
 
-            <p><code class="prettyprint">&lt;cite&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;cite&gt;</code></p>
             <p>The <cite>cite element</cite> example</p>
 
-            <p><code class="prettyprint">&lt;code&gt;</code></p>
-            <p>The <code>code element</code> example</p>
+            <p><code class="prettyprint" dir="ltr">&lt;code&gt;</code></p>
+            <p>The <code dir="ltr">code element</code> example</p>
 
-            <p><code class="prettyprint">&lt;del&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;del&gt;</code></p>
             <p>The <del>del element</del> example</p>
 
-            <p><code class="prettyprint">&lt;dfn&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;dfn&gt;</code></p>
             <p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
 
-            <p><code class="prettyprint">&lt;em&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;em&gt;</code></p>
             <p>The <em>em element</em> example</p>
 
-            <p><code class="prettyprint">&lt;i&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;i&gt;</code></p>
             <p>The <i>i element</i> example</p>
 
-            <p><code class="prettyprint">&lt;ins&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;ins&gt;</code></p>
             <p>The <ins>ins element</ins> example</p>
 
-            <p><code class="prettyprint">&lt;kbd&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;kbd&gt;</code></p>
             <p>The <kbd>kbd element</kbd> example</p>
 
-            <p><code class="prettyprint">&lt;mark&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;mark&gt;</code></p>
             <p>The <mark>mark element</mark> example</p>
 
-            <p><code class="prettyprint">&lt;q&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;q&gt;</code></p>
             <p>The <q>q element <q>inside</q> a q element</q></p>
 
-            <p><code class="prettyprint">&lt;s&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;s&gt;</code></p>
             <p>The <s>s element</s> example</p>
 
-            <p><code class="prettyprint">&lt;samp&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;samp&gt;</code></p>
             <p>The <samp>samp element</samp> example</p>
 
-            <p><code class="prettyprint">&lt;small&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;small&gt;</code></p>
             <p>The <small>small element</small> example</p>
 
-            <p><code class="prettyprint">&lt;span&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;span&gt;</code></p>
             <p>The <span>span element</span> example</p>
 
-            <p><code class="prettyprint">&lt;strong&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;strong&gt;</code></p>
             <p>The <strong>strong element</strong> example</p>
 
-            <p><code class="prettyprint">&lt;sub&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;sub&gt;</code></p>
             <p>The <sub>sub element</sub> example</p>
 
-            <p><code class="prettyprint">&lt;sup&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;sup&gt;</code></p>
             <p>The <sup>sup element</sup> example</p>
 
-            <p><code class="prettyprint">&lt;u&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;u&gt;</code></p>
             <p>The <u>u element</u> example</p>
 
-            <p><code class="prettyprint">&lt;var&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;var&gt;</code></p>
             <p>The <var>var element</var> example</p>
 
         </div>
@@ -323,23 +349,23 @@
             <h1>Inline text labels</h1>
 
             <h2>Safe <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;span class="success"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code class="prettyprint">&lt;strong class="success"&gt;...message...&lt;/strong&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;span class="success"&gt;...message...&lt;/span&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;strong class="success"&gt;...message...&lt;/strong&gt;</code></p>
             <p>This is an example of a <span class="success">span success label</span> and a <strong class="success">strong success label</strong>.</p>
 
             <h2>Warning <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;span class="warning"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code class="prettyprint">&lt;strong class="warning"&gt;...message...&lt;/strong&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;span class="warning"&gt;...message...&lt;/span&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;strong class="warning"&gt;...message...&lt;/strong&gt;</code></p>
             <p>This is an example of a <span class="warning">span warning label</span> and a <strong class="warning">strong warning label</strong>.</p>
 
             <h2>Danger <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;span class="error"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code class="prettyprint">&lt;strong class="error"&gt;...message...&lt;/strong&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;span class="error"&gt;...message...&lt;/span&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;strong class="error"&gt;...message...&lt;/strong&gt;</code></p>
             <p>This is an example of a <span class="error">span error label</span> and a <strong class="error">strong error label</strong>.</p>
 
             <h2>Information (no semantic meaning) <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;span class="information"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code class="prettyprint">&lt;strong class="information"&gt;...message...&lt;/strong&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;span class="information"&gt;...message...&lt;/span&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;strong class="information"&gt;...message...&lt;/strong&gt;</code></p>
             <p>This is an example of a <span class="information">span information label</span> and a <strong class="information">strong information label</strong>.</p>
 
         </div>
@@ -349,19 +375,19 @@
             <h1>Alert boxes</h1>
 
             <h2>System message: success <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <pre class="prettyprint"><code>&lt;p class="alert-block success"&gt;&lt;span class="ui-icon ui-icon-check"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <pre class="prettyprint" dir="ltr"><code class="language-html">&lt;p class="alert-block success"&gt;&lt;span class="ui-icon ui-icon-check"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
             <p class="alert-block success"><span class="ui-icon ui-icon-check"></span> <strong>Success:</strong> a suitable success message goes here.</p>
 
             <h2>System message: warning <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.5</span></h2>
-            <pre class="prettyprint"><code>&lt;p class="alert-block warning"&gt;&lt;span class="ui-icon ui-icon-alert"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <pre class="prettyprint" dir="ltr"><code class="language-html">&lt;p class="alert-block warning"&gt;&lt;span class="ui-icon ui-icon-alert"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
             <p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> <strong>Warning:</strong> a suitable warning message goes here.</p>
 
             <h2>System message: error <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <pre class="prettyprint"><code>&lt;p class="alert-block error"&gt;&lt;span class="ui-icon ui-icon-closethick"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <pre class="prettyprint" dir="ltr"><code class="language-html">&lt;p class="alert-block error"&gt;&lt;span class="ui-icon ui-icon-closethick"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
             <p class="alert-block error"><span class="ui-icon ui-icon-closethick"></span> <strong>Error:</strong> a suitable error message goes here.</p>
 
             <h2>System message: information (no semantic meaning) <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <pre class="prettyprint"><code>&lt;p class="alert-block information"&gt;&lt;span class="ui-icon ui-icon-info"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <pre class="prettyprint" dir="ltr"><code class="language-html">&lt;p class="alert-block information"&gt;&lt;span class="ui-icon ui-icon-info"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
             <p class="alert-block information"><span class="ui-icon ui-icon-info"></span> <strong>Information:</strong> a suitable information message goes here.</p>
 
 
@@ -372,16 +398,18 @@
             <h1>Block text-level semantics</h1>
 
             <h2>Pre-formatted text blocks</h2>
-            <p><code class="prettyprint">&lt;pre&gt;...content...&lt;/pre&gt;</code></p>
-            <pre>This is an example of a non-code
+            <p><code class="prettyprint" dir="ltr">&lt;pre dir="auto"&gt;...content...&lt;/pre&gt;</code></p>
+            <pre dir="auto">This is an example of a non-code
     pre-formatted text block
         preserving white spaces</pre>
+            <p><span class="information">Changed at 4.6:</span> Added <code dir="ltr">dir="auto"</code> attribute, which allows the browser to determine whether text direction should be <abbr title="Left To Right">LTR</abbr> or <abbr title="Right To Left">RTL</abbr> depending on content.</p>
 
             <h2>Pre-formatted code blocks</h2>
-            <p><code class="prettyprint">&lt;pre&gt;&lt;code&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
-            <pre><code>&lt;div id="messagepane"&gt;
+            <p><code class="prettyprint" dir="ltr">&lt;pre dir="ltr"&gt;&lt;code&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
+            <pre dir="ltr"><code>&lt;div id="messagepane"&gt;
     &lt;span id="message" class="success"&gt;Article posted. &lt;a class="close" title="Close" aria-label="Close"&gt;&amp;times;&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
+            <p><span class="information">Changed at 4.6:</span> Added <code dir="ltr">dir="ltr"</code> attribute, which ensures computer code text direction is <abbr title="Left To Right">LTR</abbr>.</p>
 
         </div>
 
@@ -390,29 +418,29 @@
             <h1>Embedded content</h1>
 
             <h2>Image (unstyled)</h2>
-            <p><code class="prettyprint">&lt;img src="" alt=""&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;img src="" alt=""&gt;</code></p>
             <p><img src="http://placehold.it/160/fabc2b/333333" alt="Alt text"></p>
 
             <h2>Image (styled) <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;img src="" alt="" class="content-image"&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;img src="" alt="" class="content-image"&gt;</code></p>
             <p><img src="http://placehold.it/160/fabc2b/333333" alt="Alt text" class="content-image"></p>
 
             <h2>Image (styled) with link <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;a href="" title=""&gt;&lt;img src="" alt="" class="content-image"&gt;&lt;/a&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;a href="" title=""&gt;&lt;img src="" alt="" class="content-image"&gt;&lt;/a&gt;</code></p>
             <p><a href="#" title="Title text"><img src="http://placehold.it/160/fabc2b/333333" alt="Alt text" class="content-image"></a></p>
 
             <h2>Left ranged image <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;img src="" alt="" class="align-left"&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;img src="" alt="" class="align-left"&gt;</code></p>
             <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-left" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
             <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
             <h2>Right ranged image <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;img src="" alt="" class="align-right"&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;img src="" alt="" class="align-right"&gt;</code></p>
             <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-right" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
             <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
             <h2>Centred image <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;img src="" alt="" class="align-center"&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;img src="" alt="" class="align-center"&gt;</code></p>
             <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-center" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet.</p>
 
         </div>
@@ -422,7 +450,7 @@
             <h1>Lists</h1>
 
             <h2>Ordered</h2>
-            <p><code class="prettyprint">&lt;ol&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;ol&gt;</code></p>
             <ol>
                 <li>this is an example</li>
                 <li>of a numbered</li>
@@ -435,7 +463,7 @@
             </ol>
 
             <h2>Unordered</h2>
-            <p><code class="prettyprint">&lt;ul&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;ul&gt;</code></p>
             <ul>
                 <li>this is an example</li>
                 <li>of a bulletpoint</li>
@@ -448,7 +476,7 @@
             </ul>
 
             <h2>Plain</h2>
-            <p><code class="prettyprint">&lt;ul class="plain-list"&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;ul class="plain-list"&gt;</code></p>
             <ul class="plain-list">
                 <li>this is an example</li>
                 <li>of a plain</li>
@@ -461,7 +489,7 @@
             </ul>
 
             <h2>Description</h2>
-            <p><code class="prettyprint">&lt;dl&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;dl&gt;</code></p>
             <dl>
                 <dt>This is a definition list term 1</dt>
                 <dd>Definition of term 1 here</dd>
@@ -480,7 +508,7 @@
         <div class="text-section" id="ui-doc-tables">
             <h1>Tables <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.6</span></h1>
 
-            <pre class="prettyprint linenums"><code>&lt;div class="txp-listtables"&gt;
+            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="txp-listtables"&gt;
     &lt;table class="txp-list"&gt;
         &lt;thead&gt;
             &lt;tr&gt;
@@ -501,6 +529,11 @@
                 &lt;td&gt;...&lt;/td&gt;
             &lt;/tr&gt;
             &lt;tr&gt;
+                &lt;th scope="row"&gt;...&lt;/th&gt;
+                &lt;td&gt;...&lt;/td&gt;
+                &lt;td&gt;...&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="highlight"&gt;
                 &lt;th scope="row"&gt;...&lt;/th&gt;
                 &lt;td&gt;...&lt;/td&gt;
                 &lt;td&gt;...&lt;/td&gt;
@@ -543,7 +576,7 @@
                             <td>3.1 B</td>
                             <td>Dictatorship</td>
                         </tr>
-                        <tr>
+                        <tr class="highlight">
                             <th scope="row">Zaonce</th>
                             <td>5.3 B</td>
                             <td>Corporate State</td>
@@ -552,7 +585,7 @@
                 </table>
             </div><!-- /txp-listtables -->
 
-            <p><span class="information">Changed at 4.6:</span> Added <code>scope</code> attribute to columns and rows. Each <code>&lt;tbody&gt;</code> row now has a <code>&lt;th&gt;</code> cell.</p>
+            <p><span class="information">Changed at 4.6:</span> Added <code dir="ltr">scope</code> attribute to columns and rows. Each <code dir="ltr">&lt;tbody&gt;</code> row now has a <code dir="ltr">&lt;th&gt;</code> cell.</p>
 
         </div>
 
@@ -560,7 +593,7 @@
         <div class="text-section" id="ui-doc-progress">
             <h1>Progress meters <span class="information" style="font-size:.5em;font-weight:normal;">new v4.5</span></h1>
 
-            <pre class="prettyprint linenums"><code>&lt;div class="progress-meter"&gt;
+            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="progress-meter"&gt;
     &lt;p class="txp-accessibility"&gt;There are 4 steps to this installation process:&lt;/p&gt;
     &lt;ol&gt;
         &lt;li class="active"&gt;&lt;strong&gt;Add database details&lt;/strong&gt;&lt;/li&gt;
@@ -587,7 +620,7 @@
             <h1>Summary/details boxes <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.6</span></h1>
 
             <h2>Collapsible</h2>
-            <pre class="prettyprint linenums"><code>&lt;section role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
+            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;section role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
     &lt;h3 id="regionname1_group-label" class="txp-summary expanded"&gt;&lt;a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true"&gt;Heading (lever)&lt;/a&gt;&lt;/h3&gt;
     &lt;div role="group" id="name-of-details" class="toggle" aria-expanded="true"&gt;
         &lt;p&gt;...content...&lt;/p&gt;
@@ -598,7 +631,7 @@
                 <div role="group" id="name-of-details" class="toggle" aria-expanded="true">
                     <form action="#">
                         <p>
-                            <label for="text-std1">Form element within a collapsible details box</label>&#160;<a href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                            <label for="text-std1">Form element within a collapsible details box</label>&#160;<a href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a><br>
                             <input type="text" id="text-std1" name="text-std1" size="32">
                         </p>
                     </form>
@@ -621,10 +654,10 @@
                 </div>
             </section>
 
-            <p>The WAI-ARIA attribute states and <code>expanded</code> class are managed via JavaScript. <strong>Note:</strong> may eventually be changed to use HTML5 <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> tags when browser support is better.</p>
+            <p>The WAI-ARIA attribute states and <code dir="ltr">expanded</code> class are managed via JavaScript. <strong>Note:</strong> may eventually be changed to use HTML5 <code dir="ltr">&lt;details&gt;</code> and <code dir="ltr">&lt;summary&gt;</code> tags when browser support is better.</p>
 
             <h2>Non-collapsible</h2>
-            <pre class="prettyprint linenums"><code>&lt;section role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
+            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;section role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
     &lt;h3 id="regionname1_group-label"&gt;Heading&lt;/h3&gt;
     &lt;div role="group"&gt;
         &lt;p&gt;...content...&lt;/p&gt;
@@ -635,7 +668,7 @@
                 <div role="group">
                     <form action="#">
                         <p>
-                            <label for="text-std2">Form element within a non-collapsible details box</label>&#160;<a href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                            <label for="text-std2">Form element within a non-collapsible details box</label>&#160;<a href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a><br>
                             <input type="text" id="text-std2" name="text-std2" size="32">
                         </p>
                     </form>
@@ -658,7 +691,7 @@
                 </div>
             </section>
 
-            <p><strong>Note:</strong> this replaces the <code>&lt;fieldset&gt;</code> boxes used in v4.5 and below.</p>
+            <p><strong>Note:</strong> this replaces the <code dir="ltr">&lt;fieldset&gt;</code> boxes used in v4.5 and below.</p>
 
 
         </div>
@@ -677,49 +710,49 @@
                 </p>
 
                 <h2>Text fields large <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-                <p><code class="prettyprint">&lt;input type="text" id="" name="" size="64" class="input-large"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="text" id="" name="" size="64" class="input-large"&gt;</code></p>
                 <p>
-                    <label for="text-lrg">Text (large) with pophelp</label>&#160;<a href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                    <label for="text-lrg">Text (large) with pophelp</label>&#160;<a href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a><br>
                     <input type="text" id="text-lrg" name="text-lrg" size="64" class="input-large">
                 </p>
 
                 <h2>Text fields standard</h2>
-                <p><code class="prettyprint">&lt;input type="text" id="" name="" size="32"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="text" id="" name="" size="32"&gt;</code></p>
                 <p>
-                    <label for="text-std">Text (standard) with pophelp</label>&#160;<a href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                    <label for="text-std">Text (standard) with pophelp</label>&#160;<a href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a><br>
                     <input type="text" id="text-std" name="text-std" size="32">
                 </p>
 
                 <h2>Text fields medium <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-                <p><code class="prettyprint">&lt;input type="text" id="" name="" size="16" class="input-medium"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="text" id="" name="" size="16" class="input-medium"&gt;</code></p>
                 <p>
                     <label for="text-med">Text medium</label><br>
                     <input type="text" id="text-med" name="text-med" size="16" class="input-medium">
                 </p>
 
                 <h2>Text fields small <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-                <p><code class="prettyprint">&lt;input type="text" id="" name="" size="8" class="input-small"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="text" id="" name="" size="8" class="input-small"&gt;</code></p>
                 <p>
                     <label for="text-sml">Text (small)</label><br>
                     <input type="text" id="text-sml" name="text-sml" size="8" class="input-small">
                 </p>
 
                 <h2>Text fields extra small <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-                <p><code class="prettyprint">&lt;input type="text" id="" name="" size="4" class="input-xsmall"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="text" id="" name="" size="4" class="input-xsmall"&gt;</code></p>
                 <p>
                     <label for="text-xsml">Text (extra small)</label><br>
                     <input type="text" id="text-xsml" name="text-xsml" size="4" class="input-xsmall">
                 </p>
 
                 <h2>Password fields</h2>
-                <p><code class="prettyprint">&lt;input type="password" id="" name="" size="32"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="password" id="" name="" size="32"&gt;</code></p>
                 <p>
                     <label for="password">Password</label><br>
                     <input type="password" id="password" name="password" size="32">
                 </p>
 
                 <h2>Date fields</h2>
-                <pre class="prettyprint linenums"><code>&lt;p&gt;
+                <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;p&gt;
     &lt;span class="txp-label-fixed"&gt;Date&lt;/span&gt;&lt;br&gt;
     &lt;input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" placeholder="yyyy"&gt; /
     &lt;input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" placeholder="mm"&gt; /
@@ -733,7 +766,7 @@
                 </p>
 
                 <h2>Time fields</h2>
-                <pre class="prettyprint linenums"><code>&lt;p&gt;
+                <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;p&gt;
     &lt;span class="txp-label-fixed"&gt;Date&lt;/span&gt;&lt;br&gt;
     &lt;input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" placeholder="hh"&gt; :
     &lt;input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" placeholder="mm"&gt; :
@@ -750,20 +783,16 @@
                 <p>
                     <input type="checkbox" id="test_checkbox_1" name="test_checkbox_1">
                     <label for="test_checkbox_1">Test checkbox 1</label>
-                    &nbsp;
                     <input type="checkbox" id="test_checkbox_2" name="test_checkbox_2">
                     <label for="test_checkbox_2">Test checkbox 2</label>
-                    &nbsp;
                     <input type="checkbox" id="test_checkbox_3" name="test_checkbox_3" disabled="disabled">
                     <label for="test_checkbox_3">Test checkbox 3 (disabled)</label>
                 </p>
                 <p>
                     <input type="radio" id="test_radio_1" name="test_radio_group">
                     <label for="test_radio_1">Test radio 1</label>
-                    &nbsp;
                     <input type="radio" id="test_radio_2" name="test_radio_group">
                     <label for="test_radio_2">Test radio 2</label>
-                    &nbsp;
                     <input type="radio" id="test_radio_3" name="test_radio_group" disabled="disabled">
                     <label for="test_radio_3">Test radio 3 (disabled)</label>
                 </p>
@@ -843,11 +872,11 @@
                 <h1>Buttons</h1>
 
                 <h2>Primary and standard buttons</h2>
-                <p><code class="prettyprint">&lt;input type="submit" value="" class="publish"&gt;</code></p>
-                <p><code class="prettyprint">&lt;input type="submit" value="Input Submit"&gt;</code></p>
-                <p><code class="prettyprint">&lt;input type="button" value="Input Button"&gt;</code></p>
-                <p><code class="prettyprint">&lt;button&gt;Button Tag&lt;/button&gt;</code></p>
-                <p><code class="prettyprint">&lt;a href="" class="navlink"&gt;Link (navlink)&lt;/a&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="submit" value="" class="publish"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="submit" value="Input Submit"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="button" value="Input Button"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;button&gt;Button Tag&lt;/button&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;a href="" class="navlink"&gt;Link (navlink)&lt;/a&gt;</code></p>
                 <p>
                     <input type="submit" value="Input Submit (Primary)" class="publish">
                     <input type="submit" value="Input Submit">
@@ -857,12 +886,12 @@
                 </p>
 
                 <h2>Delete buttons <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
-                <p><code class="prettyprint">&lt;input type="submit" value="&amp;times;" class="destroy" title="Delete" aria-label="Delete"&gt;</code></p>
+                <p><code class="prettyprint" dir="ltr">&lt;input type="submit" value="&amp;times;" class="destroy" title="Delete" aria-label="Delete"&gt;</code></p>
                 <p><input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete"></p>
-                <p><span class="information">Changed at 4.6:</span> Added <code>title</code> attribute.</p>
+                <p><span class="information">Changed at 4.6:</span> Added <code dir="ltr">title</code> attribute.</p>
 
                 <h2>Button sets</h2>
-                <pre class="prettyprint linenums"><code>&lt;p class="nav-tertiary"&gt;
+                <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;p class="nav-tertiary"&gt;
     &lt;a href="#" class="navlink-active"&gt;Page 1&lt;/a&gt;&lt;a href="#" class="navlink">Page 2&lt;/a&gt;&lt;a href="#" class="navlink"&gt;Page 3&lt;/a&gt;
 &lt;/p&gt;</code></pre>
                 <p class="nav-tertiary">
@@ -870,7 +899,7 @@
                 </p>
 
                 <h2>Previous/next buttons</h2>
-                <pre class="prettyprint linenums"><code>&lt;p class="prev-next"&gt;
+                <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;p class="prev-next"&gt;
     &lt;span class="navlink-disabled" aria-disabled="true"&gt;← Prev&lt;/span&gt;&lt;a href="#" class="navlink"&gt;Next →&lt;/a&gt;
 &lt;/p&gt;</code></pre>
                 <p class="prev-next">
@@ -886,7 +915,7 @@
             <h1>Edit panes and panels</h1>
 
             <h2>Edit panes (modal) <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
-            <pre class="prettyprint linenums"><code>&lt;form method="post" action="#" class="edit-form"&gt;
+            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;form method="post" action="#" class="edit-form"&gt;
     &lt;section class="txp-edit"&gt;
         &lt;h2&gt;Edit pane (modal) title&lt;/h2&gt;
 
@@ -930,7 +959,7 @@
                 <section class="txp-edit">
                     <h2>Edit pane (modal) title</h2>
                     <p class="edit-example-1">
-                        <span class="txp-label"><label for="example_1">Long text (with pophelp)</label>&#160;<a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></span>
+                        <span class="txp-label"><label for="example_1">Long text (with pophelp)</label>&#160;<a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a></span>
                         <span class="txp-value"><input type="text" value="" name="example_1" id="example_1" size="32"></span>
                     </p>
                     <p class="edit-example-2">
@@ -948,7 +977,7 @@
                         </span>
                     </p>
                     <p class="edit-example-4">
-                        <span class="txp-label">Radio buttons (with pophelp)&#160;<a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></span>
+                        <span class="txp-label">Radio buttons (with pophelp)&#160;<a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a></span>
                         <span class="txp-value">
                             <input type="radio" id="example_4_0" name="example_4" value="0" class="radio active" checked="checked">
                             <label for="example_4_0">No</label>
@@ -957,7 +986,7 @@
                         </span>
                     </p>
                     <p class="edit-example-5">
-                        <span class="txp-label"><label for="example_5">Textarea (with pophelp)</label>&#160;<a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></span>
+                        <span class="txp-label"><label for="example_5">Textarea (with pophelp)</label>&#160;<a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a></span>
                         <textarea name="example_5" id="example_5" cols="64" rows="7"></textarea>
                     </p>
                     <p class="txp-edit-action"><button>Cancel</button> <input type="submit" value="Save" class="publish"></p>
@@ -965,7 +994,7 @@
             </form>
 
             <h2>Edit panels (non-modal) <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
-            <pre class="prettyprint linenums"><code>&lt;form method="post" action="#" class="prefs-form"&gt;
+            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;form method="post" action="#" class="prefs-form"&gt;
     &lt;h2&gt;Edit panel (non-modal) title&lt;/h2&gt;
 
     &lt;p class="prefs-example-1"&gt;
@@ -1045,21 +1074,21 @@
 
         <div class="text-section" id="ui-doc-jquery-ui">
             <h1>jQuery UI widgets <span class="warning" style="font-size:.5em;font-weight:normal;">new v4.6</span></h1>
-            <p>Collection of all the available <a href="http://jqueryui.com/" rel="external" title="Go to the jQuery User Interface website">jQuery UI</a> widgets.</p>
+            <p>Collection of all the available <a rel="external" href="http://jqueryui.com/" title="Go to the jQuery User Interface website">jQuery UI</a> widgets.</p>
 
-            <h2>Interactions: Draggable</h2>
+            <h2 id="ui-doc-jquery-ui--draggable">Interactions: Draggable</h2>
             <div class="jquery-ui-draggable ui-widget-content" style="padding:.5em 1em; margin-bottom:1em;">
                 <strong>Drag me around!</strong>
             </div>
-            <p><a href="http://jqueryui.com/draggable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/draggable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Interactions: Resizable</h2>
+            <h2 id="ui-doc-jquery-ui--resizable">Interactions: Resizable</h2>
             <div class="jquery-ui-resizable ui-widget-content" style="padding:.5em 1em; margin-bottom:1em;">
                 <strong>Resize me!</strong>
             </div>
-            <p><a href="http://jqueryui.com/resizable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/resizable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Interactions: Selectable</h2>
+            <h2 id="ui-doc-jquery-ui--selectable">Interactions: Selectable</h2>
             <ol class="jquery-ui-selectable plain-list">
                 <li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 1</li>
                 <li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 2</li>
@@ -1069,9 +1098,9 @@
                 <li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 6</li>
                 <li class="ui-widget-content" style="padding:.5em 1em;">Item 7</li>
             </ol>
-            <p><a href="http://jqueryui.com/selectable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/selectable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Interactions: Sortable</h2>
+            <h2 id="ui-doc-jquery-ui--sortable">Interactions: Sortable</h2>
             <ul class="jquery-ui-sortable plain-list">
                 <li class="ui-widget-content" style="padding:.5em 1em .5em .5em; margin:2px 0;">
                     <span class="ui-icon ui-icon-arrow-2-n-s"></span>
@@ -1102,9 +1131,9 @@
                     Item 7
                 </li>
             </ul>
-            <p><a href="http://jqueryui.com/sortable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/sortable/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Widgets: Accordion</h2>
+            <h2 id="ui-doc-jquery-ui--accordion">Widgets: Accordion</h2>
             <div class="jquery-ui-accordion">
                 <h3><a href="#">Section 1</a></h3>
                 <div>
@@ -1132,16 +1161,16 @@
                     <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                 </div>
             </div>
-            <p><a href="http://jqueryui.com/accordion/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/accordion/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Widgets: Autocomplete</h2>
+            <h2 id="ui-doc-jquery-ui--autocomplete">Widgets: Autocomplete</h2>
             <p>
                 <label for="autocomplete-country">Countries</label><br>
                 <input type="text" id="autocomplete-country">
             </p>
-            <p><a href="http://jqueryui.com/autocomplete/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/autocomplete/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Widgets: Button</h2>
+            <h2 id="ui-doc-jquery-ui--button">Widgets: Button</h2>
 
             <h3>Default functionality buttons</h3>
             <p>
@@ -1202,13 +1231,13 @@
                 </ul>
             </div>
 
-            <p><a href="http://jqueryui.com/button/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/button/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Widgets: Datepicker</h2>
+            <h2 id="ui-doc-jquery-ui--datepicker">Widgets: Datepicker</h2>
             <div class="jquery-ui-datepicker"></div>
-            <p><a href="http://jqueryui.com/datepicker/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/datepicker/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Widgets: Dialog</h2>
+            <h2 id="ui-doc-jquery-ui--dialog">Widgets: Dialog</h2>
 
             <p><a href="#" id="jquery-ui-dialog-link">Open basic dialog&hellip;</a></p>
             <!-- Dialog box (basic) -->
@@ -1222,10 +1251,9 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a href="#">sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
-            <p><a href="http://jqueryui.com/dialog/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/dialog/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Widgets: Menu</h2>
-
+            <h2 id="ui-doc-jquery-ui--menu">Widgets: Menu</h2>
             <ul class="jquery-ui-menu">
                 <li class="ui-state-disabled"><a href="#">Aberdeen</a></li>
                 <li><a href="#">Ada</a></li>
@@ -1264,21 +1292,79 @@
                 </li>
                 <li class="ui-state-disabled"><a href="#">Amesville</a></li>
             </ul>
+            <p><a rel="external" href="http://jqueryui.com/menu/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <p><a href="http://jqueryui.com/menu/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
-
-            <h2>Widget: Progressbar</h2>
+            <h2 id="ui-doc-jquery-ui--progressbar">Widget: Progressbar</h2>
             <h3>Determinate value</h3>
             <div class="jquery-ui-progressbar"></div>
             <p><a class="jquery-ui-progressbar-animate" href="#">Animate to random number</a></p>
             <h3>Indeterminate value</h3>
             <div class="jquery-ui-progressbar2"></div>
-            <p><a href="http://jqueryui.com/progressbar/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/progressbar/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Widgets: Slider</h2>
+            <h2 id="ui-doc-jquery-ui--selectmenu">Widgets: Selectmenu</h2>
+            <p><span class="warning"><strong>Note:</strong> Upcoming feature - NOT IMPLEMENTED YET.</span></p>
+
+            <h3>Selectmenu - standard</h3>
+            <p>
+                <label for="selectmenu1">Disabled select</label><br>
+                <select class="jquery-ui-selectmenu" name="selectmenu1" id="selectmenu1">
+                    <option value="Slower">Slower</option>
+                    <option value="Slow">Slow</option>
+                    <option value="Medium" selected="selected">Medium</option>
+                    <option value="Fast">Fast</option>
+                    <option value="Faster">Faster</option>
+                </select>
+            </p>
+
+            <h3>Selectmenu - disabled</h3>
+            <p>
+                <label for="selectmenu-disabled1">Disabled select</label><br>
+                <select class="jquery-ui-selectmenu" name="selectmenu-disabled1" id="selectmenu-disabled1" disabled="disabled">
+                    <option value="Slower">Slower</option>
+                    <option value="Slow">Slow</option>
+                    <option value="Medium" selected="selected">Medium</option>
+                    <option value="Fast">Fast</option>
+                    <option value="Faster">Faster</option>
+                </select>
+            </p>
+
+            <h3>Selectmenu - disabled options</h3>
+            <p>
+                <label for="selectmenu-disabled2">Disabled options</label><br>
+                <select class="jquery-ui-selectmenu" name="selectmenu-disabled2" id="selectmenu-disabled2">
+                    <option value="0">0</option>
+                    <option value="1" disabled="disabled">1</option>
+                    <option value="2" selected="selected">2</option>
+                    <option value="3">3</option>
+                    <option value="4" disabled="disabled">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8" disabled="disabled">8</option>
+                    <option value="9">9</option>
+                </select>
+            </p>
+
+            <h3>Selectmenu - disabled optgroup</h3>
+            <p>
+                <label for="selectmenu-disabled3">Disabled optgroup</label><br>
+                <select class="jquery-ui-selectmenu" name="selectmenu-disabled3" id="selectmenu-disabled3">
+                    <optgroup label="Scripts" disabled="disabled">
+                        <option value="jquery">jQuery.js</option>
+                        <option value="jqueryui">ui.jQuery.js</option>
+                    </optgroup>
+                    <optgroup label="Other files">
+                        <option value="somefile">Some unknown file</option>
+                        <option value="someotherfile">Some other file</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p><a rel="external" href="http://jqueryui.com/selectmenu/" title="Go to the jQuery UI documentation">Full documentation - NOT IMPLEMENTED YET</a></p>
+
+            <h2 id="ui-doc-jquery-ui--slider">Widgets: Slider</h2>
             <h3>Slider - horizontal</h3>
             <div class="jquery-ui-slider-horizontal"></div>
-
             <h3>Slider - vertical</h3>
             <div class="jquery-ui-slider-vertical clearfix">
                 <span>88</span>
@@ -1289,17 +1375,16 @@
                 <span>45</span>
                 <span>70</span>
             </div>
+            <p><a rel="external" href="http://jqueryui.com/slider/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <p><a href="http://jqueryui.com/slider/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
-
-            <h2>Widgets: Spinner</h2>
+            <h2 id="ui-doc-jquery-ui--spinner">Widgets: Spinner</h2>
             <p>
                 <label for="jquery-ui-spinner">Select a value:</label>
                 <input type="text" id="jquery-ui-spinner" name="value">
             </p>
-            <p><a href="http://jqueryui.com/spinner/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/spinner/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Widgets: Tabs</h2>
+            <h2 id="ui-doc-jquery-ui--tabs">Widgets: Tabs</h2>
             <div class="jquery-ui-tabs">
                 <ul>
                     <li><a href="#tabgroup1-tab1">First</a></li>
@@ -1317,13 +1402,13 @@
                     <p>Mauris tempor urna non quam tincidunt aliquam. Proin venenatis metus eu purus interdum a vehicula ipsum sollicitudin. Mauris sed dignissim odio. Nam id odio sed diam dapibus dignissim. Nulla vestibulum nisl ac magna scelerisque adipiscing. Nam pellentesque sapien vulputate nisi scelerisque ut vehicula orci luctus. Sed rhoncus tempor metus vitae egestas. Proin pharetra tristique justo ac rutrum. Vestibulum ac pharetra dolor. Cras nibh arcu, bibendum eget luctus id, rhoncus nec augue. Integer ornare rhoncus nulla, eu aliquam mi ornare ullamcorper. Praesent egestas auctor orci, non rhoncus sapien eleifend at. Quisque eget purus sem, ut dignissim ligula. Etiam sollicitudin dui libero, id ullamcorper metus.</p>
                 </div>
             </div>
-            <p><a href="http://jqueryui.com/tabs/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/tabs/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Widgets: Tooltip</h2>
+            <h2 id="ui-doc-jquery-ui--tooltip">Widgets: Tooltip</h2>
             <p>Here is an example of a <a class="jquery-ui-tooltip" href="#" title="This is a tooltip, it can be of any length (within practical reason).">link with a tooltip</a>, mouseover to reveal it.</p>
-            <p><a href="http://jqueryui.com/tooltip/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+            <p><a rel="external" href="http://jqueryui.com/tooltip/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2>Styles: Icons</h2>
+            <h2 id="ui-doc-jquery-ui--icons">Styles: Icons</h2>
             <ul class="jquery-ui-icons ui-widget ui-helper-clearfix">
                 <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-n"><span class="ui-icon ui-icon-carat-1-n"></span></li>
                 <li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-ne"><span class="ui-icon ui-icon-carat-1-ne"></span></li>
@@ -1525,7 +1610,7 @@
                 <li class="ui-state-default" title=".ui-extra-icon-attach"><span class="ui-icon ui-extra-icon-attach"></span></li>
             </ul>
 
-            <h2>Styles: Overlay and shadow</h2>
+            <h2 id="ui-doc-jquery-ui--overlay">Styles: Overlay and shadow</h2>
             <p><span class="warning">Not currently used in jQuery UI widgets.</span></p>
             <div style="position: relative; width: 70%; height: 200px; padding:1% 4%; overflow:hidden;" class="fakewindowcontain">
                 <p>Lorem ipsum dolor sit amet, Nulla nec tortor. Donec id elit quis purus consectetur consequat.</p>
@@ -1554,17 +1639,17 @@
             <h1>Miscellaneous</h1>
 
             <h2>Accessibility text <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.6</span></h2>
-            <p><code class="prettyprint">&lt;p class="txp-accessibility"&gt;...content...&lt;/p&gt;</code></p>
-            <p>Accessibility text is hidden from the page but available to screen readers as an aid to those with visual impairments. This is accomplished via CSS <code>visibility: hidden;</code> <strong>not</strong> via <code>display: hidden;</code> (which would hide the text from most screen readers too).</p>
+            <p><code class="prettyprint" dir="ltr">&lt;p class="txp-accessibility"&gt;...content...&lt;/p&gt;</code></p>
+            <p>Accessibility text is hidden from the page but available to screen readers as an aid to those with visual impairments. This is accomplished via CSS <code dir="ltr">visibility: hidden;</code> <strong>not</strong> via <code dir="ltr">display: hidden;</code> (which would hide the text from most screen readers too).</p>
 
             <h2>AJAX spinner <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;span class="spinner"&gt;&lt;/span&gt;</code></p>
+            <p><code class="prettyprint" dir="ltr">&lt;span class="spinner"&gt;&lt;/span&gt;</code></p>
             <p><span class="spinner"></span></p>
 
             <h2>Disabled non-form elements <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-            <p><code class="prettyprint">&lt;p class="disabled" aria-disabled="true"&gt;...message...&lt;/p&gt;</code></p>
-            <p class="disabled" aria-disabled="true">This is an example of an element greyed out via a <code>.disabled</code> class.</p>
-            <p><strong>Please note</strong> that this class only gives a visual impression of disabled elements, any links and/or form elements therein would still be active and clickable. To truly disable form elements use the proper <code>disabled</code> attribute instead, see the <a href="#ui-doc-forms">forms</a> section for more information.</p>
+            <p><code class="prettyprint" dir="ltr">&lt;p class="disabled" aria-disabled="true"&gt;...message...&lt;/p&gt;</code></p>
+            <p class="disabled" aria-disabled="true">This is an example of an element greyed out via a <code dir="ltr">.disabled</code> class.</p>
+            <p><strong>Please note</strong> that this class only gives a visual impression of disabled elements, any links and/or form elements therein would still be active and clickable. To truly disable form elements use the proper <code dir="ltr">disabled</code> attribute instead, see the <a href="#ui-doc-forms">forms</a> section for more information.</p>
 
             <h2>Temporary example of search widget</h2>
             <form role="search" method="get" action="#" class="txp-search" style="float:none;">
