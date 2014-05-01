@@ -110,10 +110,6 @@ td {
         padding: 0.3em 0;
     }
 
-    .multi-edit {
-        width: 18px;
-    }
-
     tbody {
         border-top: 1px solid $color-border;
 
@@ -137,48 +133,65 @@ td {
             vertical-align: bottom;
         }
 
-        th {
-            a {
-                margin-right: 14px;
+        th a {
+            margin-right: 14px;
 
-                [dir="rtl"] & {
-                    margin-right: 0;
-                    margin-left: 14px;
-                }
-            }
-
-            &.asc a,
-            &.desc a {
+            [dir="rtl"] & {
                 margin-right: 0;
-                padding-right: 14px;
-                background: url("../img/arrow-up-down.svg") no-repeat;
-
-                [dir="rtl"] & {
-                    margin-left: 0;
-                    padding-right: 0;
-                    padding-left: 14px;
-                }
-            }
-
-            &.asc a {
-                background-position: right 2px;
-
-                [dir="rtl"] & {
-                    background-position: left 2px;
-                }
-            }
-
-            &.desc a {
-                background-position: right -36px;
-
-                [dir="rtl"] & {
-                    background-position: left -36px;
-                }
+                margin-left: 14px;
             }
         }
     }
+}
 
-    .id {
-        white-space: nowrap;
+/**
+ * Backgrounds and indicator icons on currently active sortable `thead th`.
+ *
+ * Example HTML:
+ *
+ * <th class="asc scope="col"><a></a></th>
+ * <th class="desc scope="col"><a></a></th>
+ */
+
+.txp-list thead th {
+    &.asc a,
+    &.desc a {
+        margin-right: 0;
+        padding-right: 14px;
+        background: url("../img/arrow-up-down.svg") no-repeat;
+
+        [dir="rtl"] & {
+            margin-left: 0;
+            padding-right: 0;
+            padding-left: 14px;
+        }
     }
+
+    &.asc a {
+        background-position: right 2px;
+
+        [dir="rtl"] & {
+            background-position: left 2px;
+        }
+    }
+
+    &.desc a {
+        background-position: right -36px;
+
+        [dir="rtl"] & {
+            background-position: left -36px;
+        }
+    }
+}
+
+/**
+ * Additional rules for certain types of table column.
+ */
+
+.txp-list-col-multi-edit {
+    width: 14px;
+}
+
+.txp-list-col-id {
+    white-space: nowrap;
 }
