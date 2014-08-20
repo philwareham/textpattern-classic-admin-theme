@@ -1,7 +1,16 @@
 $(function ()
 {
-    // spoof RTL on English language `<label>` tags (this isn't needed when viewing in proper RTL languages)
+    /**
+     * Spoof RTL on English language `label` tags.
+     *
+     * This isn't needed when viewing in proper RTL languages.
+     */
+
     $('[dir="rtl"] label').attr('dir', 'rtl');
+
+    /**
+     * jQuery UI interactions.
+     */
 
     // Draggable
     $('.jquery-ui-draggable').draggable({
@@ -21,6 +30,10 @@ $(function ()
         placeholder: 'ui-sortable-placeholder',
         cursor: 'ns-resize'
     }).disableSelection();
+
+    /**
+     * jQuery UI widgets.
+     */
 
     // Accordion
     $('.jquery-ui-accordion').accordion({
@@ -103,8 +116,6 @@ $(function ()
         .hide()
         .menu();
 
-
-
     // Split button search example
     $('.txp-search-button')
         .button({
@@ -143,7 +154,6 @@ $(function ()
         .hide()
         .menu();
 
-
     // Options button
     $('#detail-toggle').button({
         text: false,
@@ -152,6 +162,21 @@ $(function ()
         }
     });
 
+    // List view button
+    $('.txp-button-list').button({
+        text: false,
+        icons: {
+            primary: 'ui-extra-icon-list'
+        }
+    });
+
+    // Grid view button
+    $('.txp-button-grid').button({
+        text: false,
+        icons: {
+            primary: 'ui-extra-icon-grid'
+        }
+    });
 
     // Datepicker
     $('.jquery-ui-datepicker').datepicker().children().show();
@@ -213,6 +238,9 @@ $(function ()
         });
         event.preventDefault();
     });
+
+    // Selectmenu
+    $('.jquery-ui-selectmenu').selectmenu();
 
     // Slider - horizontal
     $('.jquery-ui-slider-horizontal').slider({
