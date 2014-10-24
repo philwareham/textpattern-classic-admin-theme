@@ -5,7 +5,14 @@
 @import "core/helpers";
 
 
-/* fallbacks for lack of RGBa/opacity support in IE 8 */
+
+/* ==========================================================================
+   Fallbacks for unsupported browser features
+   ========================================================================== */
+
+/**
+ * Fallback for lack of `opacity` support.
+ */
 
 .close {
     color: #cccccc;
@@ -19,7 +26,9 @@
     filter: Alpha(Opacity=33);
 }
 
-/* fallbacks for lack of SVG support in IE 8 */
+/**
+ * PNG fallback for lack of SVG support.
+ */
 
 .txp-summary a {
     background-image: url("../img/expand-collapse.gif");
