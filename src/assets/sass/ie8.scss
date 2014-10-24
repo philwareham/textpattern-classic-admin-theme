@@ -54,3 +54,14 @@
 #tab-preview a {
     background-image: url("../img/view-preview.png");
 }
+
+
+
+/* ==========================================================================
+   Fix for reponsive embedded content in IE 8
+   ========================================================================== */
+
+img,
+video {
+    width: auto;
+}
