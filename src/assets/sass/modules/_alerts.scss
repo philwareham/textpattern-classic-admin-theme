@@ -12,15 +12,6 @@
  * <strong class="error">
  */
 
-.success,
-.warning,
-.error,
-.information {
-    @include border-radius(0.2307692em); // 3px / 13px
-
-    padding: 1px 0.23076923076923em; // 3px / 13px
-}
-
 .success {
     color: $color-success-text;
 }
