@@ -1,0 +1,62 @@
+/* Twisties
+   ========================================================================== */
+
+/**
+ * Collapsible and non-collapsible summary/details boxes.
+ *
+ * Example HTML:
+ *
+ * <section class="txp-details">
+ *     <h3 class="txp-summary expanded">
+ *         <a>Heading (lever)</a>
+ *     </h3>
+ *     <div class="toggle">
+ *         Content
+ *     </div>
+ * </section>
+ *
+ * <section class="txp-details">
+ *     <h3>Heading</h3>
+ *     <div>
+ *         Content
+ *     </div>
+ * </section>
+ */
+
+.txp-details {
+    border-bottom: 1px solid $color-border;
+
+    .txp-details:last-of-type {
+        border-bottom: 0;
+    }
+}
+
+/**
+ * Styling for summary headings.
+ */
+
+h3.txp-summary,
+.txp-details > h3 {
+    margin: 1em 0;
+    font-size: 1em; // 12px
+    color: $color-link;
+    font-weight: bold;
+    font-family: $font-sans-serif;
+}
+
+/**
+ * Additonal styling for lever summary headings.
+ */
+
+h3.txp-summary a {
+    padding: 0 0 0 1em;
+    background: url("../img/expand-collapse.svg") no-repeat 0 4px;
+}
+
+/**
+ * Additonal styling for lever summary headings - expanded state.
+ */
+
+h3.txp-summary.expanded a {
+    background-position: 0 -90px;
+}
