@@ -1,0 +1,160 @@
+/* Messages
+   ========================================================================== */
+
+/**
+ * Alert labels.
+ *
+ * Example HTML:
+ *
+ * <span class="success">
+ * <span class="error">
+ * <strong class="success">
+ * <strong class="error">
+ */
+
+.success,
+.warning,
+.error,
+.information {
+    @include border-radius(0.2307692em); // 3px / 13px
+
+    padding: 1px 0.23076923076923em; // 3px / 13px
+}
+
+.success {
+    color: $color-success-text;
+}
+
+.warning {
+    color: $color-warning-text;
+}
+
+.error {
+    color: $color-error-text;
+}
+
+.information {
+    color: $color-info-text;
+}
+
+/**
+ * Highlight background.
+ *
+ * Example HTML:
+ *
+ * <table>
+ *     <tr>
+ *         <td class="highlight></td>
+ *         <td></td>
+ *     </tr>
+ * </table>
+ */
+
+.highlight {
+    background: $color-highlight-box;
+}
+
+/**
+ * Alert boxes.
+ *
+ * Example HTML:
+ *
+ * <p class="alert-block success">
+ * <p class="alert-block error">
+ */
+
+.alert-block {
+    border: 1px solid;
+    padding: 0.5em 1em; // 6px / 12px
+
+    &.success {
+        border-color: $color-success-border;
+        background: $color-success-background;
+    }
+
+    &.warning {
+        border-color: $color-warning-border;
+        background: $color-warning-background;
+    }
+
+    &.error {
+        border-color: $color-error-border;
+        background: $color-error-background;
+    }
+
+    &.information {
+        border-color: $color-info-border;
+        background: $color-info-background;
+    }
+}
+
+/**
+ * System messages.
+ *
+ * Example HTML:
+ *
+ * <div id="messagepane">
+ *     <span role="alert" class="error">
+ *         Content
+ *     </span>
+ * </div>
+ */
+
+#messagepane {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+
+    span {
+        &.success,
+        &.warning,
+        &.error {
+            @include box-shadow(rgba(0, 0, 0, 0.15) 0 -0.25em 0.4em);
+
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            padding: 0.5em 2em;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        &.success {
+            background: $color-success-text;
+        }
+
+        &.warning {
+            background: $color-warning-text;
+        }
+
+        &.error {
+            background: $color-error-text;
+        }
+    }
+}
+
+/*
+ * Message close icon.
+ *
+ * Example HTML:
+ *
+ * <a role="button" class="close" aria-label="Close">&times;</a>
+ */
+
+.close {
+    position: absolute;
+    top: 0.26666666666667em; // 4px / 15px
+    right: 1em;
+    font-size: 15px;
+    text-decoration: none;
+    color: transparentize(#ffffff, 0.5);
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
+}
