@@ -1,0 +1,251 @@
+/* Typography
+   ========================================================================== */
+
+@include establish-baseline;
+
+/**
+ * Global font and colour.
+ */
+
+body {
+    font-family: $font-sans-serif;
+}
+
+/**
+ * `h1` headings.
+ *
+ * Example HTML:
+ *
+ * <h1>Heading</h1>
+ * <h1>
+ *     Heading
+ *     <a class="pophelp">i</a>
+ * </h1>
+ */
+
+h1 {
+    font-family: $font-serif;
+    font-size: 2em; // 24px / 12px
+    font-weight: normal;
+    line-height: 1.25;
+    margin: 0 0 0.5em 0;
+
+    .pophelp {
+        font-size: 0.5em;
+    }
+}
+
+/**
+ * `h2` headings.
+ *
+ * Example HTML:
+ *
+ * <h2>Heading</h2>
+ * <h2>
+ *     Heading
+ *     <a class="pophelp">i</a>
+ * </h2>
+ */
+
+h2 {
+    font-size: 1.5em; // 18px / 12px
+    font-family: $font-serif;
+    font-weight: normal;
+    line-height: 1.3333333;
+    margin: 0 0 0.66667em 0;
+
+    .pophelp {
+        font-size: 0.6666667em;
+    }
+}
+
+/**
+ * `h3` headings.
+ */
+
+h3 {
+    font-family: $font-serif;
+    font-size: 1.25em; // 15px / 12px
+    line-height: 1.4;
+    margin: 0.66667em 0;
+
+    a {
+        font-weight: bold;
+    }
+}
+
+/**
+ * Normalise `h4`, `h5` and `h6` headings (these are effectively unused).
+ */
+
+h4,
+h5,
+h6 {
+    font-size: 1em; // 12px
+    margin: 1em 0;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+ * Add vertical margin to addresses.
+ */
+
+address {
+    margin: 1em 0;
+}
+
+/**
+ * Additional styling for blockquotes.
+ */
+
+blockquote {
+    margin: 1em 0;
+    border-left: 3px solid $color-border;
+    padding: 0 0 0 1em;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark,
+var {
+    padding: 0 0.2em;
+    color: $color-text;
+    background: $color-selected;
+}
+
+/**
+ * Harmonise size and style of computer text.
+ */
+
+pre,
+code,
+kbd,
+samp,
+.code {
+    font-family: $font-mono;
+}
+
+code,
+kbd,
+samp {
+    border: 1px solid lighten($color-border, 9%);
+    padding: 0 0.2em;
+    background: $color-background-box;
+}
+
+/**
+ * Additional stylng for preformatted text/code.
+ *
+ * 1. Don't wrap long words.
+ * 2. Contain overflow in all browsers.
+ * 3. Set tab size to 4 spaces.
+ */
+
+pre {
+    /* 1 */
+    word-wrap: normal;
+    /* 2 */
+    overflow-x: auto;
+    margin: 1em 0;
+    border: 1px solid lighten($color-border, 9%);
+    padding: 1em;
+    background: $color-background-box;
+    /* 3 */
+    tab-size: 4;
+}
+
+/**
+ * Don't wrap lines of `textarea` code onto new lines.
+ */
+
+textarea.code {
+    word-wrap: normal;
+    white-space: pre;
+}
+
+/**
+ * Override `code` styling for code display within preformatted text areas and
+ * form text areas.
+ */
+
+pre code,
+.code code,
+code.body,
+code.excerpt {
+    border: 0;
+    padding: 0;
+    background: none;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup.footnote, // override Textile class
+sup {
+    @include adjust-font-size-to(10px, 0);
+
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.33333333333333em;
+}
+
+/**
+ * Harmonise size and style of small text.
+ */
+
+small,
+figcaption,
+tfoot,
+.footnote,
+.txp-form-field-instructions {
+    @include adjust-font-size-to(10px, 0.83333333333333); // 15px line height
+}
+
+figcaption,
+tfoot,
+.footnote,
+.txp-form-field-instructions {
+    color: $color-text-footnote;
+}
+
+figcaption {
+    margin-top: 0.5em;
+    font-style: italic;
+}
