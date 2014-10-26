@@ -14,6 +14,10 @@
   padding: 0;
 }
 
+[dir="rtl"] .jquery-ui-icons {
+  padding: 0;
+}
+
 .jquery-ui-icons li {
   margin: 2px;
   position: relative;
@@ -23,9 +27,17 @@
   list-style: none;
 }
 
+[dir="rtl"] .jquery-ui-icons li  {
+  float: right;
+}
+
 .jquery-ui-icons span.ui-icon {
   float: left;
   margin: 0 4px;
+}
+
+[dir="rtl"] .jquery-ui-icons span.ui-icon  {
+  float: right;
 }
 
 .jquery-ui-slider-vertical span {
@@ -34,6 +46,11 @@
   margin: 15px;
 }
 
+[dir="rtl"] .jquery-ui-slider-vertical span {
+  float: right;
+}
+
+/* TODO: TEMPORARY RULES TO BE REMOVED */
 .ui-menu {
   width: 150px;
 }
@@ -41,13 +58,6 @@
 .ui-menu:not(.jquery-ui-menu) {
   position: absolute;
   z-index: 1000;
-}
-
-.txp-search .txp-search-button {
-  margin-left: -0.35em;
-  border-radius: 0;
-  padding-left: 1.75em;
-  padding-right: 1.75em;
 }
 
 
