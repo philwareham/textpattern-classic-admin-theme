@@ -69,17 +69,18 @@ $color-gradient-border:       darken($color-gradient-from, 13.5%);
 
 // accent colours (change these to make a new colourscheme)
 
-$color-gradient2-from:        #ffda44;
-$color-gradient2-to:          darken($color-gradient2-from, 15%);
-$color-highlight-box:         #fff9e1;
+$color-accent-gradient-from:  #ffda44;
+$color-accent-gradient-to:    darken($color-accent-gradient-from, 15%);
+$color-highlight-box:         tint($color-accent-gradient-from, 84%);
+$color-strong-highlight-box:  tint($color-accent-gradient-from, 36%);
 
 // alert colours
 
 $color-success-text:          #238c23;
 $color-success-background:    #dff0d8;
 $color-success-border:        darken($color-success-background, 20%);
-$color-warning-text:          #cb8f02;
-$color-warning-background:    #fff6d3;
+$color-warning-text:          #cc8c00;
+$color-warning-background:    #f7eedb;
 $color-warning-border:        darken($color-warning-background, 20%);
 $color-error-text:            #9d261d;
 $color-error-background:      #f2dede;
