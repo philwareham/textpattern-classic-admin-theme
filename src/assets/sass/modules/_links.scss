@@ -48,10 +48,9 @@ a {
 
 .pophelp,
 .pophelpsubtle {
-    @include border-radius(50%);
-
     border: 1px solid;
     border-color: #dddddd #bbbbbb #bbbbbb #dddddd;
+    border-radius: 50%;
     padding: 0 0.5em;
     font-weight: normal;
 }
