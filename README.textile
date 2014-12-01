@@ -1,6 +1,6 @@
 h1. Classic admin-side theme for Textpattern CMS
 
-Classic admin-side theme for Textpattern CMS v4.6. *Currently under development.*
+Classic admin-side theme for Textpattern CMS v4.6 - built with Sass and Compass. *Currently under development.*
 
 h2. Requirements
 
