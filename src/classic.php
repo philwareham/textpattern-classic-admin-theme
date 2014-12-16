@@ -151,12 +151,12 @@ class classic_theme extends theme
         } else {
             $html = span(
                 gTxt($thing[0]).
-                sp.href('&#215;', '#close', ' class="close" role="button" title="'.gTxt('close').'" aria-label="'.gTxt('close').'"')
-            , array(
-                'class' => $class,
-                'id'    => 'message',
-                'role'  => 'alert',
-            ));
+                sp.href('&#215;', '#close', ' class="close" role="button" title="'.gTxt('close').'" aria-label="'.gTxt('close').'"'), array(
+                    'class' => $class,
+                    'id'    => 'message',
+                    'role'  => 'alert',
+                )
+            );
 
             // Try to inject $html into the message pane no matter when _announce()'s output is printed.
             $js = escape_js($html);
