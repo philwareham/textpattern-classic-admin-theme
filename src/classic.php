@@ -96,7 +96,11 @@ class classic_theme extends theme
     {
         global $txp_user;
 
-        $out[] = href('Textpattern CMS', 'http://textpattern.com', ' title="'.gTxt('go_txp_com').'" rel="external" target="_blank"').
+        $out[] = href('Textpattern CMS', 'http://textpattern.com', array(
+                'rel'    => 'external',
+                'target' => '_blank',
+                'title'  => gTxt('go_txp_com'),
+            )).
             n.span('&#183;', array('role' => 'separator')).
             n.txp_version;
 
