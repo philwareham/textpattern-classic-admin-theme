@@ -42,6 +42,9 @@ module.exports = function (grunt)
         // Minified versions of CSS files within `dist/classic/assets/css/`.
         cssmin: {
             main: {
+                options: {
+                    rebase: false
+                },
                 expand: true,
                 cwd: 'dist/classic/assets/css/',
                 src: ['*.css', '!*.min.css'],
