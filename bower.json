@@ -2,6 +2,6 @@
   "name": "txp-classic-admin-theme",
   "directory": "bower_components",
   "dependencies": {
-    "google-code-prettify": "1.0.3"
+    "google-code-prettify": "1.0.4"
   }
 }
