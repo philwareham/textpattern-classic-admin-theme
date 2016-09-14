@@ -1,13 +1,3 @@
-// import all Compass core mixins
-@import "compass";
-
-// import Singularity.gs
-@import "singularitygs";
-
-// import Toolkit
-@import "toolkit";
-
-
 // higher resolution background images for high resolution displays
 
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
@@ -15,26 +5,30 @@
     $hdfilename: $hdfile + "@2x." + $hdtype;
     background-image: url("../img/" + $filename);
     background-size: $hdwidth $hdheight;
-    @media (min-resolution: 1.25dppx),
-        (min-resolution: 120dpi) {
-        background-image: url("../img/" + $hdfilename) !important;
-    }
+    @media (min-resolution: 1.25dppx), (min-resolution: 120dpi) {background-image: url("../img/" + $hdfilename);}
 }
 
 // standard gradients
 
 @mixin gradient-linear($color-gradient-from, $color-gradient-to) {
-    background-color: $color-gradient-from;
-    @include background-image(linear-gradient($color-gradient-from, $color-gradient-to));
+    background-color: $color-gradient-to;
+    @if $color-gradient-from != $color-gradient-to { // only render gradient if colours are not equal
+        background-image: linear-gradient($color-gradient-from, $color-gradient-to);
+    }
 }
+
 @mixin gradient-radial($color-gradient-from, $color-gradient-to) {
-    background-color: $color-gradient-from;
-    @include background-image(radial-gradient($color-gradient-from, $color-gradient-to));
+    background-color: $color-gradient-to;
+    @if $color-gradient-from != $color-gradient-to { // only render gradient if colours are not equal
+        background-image: radial-gradient($color-gradient-from, $color-gradient-to);
+    }
 }
 
-// touch actions
+// hide text
 
-@mixin touch-action($taction: none) {
-    -ms-touch-action: $taction;
-        touch-action: $taction;
+@mixin hide-text {
+    text-indent: 110%;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
 }
