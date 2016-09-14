@@ -13,7 +13,7 @@ module.exports = function (grunt)
             src: {
                 dir: 'src/',
                 sass: 'src/assets/sass/',
-                img: 'src/assets/img-global/',
+                img: 'src/assets/img/',
                 js: 'src/assets/js/'
             },
             docs: {
