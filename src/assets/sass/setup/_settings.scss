@@ -1,37 +1,27 @@
-// set Compass minimum browser support and caniuse thresholds
-
-$graceful-usage-threshold:     1;
-$critical-usage-threshold:     0.1;
-$supported-browsers:           ("chrome", "firefox", "ie", "safari");
-$browser-minimum-versions:     ("chrome": "30", "firefox": "24", "ie": "8", "safari": "5");
-$debug-browser-support:        false; // set to `true` to see debug comments
-
-// use the Kellum method for hiding text
-// https://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
-
-$hide-text-direction:         right;
-
 // font families
 
-$font-serif:                  Cambria, Georgia, serif;
-$font-sans-serif:             "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-$font-mono:                   Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+$font-serif:                 Cambria, Georgia, serif;
+$font-sans-serif:            "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$font-form:                  Helvetica, Arial, sans-serif !default;
+$font-code:                  Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
 
 // typography grid
 
-$base-font-size:              12px;
-$base-line-height:            18px;
+$base-font-size:              12px !default;
+$base-line-height:            18px !default;
+$small-font-size:             10px !default;
+$small-line-height:           15px !default;
 
 // layout grid (not responsive)
 
-$container-max-width:         124em; // 1488px / 12px
-$grid-gutter:                 1em; // 12px
-$standard-column:             44em; // 528px / 12px
-$text-column:                 62em; // 744px / 12px
+$container-max-width:        124em !default; // 1488px / 12px
+$grid-gutter:                1em !default; // 12px
+$standard-column:            44em !default; // 528px / 12px
+$text-column:                62em !default; // 744px / 12px
 
 // borders
 
-$default-border-radius:       0.5em;
+$border-radius:              0.5em !default;
 
 // shadows
 
