@@ -4,7 +4,7 @@
  * Textpattern Content Management System
  * http://textpattern.com
  *
- * Copyright (C) 2014 The Textpattern Development Team
+ * Copyright (C) 2016 The Textpattern Development Team
  *
  * This file is part of Textpattern.
  *
@@ -25,18 +25,41 @@ if (!defined('txpinterface')) {
     die('txpinterface is undefined.');
 }
 
-class classic_theme extends theme
+class classic_theme extends \Textpattern\Admin\Theme
 {
     function html_head()
     {
-        $out[] = '<link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui.min.css">';
-        $out[] = '<link rel="stylesheet" href="'.$this->url.'textpattern.min.css">';
+        $cssPath = 'assets'.DS.'css';
+        $jsPath = 'assets'.DS.'js';
+
+        $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/textpattern.min.css">';
+
+        // Custom CSS (see theme README for usage instructions).
+        if (defined('admin_custom_css')) {
+            $custom_css = admin_custom_css;
+        } else {
+            $custom_css = 'custom.css';
+        }
+
+        if (file_exists(txpath.DS.THEME.$this->name.DS.$cssPath.DS.$custom_css)) {
+            $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/'.$custom_css.'">';
+        }
+
+        $out[] = '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">';
         $out[] = '<meta name="generator" content="Textpattern CMS">';
-        $out[] = '<script src="vendors/modernizr/modernizr/modernizr.js"></script>';
-        $out[] = '<!--[if lt IE 9]>';
-        $out[] = '<link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui-ie8.min.css">';
-        $out[] = '<link rel="stylesheet" href="'.$this->url.'ie8.min.css">';
-        $out[] = '<![endif]-->'.n;
+        $out[] = '<meta name="application-name" content="'.htmlspecialchars($GLOBALS['prefs']['sitename']).'">';
+        $out[] = '<script src="'.$this->url.'assets/js/main.min.js"></script>'.n;
+
+        // Custom JavaScript (see theme README for usage instructions).
+        if (defined('admin_custom_js')) {
+            $custom_js = admin_custom_js;
+        } else {
+            $custom_js = 'custom.js';
+        }
+
+        if (file_exists(txpath.DS.THEME.$this->name.DS.$jsPath.DS.$custom_js)) {
+            $out[] = '<script src="'.$this->url.'assets/js/'.$custom_js.'"></script>'.n;
+        }
 
         return join(n, $out);
     }
@@ -99,7 +122,6 @@ class classic_theme extends theme
         $out[] = href('Textpattern CMS', 'http://textpattern.com', array(
                 'rel'    => 'external',
                 'target' => '_blank',
-                'title'  => gTxt('go_txp_com'),
             )).
             n.span('&#183;', array('role' => 'separator')).
             n.txp_version;
@@ -128,13 +150,12 @@ class classic_theme extends theme
         // $thing[0]: message text.
         // $thing[1]: message type, defaults to "success" unless empty or a different flag is set.
 
-        if (!is_array($thing) || !isset($thing[1])) {
-            $thing = array($thing, 0);
+        if ($thing === '') {
+            return '';
         }
 
-        // Still nothing to say?
-        if (trim($thing[0]) === '') {
-            return '';
+        if (!is_array($thing) || !isset($thing[1])) {
+            $thing = array($thing, 0);
         }
 
         switch ($thing[1]) {
@@ -159,13 +180,15 @@ class classic_theme extends theme
                     'class' => $class,
                     'id'    => 'message',
                     'role'  => 'alert',
+                    'aria-live' => 'assertive',
                 )
             );
 
             // Try to inject $html into the message pane no matter when _announce()'s output is printed.
             $js = escape_js($html);
             $js = <<< EOS
-                $(document).ready(function () {
+                $(document).ready(function ()
+                {
                     $("#messagepane").html("{$js}");
                     $('#message.success, #message.warning, #message.error').fadeOut('fast').fadeIn('fast');
                 });
@@ -184,11 +207,12 @@ EOS;
         global $prefs;
 
         return array(
-            'author'      => 'Team Textpattern',
-            'author_uri'  => 'http://textpattern.com/',
-            'version'     => $prefs['version'],
-            'description' => 'Textpattern Classic Theme',
-            'help'        => 'http://textpattern.com/admin-theme-help',
+            'title'       => 'Classic',
+            'description' => 'Textpattern Classic admin theme',
+            'version'     => '4.6.1-dev',
+            'author'      => 'Phil Wareham',
+            'author_uri'  => 'https://github.com/philwareham',
+            'help'        => 'https://github.com/philwareham/textpattern-classic-admin-theme',
         );
     }
 }
