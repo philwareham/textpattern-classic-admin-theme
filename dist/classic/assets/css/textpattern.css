@@ -179,6 +179,100 @@ html[lang="zh-tw"] {
   font-family: PMingLiU, sans-serif;
 }
 
+/* Embedded content
+   ========================================================================== */
+/**
+ * Make embedded elements responsive.
+ */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Images.
+ *
+ * 1. Remove the gap between images and the bottom of their containers.
+ *
+ * Image alignment (compatible with Textile markup syntax).
+ *
+ * Example HTML:
+ *
+ * <img class="align-left">
+ * <img class="align-right">
+ * <img class="align-center">
+ */
+img {
+  /* 1 */
+  vertical-align: middle;
+}
+
+img.align-left {
+  margin: 1em 1em 1em 0;
+  float: left;
+}
+
+img.align-right {
+  margin: 1em 0 1em 1em;
+  float: right;
+}
+
+img.align-center {
+  display: block;
+  margin: 1em auto;
+}
+
+/**
+ * Swap image alignment right/left positions in RTL languages.
+ */
+[dir="rtl"] img.align-left {
+  margin: 1em 0 1em 1em;
+  float: right;
+}
+
+[dir="rtl"] img.align-right {
+  margin: 1em 1em 1em 0;
+  float: left;
+}
+
+/**
+ * Address margin not present in Safari.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/**
+ * Content images and content images with links.
+ *
+ * Example HTML:
+ *
+ * <a>
+ *     <img class="content-image">
+ * </a>
+ */
+.content-image {
+  border: solid 1px #cccccc;
+  padding: 4px;
+  background: #ffffff;
+}
+
+a:hover .content-image {
+  border-color: #b16f2e;
+}
+
+a:focus .content-image {
+  border-color: #5b9dd9;
+}
+
 /* Code highlighting (via Prism.js)
    ========================================================================== */
 code[class*="language-"],
