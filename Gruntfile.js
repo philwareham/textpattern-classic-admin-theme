@@ -59,7 +59,7 @@ module.exports = function (grunt)
                         cwd: '<%= paths.src.img %>',
                         src: '**',
                         dest: '<%= paths.dest.img %>'
-                    }
+                    },
                     {'<%= paths.dest.css %>custom-example.css': '<%= paths.src.sass %>custom-example.css'}
                 ]
             }
