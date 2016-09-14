@@ -88,8 +88,8 @@ svg:not(:root) {
  */
 
 .content-image {
-    border: solid 1px $color-border;
     padding: 4px;
+    border: solid 1px $color-border;
     background: $color-background;
 
     a:hover & {

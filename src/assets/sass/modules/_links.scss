@@ -49,10 +49,10 @@ a {
 
 .pophelp,
 .pophelpsubtle {
-    border: 1px solid;
-    border-color: #dddddd #bbbbbb #bbbbbb #dddddd;
-    border-radius: 50%;
     padding: 0 0.5em;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: #dddddd #bbbbbb #bbbbbb #dddddd;
     font-weight: normal;
 
     &:focus {
