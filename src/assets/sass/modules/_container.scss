@@ -1,0 +1,43 @@
+/* Container
+   ========================================================================== */
+
+/**
+ * 1. Make body position relative so subsequent items can be positioned
+ *    absolutely if desired.
+ * 2. Remove default margin.
+ */
+
+body {
+    display: flex;
+    /* 1 */
+    position: relative;
+    flex-direction: column;
+    min-height: 100vh;
+    /* 2 */
+    margin: 0;
+    padding: 4em 2.75% 0;
+    background: $color-background;
+    color: $color-text;
+    box-sizing: border-box;
+}
+
+/**
+ * Main content area.
+ *
+ * Example HTML:
+ *
+ * <body>
+ *     <header class="txp-header"></header>
+ *     <main class="txp-body">
+ *         Content
+ *     </main>
+ *     <footer class="txp-footer"></footer>
+ * </body>
+ */
+
+.txp-body {
+    flex-grow: 1;
+    width: 100%;
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
