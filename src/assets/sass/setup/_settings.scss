@@ -1,21 +1,20 @@
 // font families
 
-$font-serif:                 Cambria, Georgia, serif;
-$font-sans-serif:            "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$font-heading:               Cambria, Georgia, serif;
+$font-body:                  "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 $font-form:                  Helvetica, Arial, sans-serif !default;
 $font-code:                  Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
 
 // typography grid
 
-$base-font-size:              12px !default;
-$base-line-height:            18px !default;
-$small-font-size:             10px !default;
-$small-line-height:           15px !default;
+$base-font-size:             12px !default;
+$base-line-height:           18px !default;
+$small-font-size:            10px !default;
+$small-line-height:          15px !default;
 
 // layout grid (not responsive)
 
 $container-max-width:        124em !default; // 1488px / 12px
-$grid-gutter:                1em !default; // 12px
 $standard-column:            44em !default; // 528px / 12px
 $text-column:                62em !default; // 744px / 12px
 

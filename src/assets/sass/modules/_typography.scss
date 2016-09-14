@@ -8,7 +8,7 @@
  */
 
 body {
-    font-family: $font-sans-serif;
+    font-family: $font-body;
 }
 
 /**
@@ -24,7 +24,7 @@ body {
  */
 
 h1 {
-    font-family: $font-serif;
+    font-family: $font-heading;
     font-size: 2em; // 24px / 12px
     font-weight: normal;
     line-height: 1.25;
@@ -49,7 +49,7 @@ h1 {
 
 h2 {
     font-size: 1.5em; // 18px / 12px
-    font-family: $font-serif;
+    font-family: $font-heading;
     font-weight: normal;
     line-height: 1.3333333;
     margin: 0 0 0.66667em 0;
@@ -64,7 +64,7 @@ h2 {
  */
 
 h3 {
-    font-family: $font-serif;
+    font-family: $font-heading;
     font-size: 1.25em; // 15px / 12px
     line-height: 1.4;
     margin: 0.66667em 0;
