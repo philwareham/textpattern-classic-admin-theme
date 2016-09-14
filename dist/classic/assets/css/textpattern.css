@@ -1,0 +1,447 @@
+/* ==========================================================================
+   Global
+   ========================================================================== */
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in older browsers.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 10.
+ * Hide the `template` element in IE 10/11 and Safari.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/**
+ * Remove tap delay in modern browsers.
+ */
+a,
+input,
+button {
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+/* Float clearing
+   ========================================================================== */
+/**
+ * Clearfix using the 'A new micro clearfix hack' method.
+ *
+ * More info: http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/**
+ * Basic float clearer.
+ */
+.clear {
+  clear: both;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove potential background colour from active links.
+ * 2. Specify link colour.
+ * 3. Remove default underline style from non-hover state links.
+ * 4. Interrupt the decoration line to let the shape of the text show through
+ *    in supported browsers.
+ * 5. Expanded CSS level 3 `text-decoration` property in supported browsers,
+ *    older browsers will fallback to legacy `text-decoration` property.
+ * 6. Hide `.busy` class links when processing AJAX.
+ */
+a {
+  /* 1 */
+  background: transparent;
+  /* 2 */
+  color: #996633;
+  /* 3 */
+  text-decoration: none;
+  /* 4 */
+  -webkit-text-decoration-skip: ink edges;
+          text-decoration-skip: ink edges;
+}
+
+a:hover, a:active {
+  outline-width: 0;
+  color: #b16f2e;
+  text-decoration: underline;
+  text-decoration: #996633 solid underline;
+  /* 5 */
+}
+
+a:focus {
+  outline: thin solid #5b9dd9;
+}
+
+a.busy {
+  visibility: hidden;
+  /* 6 */
+}
+
+/**
+ * Additional styling for popup help links.
+ *
+ * Example HTML:
+ *
+ * <a class="pophelp">i</a>
+ */
+.pophelp,
+.pophelpsubtle {
+  border: 1px solid;
+  border-color: #dddddd #bbbbbb #bbbbbb #dddddd;
+  border-radius: 50%;
+  padding: 0 0.5em;
+  font-weight: normal;
+}
+
+.pophelp:focus,
+.pophelpsubtle:focus {
+  border-color: #5b9dd9;
+  outline-width: 0;
+}
+
+/**
+ * Additional styling for popup help links in table headers.
+ */
+.txp-list thead th a.pophelp {
+  display: inline;
+  color: #996633;
+}
+
+.txp-list thead th a.pophelp:hover {
+  color: #b16f2e;
+  text-decoration: underline;
+}
+
+.txp-list thead th a.pophelp:focus {
+  border-color: #5b9dd9;
+}
+
+/**
+ * Reduce risk of render glitches in links on RTL languages.
+ */
+[dir="rtl"] a {
+  unicode-bidi: embed;
+}
+
+/* Support for non-latin languages
+   ========================================================================== */
+/**
+ * Preferred font for Japanese language.
+ */
+html[lang="ja-jp"] {
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+}
+
+/**
+ * Preferred font for Korean language.
+ */
+html[lang="ko-kr"] {
+  font-family: GulimChe, Gulim, sans-serif;
+}
+
+/**
+ * Preferred font for Chinese (PRC) language.
+ */
+html[lang="zh-cn"] {
+  font-family: SimHei, sans-serif;
+}
+
+/**
+ * Preferred font for Chinese (Taiwan) language.
+ */
+html[lang="zh-tw"] {
+  font-family: PMingLiU, sans-serif;
+}
+
+/* Code highlighting (via Prism.js)
+   ========================================================================== */
+code[class*="language-"],
+pre[class*="language-"] {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+
+/**
+ * Inline code.
+ */
+:not(pre) > code[class*="language-"] {
+  white-space: normal;
+}
+
+/**
+ * Syntax colours/styles.
+ */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #708090;
+}
+
+.token.punctuation {
+  color: #999999;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #990055;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #669900;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: rgba(255, 255, 255, 0.5);
+  color: #a67f59;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #0077aa;
+}
+
+.token.function {
+  color: #dd4a68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #ee9900;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* ==========================================================================
+   Layout modules
+   ========================================================================== */
+/* Container
+   ========================================================================== */
+/**
+ * 1. Make body position relative so subsequent items can be positioned
+ *    absolutely if desired.
+ * 2. Remove default margin.
+ */
+body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /* 1 */
+  position: relative;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  /* 2 */
+  margin: 0;
+  padding: 4em 2.75% 0;
+  background: #ffffff;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+/**
+ * Main content area.
+ *
+ * Example HTML:
+ *
+ * <body>
+ *     <header class="txp-header"></header>
+ *     <main class="txp-body">
+ *         Content
+ *     </main>
+ *     <footer class="txp-footer"></footer>
+ * </body>
+ */
+.txp-body {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  max-width: 124em;
+  margin: 0 auto;
+}
+
+/* Layout grid
+   ========================================================================== */
+/**
+ * Flex container.
+ */
+.txp-layout {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 0 -1em;
+}
+
+.txp-layout > * {
+  min-width: 0;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+/**
+ * Generate sizes all for grid column cells.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-layout-1col"></div>
+ *
+ * <div class="txp-layout-2col">
+ * <div class="txp-layout-2col">
+ *
+ * <div class="txp-layout-4col-3span"></div>
+ * <div class="txp-layout-4col"></div>
+ */
+.txp-layout-1col {
+  width: 100%;
+}
+
+.txp-layout-4col-3span {
+  width: 75%;
+}
+
+.txp-layout-2col,
+.txp-layout-4col-2span {
+  width: 50%;
+}
+
+.txp-layout-4col,
+.txp-layout-4col-alt {
+  width: 25%;
+}
+
+/**
+ * Text columns (fixed proportion cell)
+ *
+ * Example HTML:
+ *
+ * <div class="txp-layout-textbox">
+ */
+.txp-layout-textbox {
+  max-width: 62em;
+  margin: 0 auto;
+}
+
+/* Inline grids
+   ========================================================================== */
+/**
+ * Inline grid type layouts.
+ *
+ * You should define a specific width for each .txp-grid-cell, either as a class
+ * attribute or style attribute, otherwise the cell width stretches to the
+ * content within it.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-grid">
+ *     <div class="txp-grid-cell" style="width:30em;">
+ *         Content
+ *     </div>
+ *     <div class="txp-grid-cell" style="width:15em;">
+ *         Content
+ *     </div>
+ *     <div class="txp-grid-cell" style="width:15em;">
+ *         Content
+ *     </div>
+ * </div>
+ */
+.txp-grid {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: -2px;
+}
+
+.txp-grid-cell {
+  margin: 2px;
+  padding: 0 1em;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   jQuery UI core
+   ========================================================================== */
+/* ==========================================================================
+   jQuery UI icons
+   ========================================================================== */
+/* ==========================================================================
+   jQuery UI interactions
+   ========================================================================== */
+/* ==========================================================================
+   jQuery UI widgets
+   ========================================================================== */
