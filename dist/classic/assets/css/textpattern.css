@@ -149,6 +149,253 @@ a.busy {
   unicode-bidi: embed;
 }
 
+/* Typography
+   ========================================================================== */
+/**
+ * Establish baseline.
+ */
+html {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/**
+ * Global font and colour.
+ */
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+/**
+ * `h1` headings.
+ *
+ * Example HTML:
+ *
+ * <h1>Heading</h1>
+ * <h1>
+ *     Heading
+ *     <a class="pophelp">i</a>
+ * </h1>
+ */
+h1 {
+  margin: 0 0 0.5em;
+  font-family: Cambria, Georgia, serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+h1 .pophelp {
+  font-size: 12px;
+}
+
+/**
+ * Omit margin below heading on image edit, pages, forms, styles, prefs panels.
+ */
+#page-image .txp-heading,
+#page-form .txp-heading,
+#page-page .txp-heading,
+#page-css .txp-heading,
+#page-prefs .txp-heading {
+  margin-bottom: 0;
+}
+
+/**
+ * `h2` headings.
+ *
+ * Example HTML:
+ *
+ * <h2>Heading</h2>
+ * <h2>
+ *     Heading
+ *     <a class="pophelp">i</a>
+ * </h2>
+ */
+h2 {
+  margin: 0 0 0.66667em;
+  font-family: Cambria, Georgia, serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.3333333;
+}
+
+h2 .pophelp {
+  font-size: 12px;
+}
+
+/**
+ * `h3` headings.
+ */
+h3 {
+  margin: 0.8em 0;
+  font-family: Cambria, Georgia, serif;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+h3 a {
+  font-weight: bold;
+}
+
+/**
+ * Normalize `h4`, `h5` and `h6` headings (these are effectively unused).
+ */
+h4,
+h5,
+h6 {
+  margin: 1em 0;
+  font-size: 12px;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Add vertical margin to addresses.
+ */
+address {
+  margin: 1em 0;
+}
+
+/**
+ * Additional styling for blockquotes.
+ */
+blockquote {
+  margin: 1em 0;
+  padding: 0 0 0 1em;
+  border-left: 3px solid #cccccc;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+abbr[title],
+dfn[title] {
+  text-decoration: dotted underline;
+  cursor: help;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark,
+var {
+  padding: 0 0.2em;
+  background: #e3edfc;
+  color: #333333;
+}
+
+/**
+ * Harmonize size and style of computer text.
+ */
+pre,
+code,
+kbd,
+samp,
+.code {
+  font-family: Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+kbd,
+samp {
+  padding: 0 0.2em;
+  border: 1px solid #e3e3e3;
+  background: #f7f7f7;
+}
+
+/**
+ * Additional stylng for preformatted text/code.
+ *
+ * 1. Don't wrap long words.
+ * 2. Contain overflow in all browsers.
+ * 3. Set tab size to 4 spaces.
+ */
+pre {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #e3e3e3;
+  background: #f7f7f7;
+  /* 1 */
+  word-wrap: normal;
+  /* 2 */
+  overflow-x: auto;
+  /* 3 */
+  -moz-tab-size: 4;
+       tab-size: 4;
+}
+
+/**
+ * Override `code` styling for code display within preformatted text areas and
+ * form text areas.
+ */
+pre code,
+.code code,
+code.body,
+code.excerpt {
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup.footnote,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.33333333333333em;
+}
+
+/**
+ * Harmonize size and style of small text.
+ */
+small,
+figcaption,
+tfoot,
+.footnote,
+.txp-form-field-instructions {
+  font-size: 10px;
+  line-height: 15px;
+}
+
+figcaption,
+tfoot,
+.footnote,
+.txp-form-field-instructions {
+  color: #777777;
+}
+
+figcaption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
 /* Support for non-latin languages
    ========================================================================== */
 /**

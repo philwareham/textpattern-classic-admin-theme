@@ -1,7 +1,14 @@
 /* Typography
    ========================================================================== */
 
-@include establish-baseline;
+/**
+ * Establish baseline.
+ */
+
+html {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
 
 /**
  * Global font and colour.
@@ -24,14 +31,28 @@ body {
  */
 
 h1 {
+    margin: 0 0 0.5em;
     font-family: $font-heading;
-    font-size: 2em; // 24px / 12px
+    font-size: 24px;
     font-weight: normal;
     line-height: 1.25;
-    margin: 0 0 0.5em 0;
 
     .pophelp {
-        font-size: 0.5em;
+        font-size: $base-font-size;
+    }
+}
+
+/**
+ * Omit margin below heading on image edit, pages, forms, styles, prefs panels.
+ */
+
+#page-image,
+#page-form,
+#page-page,
+#page-css,
+#page-prefs {
+    .txp-heading {
+        margin-bottom: 0;
     }
 }
 
@@ -48,14 +69,14 @@ h1 {
  */
 
 h2 {
-    font-size: 1.5em; // 18px / 12px
+    margin: 0 0 0.66667em; // 12px / 18px
     font-family: $font-heading;
+    font-size: 18px;
     font-weight: normal;
     line-height: 1.3333333;
-    margin: 0 0 0.66667em 0;
 
     .pophelp {
-        font-size: 0.6666667em;
+        font-size: $base-font-size;
     }
 }
 
@@ -64,10 +85,10 @@ h2 {
  */
 
 h3 {
+    margin: 0.8em 0; // 12px / 15px
     font-family: $font-heading;
-    font-size: 1.25em; // 15px / 12px
+    font-size: 15px;
     line-height: 1.4;
-    margin: 0.66667em 0;
 
     a {
         font-weight: bold;
@@ -75,18 +96,18 @@ h3 {
 }
 
 /**
- * Normalise `h4`, `h5` and `h6` headings (these are effectively unused).
+ * Normalize `h4`, `h5` and `h6` headings (these are effectively unused).
  */
 
 h4,
 h5,
 h6 {
-    font-size: 1em; // 12px
     margin: 1em 0;
+    font-size: $base-font-size;
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ * Address style set to `bolder` in Firefox 4+, Safari and Chrome.
  */
 
 b,
@@ -108,25 +129,17 @@ address {
 
 blockquote {
     margin: 1em 0;
-    border-left: 3px solid $color-border;
     padding: 0 0 0 1em;
+    border-left: 3px solid $color-border;
 }
 
 /**
  * Address styling not present in Safari and Chrome.
  */
 
-dfn {
-    font-style: italic;
-}
-
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-
 abbr[title],
 dfn[title] {
-    border-bottom: 1px dotted;
+    text-decoration: dotted underline;
     cursor: help;
 }
 
@@ -137,12 +150,12 @@ dfn[title] {
 mark,
 var {
     padding: 0 0.2em;
-    color: $color-text;
     background: $color-selected;
+    color: $color-text;
 }
 
 /**
- * Harmonise size and style of computer text.
+ * Harmonize size and style of computer text.
  */
 
 pre,
@@ -150,14 +163,14 @@ code,
 kbd,
 samp,
 .code {
-    font-family: $font-mono;
+    font-family: $font-code;
 }
 
 code,
 kbd,
 samp {
-    border: 1px solid lighten($color-border, 9%);
     padding: 0 0.2em;
+    border: 1px solid lighten($color-border, 9%);
     background: $color-background-box;
 }
 
@@ -170,25 +183,16 @@ samp {
  */
 
 pre {
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid lighten($color-border, 9%);
+    background: $color-background-box;
     /* 1 */
     word-wrap: normal;
     /* 2 */
     overflow-x: auto;
-    margin: 1em 0;
-    border: 1px solid lighten($color-border, 9%);
-    padding: 1em;
-    background: $color-background-box;
     /* 3 */
     tab-size: 4;
-}
-
-/**
- * Don't wrap lines of `textarea` code onto new lines.
- */
-
-textarea.code {
-    word-wrap: normal;
-    white-space: pre;
 }
 
 /**
@@ -200,9 +204,16 @@ pre code,
 .code code,
 code.body,
 code.excerpt {
-    border: 0;
     padding: 0;
+    border: 0;
     background: none;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    direction: ltr;
+    hyphens: none;
 }
 
 /**
@@ -210,11 +221,12 @@ code.excerpt {
  */
 
 sub,
-sup.footnote, // override Textile class
+// override Textile class
+sup.footnote,
 sup {
-    @include adjust-font-size-to(9px, 0);
-
     position: relative;
+    font-size: 0.75em; // 9px / 12px
+    line-height: 0;
     vertical-align: baseline;
 }
 
@@ -227,7 +239,7 @@ sub {
 }
 
 /**
- * Harmonise size and style of small text.
+ * Harmonize size and style of small text.
  */
 
 small,
@@ -235,7 +247,8 @@ figcaption,
 tfoot,
 .footnote,
 .txp-form-field-instructions {
-    @include adjust-font-size-to(10px, 0.83333333333333); // 15px line height
+    font-size: $small-font-size;
+    line-height: $small-line-height;
 }
 
 figcaption,
