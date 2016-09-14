@@ -2,39 +2,40 @@
    ========================================================================== */
 
 /**
- * 1. Remove default underline style from non-hover state links.
+ * 1. Remove potential background colour from active links.
  * 2. Specify link colour.
- * 3. Remove the gray background color from active links in IE 10.
+ * 3. Remove default underline style from non-hover state links.
+ * 4. Interrupt the decoration line to let the shape of the text show through
+ *    in supported browsers.
+ * 5. Expanded CSS level 3 `text-decoration` property in supported browsers,
+ *    older browsers will fallback to legacy `text-decoration` property.
+ * 6. Hide `.busy` class links when processing AJAX.
  */
 
 a {
     /* 1 */
-    text-decoration: none;
+    background: transparent;
     /* 2 */
     color: $color-link;
     /* 3 */
-    background: transparent;
-}
+    text-decoration: none;
+    /* 4 */
+    text-decoration-skip: ink edges;
 
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- * Specify link state colours.
- */
-
-a {
     &:hover,
     &:active {
-        outline: 0;
-        text-decoration: underline;
+        outline-width: 0;
         color: $color-link-hover;
+        text-decoration: underline;
+        text-decoration: $color-link solid underline; /* 5 */
     }
 
     &:focus {
-        outline: thin dotted $color-link-focus;
+        outline: thin solid $color-link-focus;
     }
 
     &.busy {
-        visibility: hidden;
+        visibility: hidden; /* 6 */
     }
 }
 
@@ -53,6 +54,11 @@ a {
     border-radius: 50%;
     padding: 0 0.5em;
     font-weight: normal;
+
+    &:focus {
+        border-color: $color-link-focus;
+        outline-width: 0;
+    }
 }
 
 /**
@@ -66,6 +72,10 @@ a {
     &:hover {
         color: $color-link-hover;
         text-decoration: underline;
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
     }
 }
 
