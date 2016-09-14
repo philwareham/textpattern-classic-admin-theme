@@ -1,17 +1,55 @@
 {
-  "name": "txp-classic-admin-theme",
-  "version": "0.0.0",
+  "name": "textpattern-hive-admin-theme",
+  "description": "The classic admin theme that ships as standard with Textpattern CMS.",
+  "version": "4.6.1-dev",
+  "keywords": [
+    "admin",
+    "theme",
+    "back-end",
+    "textpattern",
+    "cms",
+    "css",
+    "sass",
+    "web"
+  ],
+  "author": {
+    "name": "Phil Wareham",
+    "url": "https://twitter.com/philwareham"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philwareham/textpattern-classic-admin-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/philwareham/textpattern-classic-admin-theme/issues"
+  },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-cli": "~0.1",
-    "grunt-contrib-compass": "1.0.3",
-    "grunt-contrib-copy": "0.8.0",
-    "grunt-contrib-cssmin": "0.12.2",
-    "grunt-contrib-jshint": "0.11.1",
-    "grunt-contrib-uglify": "0.9.1",
-    "grunt-contrib-watch": "0.6.1"
+    "autoprefixer": "6.4.1",
+    "eyeglass": "1.0.0",
+    "grunt": "~1.0",
+    "grunt-cli": "~1",
+    "grunt-concurrent": "2.3.1",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-cssmin": "1.0.2",
+    "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-uglify": "2.0.0",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-dev-update": "2.0.0",
+    "grunt-postcss": "0.8.0",
+    "grunt-sass": "1.2.1",
+    "grunt-sass-lint": "0.2.0",
+    "load-grunt-tasks": "~3.5",
+    "node-sass": "3.9.3",
+    "sass-lint": "1.9.1",
+    "uglify-save-license": "0.4.1"
+  },
+  "dependencies": {
+    "autosize": "3.0.17",
+    "prismjs": "1.5.1"
   },
   "scripts": {
     "test": "grunt travis --verbose"
-  }
+  },
+  "license": "GPL-2.0"
 }

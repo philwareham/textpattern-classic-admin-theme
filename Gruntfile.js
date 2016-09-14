@@ -2,60 +2,96 @@ module.exports = function (grunt)
 {
     'use strict';
 
-    // Load Grunt plugins.
-    grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    // Load all Grunt tasks.
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // Use 'config.rb' file to configure Compass.
-        compass: {
-            dev: {
-                options: {
-                    config: 'config.rb',
-                    force: true
-                }
+        // Set up paths.
+        paths: {
+            src: {
+                dir: 'src/',
+                sass: 'src/assets/sass/',
+                img: 'src/assets/img-global/',
+                js: 'src/assets/js/'
+            },
+            docs: {
+                css: 'docs/assets/css/',
+                js: 'docs/assets/js/'
+            },
+            dest: { // Classic Yellow theme
+                dir: 'dist/classic/',
+                css: 'dist/classic/assets/css/',
+                img: 'dist/classic/assets/img/',
+                js: 'dist/classic/assets/js/'
             }
+        },
+
+        // Clean distribution and temporary directories to start afresh.
+        clean: [
+            'dist/',
+            'docs/assets/css/'
+        ],
+
+        // Run some tasks in parallel to speed up the build process.
+        concurrent: {
+            dist: [
+                'css',
+                'uglify:dist',
+                'devUpdate'
+            ]
         },
 
         // Copy files from `src/` to `dist/classic/assets/`.
         copy: {
-            css: {
-                files: [
-                    {expand: true, cwd: 'tmp/assets/css/', src: ['**', '!design-patterns.css'], dest: 'dist/classic/assets/css/'},
-                    {expand: true, cwd: 'tmp/assets/css/', src: ['design-patterns.css'], dest: 'docs/assets/css/'}
-                ]
-            },
             dist: {
                 files: [
-                    {expand: true, cwd: 'src/', src: ['*'], dest: 'dist/classic/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/assets/img/', src: ['**'], dest: 'dist/classic/assets/img/'}
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.dir %>classic',
+                        src: '**',
+                        dest: '<%= paths.dest.dir %>',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.img %>',
+                        src: '**',
+                        dest: '<%= paths.dest.img %>'
+                    }
+                    {'<%= paths.dest.css %>custom-example.css': '<%= paths.src.sass %>custom-example.css'}
                 ]
             }
         },
 
-        // Minified versions of CSS files within `dist/classic/assets/css/`.
+        // Minified versions of CSS files.
         cssmin: {
+            dist: {
+                expand: true,
+                cwd: '<%= paths.dest.css %>',
+                src: '*.css',
+                dest: '<%= paths.dest.css %>',
+                ext: '.min.css'
+            }
+        },
+
+        // Report on any available updates for dependencies.
+        devUpdate: {
             main: {
                 options: {
-                    rebase: false
-                },
-                expand: true,
-                cwd: 'dist/classic/assets/css/',
-                src: ['*.css', '!*.min.css'],
-                dest: 'dist/classic/assets/css/',
-                ext: '.min.css'
+                    updateType: 'report',
+                    reportUpdated: false, // Don't report up-to-date packages.
+                    packages: {
+                        dependencies: true,
+                        devDependencies: true
+                    }
+                }
             }
         },
 
         // Check code quality of Gruntfile.js and theme-specific JavaScript using JSHint.
         jshint: {
-            files: ['Gruntfile.js', 'src/assets/js/*.js'],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -76,32 +112,92 @@ module.exports = function (grunt)
                 trailing: true,
                 browser: true,
                 globals: {
-                    jQuery: true,
+                    jQuery: false,
+                    $: false,
                     module: true,
-                    prettyPrint: true
+                    autosize: true,
+                    prettyPrint: true,
+                    require: true
                 }
+            },
+            files: [
+                'Gruntfile.js',
+                '<%= paths.src.js %>**/*.js'
+            ]
+        },
+
+        // Add vendor prefixed styles and other post-processing transformations.
+        postcss: {
+            options: {
+                processors: [
+                    require('autoprefixer')({
+                        browsers: [
+                            'last 3 versions',
+                            'not ie <= 11'
+                        ]
+                    })
+                ]
+            },
+            dist: {
+                files: [
+                    {'<%= paths.dest.css %>textpattern.css': '<%= paths.dest.css %>textpattern.css'},
+                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'}
+                ]
             }
         },
 
-        // Uglify and copy JavaScript files from `bower-components`.
+        // Sass configuration.
+        sass: {
+            options: require('eyeglass')({
+                outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
+                sourceMap: false
+            }),
+            dist: {
+                files: [
+                    {'<%= paths.dest.css %>textpattern.css': '<%= paths.src.sass %>default.scss'},
+                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
+                ]
+            }
+        },
+
+        // Validate Sass files via sass-lint.
+        sasslint: {
+            options: {
+                configFile: '.sass-lint.yml'
+            },
+            target: ['<%= paths.src.sass %>**/*.scss']
+        },
+
+        // Uglify and copy JavaScript files from `node_modules`.
         uglify: {
             dist: {
                 // Preserve all comments that start with a bang (!) or include a closure compiler style.
                 options: {
-                    mangle: false,
-                    preserveComments: 'some'
+                    preserveComments: require('uglify-save-license')
                 },
-
                 files: [
                     {
-                        'dist/classic/assets/js/main.js': ['src/assets/js/main.js'],
-                        'docs/assets/js/prettify/prettify.js': ['bower_components/google-code-prettify/src/prettify.js']
-                    },
+                        '<%= paths.dest.js %>main.js':
+                        [
+                            'node_modules/autosize/dist/autosize.js',
+                            '<%= paths.src.js %>main.js'
+                        ],
+                        '<%= paths.docs.js %>prism.js': [
+                            'node_modules/prismjs/prism.js',
+                            // Add any plugins
+                            'node_modules/prismjs/plugins/show-language/prism-show-language.js'
+                        ]
+                    }
+                ]
+            },
+            minify: {
+                files: [
                     {
                         expand: true,
-                        cwd: 'bower_components/google-code-prettify/src/',
-                        src: 'lang-*.js',
-                        dest: 'docs/assets/js/prettify/'
+                        cwd: '<%= paths.dest.js %>',
+                        src: ['*.js', '!*.min.js'],
+                        dest: '<%= paths.dest.js %>',
+                        ext: '.min.js'
                     }
                 ]
             }
@@ -110,12 +206,11 @@ module.exports = function (grunt)
         // Directories watched and tasks performed by invoking `grunt watch`.
         watch: {
             sass: {
-                files: 'src/assets/sass/**',
-                tasks: ['sass']
+                files: '<%= paths.src.sass %>**/*.scss',
+                tasks: 'css'
             },
-
             js: {
-                files: 'src/assets/js/*.js',
+                files: '<%= paths.src.js %>**/*.js',
                 tasks: ['jshint', 'copy', 'uglify']
             }
         }
@@ -123,9 +218,8 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:dist', 'uglify']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'copy', 'uglify:minify']);
+    grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'cssmin']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['compass', 'copy:css', 'cssmin']);
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('travis', ['jshint', 'compass']);
+    grunt.registerTask('travis', ['jshint', 'build']);
 };
