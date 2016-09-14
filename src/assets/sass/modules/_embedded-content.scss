@@ -12,18 +12,10 @@ video {
 }
 
 /**
+ * Images.
+ *
  * 1. Remove the gap between images and the bottom of their containers.
- * 2. Remove border when inside `a` element in IE 8-10.
- */
-
-img {
-    /* 1 */
-    vertical-align: middle;
-    /* 2 */
-    border: 0;
-}
-
-/**
+ *
  * Image alignment (compatible with Textile markup syntax).
  *
  * Example HTML:
@@ -34,14 +26,17 @@ img {
  */
 
 img {
+    /* 1 */
+    vertical-align: middle;
+
     &.align-left {
-        float: left;
         margin: 1em 1em 1em 0;
+        float: left;
     }
 
     &.align-right {
-        float: right;
         margin: 1em 0 1em 1em;
+        float: right;
     }
 
     &.align-center {
@@ -56,18 +51,18 @@ img {
 
 [dir="rtl"] img {
     &.align-left {
-        float: right;
         margin: 1em 0 1em 1em;
+        float: right;
     }
 
     &.align-right {
-        float: left;
         margin: 1em 1em 1em 0;
+        float: left;
     }
 }
 
 /**
- * Address margin not present in IE 8/9 and Safari.
+ * Address margin not present in Safari.
  */
 
 figure {
@@ -75,7 +70,7 @@ figure {
 }
 
 /**
- * Correct overflow not hidden in IE 9/10/11.
+ * Correct overflow not hidden in IE 11.
  */
 
 svg:not(:root) {
@@ -83,21 +78,7 @@ svg:not(:root) {
 }
 
 /**
- * Content images.
- *
- * Example HTML:
- *
- * <img class="content-image">
- */
-
-.content-image {
-    border: solid 1px $color-border;
-    padding: 4px;
-    background: #ffffff;
-}
-
-/**
- * Content images with links.
+ * Content images and content images with links.
  *
  * Example HTML:
  *
@@ -107,6 +88,10 @@ svg:not(:root) {
  */
 
 .content-image {
+    border: solid 1px $color-border;
+    padding: 4px;
+    background: $color-background;
+
     a:hover & {
         border-color: $color-link-hover;
     }
