@@ -112,7 +112,7 @@ a.busy {
  */
 .pophelp,
 .pophelpsubtle {
-  padding: 0 0.5em;
+  padding: 0 0.25em;
   border: 1px solid;
   border-radius: 50%;
   border-color: #dddddd #bbbbbb #bbbbbb #dddddd;
@@ -1035,6 +1035,77 @@ body {
   padding: 0 1em;
   border: 1px solid #cccccc;
   box-sizing: border-box;
+}
+
+/* Navigation
+   ========================================================================== */
+/**
+ * Hide the navigation menu toggle button on desktop layout.
+ *
+ * Example HTML:
+ *
+ * <button class="txp-nav-toggle">
+ */
+#navpop {
+  margin: 0.2em 2em;
+  float: right;
+}
+
+[dir="rtl"] #navpop {
+  float: left;
+}
+
+/**
+ * Hide the navigation menu toggle button on desktop layout.
+ *
+ * Example HTML:
+ *
+ * <button class="txp-nav-toggle">
+ */
+.nav-tabs {
+  text-align: center;
+}
+
+.nav-tabs ul {
+  margin: 0.5em 0 0;
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+  list-style: none;
+  box-shadow: inset 0 -0.25em 0.4em rgba(0, 0, 0, 0.15);
+}
+
+.nav-tabs li {
+  display: inline-block;
+}
+
+.nav-tabs a {
+  display: block;
+  position: relative;
+  bottom: -1px;
+  padding: 0.25em 1.5em;
+  border: 1px solid #dbdbdb;
+  border-top-left-radius: 0.75em 2em;
+  border-top-right-radius: 0.75em 2em;
+  border-bottom-color: #cccccc;
+  background-color: #fff8dd;
+  color: #333333;
+  text-decoration: none;
+  box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5), 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs a.tabup {
+  border-bottom-color: #ffffff;
+  background-color: #ffffff;
+  box-shadow: 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs a:hover {
+  background-color: #ffffff;
+}
+
+.nav-tabs a:focus {
+  border-color: #5b9dd9;
+  outline: none;
 }
 
 /* ==========================================================================
