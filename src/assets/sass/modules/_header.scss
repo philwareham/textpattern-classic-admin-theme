@@ -1,0 +1,34 @@
+/* Header
+   ========================================================================== */
+
+/**
+ * Header content area.
+ *
+ * Example HTML:
+ *
+ * TODO
+ */
+
+.txp-header {
+    min-width: 80em;
+    margin-bottom: 1.5em;
+}
+
+#masthead {
+    height: 2.5em;
+    border-top: 1px solid #f8c225;
+    border-bottom: 1px solid #d9a307;
+    background-image: linear-gradient(#ffda44, #f8c225);
+}
+
+#branding {
+    @include hide-text;
+
+    width: 6.75em; // 108px
+    height: 1.5em; // 24px
+    margin: 0;
+    background: url("../img/sprite.svg") no-repeat 0 0;
+    background-size: 11.25em 1.5em; // 180px 24px
+    font-size: 16px;
+    line-height: 1.5; // 24px
+}

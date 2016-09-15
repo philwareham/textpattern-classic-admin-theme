@@ -402,37 +402,6 @@ body {
 }
 
 
-/* Header
-   ========================================================================== */
-
-.txp-header {
-    min-width: 80em;
-    margin-bottom: 1.5em;
-}
-
-#masthead {
-    height: 2.5em;
-    border-top: 1px solid #f8c225;
-    border-bottom: 1px solid #d9a307;
-    background-color: #ffda44;
-    background-image: -webkit-linear-gradient(#ffda44, #f8c225);
-    background-image: -moz-linear-gradient(#ffda44, #f8c225);
-    background-image: -o-linear-gradient(#ffda44, #f8c225);
-    background-image: linear-gradient(#ffda44, #f8c225);
-}
-
-#branding {
-    font-size: 1em;
-    margin: 0 2em;
-    width: 9em;
-    height: 2.5em;
-    line-height: 2.5;
-    text-indent: -9999px;
-    background: url("img/textpattern.svg") no-repeat 0 50%;
-    background-size: 9em 2em;
-}
-
-
 /* Footer
    ========================================================================== */
 

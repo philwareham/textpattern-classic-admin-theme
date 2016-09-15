@@ -112,7 +112,7 @@ a.busy {
  */
 .pophelp,
 .pophelpsubtle {
-  padding: 0 0.25em;
+  padding: 0 0.41666666666667em;
   border: 1px solid;
   border-radius: 50%;
   border-color: #dddddd #bbbbbb #bbbbbb #dddddd;
@@ -1037,6 +1037,41 @@ body {
   box-sizing: border-box;
 }
 
+/* Header
+   ========================================================================== */
+/**
+ * Header content area.
+ *
+ * Example HTML:
+ *
+ * TODO
+ */
+.txp-header {
+  min-width: 80em;
+  margin-bottom: 1.5em;
+}
+
+#masthead {
+  height: 2.5em;
+  border-top: 1px solid #f8c225;
+  border-bottom: 1px solid #d9a307;
+  background-image: linear-gradient(#ffda44, #f8c225);
+}
+
+#branding {
+  text-indent: 110%;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 6.75em;
+  height: 1.5em;
+  margin: 0;
+  background: url("../img/sprite.svg") no-repeat 0 0;
+  background-size: 11.25em 1.5em;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 /* Navigation
    ========================================================================== */
 /**
@@ -1044,7 +1079,7 @@ body {
  *
  * Example HTML:
  *
- * <button class="txp-nav-toggle">
+ * TODO
  */
 #navpop {
   margin: 0.2em 2em;
@@ -1060,7 +1095,7 @@ body {
  *
  * Example HTML:
  *
- * <button class="txp-nav-toggle">
+ * TODO
  */
 .nav-tabs {
   text-align: center;
