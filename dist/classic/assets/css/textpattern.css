@@ -520,6 +520,148 @@ a:focus .content-image {
   border-color: #5b9dd9;
 }
 
+/* Messages
+   ========================================================================== */
+/**
+ * Alert labels.
+ *
+ * Example HTML:
+ *
+ * <span class="success">
+ * <span class="error">
+ * <strong class="success">
+ * <strong class="error">
+ */
+.success {
+  color: #238c23;
+}
+
+.warning {
+  color: #cc8c00;
+}
+
+.error {
+  color: #9d261d;
+}
+
+.information {
+  color: #3a87ad;
+}
+
+/**
+ * Highlight background.
+ *
+ * Example HTML:
+ *
+ * <table>
+ *     <tr>
+ *         <td class="highlight></td>
+ *         <td></td>
+ *     </tr>
+ * </table>
+ */
+.highlight {
+  background: #fff9e1;
+}
+
+/**
+ * Alert boxes.
+ *
+ * Example HTML:
+ *
+ * <p class="alert-block success">
+ * <p class="alert-block error">
+ */
+.alert-block {
+  padding: 0.5em 1em;
+  clear: both;
+  border: 1px solid;
+}
+
+.alert-block.success {
+  border-color: #a3d48e;
+  background: #dff0d8;
+}
+
+.alert-block.warning {
+  border-color: #e4c788;
+  background: #f7eedb;
+}
+
+.alert-block.error {
+  border-color: #e1b2b2;
+  background: #f2dede;
+}
+
+.alert-block.information {
+  border-color: #b1e2f5;
+  background: #e7f6fc;
+}
+
+/**
+ * System messages.
+ *
+ * Example HTML:
+ *
+ * <div id="messagepane">
+ *     <span role="alert" class="error">
+ *         Content
+ *     </span>
+ * </div>
+ */
+#messagepane {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#messagepane span.success, #messagepane span.warning, #messagepane span.error {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 -0.25em 0.4em rgba(0, 0, 0, 0.15);
+}
+
+#messagepane span.success {
+  background: #238c23;
+}
+
+#messagepane span.warning {
+  background: #cc8c00;
+}
+
+#messagepane span.error {
+  background: #9d261d;
+}
+
+/*
+ * Message close icon.
+ *
+ * Example HTML:
+ *
+ * <a role="button" class="close" aria-label="Close">&times;</a>
+ */
+.close {
+  position: absolute;
+  top: 0.26666666666667em;
+  right: 1em;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.close:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* Password strength meter (via zxcvbn.js)
    ========================================================================== */
 /**
@@ -902,7 +1044,7 @@ body {
   min-height: 100vh;
   /* 2 */
   margin: 0;
-  padding: 4em 2.75% 0;
+  padding: 0 2.75%;
   background: #ffffff;
   color: #333333;
   box-sizing: border-box;
@@ -1053,9 +1195,8 @@ body {
 
 #masthead {
   height: 2.5em;
-  border-top: 1px solid #f8c225;
-  border-bottom: 1px solid #d9a307;
-  background-image: linear-gradient(#ffda44, #f8c225);
+  border-bottom: 1px solid #f8c225;
+  background-color: #ffda44;
 }
 
 #branding {

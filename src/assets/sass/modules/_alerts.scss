@@ -55,8 +55,9 @@
  */
 
 .alert-block {
-    border: 1px solid;
     padding: 0.5em 1em; // 6px / 12px
+    clear: both;
+    border: 1px solid;
 
     &.success {
         border-color: $color-success-border;
@@ -93,8 +94,8 @@
 
 #messagepane {
     position: fixed;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     left: 0;
     z-index: 1000;
 
@@ -102,14 +103,13 @@
         &.success,
         &.warning,
         &.error {
-            @include box-shadow(rgba(0, 0, 0, 0.15) 0 -0.25em 0.4em);
-
-            position: relative;
             display: block;
+            position: relative;
             margin: 0 auto;
             padding: 0.5em 2em;
             color: #ffffff;
             text-align: center;
+            box-shadow: 0 -0.25em 0.4em rgba(0, 0, 0, 0.15);
         }
 
         &.success {
@@ -138,14 +138,14 @@
     position: absolute;
     top: 0.26666666666667em; // 4px / 15px
     right: 1em;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 15px;
-    text-decoration: none;
-    color: transparentize(#ffffff, 0.5);
     font-weight: bold;
+    text-decoration: none;
 
     &:hover {
-        text-decoration: none;
         color: #ffffff;
+        text-decoration: none;
         cursor: pointer;
     }
 }
