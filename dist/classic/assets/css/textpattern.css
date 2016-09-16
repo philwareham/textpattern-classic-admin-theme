@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ==========================================================================
    Global
    ========================================================================== */
@@ -830,6 +829,157 @@ pre[class*="language-"] {
   cursor: help;
 }
 
+/* Lists
+   ========================================================================== */
+/**
+ * Address paddings set differently.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 2.3333333em;
+}
+
+/**
+ * Swap padding positions in RTL languages.
+ */
+[dir="rtl"] menu,
+[dir="rtl"] ol,
+[dir="rtl"] ul {
+  padding: 0 2.3333333em 0 0;
+}
+
+/**
+ * Remove margins from nested lists.
+ */
+li > ul,
+li > ol {
+  margin: 0;
+}
+
+/**
+ * Address margins set differently.
+ */
+dd {
+  margin: 0 0 0 2.3333333em;
+}
+
+/**
+ * Swap margin positions in RTL languages.
+ */
+[dir="rtl"] dd {
+  margin: 0 2.3333333em 0 0;
+}
+
+/**
+ * Have a list with no bullets/numerals.
+ *
+ * Example HTML:
+ *
+ * <ul class="plain-list">
+ * <ol class="plain-list">
+ */
+.plain-list {
+  padding: 0;
+  list-style: none;
+}
+
+/**
+ * Ensure padding stays removed in RTL languages.
+ *
+ * Required for specificity.
+ */
+[dir="rtl"] .plain-list {
+  padding: 0;
+}
+
+/**
+ * Switcher lists, to swap between diffrent page templates/form templates/etc.
+ *
+ * Example HTML:
+ *
+ * <ul class="switcher-list">
+ *     <li class="active"></li>
+ *     <li><a></a></li>
+ *     <li><a></a></li>
+ * </ul>
+ */
+.switcher-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.switcher-list li {
+  position: relative;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid transparent;
+}
+
+.switcher-list li:last-child {
+  border-bottom-color: #cccccc;
+}
+
+.switcher-list li.active {
+  background: #e3edfc;
+}
+
+.switcher-list a {
+  display: block;
+  padding: 0.3333333em 2em 0.3333333em 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+[dir="rtl"] .switcher-list {
+  padding: 0;
+}
+
+[dir="rtl"] .switcher-list a {
+  padding: 0.3333333em 0 0.3333333em 2em;
+}
+
+/**
+ * Multi-edit checkboxes within switcher lists.
+ */
+.switcher-action {
+  position: absolute;
+  top: 0.3333333em;
+  left: 0;
+  z-index: 2;
+}
+
+.switcher-action + a {
+  padding-right: 0;
+  padding-left: 2em;
+}
+
+[dir="rtl"] .switcher-action {
+  right: 0;
+  left: auto;
+}
+
+[dir="rtl"] .switcher-action + a {
+  padding-right: 2em;
+  padding-left: 0;
+}
+
+/**
+ * 'Destroy' buttons within switcher lists.
+ */
+.switcher-list .destroy {
+  position: absolute;
+  top: 0.3333333em;
+  right: 0;
+  z-index: 2;
+}
+
+[dir="rtl"] .switcher-list .destroy {
+  right: auto;
+  left: 0;
+}
+
 /* Tables
    ========================================================================== */
 /**
@@ -1238,23 +1388,31 @@ body {
 /* Navigation
    ========================================================================== */
 /**
- * Navigation links displayed as a `select` dropdown.
- *
- * Example HTML:
- *
- * <form class="navpop">
- *     <select>
- *         <option>Go…</option>
- *             <optgroup label="Content">
- *                 <option value="article">Write</option>
- *                 <option value="list">Articles</option>
- */
-/**
  * Navigation menu displayed as primary and secondary tabs.
  *
  * Example HTML:
  *
- * TODO
+ * <nav role="navigation" aria-label="Navigation">
+ *     <div class="nav-tabs" id="nav-primary">
+ *         <ul>
+ *             <li><a class="tabup">Content</a></li>
+ *             <li><a class="tabdown">Presentation</a></li>
+ *             <li><a class="tabdown">Admin</a></li>
+ *             <li id="view-site"><a class="tabdown">View site</a></li>
+ *         </ul>
+ *     </div>
+ *     <div class="nav-tabs" id="nav-secondary">
+ *         <ul>
+ *             <li><a class="tabdown">Write</a></li>
+ *             <li><a class="tabup">Articles</a></li>
+ *             <li><a class="tabdown">Images</a></li>
+ *             <li><a class="tabdown">Files</a></li>
+ *             <li><a class="tabdown">Links</a></li>
+ *             <li><a class="tabdown">Categories</a></li>
+ *             <li><a class="tabdown">Comments</a></li>
+ *         </ul>
+ *     </div>
+ * </nav>
  */
 .nav-tabs {
   text-align: center;
@@ -1276,7 +1434,7 @@ body {
   display: block;
   position: relative;
   bottom: -1px;
-  padding: 0.25em 1.5em;
+  padding: 0.1666667em 1.5em;
   border: 1px solid #dbdbdb;
   border-top-left-radius: 0.75em 2em;
   border-top-right-radius: 0.75em 2em;

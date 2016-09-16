@@ -8,7 +8,7 @@
 menu,
 ol,
 ul {
-    padding: 0 0 0 2.3em;
+    padding: 0 0 0 2.3333333em;
 }
 
 /**
@@ -19,16 +19,8 @@ ul {
     menu,
     ol,
     ul {
-        padding: 0 2.3em 0 0;
+        padding: 0 2.3333333em 0 0;
     }
-}
-
-/**
- * Harmonise bullet style of unordered lists.
- */
-
-ul {
-    list-style: circle;
 }
 
 /**
@@ -47,7 +39,7 @@ li {
  */
 
 dd {
-    margin: 0 0 0 2.3em;
+    margin: 0 0 0 2.3333333em;
 }
 
 /**
@@ -55,15 +47,7 @@ dd {
  */
 
 [dir="rtl"] dd {
-    margin: 0 2.3em 0 0;
-}
-
-/**
- * Italicise definition terms.
- */
-
-dt {
-    font-style: italic;
+    margin: 0 2.3333333em 0 0;
 }
 
 /**
@@ -76,8 +60,8 @@ dt {
  */
 
 .plain-list {
-    list-style: none;
     padding: 0;
+    list-style: none;
 }
 
 /**
@@ -103,22 +87,64 @@ dt {
  */
 
 .switcher-list {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    margin-bottom: 0;
-    padding-left: 0;
 
     li {
         position: relative;
-        margin: 0;
         border-top: 1px solid $color-border;
-        padding: 0.3em 2.5em 0.3em 0;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
+        border-bottom: 1px solid transparent;
+
+        &:last-child {
+            border-bottom-color: $color-border;;
+        }
 
         &.active {
             background: $color-selected;
         }
+    }
+
+    a {
+        display: block;
+        padding: 0.3333333em 2em 0.3333333em 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+[dir="rtl"] .switcher-list {
+    padding: 0;
+
+    a {
+        padding: 0.3333333em 0 0.3333333em 2em;
+    }
+}
+
+/**
+ * Multi-edit checkboxes within switcher lists.
+ */
+
+.switcher-action {
+    position: absolute;
+    top: 0.3333333em; // 4px / 12px
+    left: 0;
+    z-index: 2;
+
+    & + a {
+        padding-right: 0;
+        padding-left: 2em;
+    }
+}
+
+[dir="rtl"] .switcher-action {
+    right: 0;
+    left: auto;
+
+    & + a {
+        padding-right: 2em;
+        padding-left: 0;
     }
 }
 
@@ -126,10 +152,14 @@ dt {
  * 'Destroy' buttons within switcher lists.
  */
 
-.switcher-action,
 .switcher-list .destroy {
     position: absolute;
-    z-index: 2;
-    top: 0.25em; // 3px / 12px
+    top: 0.3333333em; // 4px / 12px
     right: 0;
+    z-index: 2;
+}
+
+[dir="rtl"] .switcher-list .destroy {
+    right: auto;
+    left: 0;
 }

@@ -2,28 +2,31 @@
    ========================================================================== */
 
 /**
- * Navigation links displayed as a `select` dropdown.
- *
- * Example HTML:
- *
- * <form class="navpop">
- *     <select>
- *         <option>Go…</option>
- *             <optgroup label="Content">
- *                 <option value="article">Write</option>
- *                 <option value="list">Articles</option>
- */
-
-.navpop {
-
-}
-
-/**
  * Navigation menu displayed as primary and secondary tabs.
  *
  * Example HTML:
  *
- * TODO
+ * <nav role="navigation" aria-label="Navigation">
+ *     <div class="nav-tabs" id="nav-primary">
+ *         <ul>
+ *             <li><a class="tabup">Content</a></li>
+ *             <li><a class="tabdown">Presentation</a></li>
+ *             <li><a class="tabdown">Admin</a></li>
+ *             <li id="view-site"><a class="tabdown">View site</a></li>
+ *         </ul>
+ *     </div>
+ *     <div class="nav-tabs" id="nav-secondary">
+ *         <ul>
+ *             <li><a class="tabdown">Write</a></li>
+ *             <li><a class="tabup">Articles</a></li>
+ *             <li><a class="tabdown">Images</a></li>
+ *             <li><a class="tabdown">Files</a></li>
+ *             <li><a class="tabdown">Links</a></li>
+ *             <li><a class="tabdown">Categories</a></li>
+ *             <li><a class="tabdown">Comments</a></li>
+ *         </ul>
+ *     </div>
+ * </nav>
  */
 
 .nav-tabs {
@@ -45,7 +48,7 @@
         display: block;
         position: relative;
         bottom: -1px;
-        padding: 0.25em 1.5em;
+        padding: 0.1666667em 1.5em; // 2px / 12px + 18px / 12px
         border: 1px solid lighten($color-border, 6%);
         border-top-left-radius: 0.75em 2em;
         border-top-right-radius: 0.75em 2em;
