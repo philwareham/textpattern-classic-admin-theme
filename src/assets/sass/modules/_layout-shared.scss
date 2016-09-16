@@ -515,7 +515,7 @@ span.spinner {
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
     /* 1 */
-    background: $color-background-box;
+    background: $color-background;
 
     h2 {
         /* 2 */
@@ -606,7 +606,7 @@ span.spinner {
 
 .txp-form-field-label,
 .txp-form-field-value {
-    max-width: 29em; // 377px / 13px
+    max-width: 30em; // 360px / 12px
 }
 
 /**
@@ -634,7 +634,7 @@ span.spinner {
     .txp-form-field-label,
     .txp-form-field-value {
         flex: 1 1 0%;
-        min-height: 2.15384615384615em; // 28px / 13px
+        min-height: 2.16666666666667em; // 26px / 12px
     }
 }
 
@@ -691,7 +691,7 @@ span.spinner {
 
 .txp-form-field-instructions {
     /* 1 */
-    max-width: 56em; // 616px / 11px
+    max-width: 60em; // 600px / 10px
 }
 
 /**

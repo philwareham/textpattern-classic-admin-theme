@@ -38,7 +38,7 @@ body {
 .txp-body {
     flex-grow: 1;
     width: 95%;
-    max-width: $container-max-width;
     min-width: 80em; // TODO: check this?
+    max-width: $container-max-width;
     margin: 0 auto;
 }
