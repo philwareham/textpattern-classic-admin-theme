@@ -1,0 +1,734 @@
+/* Globally shared layout
+   ========================================================================== */
+
+/**
+ * 1. Prevent text size adjust after mobile device orientation change.
+ */
+
+html {
+    /* 1 */
+    text-size-adjust: 100%;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+    height: 0;
+    margin: 1.5em 0;
+    clear: both; // make sure any floats above `hr` are cleared
+    border: 0; // remove the default `hr` border
+    border-bottom: 1px solid $color-border;
+    box-sizing: content-box;
+}
+
+/**
+ * Hide text but still allow screen reader access.
+ *
+ * Example HTML:
+ *
+ * <h1 class="txp-accessibility">
+ */
+
+.txp-accessibility {
+    position: absolute;
+    left: -1000em;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/**
+ * Swap absolute positions in RTL languages.
+ *
+ * This avoids browser scrollbar displaying incorrectly.
+ */
+
+[dir="rtl"] .txp-accessibility {
+    right: -1000em;
+    left: auto;
+}
+
+/**
+ * Ensure dropdowns are hidden at page load (prevents content 'jumping').
+ */
+
+.txp-dropdown {
+    display: none;
+}
+
+/**
+ * Search widget at top of lists.
+ *
+ * Appears on:
+ *
+ * List panels.
+ *
+ * Example HTML:
+ *
+ * <form class="txp-search">
+ *     <span class="txp-search-clear"><a>Clear search</a></span>
+ *     <input class="txp-search-input" type="search" size="24">
+ *     <span class="txp-search-buttons">
+ *         <button class="txp-search-button">Search</button>
+ *         <button class="txp-search-options">Search criteria</button>
+ *     </span>
+ * </form>
+ */
+
+.txp-search {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1em 0;
+
+    .ui-menu {
+        position: absolute;
+        width: 18em; // 234px / 13px
+        z-index: 100;
+    }
+
+    // Ensure the 2 buttons stay together.
+    .ui-controlgroup {
+        flex-wrap: nowrap;
+    }
+
+    .txp-dropdown {
+        input {
+            vertical-align: -0.23076923076923em; // 3px / 13px
+        }
+
+        label {
+            display: inline-block;
+            width: 85%;
+            padding: 0.23076923076923em 0.30769230769231em; // 3px / 13px + 4px / 13px
+            cursor: pointer;
+            vertical-align: text-top;
+        }
+    }
+}
+
+.txp-search-clear {
+    flex: 1;
+    margin: auto 0.5em;
+    text-align: right;
+
+    [dir="rtl"] & {
+        text-align: left;
+    }
+}
+
+/**
+ * Actions and upload forms at top of listings.
+ *
+ * Appears on:
+ *
+ * List panels.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-control-panel">
+ *     Content
+ * </div>
+ */
+
+.txp-control-panel {
+    margin-bottom: 1em;
+    float: left;
+
+    > * {
+        margin: 0 1em 0 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    form {
+        display: inline-block;
+    }
+
+    textarea {
+        margin-bottom: 1em;
+    }
+}
+
+/**
+ * Swap float/margin positions in RTL languages.
+ */
+
+[dir="rtl"] .txp-control-panel {
+    float: right;
+
+    > * {
+        margin: 0 0 0 1em;
+    }
+}
+
+/**
+ * List display options at top of listings.
+ *
+ * Appears on:
+ *
+ * List panels.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-list-options">
+ *     <a>List view</a>
+ *     <a>Grid view</a>
+ *     <a>List options</a>
+ * </div>
+ */
+
+.txp-list-options {
+    margin: 0.46153846153846em 0 1em; // 6px / 13px, 13px
+    float: right;
+
+    > * {
+        margin: 0 0 0 1em;
+    }
+
+    form {
+        display: inline-block;
+    }
+}
+
+/**
+ * Swap float/margin positions in RTL languages.
+ */
+
+[dir="rtl"] .txp-list-options {
+    float: left;
+
+    > * {
+        margin: 0 1em 0 0;
+    }
+}
+
+/**
+ * Additonal action links ('Duplicate', 'View', etc.) on some panels.
+ *
+ * Appears on:
+ *
+ * Article write/edit panel, pages panel, forms panel, styles panel.
+ *
+ * Example HTML:
+ *
+ * <p class="txp-actions">
+ *     <a class="txp-article-view">View</a>
+ *     <a class="txp-clone">Duplicate</a>
+ *     <a class="txp-new">Create new</a>
+ * </p>
+ */
+
+.txp-actions a {
+    display: inline-block;
+    margin: 0.5em 1em 0 0;
+
+    &:last-child {
+        margin: 0.5em 0 0;
+    }
+}
+
+/**
+ * Swap margin positions in RTL languages.
+ */
+
+[dir="rtl"] .txp-actions a {
+    margin: 0.5em 0 0 1em;
+
+    &:last-child {
+        margin: 0.5em 0 0;
+    }
+}
+
+/**
+ * Remove top margin when inside a dialog box.
+ */
+
+.ui-dialog .txp-actions {
+    margin-top: 0;
+}
+
+/**
+ * Inline the action links.
+ *
+ * Appears on:
+ *
+ * Article pages panel, forms panel, styles panel.
+ */
+
+.txp-actions-inline {
+    margin-top: 1.30769230769231em; // 17px / 13px
+    float: right;
+}
+
+/**
+ * Swap position in RTL languages.
+ */
+
+[dir="rtl"] .txp-actions-inline {
+    float: left;
+}
+
+/**
+ * AJAX spinners.
+ *
+ * Example HTML:
+ *
+ * <span class="spinner"></span>
+ */
+
+span.spinner {
+    @include hires-graphic(spinner, gif, 13px, 13px);
+
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+}
+
+/**
+ * Parent container for multi-edit `select` widget at bottom of listings.
+ *
+ * Appears on:
+ *
+ * List panels.
+ *
+ * Example HTML:
+ *
+ * <div class="multi-edit">
+ *     <select>
+ *         <option selected="selected">With selected...</option>
+ *         <option>Change author</option>
+ *         <option>Duplicate</option>
+ *         <option>Delete</option>
+ *     </select>
+ * </div>
+ */
+
+.multi-edit {
+    margin: 1em 0 0;
+}
+
+/**
+ * Hide secondary `select` element on multi-edit `select` widget.
+ *
+ * Display is controlled via JavaScript (hidden by default until an action is
+ * selected by user, then overrode by `.multi-step`).
+ *
+ * Appears on:
+ *
+ * List panels.
+ *
+ * Example HTML:
+ *
+ * <div class="multi-edit">
+ *     <select>
+ *         <option selected="selected">With selected...</option>
+ *         <option>Change author</option>
+ *         <option>Duplicate</option>
+ *         <option>Delete</option>
+ *     </select>
+ *     <div class="multi-option">
+ *         <select name="order">
+ *             <option value="1">1</option>
+ *             <option value="2">1</option>
+ *             <option value="3" selected="selected">5</option>
+ *         </select>
+ *     </div>
+ *     <input type="submit" value="Go">
+ * </div>
+ */
+
+.multi-option {
+    display: none;
+}
+
+/**
+ * Show secondary `select` element on multi-edit `select` widget.
+ *
+ * Display is controlled via JavaScript (class not present until an action is
+ * selected by user, then overrides `.multi-edit`).
+ *
+ * Appears on:
+ *
+ * List panels.
+ *
+ * Example HTML:
+ *
+ * <div class="multi-edit">
+ *     <select>
+ *         <option selected="selected">With selected...</option>
+ *         <option>Change author</option>
+ *         <option>Duplicate</option>
+ *         <option>Delete</option>
+ *     </select>
+ *     <div class="multi-option multi-step">
+ *         <select name="order">
+ *             <option value="1">1</option>
+ *             <option value="2">1</option>
+ *             <option value="3" selected="selected">5</option>
+ *         </select>
+ *     </div>
+ *     <input type="submit" value="Go">
+ * </div>
+ */
+
+.multi-option.multi-step {
+    display: inline-block;
+    margin-left: 0.30769230769231em; // 4px / 13px
+}
+
+/**
+ * Ensure links display as inline blocks (prevents linebreak problems).
+ *
+ * Example HTML:
+ *
+ * <a class="txp-option-link">Edit</a>
+ */
+
+.txp-option-link {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/**
+ * When text sections are linked with anchors, make sure there is ample padding
+ * above so they don't become obscured by sticky `header` area.
+ *
+ * Appears on:
+ *
+ * Plugin help pages, miscellaneous text pages.
+ *
+ * Example HTML:
+ *
+ * <section class="text-section" id="help-section02">
+ */
+
+.text-section {
+    margin-top: 3em;
+    padding-top: 3em;
+    border-top: 2px solid $color-border;
+}
+
+/**
+ * System permissions 'keep out' messages.
+ */
+
+.restricted-area {
+    font-size: 2em; // 26px / 13px
+    text-align: center;
+}
+
+/**
+ * Visually disabled text and anchors.
+ */
+
+.disabled {
+    background-image: none;
+    cursor: default !important;
+    opacity: 0.33;
+
+    a {
+        text-decoration: none;
+        cursor: default;
+    }
+}
+
+/**
+ * List navigators on list panels.
+ *
+ * Anchor elements kept to one line to prevent space between buttons.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-navigation" id="image_navigation">
+ *     <p class="nav-tertiary pageby">
+ *         <a class="navlink-active">15</a><a class="navlink">25</a><a class="navlink">50</a>
+ *     </p>
+ *     <nav class="prev-next">
+ *         <span class="disabled"><span class="ui-icon ui-icon-arrowthick-1-w">Previous</span></span>
+ *         <form>
+ *             <label>Page</label>
+ *             <input class="current-page">
+ *             of <span class="total-pages">2</span>
+ *         </form>
+ *         <a><span class="ui-icon ui-icon-arrowthick-1-e">Next</span></a>
+ *     </nav>
+ * </div>
+ */
+
+.txp-navigation {
+    @extend .clearfix;
+}
+
+.pageby {
+    margin: 1em 0;
+    float: left;
+}
+
+.prev-next {
+    margin: 1em 0;
+    float: right;
+
+    form {
+        display: inline-block;
+    }
+}
+
+/**
+ * Swap margin positions and arrow icons in RTL languages.
+ */
+
+[dir="rtl"] {
+    .pageby {
+        float: right;
+    }
+
+    .prev-next {
+        float: left;
+
+        .ui-icon-arrowthick-1-w {
+            background-position: -32px -48px;
+        }
+
+        .ui-icon-arrowthick-1-e {
+            background-position: -96px -48px;
+        }
+    }
+}
+
+
+/* Panes
+   ========================================================================== */
+
+/**
+ * Styling of edit panels.
+ *
+ * 1. Maximum width of edit panels.
+ * 2. Remove margin above `h2` within panels.
+ */
+
+.txp-edit {
+    max-width: ($text-column - 2em);
+    margin: 0 auto 1em;
+    padding: 1em 1em 1px;
+    /* 1 */
+    background: $color-background-box;
+
+    h2 {
+        /* 2 */
+        margin-top: 0;
+    }
+}
+
+/**
+ * Styling of edit panel cancel/submit button combinations.
+ */
+
+.txp-edit-actions {
+    margin: 1em -1em;
+    padding: 1em 1em 0;
+    border-top: 2px solid $color-background;
+    text-align: right;
+
+    > * {
+        margin: 0 0 0 1em;
+    }
+}
+
+/**
+ * Swap alignment and margin positions in RTL languages.
+ */
+
+[dir="rtl"] .txp-edit-actions {
+    text-align: left;
+
+    > * {
+        margin: 0 1em 0 0;
+    }
+}
+
+
+/* Form fields.
+   ========================================================================== */
+
+/**
+ * Form field containers.
+ *
+ * Textpattern form fields can have optional inline help texts applied to them.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-form-field">
+ *     <div class="txp-form-field-label">
+ *         <label> <a class="pophelp">i</a></label>
+ *     </div>
+ *     <div class="txp-form-field-value">
+ *         <input>
+ *     </div>
+ * </div>
+ *
+ * <div class="txp-form-field">
+ *     <div class="txp-form-field-label">
+ *         <label> <a class="pophelp">i</a></label>
+ *     </div>
+ *     <div class="txp-form-field-instructions">
+ *         <p>(Optional) intructions on how to fill out this form field.</p>
+ *     </div>
+ *     <div class="txp-form-field-value">
+ *         <input>
+ *     </div>
+ * </div>
+ */
+
+.txp-form-field {
+    margin: 1em 0;
+}
+
+/**
+ * Label/value form field pairings.
+ *
+ * Note: this is always collapsed to a one-column format on mobile layout.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-form-field">
+ *     <div class="txp-form-field-label">
+ *         <label>Label <a class="pophelp">i</a></label>
+ *     </div>
+ *     <div class="txp-form-field-value">
+ *         <input type="text" size="32">
+ *     </div>
+ * </div>
+ */
+
+.txp-form-field-label,
+.txp-form-field-value {
+    max-width: 29em; // 377px / 13px
+}
+
+/**
+ * Inline form field pairings on edit panels, preferences group panels and
+ * setup panels.
+ *
+ * Example HTML:
+ *
+ * <form class="txp-edit">
+ *     <div class="txp-form-field">
+ *         <div class="txp-form-field-label"></div>
+ *         <div class="txp-form-field-value"></div>
+ *     </div>
+ * </form>
+ */
+
+.txp-edit,
+.txp-prefs-group,
+.setup:not(.welcome) {
+    .txp-form-field:not(.txp-form-field-textarea) {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .txp-form-field-label,
+    .txp-form-field-value {
+        flex: 1 1 0%;
+        min-height: 2.15384615384615em; // 28px / 13px
+    }
+}
+
+/**
+ * Don't inline or constrain form fields for textareas.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-form-field txp-form-field-textarea">
+ *     <div class="txp-form-field-label">
+ *         <label>Label <a class="pophelp">i</a></label>
+ *     </div>
+ *     <div class="txp-form-field-value">
+ *         <textarea></textarea>
+ *     </div>
+ * </div>
+ */
+
+.txp-form-field-textarea {
+    .txp-form-field-label,
+    .txp-form-field-value {
+        flex: none;
+        max-width: inherit;
+        min-height: inherit;
+    }
+}
+
+/**
+ * Don't constrain form fields when in 3 column layout spans.
+ */
+
+.txp-layout-4col-3span {
+    .txp-form-field-label,
+    .txp-form-field-value {
+        max-width: inherit;
+    }
+}
+
+/**
+ * Form field inline help texts.
+ *
+ * 1. Limit maximum width of instructions, for legibility.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-form-field>
+ *     <div class="txp-form-field-label"></div>
+ *     <div class="txp-form-field-instructions">
+ *         <p>(Optional) intructions on how to fill out this form field.</p>
+ *     </div>
+ *     <div class="txp-form-field-value"></div>
+ * </div>
+ */
+
+.txp-form-field-instructions {
+    /* 1 */
+    max-width: 56em; // 616px / 11px
+}
+
+/**
+ * Tag builder link on Forms panel and Pages panel.
+ */
+
+.txp-tagbuilder-dialog {
+    position: relative;
+    margin: 0 1px;
+    float: right;
+    z-index: 2;
+}
+
+/**
+ * Swap alignment of tag builder link in RTL languages.
+ */
+
+[dir="rtl"] .txp-tagbuilder-dialog {
+    float: left;
+}
+
+/**
+ * Ensure Tag builder vertical footprint doesn't spill out of screen area.
+ */
+
+.txp-tagbuilder-container {
+    display: flex;
+    flex-flow: column;
+    max-height: 90vh;
+    overflow: hidden;
+
+    .ui-dialog-titlebar {
+        flex: none;
+    }
+}
+
+.txp-tagbuilder-content {
+    flex: 1 1 auto;
+    overflow: scroll;
+}

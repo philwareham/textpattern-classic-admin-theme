@@ -2,24 +2,24 @@
    ========================================================================== */
 
 /**
- * Hide the navigation menu toggle button on desktop layout.
+ * Navigation links displayed as a `select` dropdown.
  *
  * Example HTML:
  *
- * TODO
+ * <form class="navpop">
+ *     <select>
+ *         <option>Go…</option>
+ *             <optgroup label="Content">
+ *                 <option value="article">Write</option>
+ *                 <option value="list">Articles</option>
  */
 
-#navpop {
-    margin: 0.2em 2em;
-    float: right;
-}
+.navpop {
 
-[dir="rtl"] #navpop {
-    float: left;
 }
 
 /**
- * Hide the navigation menu toggle button on desktop layout.
+ * Navigation menu displayed as primary and secondary tabs.
  *
  * Example HTML:
  *

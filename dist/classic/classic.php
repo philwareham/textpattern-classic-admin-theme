@@ -66,10 +66,10 @@ class classic_theme extends \Textpattern\Admin\Theme
 
     function header()
     {
-        $out[] = hed(htmlspecialchars($GLOBALS["prefs"]["sitename"]), 1, ' class="txp-accessibility"');
-        $out[] = '<div id="masthead">';
-        $out[] = '<div id="navpop">'.navPop(1).'</div>';
-        $out[] = hed('Textpattern', 1, ' id="branding"');
+        $out[] = '<div class="txp-masthead">';
+        $out[] = hed('Textpattern', 1, ' class="txp-branding"');
+        $out[] = hed(htmlspecialchars($GLOBALS["prefs"]["sitename"]), 2, ' class="txp-accessibility"');
+        $out[] = navPop(1);
         $out[] = '</div>';
 
         if (!$this->is_popup) {
@@ -123,13 +123,14 @@ class classic_theme extends \Textpattern\Admin\Theme
                 'rel'    => 'external',
                 'target' => '_blank',
             )).
-            n.span('&#183;', array('role' => 'separator')).
-            n.txp_version;
+            n.'('.txp_version.')';
 
         if ($txp_user) {
-            $out[] = graf(gTxt('logged_in_as').' '.span(txpspecialchars($txp_user)).br.
-                href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"')
-                , ' id="moniker"');
+            $out[] = span('&#183;', array('role' => 'separator')).
+                n.gTxt('logged_in_as').
+                n.span(txpspecialchars($txp_user)).
+                n.span('&#183;', array('role' => 'separator')).
+                n.href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"');
         }
 
         return join(n, $out);;

@@ -10,17 +10,19 @@
  */
 
 .txp-header {
-    min-width: 80em;
+    min-width: 80em; // TODO: check this?
     margin-bottom: 1.5em;
 }
 
-#masthead {
+.txp-masthead {
+    display: flex;
+    justify-content: space-between;
     height: 2.5em;
     border-bottom: 1px solid #f8c225;
     background-color: #ffda44;
 }
 
-#branding {
+.txp-branding {
     @include hide-text;
 
     width: 6.75em; // 108px
