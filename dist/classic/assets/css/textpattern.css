@@ -662,6 +662,56 @@ a:focus .content-image {
   cursor: pointer;
 }
 
+/* Twisties
+   ========================================================================== */
+/**
+ * Collapsible and non-collapsible summary/details boxes.
+ *
+ * Example HTML:
+ *
+ * <section class="txp-details">
+ *     <h3 class="txp-summary expanded">
+ *         <a>Heading (lever)</a>
+ *     </h3>
+ *     <div class="toggle">
+ *         Content
+ *     </div>
+ * </section>
+ *
+ * <section class="txp-details">
+ *     <h3>Heading</h3>
+ *     <div>
+ *         Content
+ *     </div>
+ * </section>
+ */
+/**
+ * Styling for summary headings.
+ */
+h3.txp-summary,
+.txp-details > h3 {
+  margin: 1em 0;
+  color: #996633;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/**
+ * Additonal styling for lever summary headings.
+ */
+h3.txp-summary a {
+  padding: 0 0 0 1em;
+  background: url("../img/expand-collapse.svg") no-repeat 0 4px;
+}
+
+/**
+ * Additonal styling for lever summary headings - expanded state.
+ */
+h3.txp-summary.expanded a {
+  background-position: 0 -90px;
+}
+
 /* Password strength meter (via zxcvbn.js)
    ========================================================================== */
 /**
