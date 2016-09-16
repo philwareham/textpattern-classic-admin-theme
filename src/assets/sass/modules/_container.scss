@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
     /* 2 */
     margin: 0;
-    padding: 0 2.75%;
+    padding: 0;
     background: $color-background;
     color: $color-text;
     box-sizing: border-box;
@@ -37,7 +37,8 @@ body {
 
 .txp-body {
     flex-grow: 1;
-    width: 100%;
+    width: 95%;
     max-width: $container-max-width;
+    min-width: 80em; // TODO: check this?
     margin: 0 auto;
 }

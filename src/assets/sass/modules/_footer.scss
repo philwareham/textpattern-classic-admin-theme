@@ -6,11 +6,14 @@
  *
  * Example HTML:
  *
- * TODO
+ * <footer class="txp-footer">
+ *     Content
+ * </footer>
  */
 
 .txp-footer {
+    width: 95%;
     min-width: 80em; // TODO: check this?
-    margin: 1em 0; // TODO: check this?
+    margin: 1em auto;
     text-align: center;
 }
