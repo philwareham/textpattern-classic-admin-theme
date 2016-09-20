@@ -2876,6 +2876,76 @@ span.spinner {
   margin-bottom: 1em;
 }
 
+/* Content -> Write panel - additional layout
+   ========================================================================== */
+/**
+ * View mode tabs on write area.
+ *
+ * Example HTML:
+ *
+ * <div id="view_modes">
+ *     <ul>
+ *         <li id="tab-text" class="active"><a>Text</a></li>
+ *         <li id="tab-html"><a>HTML</a></li>
+ *         <li id="tab-preview"><a>Preview</a></li>
+ *     </ul>
+ * </div>
+ */
+#view_modes ul {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
+  background: none;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+#view_modes ul::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+#view_modes ul li {
+  position: relative;
+  top: 0;
+  margin-right: 2px;
+  float: left;
+  border: 1px solid #dbdbdb;
+  border-top-left-radius: 0.75em 2em;
+  border-top-right-radius: 0.75em 2em;
+  border-bottom-color: #cccccc;
+  background-color: #f2f2f2;
+  list-style: none;
+  white-space: nowrap;
+}
+
+#view_modes ul li:hover, #view_modes ul li:focus {
+  border-color: #aaaaaa;
+  background-color: #f7f7f7;
+}
+
+#view_modes ul li.active {
+  margin-bottom: -1px;
+  padding-bottom: 1px;
+  background-color: white;
+}
+
+#view_modes ul a {
+  padding: 0.5em 1em;
+  float: left;
+  color: #333333;
+  text-decoration: none;
+}
+
+/**
+ * View mode tabs RTL support.
+ */
+[dir="rtl"] #view_modes ul li,
+[dir="rtl"] #view_modes ul a {
+  float: right;
+}
+
 /* ==========================================================================
    jQuery UI core
    ========================================================================== */

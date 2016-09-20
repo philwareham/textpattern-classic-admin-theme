@@ -42,3 +42,79 @@
 #page-category .multi-edit {
     margin-bottom: 1em;
 }
+
+/* Content -> Write panel - additional layout
+   ========================================================================== */
+
+/**
+ * View mode tabs on write area.
+ *
+ * Example HTML:
+ *
+ * <div id="view_modes">
+ *     <ul>
+ *         <li id="tab-text" class="active"><a>Text</a></li>
+ *         <li id="tab-html"><a>HTML</a></li>
+ *         <li id="tab-preview"><a>Preview</a></li>
+ *     </ul>
+ * </div>
+ */
+
+#view_modes ul {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $color-border;
+    background: none;
+    font-size: $small-font-size;
+    line-height: $small-line-height;
+
+    &::after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+
+    li {
+        position: relative;
+        top: 0;
+        margin-right: 2px;
+        float: left;
+        border: 1px solid lighten($color-border, 6%);
+        border-top-left-radius: 0.75em 2em;
+        border-top-right-radius: 0.75em 2em;
+        border-bottom-color: $color-border;
+        background-color: darken($color-background-box, 2%);
+        list-style: none;
+        white-space: nowrap;
+
+        &:hover,
+        &:focus {
+            border-color: darken($color-border, 13.5%);
+            background-color: $color-background-box;
+        }
+
+        &.active {
+            margin-bottom: -1px;
+            padding-bottom: 1px;
+            background-color: lighten($color-background-box, 3%);
+        }
+    }
+
+    a {
+        padding: 0.5em 1em;
+        float: left;
+        color: $color-text;
+        text-decoration: none;
+    }
+}
+
+/**
+ * View mode tabs RTL support.
+ */
+
+[dir="rtl"] #view_modes ul {
+    li,
+    a {
+        float: right;
+    }
+}
