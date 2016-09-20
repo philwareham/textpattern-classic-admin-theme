@@ -1,0 +1,44 @@
+/* Setup and login panels - additional layout
+   ========================================================================== */
+
+/**
+ * Column width and margins of setup panels.
+ */
+
+.txp-setup {
+    max-width: $standard-column;
+    margin: 1em auto;
+
+    // Column width of 'welcome' setup panel.
+    .welcome & {
+        max-width: 26em; // 312px / 12px
+    }
+}
+
+/**
+ * Column width and margins of login panels.
+ */
+
+.txp-login {
+    max-width: 26em; // 312px / 12px
+    margin: 1em auto;
+}
+
+/**
+ * Welcome page `select` spans entire column width.
+ */
+
+.welcome select {
+    width: 100%;
+}
+
+/* Content -> Categories panel - additional layout
+   ========================================================================== */
+
+/**
+ * Extra margin below multi-edit widgets on categories page.
+ */
+
+#page-category .multi-edit {
+    margin-bottom: 1em;
+}

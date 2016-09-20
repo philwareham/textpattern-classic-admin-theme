@@ -2838,6 +2838,44 @@ span.spinner {
   overflow: scroll;
 }
 
+/* Setup and login panels - additional layout
+   ========================================================================== */
+/**
+ * Column width and margins of setup panels.
+ */
+.txp-setup {
+  max-width: 44em;
+  margin: 1em auto;
+}
+
+.welcome .txp-setup {
+  max-width: 26em;
+}
+
+/**
+ * Column width and margins of login panels.
+ */
+.txp-login {
+  max-width: 26em;
+  margin: 1em auto;
+}
+
+/**
+ * Welcome page `select` spans entire column width.
+ */
+.welcome select {
+  width: 100%;
+}
+
+/* Content -> Categories panel - additional layout
+   ========================================================================== */
+/**
+ * Extra margin below multi-edit widgets on categories page.
+ */
+#page-category .multi-edit {
+  margin-bottom: 1em;
+}
+
 /* ==========================================================================
    jQuery UI core
    ========================================================================== */
