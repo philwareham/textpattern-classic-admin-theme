@@ -6,7 +6,17 @@
  *
  * Example HTML:
  *
- * TODO
+ * <header class="txp-header">
+ *     <div class="txp-masthead">
+ *         <h1 class="txp-branding">Textpattern</h1>
+ *         <h2 class="txp-accessibility">My site</h2>
+ *         <form class="navpop" method="get" action="index.php">
+ *             <select name="event" data-submit-on="change"></select>
+ *         </form>
+ *     </div>
+ *     <nav role="navigation" aria-label="Navigation"></nav>
+ *     <div id="messagepane"></div>
+ * </header>
  */
 
 .txp-header {
@@ -28,9 +38,12 @@
 
     width: 6.75em; // 108px
     height: 1.5em; // 24px
-    margin: 0;
+    margin: 0.25em 0;
     background: url("../img/sprite.svg") no-repeat 0 0;
     background-size: 11.25em 1.5em; // 180px 24px
     font-size: 16px;
-    line-height: 1.5; // 24px
+}
+
+.navpop {
+    margin: 0.1666667em 0; // 2px / 12px
 }
