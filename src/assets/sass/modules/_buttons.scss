@@ -32,10 +32,9 @@ input[type="button"],
     height: 2.1666667em; // 26px / 12px
     padding: 0.25em 0.75em; // 3px/ 12px + 9px / 12px
     border: 1px solid;
-    border-radius: 0.5em;
     border-color: #dddddd #c7c7c7 #c7c7c7 #dddddd;
     background-clip: padding-box;
-    background-color: #dddddd;
+    background-color: #e2e2e2;
     color: $color-text-button;
     font-weight: normal;
     text-align: center;
@@ -52,7 +51,7 @@ input[type="button"],
     }
 
     &:active {
-        background-color: #cccccc;
+        background-color: #dddddd;
         color: $color-text-button-active;
         text-decoration: none;
     }
@@ -82,11 +81,11 @@ a.publish {
     font-weight: bold;
 
     &:hover {
-        background-color: #bb0000;
+        background-color: #aa0000;
     }
 
     &:active {
-        background-color: #770000;
+        background-color: #880000;
     }
 
     &:focus {
@@ -171,41 +170,8 @@ ul.nav-tertiary {
     padding: 0;
 }
 
-.nav-tertiary {
-    a,
-    .navlink-disabled {
-        border-radius: 0;
-    }
-
-    .navlink-active {
-        background-color: #eeeeee;
-    }
-
-    > :first-child,
-    > :first-child > a,
-    > :first-child > span {
-        border-radius: $border-radius 0 0 $border-radius;
-    }
-
-    > :last-child,
-    > :last-child > a,
-    > :last-child > span {
-        border-radius: 0 $border-radius $border-radius 0;
-    }
-}
-
-[dir="rtl"] .nav-tertiary {
-    > :first-child,
-    > :first-child > a,
-    > :first-child > span {
-        border-radius: 0 $border-radius $border-radius 0;
-    }
-
-    > :last-child,
-    > :last-child > a,
-    > :last-child > span {
-        border-radius: $border-radius 0 0 $border-radius;
-    }
+.navlink-active {
+    background-color: #eeeeee;
 }
 
 /**
@@ -227,12 +193,4 @@ ul.nav-tertiary {
 .txp-search button.txp-search-button {
     padding-right: 1.5em;
     padding-left: 1.5em;
-    @if $border-radius > 0 {
-        border-radius: 0;
-
-        [dir="rtl"] & {
-            /* 1 */
-            border-radius: 0;
-        }
-    }
 }

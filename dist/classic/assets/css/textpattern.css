@@ -1285,10 +1285,9 @@ input[type="button"],
   height: 2.1666667em;
   padding: 0.25em 0.75em;
   border: 1px solid;
-  border-radius: 0.5em;
   border-color: #dddddd #c7c7c7 #c7c7c7 #dddddd;
   background-clip: padding-box;
-  background-color: #dddddd;
+  background-color: #e2e2e2;
   color: #333333;
   font-weight: normal;
   text-align: center;
@@ -1325,7 +1324,7 @@ input[type="button"]:active,
 .txp-logout a:active,
 .navlink:active,
 .navlink-active:active {
-  background-color: #cccccc;
+  background-color: #dddddd;
   color: #1a1a1a;
   text-decoration: none;
 }
@@ -1363,13 +1362,13 @@ a.publish {
 [type="submit"].publish:hover,
 button.publish:hover,
 a.publish:hover {
-  background-color: #bb0000;
+  background-color: #aa0000;
 }
 
 [type="submit"].publish:active,
 button.publish:active,
 a.publish:active {
-  background-color: #770000;
+  background-color: #880000;
 }
 
 [type="submit"].publish:focus,
@@ -1452,37 +1451,8 @@ ul.nav-tertiary li {
   padding: 0;
 }
 
-.nav-tertiary a,
-.nav-tertiary .navlink-disabled {
-  border-radius: 0;
-}
-
-.nav-tertiary .navlink-active {
+.navlink-active {
   background-color: #eeeeee;
-}
-
-.nav-tertiary > :first-child,
-.nav-tertiary > :first-child > a,
-.nav-tertiary > :first-child > span {
-  border-radius: 0.5em 0 0 0.5em;
-}
-
-.nav-tertiary > :last-child,
-.nav-tertiary > :last-child > a,
-.nav-tertiary > :last-child > span {
-  border-radius: 0 0.5em 0.5em 0;
-}
-
-[dir="rtl"] .nav-tertiary > :first-child,
-[dir="rtl"] .nav-tertiary > :first-child > a,
-[dir="rtl"] .nav-tertiary > :first-child > span {
-  border-radius: 0 0.5em 0.5em 0;
-}
-
-[dir="rtl"] .nav-tertiary > :last-child,
-[dir="rtl"] .nav-tertiary > :last-child > a,
-[dir="rtl"] .nav-tertiary > :last-child > span {
-  border-radius: 0.5em 0 0 0.5em;
 }
 
 /**
@@ -1503,12 +1473,6 @@ ul.nav-tertiary li {
 .txp-search button.txp-search-button {
   padding-right: 1.5em;
   padding-left: 1.5em;
-  border-radius: 0;
-}
-
-[dir="rtl"] .txp-search button.txp-search-button {
-  /* 1 */
-  border-radius: 0;
 }
 
 /* Lists
