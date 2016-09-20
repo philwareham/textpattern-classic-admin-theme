@@ -1254,6 +1254,263 @@ input.input-month, input.input-day, input.input-hour, input.input-minute, input.
   text-align: center;
 }
 
+/* Buttons
+   ========================================================================== */
+/**
+ * 1. Correct `button` style inheritance in Firefox, IE 11, and Opera.
+ * 2. Address `overflow` set to `hidden` in IE 11.
+ */
+button {
+  /* 1 */
+  text-transform: none;
+  /* 2 */
+  overflow: visible;
+}
+
+/**
+ * 1. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 2. Remove iOS Safari default styling.
+ */
+button,
+[type="reset"],
+[type="submit"],
+input[type="button"],
+.txp-button,
+.txp-logout a,
+.navlink,
+.navlink-active {
+  display: inline-block;
+  width: auto;
+  height: 2.1666667em;
+  padding: 0.25em 0.75em;
+  border: 1px solid;
+  border-radius: 0.5em;
+  border-color: #dddddd #c7c7c7 #c7c7c7 #dddddd;
+  background-clip: padding-box;
+  background-color: #dddddd;
+  color: #333333;
+  font-weight: normal;
+  text-align: center;
+  /* 1 */
+  cursor: pointer;
+  /* 2 */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+button:hover,
+[type="reset"]:hover,
+[type="submit"]:hover,
+input[type="button"]:hover,
+.txp-button:hover,
+.txp-logout a:hover,
+.navlink:hover,
+.navlink-active:hover {
+  background-color: #eeeeee;
+  color: #333333;
+  text-decoration: none;
+}
+
+button:active,
+[type="reset"]:active,
+[type="submit"]:active,
+input[type="button"]:active,
+.txp-button:active,
+.txp-logout a:active,
+.navlink:active,
+.navlink-active:active {
+  background-color: #cccccc;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+button:focus,
+[type="reset"]:focus,
+[type="submit"]:focus,
+input[type="button"]:focus,
+.txp-button:focus,
+.txp-logout a:focus,
+.navlink:focus,
+.navlink-active:focus {
+  border-color: #5b9dd9;
+  outline-width: 0;
+}
+
+/**
+ * Additional styling for primary buttons.
+ *
+ * Example HTML:
+ *
+ * <input type="submit" class="publish">
+ */
+[type="submit"].publish,
+button.publish,
+a.publish {
+  height: 2.6666667em;
+  padding: 0.5em 0.75em;
+  border-color: #bb0000 #660000 #660000 #bb0000;
+  background-color: #990000;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+[type="submit"].publish:hover,
+button.publish:hover,
+a.publish:hover {
+  background-color: #bb0000;
+}
+
+[type="submit"].publish:active,
+button.publish:active,
+a.publish:active {
+  background-color: #770000;
+}
+
+[type="submit"].publish:focus,
+button.publish:focus,
+a.publish:focus {
+  border-color: #5b9dd9;
+}
+
+/**
+ * Additional styling for delete (destroy) buttons.
+ *
+ * Example HTML:
+ *
+ * <button class="destroy" type="submit">
+ *     <span class="ui-icon ui-icon-close">Destroy</span>
+ * </button>
+ */
+button.destroy {
+  height: auto;
+  padding: 0.08333333em 0 0;
+  border: 0;
+  background: none;
+}
+
+button.destroy:hover, button.destroy:active {
+  background: none;
+}
+
+button.destroy:focus {
+  outline: thin solid #5b9dd9;
+}
+
+button.destroy:hover .ui-icon,
+button.destroy:active .ui-icon,
+button.destroy:focus .ui-icon {
+  -webkit-filter: brightness(0.66);
+          filter: brightness(0.66);
+}
+
+/**
+ * Grey-out disabled navlinks (but keep them in button style).
+ *
+ * Example HTML:
+ *
+ * <p class="prev-next">
+ *     <span class="navlink-disabled">Previous</span>
+ *     <a class="navlink">Next</a>
+ * </p>
+ */
+.navlink-disabled {
+  display: inline-block;
+  height: 2.1666667em;
+  padding: 0.25em 0.75em;
+  border: 1px solid;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+
+/**
+ * Tertiary button sets.
+ *
+ * Anchor elements kept to one line to prevent space between buttons.
+ *
+ * Example HTML:
+ *
+ * <p class="nav-tertiary">
+ *     <a class="navlink-active">Page 1</a><a class="navlink">Page 2</a>
+ * </p>
+ */
+ul.nav-tertiary {
+  padding: 0;
+  list-style: none;
+}
+
+ul.nav-tertiary li {
+  display: inline;
+}
+
+[dir="rtl"] ul.nav-tertiary {
+  padding: 0;
+}
+
+.nav-tertiary a,
+.nav-tertiary .navlink-disabled {
+  border-radius: 0;
+}
+
+.nav-tertiary .navlink-active {
+  background-color: #eeeeee;
+}
+
+.nav-tertiary > :first-child,
+.nav-tertiary > :first-child > a,
+.nav-tertiary > :first-child > span {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+.nav-tertiary > :last-child,
+.nav-tertiary > :last-child > a,
+.nav-tertiary > :last-child > span {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+[dir="rtl"] .nav-tertiary > :first-child,
+[dir="rtl"] .nav-tertiary > :first-child > a,
+[dir="rtl"] .nav-tertiary > :first-child > span {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+[dir="rtl"] .nav-tertiary > :last-child,
+[dir="rtl"] .nav-tertiary > :last-child > a,
+[dir="rtl"] .nav-tertiary > :last-child > span {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+/**
+ * Search widget 'search' button.
+ *
+ * 1. Correct specificity for RTL languages.
+ *
+ * Example HTML:
+ *
+ * <form class="txp-search">
+ *     <input class="txp-search-input" type="search" size="24">
+ *     <span class="txp-search-buttons">
+ *         <button class="txp-search-button">Search</button>
+ *         <button class="txp-search-options">Search criteria</button>
+ *     </span>
+ * </form>
+ */
+.txp-search button.txp-search-button {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  border-radius: 0;
+}
+
+[dir="rtl"] .txp-search button.txp-search-button {
+  /* 1 */
+  border-radius: 0;
+}
+
 /* Lists
    ========================================================================== */
 /**
