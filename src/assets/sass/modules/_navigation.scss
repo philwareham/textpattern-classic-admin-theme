@@ -9,21 +9,21 @@
  * <nav role="navigation" aria-label="Navigation">
  *     <div class="nav-tabs" id="nav-primary">
  *         <ul>
- *             <li><a class="tabup">Content</a></li>
- *             <li><a class="tabdown">Presentation</a></li>
- *             <li><a class="tabdown">Admin</a></li>
- *             <li id="view-site"><a class="tabdown">View site</a></li>
+ *             <li class="active"><a>Content</a></li>
+ *             <li><a>Presentation</a></li>
+ *             <li><a>Admin</a></li>
+ *             <li class="txp-view-site"><a>View site</a></li>
  *         </ul>
  *     </div>
  *     <div class="nav-tabs" id="nav-secondary">
  *         <ul>
- *             <li><a class="tabdown">Write</a></li>
- *             <li><a class="tabup">Articles</a></li>
- *             <li><a class="tabdown">Images</a></li>
- *             <li><a class="tabdown">Files</a></li>
- *             <li><a class="tabdown">Links</a></li>
- *             <li><a class="tabdown">Categories</a></li>
- *             <li><a class="tabdown">Comments</a></li>
+ *             <li><a>Write</a></li>
+ *             <li class="active"><a>Articles</a></li>
+ *             <li><a>Images</a></li>
+ *             <li><a>Files</a></li>
+ *             <li><a>Links</a></li>
+ *             <li><a>Categories</a></li>
+ *             <li><a>Comments</a></li>
  *         </ul>
  *     </div>
  * </nav>
@@ -58,19 +58,24 @@
         text-decoration: none;
         box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5), 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
 
-        &.tabup {
-            border-bottom-color: $color-background;
-            background-color: $color-background;
-            box-shadow: 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
-        }
-
         &:hover {
+            border-color: darken($color-border, 13.5%);
             background-color: $color-background;
         }
 
         &:focus {
             border-color: $color-link-focus;
             outline: none;
+        }
+    }
+
+    .active a {
+        border-bottom-color: $color-background;
+        background-color: $color-background;
+        box-shadow: 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
+
+        &:focus {
+            border-color: $color-link-focus;
         }
     }
 }

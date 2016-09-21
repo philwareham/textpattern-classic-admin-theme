@@ -81,9 +81,9 @@ class classic_theme extends \Textpattern\Admin\Theme
             $secondary = '';
 
             foreach ($this->menu as $tab) {
-                $tc = ($tab['active']) ? 'tabup' : 'tabdown';
-                $out[] = '<li>'.
-                    href($tab["label"], array('event' => $tab['event']), ' class="'.$tc.'"').
+                $tc = ($tab['active']) ? ' class="active"' : '';
+                $out[] = '<li'.$tc.'>'.
+                    href($tab["label"], array('event' => $tab['event'])).
                     '</li>';
 
                 if ($tab['active'] && !empty($tab['items'])) {
@@ -91,9 +91,9 @@ class classic_theme extends \Textpattern\Admin\Theme
                         n.'<ul>';
 
                     foreach ($tab['items'] as $item) {
-                        $tc = ($item['active']) ? 'tabup' : 'tabdown';
-                        $secondary .= n.'<li>'.
-                            href($item['label'], array('event' => $item['event']), ' class="'.$tc.'"').
+                        $tc = ($item['active']) ? ' class="active"' : '';
+                        $secondary .= n.'<li'.$tc.'>'.
+                            href($item['label'], array('event' => $item['event'])).
                             '</li>';
                     }
 
@@ -102,8 +102,8 @@ class classic_theme extends \Textpattern\Admin\Theme
                 }
             }
 
-            $out[] = '<li id="view-site">'.
-                href(gTxt('tab_view_site'), hu, ' class="tabdown" target="_blank"').
+            $out[] = '<li class="txp-view-site">'.
+                href(gTxt('tab_view_site'), hu, array('target' => '_blank')).
                 '</li>';
 
             $out[] = '</ul>';
@@ -121,6 +121,7 @@ class classic_theme extends \Textpattern\Admin\Theme
         global $txp_user;
 
         $out[] = href('Textpattern CMS', 'http://textpattern.com', array(
+                'class'  => 'mothership',
                 'rel'    => 'external',
                 'target' => '_blank',
             )).
@@ -129,9 +130,12 @@ class classic_theme extends \Textpattern\Admin\Theme
         if ($txp_user) {
             $out[] = span('&#183;', array('role' => 'separator')).
                 n.gTxt('logged_in_as').
-                n.span(txpspecialchars($txp_user)).
+                n.span(txpspecialchars($txp_user), array('class' => 'txp-username')).
                 n.span('&#183;', array('role' => 'separator')).
-                n.href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"');
+                n.href(gTxt('logout'), 'index.php?logout=1', array(
+                'class'   => 'txp-logout',
+                'onclick' => 'return verify(\''.gTxt('are_you_sure').'\')',
+            ));
         }
 
         return join(n, $out);;
