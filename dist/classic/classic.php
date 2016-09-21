@@ -111,7 +111,6 @@ class classic_theme extends \Textpattern\Admin\Theme
             $out[] = $secondary;
             $out[] = '</nav>';
         }
-        $out[] = '<div id="messagepane">'.$this->announce($this->message).'</div>'.n;
 
         return join(n, $out);
     }
@@ -167,12 +166,15 @@ class classic_theme extends \Textpattern\Admin\Theme
         switch ($thing[1]) {
             case E_ERROR:
                 $class = 'error';
+                $icon = 'ui-icon-alert';
                 break;
             case E_WARNING:
                 $class = 'warning';
+                $icon = 'ui-icon-alert';
                 break;
             default:
                 $class = 'success';
+                $icon = 'ui-icon-check';
                 break;
         }
 
@@ -181,11 +183,11 @@ class classic_theme extends \Textpattern\Admin\Theme
             $js = 'window.alert("'.escape_js(strip_tags($thing[0])).'")';
         } else {
             $html = span(
-                gTxt($thing[0]).
-                sp.href('&#215;', '#close', ' class="close" role="button" title="'.gTxt('close').'" aria-label="'.gTxt('close').'"'), array(
-                    'class' => $class,
-                    'id'    => 'message',
-                    'role'  => 'alert',
+                span(null, array('class' => 'ui-icon '.$icon)).' '.gTxt($thing[0]).
+                sp.href('&#215;', '#close', ' class="close" role="button" title="'.gTxt('close').'" aria-label="'.gTxt('close').'"'),
+                array(
+                    'class'     => 'messageflash '.$class,
+                    'role'      => 'alert',
                     'aria-live' => 'assertive',
                 )
             );
