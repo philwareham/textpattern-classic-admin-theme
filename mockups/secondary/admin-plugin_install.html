@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Verify plugin - My Site &#124; Textpattern CMS</title>
+    <script src="../../docs/assets/js/jquery.js"></script>
+    <script src="../../docs/assets/js/jquery-ui.js"></script>
+        <link rel="stylesheet" href="../../dist/classic/assets/css/textpattern.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="generator" content="Textpattern CMS">
+    <meta name="application-name" content="My site">
+    <script src="../../dist/classic/assets/js/main.js"></script>
+    <script src="../../docs/assets/js/design-patterns.js"></script>
+</head>
+<body class="admin" id="page-plugin">
+
+    <header class="txp-header">
+
+        <div class="txp-masthead">
+            <h1 class="txp-branding">Textpattern</h1>
+            <h2 class="txp-accessibility">My site</h2>
+
+            <form class="navpop" action="#">
+                <select name="event">
+                    <option>Go…</option>
+                    <optgroup label="Content">
+                        <option value="../content-article.html">Write</option>
+                        <option value="../content-list.html">Articles</option>
+                        <option value="../content-image.html">Images</option>
+                        <option value="../content-file.html">Files</option>
+                        <option value="../content-link.html">Links</option>
+                        <option value="../content-category.html">Categories</option>
+                        <option value="../content-discuss.html">Comments</option>
+                    </optgroup>
+                    <optgroup label="Presentation">
+                        <option value="../presentation-section.html">Sections</option>
+                        <option value="../presentation-page.html">Pages</option>
+                        <option value="../presentation-form.html">Forms</option>
+                        <option value="../presentation-css.html">Styles</option>
+                    </optgroup>
+                    <optgroup label="Admin">
+                        <option value="../admin-diag.html">Diagnostics</option>
+                        <option value="../admin-prefs.html">Preferences</option>
+                        <option value="../admin-languages.html">Languages</option>
+                        <option value="../admin-admin.html">Users</option>
+                        <option value="../admin-plugin.html">Plugins</option>
+                        <option value="../admin-log.html">Visitor logs</option>
+                    </optgroup>
+                </select>
+            </form>
+        </div>
+
+        <nav role="navigation" aria-label="Navigation">
+
+            <div class="nav-tabs" id="nav-primary">
+                <ul>
+                    <li><a href="../content-article.html">Content</a></li>
+                    <li><a href="../presentation-page.html">Presentation</a></li>
+                    <li class="active"><a href="../admin-admin.html">Admin</a></li>
+                    <li><a href="#">Extensions</a></li>
+                    <li class="txp-view-site"><a target="_blank" href="#">View site</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-tabs" id="nav-secondary">
+                <ul>
+                    <li><a href="../admin-diag.html">Diagnostics</a></li>
+                    <li><a href="../admin-prefs.html">Preferences</a></li>
+                    <li><a href="../admin-languages.html">Languages</a></li>
+                    <li><a href="../admin-admin.html">Users</a></li>
+                    <li class="active"><a href="../admin-plugin.html">Plugins</a></li>
+                    <li><a href="../admin-log.html">Visitor logs</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header><!-- /txp-header -->
+
+    <main class="txp-body" aria-label="Main content">
+
+        <div id="messagepane"></div>
+
+        <form class="plugin-info" id="plugin_preview" method="post" action="#">
+            <h2>Previewing plugin:</h2>
+            <div class="code" id="preview-plugin" dir="ltr">
+                <code>The plugin code displays here</code>
+            </div>
+            <h2>Plugin help:</h2>
+            <div class="code" id="preview-help" dir="ltr">
+                <code>The plugin help displays here</code>
+            </div>
+            <p class="txp-edit-actions">
+                <a class="txp-button" href="../admin-plugin.html">Cancel</a>
+                <input class="publish" type="submit" value="Install">
+            </p>
+        </form>
+
+    </main><!-- /txp-body -->
+
+    <footer class="txp-footer">
+        <a class="mothership" href="http://textpattern.com" rel="external" target="_blank">Textpattern CMS</a> (4.7.0-dev)
+        <span role="separator">·</span>
+        Logged in as <span class="txp-username">admin</span>
+        <span role="separator">·</span>
+        <a class="txp-logout" href="login.html">Log out</a>
+    </footer><!-- /txp-footer -->
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Visitor logs - My Site &#124; Textpattern CMS</title>
+    <script src="../docs/assets/js/jquery.js"></script>
+    <script src="../docs/assets/js/jquery-ui.js"></script>
+        <link rel="stylesheet" href="../dist/classic/assets/css/textpattern.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="generator" content="Textpattern CMS">
+    <meta name="application-name" content="My site">
+    <script src="../dist/classic/assets/js/main.js"></script>
+
+    <script src="../docs/assets/js/design-patterns.js"></script>
+
+</head>
+<body class="admin" id="page-log">
+
+    <header class="txp-header">
+
+        <div class="txp-masthead">
+            <h1 class="txp-branding">Textpattern</h1>
+            <h2 class="txp-accessibility">My site</h2>
+
+            <form class="navpop" action="#">
+                <select name="event">
+                    <option>Go…</option>
+                    <optgroup label="Content">
+                        <option value="content-article.html">Write</option>
+                        <option value="content-list.html">Articles</option>
+                        <option value="content-image.html">Images</option>
+                        <option value="content-file.html">Files</option>
+                        <option value="content-link.html">Links</option>
+                        <option value="content-category.html">Categories</option>
+                        <option value="content-discuss.html">Comments</option>
+                    </optgroup>
+                    <optgroup label="Presentation">
+                        <option value="presentation-section.html">Sections</option>
+                        <option value="presentation-page.html">Pages</option>
+                        <option value="presentation-form.html">Forms</option>
+                        <option value="presentation-css.html">Styles</option>
+                    </optgroup>
+                    <optgroup label="Admin">
+                        <option value="admin-diag.html">Diagnostics</option>
+                        <option value="admin-prefs.html">Preferences</option>
+                        <option value="admin-languages.html">Languages</option>
+                        <option value="admin-admin.html">Users</option>
+                        <option value="admin-plugin.html">Plugins</option>
+                        <option value="admin-log.html">Visitor logs</option>
+                    </optgroup>
+                </select>
+            </form>
+        </div>
+
+        <nav role="navigation" aria-label="Navigation">
+
+            <div class="nav-tabs" id="nav-primary">
+                <ul>
+                    <li><a href="content-article.html">Content</a></li>
+                    <li><a href="presentation-page.html">Presentation</a></li>
+                    <li class="active"><a href="admin-admin.html">Admin</a></li>
+                    <li><a href="#">Extensions</a></li>
+                    <li class="txp-view-site"><a target="_blank" href="#">View site</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-tabs" id="nav-secondary">
+                <ul>
+                    <li><a href="admin-diag.html">Diagnostics</a></li>
+                    <li><a href="admin-prefs.html">Preferences</a></li>
+                    <li><a href="admin-languages.html">Languages</a></li>
+                    <li><a href="admin-admin.html">Users</a></li>
+                    <li><a href="admin-plugin.html">Plugins</a></li>
+                    <li class="active"><a href="admin-log.html">Visitor logs</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header><!-- /txp-header -->
+
+    <main class="txp-body" aria-label="Main content">
+
+        <div id="messagepane"></div>
+
+        <div class="txp-layout">
+
+            <div class="txp-layout-4col-alt">
+                <h1 class="txp-heading">Visitor logs</h1>
+            </div>
+
+            <div class="txp-layout-4col-3span" id="log_control">
+                <form class="txp-search" role="search" method="get" action="#">
+                    <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search visitor logs…">
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <button class="txp-search-options">Search criteria</button>
+                    </span>
+                    <ul class="txp-dropdown">
+                        <li>
+                            <div>
+                                <input id="search-crit1" name="search-crit1" type="checkbox">
+                                <label for="search-crit1">Search all</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit2" name="search-crit2" type="checkbox">
+                                <label for="search-crit2">IP</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit3" name="search-crit3" type="checkbox">
+                                <label for="search-crit3">Host</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit4" name="search-crit4" type="checkbox">
+                                <label for="search-crit4">Page</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit5" name="search-crit5" type="checkbox">
+                                <label for="search-crit5">Referrer</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit6" name="search-crit6" type="checkbox">
+                                <label for="search-crit6">Method</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit7" name="search-crit7" type="checkbox">
+                                <label for="search-crit7">Status</label>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+            <div class="txp-layout-1col">
+                <div class="txp-list-options">
+                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                </div>
+
+                <form class="multi_edit_form" id="log_form" name="longform" method="post" action="#">
+                    <div class="txp-listtables">
+                        <table class="txp-list">
+
+                            <thead>
+                                <tr>
+                                    <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                    <th class="txp-list-col-time date desc" scope="col"><a href="#">Time</a></th>
+                                    <th class="txp-list-col-ip log_detail" scope="col"><a href="#">IP</a></th>
+                                    <th class="txp-list-col-host" scope="col"><a href="#">Host</a></th>
+                                    <th class="txp-list-col-page" scope="col"><a href="#">Page</a></th>
+                                    <th class="txp-list-col-refer" scope="col"><a href="#">Referrer</a></th>
+                                    <th class="txp-list-col-method log_detail" scope="col"><a href="#">Method</a></th>
+                                    <th class="txp-list-col-status log_detail" scope="col"><a href="#">Status</a></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="126" name="selected[]"></td>
+                                    <th class="txp-list-col-time date" scope="row">21&#160;Sep&#160;2011 10:13:58</th>
+                                    <td class="txp-list-col-ip log_detail">127.0.0.1</td>
+                                    <td class="txp-list-col-host">www.anon.​dev</td>
+                                    <td class="txp-list-col-page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></td>
+                                    <td class="txp-list-col-refer">&#160;</td>
+                                    <td class="txp-list-col-method log_detail">POST</td>
+                                    <td class="txp-list-col-status log_detail">302</td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="127" name="selected[]"></td>
+                                    <th class="txp-list-col-time date" scope="row">21&#160;Sep&#160;2011 10:13:58</th>
+                                    <td class="txp-list-col-ip log_detail">127.0.0.1</td>
+                                    <td class="txp-list-col-host">www.anon.​dev</td>
+                                    <td class="txp-list-col-page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
+                                    <td class="txp-list-col-refer">&#160;</td>
+                                    <td class="txp-list-col-method log_detail">GET</td>
+                                    <td class="txp-list-col-status log_detail">200</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div><!-- /txp-listtables -->
+
+                    <div class="multi-edit">
+                        <select name="edit_method">
+                            <option value="" selected="selected">With selected&#8230;</option>
+                            <option value="delete">Delete</option>
+                        </select>
+                    </div>
+
+                </form>
+
+                <div class="txp-navigation" id="log_navigation">
+                    <div class="nav-tertiary pageby">
+                        <a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a>
+                    </div>
+                </div>
+
+            </div><!-- /txp-layout-1col -->
+        </div><!-- /.txp-layout -->
+    </main><!-- /txp-body -->
+
+    <footer class="txp-footer">
+        <a class="mothership" href="http://textpattern.com" rel="external" target="_blank">Textpattern CMS</a> (4.7.0-dev)
+        <span role="separator">·</span>
+        Logged in as <span class="txp-username">admin</span>
+        <span role="separator">·</span>
+        <a class="txp-logout" href="login.html">Log out</a>
+    </footer><!-- /txp-footer -->
+
+</body>
+</html>
