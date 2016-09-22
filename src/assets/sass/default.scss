@@ -47,7 +47,7 @@
    jQuery UI core
    ========================================================================== */
 
-//@import "modules/jquery-ui/core";
+@import "modules/jquery-ui/core";
 
 
 
@@ -56,8 +56,8 @@
    ========================================================================== */
 
 // comment out any components that are not required
-//@import "modules/jquery-ui/icons";
-//@import "modules/jquery-ui/icons-additions"; // requires icons module
+@import "modules/jquery-ui/icons";
+@import "modules/jquery-ui/icons-additions"; // requires icons module
 
 
 
@@ -80,7 +80,7 @@
 // comment out any components that are not required
 //@import "modules/jquery-ui/accordion";
 //@import "modules/jquery-ui/autocomplete";
-//@import "modules/jquery-ui/button";
+@import "modules/jquery-ui/button";
 //@import "modules/jquery-ui/checkboxradio";
 //@import "modules/jquery-ui/controlgroup";
 //@import "modules/jquery-ui/datepicker";

@@ -154,3 +154,102 @@
 .not-modified {
     color: $color-text-footnote;
 }
+
+
+/* Content -> Images panel - additional layout
+   ========================================================================== */
+
+.has-thumbnail a:focus {
+    outline-width: 0;
+}
+
+.thumbnail-alter input {
+    margin: 0 0.3333333em 0 0;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+[dir="rtl"] .thumbnail-alter input {
+    margin: 0 0 0 0.3333333em;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.thumbnail-image form {
+    display: inline-block;
+    margin-top: 5px;
+    vertical-align: top;
+}
+
+
+/* Content -> Files panel - additional layout
+   ========================================================================== */
+
+/**
+ * Make sure form for selecting existing files is on a new line.
+ */
+
+.txp-control-panel .assign-existing-form {
+    display: block;
+    margin-top: 1em;
+}
+
+
+/* Content -> Comments panel - additional layout
+   ========================================================================== */
+
+/**
+ * Red background highlight for spam comment rows in the list.
+ */
+
+#page-discuss .txp-list tr.spam {
+    background: lighten($color-error-background, 2%);
+}
+
+/**
+ * Yellow background highlight for unmoderated comment rows in the list.
+ */
+
+#page-discuss .txp-list tr.moderate {
+    background: lighten($color-warning-background, 2%);
+}
+
+
+/* Admin -> Languages panel - additional layout
+   ========================================================================== */
+
+#page-lang .txp-list .modified {
+    margin-left: 0.75em;
+}
+
+
+
+/* Admin -> Plugins panel - additional layout
+   ========================================================================== */
+
+tr {
+    .manage span,
+    .plugin-prefs {
+        visibility: hidden;
+    }
+}
+
+tr.active {
+    .manage span,
+    .plugin-prefs {
+        visibility: visible;
+    }
+}
+
+div.code {
+    height: 24em;
+    margin-bottom: 1em;
+    padding: 0.25em; // 3px / 12px
+    border: 1px solid $color-border;
+    overflow: auto;
+    box-sizing: border-box;
+}

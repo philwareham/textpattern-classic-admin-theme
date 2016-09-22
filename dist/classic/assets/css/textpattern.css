@@ -505,7 +505,6 @@ svg:not(:root) {
  * </a>
  */
 .content-image {
-  padding: 4px;
   border: solid 1px #cccccc;
   background: #ffffff;
 }
@@ -1329,6 +1328,7 @@ input[type="button"]:hover,
 .txp-logout a:hover,
 .navlink:hover,
 .navlink-active:hover {
+  border-color: #cccccc #b7b7b7 #b7b7b7 #cccccc;
   background-color: #eeeeee;
   color: #333333;
   text-decoration: none;
@@ -1342,6 +1342,7 @@ input[type="button"]:active,
 .txp-logout a:active,
 .navlink:active,
 .navlink-active:active {
+  border-color: #cccccc #b7b7b7 #b7b7b7 #cccccc;
   background-color: #dddddd;
   color: #1a1a1a;
   text-decoration: none;
@@ -1585,6 +1586,10 @@ dd {
 }
 
 .switcher-list li.active {
+  background: #fff9e1;
+}
+
+.switcher-list li.selected {
   background: #e3edfc;
 }
 
@@ -2978,15 +2983,1353 @@ span.spinner {
   color: #777777;
 }
 
+/* Content -> Images panel - additional layout
+   ========================================================================== */
+.has-thumbnail a:focus {
+  outline-width: 0;
+}
+
+.thumbnail-alter input {
+  margin: 0 0.3333333em 0 0;
+}
+
+.thumbnail-alter input:last-child {
+  margin: 0;
+}
+
+[dir="rtl"] .thumbnail-alter input {
+  margin: 0 0 0 0.3333333em;
+}
+
+[dir="rtl"] .thumbnail-alter input:last-child {
+  margin: 0;
+}
+
+.thumbnail-image form {
+  display: inline-block;
+  margin-top: 5px;
+  vertical-align: top;
+}
+
+/* Content -> Files panel - additional layout
+   ========================================================================== */
+/**
+ * Make sure form for selecting existing files is on a new line.
+ */
+.txp-control-panel .assign-existing-form {
+  display: block;
+  margin-top: 1em;
+}
+
+/* Content -> Comments panel - additional layout
+   ========================================================================== */
+/**
+ * Red background highlight for spam comment rows in the list.
+ */
+#page-discuss .txp-list tr.spam {
+  background: #f5e5e5;
+}
+
+/**
+ * Yellow background highlight for unmoderated comment rows in the list.
+ */
+#page-discuss .txp-list tr.moderate {
+  background: #f9f2e3;
+}
+
+/* Admin -> Languages panel - additional layout
+   ========================================================================== */
+#page-lang .txp-list .modified {
+  margin-left: 0.75em;
+}
+
+/* Admin -> Plugins panel - additional layout
+   ========================================================================== */
+tr .manage span,
+tr .plugin-prefs {
+  visibility: hidden;
+}
+
+tr.active .manage span,
+tr.active .plugin-prefs {
+  visibility: visible;
+}
+
+div.code {
+  height: 24em;
+  margin-bottom: 1em;
+  padding: 0.25em;
+  border: 1px solid #cccccc;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
 /* ==========================================================================
    jQuery UI core
    ========================================================================== */
+/* Layout helpers
+   ========================================================================== */
+/**
+ * Hide jQuery UI elements.
+ */
+.ui-helper-hidden {
+  display: none;
+}
+
+/**
+ * Hide jQuery UI  text but still allow screen reader access.
+ */
+.ui-helper-hidden-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/**
+ * Normalize various rules to avoid style inheritance.
+ */
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline-width: 0;
+  font-size: 12px;
+  line-height: 18px;
+  list-style: none;
+  text-decoration: none;
+}
+
+/**
+ * Clearfix jQuery UI elements.
+ */
+.ui-helper-clearfix::after {
+  display: table;
+  clear: both;
+  border-collapse: collapse;
+  content: "";
+}
+
+/**
+ * Normalize absolute positioning of jQuery UI elements to avoid misplacement.
+ */
+.ui-helper-zfix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/**
+ * Make jQuery UI elements show above other elements.
+ */
+.ui-front {
+  z-index: 100;
+}
+
+/* Component containers
+   ========================================================================== */
+/**
+ * Normalize font size of nested jQuery UI widgets to avoid style inheritance.
+ */
+.ui-widget .ui-widget {
+  font-size: 12px;
+}
+
+/**
+ * General style for jQuery widget content.
+ */
+.ui-widget-content {
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+
+/**
+ * General style for jQuery widget headers.
+ */
+.ui-widget-header {
+  background-color: #e2e2e2;
+  font-weight: bold;
+}
+
+/* Interaction states
+   ========================================================================== */
+/**
+ * Default jQuery UI widget interaction state.
+ */
+.ui-state-default {
+  border: 1px solid #cccccc;
+  background-color: #e2e2e2;
+  color: #333333;
+}
+
+/**
+ * Override hover/focus states for anchors in certain situations.
+ */
+a.ui-state-default:hover,
+a.ui-state-default:focus {
+  color: #333333;
+  text-decoration: none;
+}
+
+/**
+ * Hover jQuery UI widget interaction states.
+ */
+.ui-state-hover {
+  border-color: #aaaaaa;
+  background-color: #eeeeee;
+}
+
+/**
+ * Focus jQuery UI widget interaction states.
+ */
+.ui-state-focus {
+  border-color: #5b9dd9;
+  outline-width: 0;
+}
+
+.ui-state-focus a {
+  outline-width: 0;
+}
+
+/**
+ * Active jQuery UI widget interaction state.
+ */
+.ui-state-active {
+  background-color: #ffffff;
+}
+
+/**
+ * Highlight colour for jQuery UI widgets currently in 'selecting' state.
+ */
+.ui-selecting {
+  background-color: #c7dbfa;
+}
+
+/**
+ * Highlight colour for jQuery UI widgets currently in 'selected' state.
+ */
+.ui-selected {
+  background-color: #e3edfc;
+}
+
+/* Interaction cues
+   ========================================================================== */
+/**
+ * jQuery UI highlight cue colouring.
+ */
+.ui-state-highlight {
+  border: 1px solid #e4c788;
+  background-color: #f7eedb;
+}
+
+/**
+ * jQuery UI error cue colouring.
+ */
+.ui-state-error {
+  border: 1px solid #e1b2b2;
+  background-color: #f2dede;
+  color: #9d261d;
+}
+
+/**
+ * Visually prioritized jQuery UI text.
+ */
+.ui-priority-primary {
+  font-weight: bold;
+}
+
+/**
+ * Visually non-prioritized jQuery UI text.
+ */
+.ui-priority-secondary {
+  font-weight: normal;
+  opacity: 0.66;
+}
+
+/**
+ * Visually disabled jQuery UI text and anchors.
+ */
+.ui-state-disabled {
+  background-image: none;
+  cursor: default !important;
+  opacity: 0.33;
+  pointer-events: none;
+}
+
+.ui-state-disabled a {
+  text-decoration: none;
+  cursor: default;
+}
+
+/* Overlays
+   ========================================================================== */
+/**
+ * Dark, semi-transparent container overlays.
+ *
+ * Example HTML:
+ *
+ * <div class="ui-widget-overlay"></div>
+ */
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* Shadows
+   ========================================================================== */
+/**
+ * Faux shadows via `background-color`.
+ *
+ * Example HTML:
+ *
+ * <div class="ui-widget-shadow"></div>
+ */
+.ui-widget-shadow {
+  box-shadow: 0 0 5px #666666;
+}
+
 /* ==========================================================================
    jQuery UI icons
    ========================================================================== */
+/* Icons
+   ========================================================================== */
+/**
+ * jQuery UI icon sprites, various colourschemes depending of usage state.
+ *
+ * Also used for 'Destroy' button.
+ *
+ * Example HTML:
+ *
+ * <span class="ui-icon ui-icon-caret-1-n"></span>
+ * <span class="ui-icon ui-icon-folder-collapsed"></span>
+ * <span class="ui-icon ui-icon-play"></span>
+ *
+ * TODO: Use `mask` in future (http://caniuse.com/#search=mask), instead of
+ * `filter` or dedicated image.
+ */
+.ui-icon {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/ui-icon-sprite-333333.svg");
+  background-repeat: no-repeat;
+  background-size: 256px 272px;
+  text-indent: -9999px;
+  overflow: hidden;
+  vertical-align: text-bottom;
+}
+
+.ui-widget-icon-block {
+  display: block;
+  left: 50%;
+  margin-left: -8px;
+}
+
+/**
+ * Default state icons.
+ *
+ * TODO: Use `mask` in future.
+ */
+.ui-state-default .ui-icon {
+  -webkit-filter: brightness(1.6666667);
+          filter: brightness(1.6666667);
+}
+
+/**
+ * Weighted content icons and interaction state icons.
+ *
+ * TODO: Use `mask` in future.
+ */
+.ui-widget-content .ui-icon,
+.ui-widget-header .ui-icon,
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-state-active .ui-icon {
+  -webkit-filter: none;
+          filter: none;
+}
+
+/**
+ * 'Succes' state icons.
+ *
+ * Example HTML:
+ *
+ * <p class="success">
+ *     <span class="ui-icon ui-icon-check"></span>
+ *     Success!
+ * </p>
+ *
+ * TODO: Use `mask` in future.
+ */
+.success .ui-icon {
+  background-image: url("../img/ui-icon-sprite-success.svg");
+}
+
+/**
+ * 'Warning' state icons.
+ *
+ * Example HTML:
+ *
+ * <p class="warning">
+ *     <span class="ui-icon ui-icon-alert"></span>
+ *     Warning!
+ * </p>
+ *
+ * TODO: Use `mask` in future.
+ */
+.ui-state-highlight .ui-icon,
+.warning .ui-icon {
+  background-image: url("../img/ui-icon-sprite-warning.svg");
+}
+
+/**
+ * 'Error' state icons.
+ *
+ * Example HTML:
+ *
+ * <p class="error">
+ *     <span class="ui-icon ui-icon-alert"></span>
+ *     Error!
+ * </p>
+ *
+ * TODO: Use `mask` in future.
+ */
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon,
+.error .ui-icon,
+.destroy .ui-icon {
+  background-image: url("../img/ui-icon-sprite-error.svg");
+}
+
+/**
+ * 'Information' state icons.
+ *
+ * Example HTML:
+ *
+ * <p class="information">
+ *     <span class="ui-icon ui-icon-info"></span>
+ *     Content
+ * </p>
+ *
+ * TODO: Use `mask` in future.
+ */
+.information .ui-icon {
+  background-image: url("../img/ui-icon-sprite-info.svg");
+}
+
+/**
+ * Icons within Textpattern system message panes.
+ *
+ * TODO: Use `mask` in future.
+ */
+#messagepane .ui-icon {
+  background-image: url("../img/ui-icon-sprite-ffffff.svg");
+}
+
+/**
+ * Icon sprite positionings.
+ *
+ * TODO: Use `mask` in future.
+ */
+.ui-icon-blank {
+  background-position: 16px 16px;
+}
+
+.ui-icon-caret-1-n {
+  background-position: 0 0;
+}
+
+.ui-icon-caret-1-ne {
+  background-position: -16px 0;
+}
+
+.ui-icon-caret-1-e {
+  background-position: -32px 0;
+}
+
+.ui-icon-caret-1-se {
+  background-position: -48px 0;
+}
+
+.ui-icon-caret-1-s {
+  background-position: -64px 0;
+}
+
+.ui-icon-caret-1-sw {
+  background-position: -80px 0;
+}
+
+.ui-icon-caret-1-w {
+  background-position: -96px 0;
+}
+
+.ui-icon-caret-1-nw {
+  background-position: -112px 0;
+}
+
+.ui-icon-caret-2-n-s {
+  background-position: -128px 0;
+}
+
+.ui-icon-caret-2-e-w {
+  background-position: -144px 0;
+}
+
+.ui-icon-triangle-1-n {
+  background-position: 0 -16px;
+}
+
+.ui-icon-triangle-1-ne {
+  background-position: -16px -16px;
+}
+
+.ui-icon-triangle-1-e {
+  background-position: -32px -16px;
+}
+
+.ui-icon-triangle-1-se {
+  background-position: -48px -16px;
+}
+
+.ui-icon-triangle-1-s {
+  background-position: -64px -16px;
+}
+
+.ui-icon-triangle-1-sw {
+  background-position: -80px -16px;
+}
+
+.ui-icon-triangle-1-w {
+  background-position: -96px -16px;
+}
+
+.ui-icon-triangle-1-nw {
+  background-position: -112px -16px;
+}
+
+.ui-icon-triangle-2-n-s {
+  background-position: -128px -16px;
+}
+
+.ui-icon-triangle-2-e-w {
+  background-position: -144px -16px;
+}
+
+.ui-icon-arrow-1-n {
+  background-position: 0 -32px;
+}
+
+.ui-icon-arrow-1-ne {
+  background-position: -16px -32px;
+}
+
+.ui-icon-arrow-1-e {
+  background-position: -32px -32px;
+}
+
+.ui-icon-arrow-1-se {
+  background-position: -48px -32px;
+}
+
+.ui-icon-arrow-1-s {
+  background-position: -64px -32px;
+}
+
+.ui-icon-arrow-1-sw {
+  background-position: -80px -32px;
+}
+
+.ui-icon-arrow-1-w {
+  background-position: -96px -32px;
+}
+
+.ui-icon-arrow-1-nw {
+  background-position: -112px -32px;
+}
+
+.ui-icon-arrow-2-n-s {
+  background-position: -128px -32px;
+}
+
+.ui-icon-arrow-2-ne-sw {
+  background-position: -144px -32px;
+}
+
+.ui-icon-arrow-2-e-w {
+  background-position: -160px -32px;
+}
+
+.ui-icon-arrow-2-se-nw {
+  background-position: -176px -32px;
+}
+
+.ui-icon-arrowstop-1-n {
+  background-position: -192px -32px;
+}
+
+.ui-icon-arrowstop-1-e {
+  background-position: -208px -32px;
+}
+
+.ui-icon-arrowstop-1-s {
+  background-position: -224px -32px;
+}
+
+.ui-icon-arrowstop-1-w {
+  background-position: -240px -32px;
+}
+
+.ui-icon-arrowthick-1-n {
+  background-position: 0 -48px;
+}
+
+.ui-icon-arrowthick-1-ne {
+  background-position: -16px -48px;
+}
+
+.ui-icon-arrowthick-1-e {
+  background-position: -32px -48px;
+}
+
+.ui-icon-arrowthick-1-se {
+  background-position: -48px -48px;
+}
+
+.ui-icon-arrowthick-1-s {
+  background-position: -64px -48px;
+}
+
+.ui-icon-arrowthick-1-sw {
+  background-position: -80px -48px;
+}
+
+.ui-icon-arrowthick-1-w {
+  background-position: -96px -48px;
+}
+
+.ui-icon-arrowthick-1-nw {
+  background-position: -112px -48px;
+}
+
+.ui-icon-arrowthick-2-n-s {
+  background-position: -128px -48px;
+}
+
+.ui-icon-arrowthick-2-ne-sw {
+  background-position: -144px -48px;
+}
+
+.ui-icon-arrowthick-2-e-w {
+  background-position: -160px -48px;
+}
+
+.ui-icon-arrowthick-2-se-nw {
+  background-position: -176px -48px;
+}
+
+.ui-icon-arrowthickstop-1-n {
+  background-position: -192px -48px;
+}
+
+.ui-icon-arrowthickstop-1-e {
+  background-position: -208px -48px;
+}
+
+.ui-icon-arrowthickstop-1-s {
+  background-position: -224px -48px;
+}
+
+.ui-icon-arrowthickstop-1-w {
+  background-position: -240px -48px;
+}
+
+.ui-icon-arrowreturnthick-1-w {
+  background-position: 0 -64px;
+}
+
+.ui-icon-arrowreturnthick-1-n {
+  background-position: -16px -64px;
+}
+
+.ui-icon-arrowreturnthick-1-e {
+  background-position: -32px -64px;
+}
+
+.ui-icon-arrowreturnthick-1-s {
+  background-position: -48px -64px;
+}
+
+.ui-icon-arrowreturn-1-w {
+  background-position: -64px -64px;
+}
+
+.ui-icon-arrowreturn-1-n {
+  background-position: -80px -64px;
+}
+
+.ui-icon-arrowreturn-1-e {
+  background-position: -96px -64px;
+}
+
+.ui-icon-arrowreturn-1-s {
+  background-position: -112px -64px;
+}
+
+.ui-icon-arrowrefresh-1-w {
+  background-position: -128px -64px;
+}
+
+.ui-icon-arrowrefresh-1-n {
+  background-position: -144px -64px;
+}
+
+.ui-icon-arrowrefresh-1-e {
+  background-position: -160px -64px;
+}
+
+.ui-icon-arrowrefresh-1-s {
+  background-position: -176px -64px;
+}
+
+.ui-icon-arrow-4 {
+  background-position: 0 -80px;
+}
+
+.ui-icon-arrow-4-diag {
+  background-position: -16px -80px;
+}
+
+.ui-icon-extlink {
+  background-position: -32px -80px;
+}
+
+.ui-icon-newwin {
+  background-position: -48px -80px;
+}
+
+.ui-icon-refresh {
+  background-position: -64px -80px;
+}
+
+.ui-icon-shuffle {
+  background-position: -80px -80px;
+}
+
+.ui-icon-transfer-e-w {
+  background-position: -96px -80px;
+}
+
+.ui-icon-transferthick-e-w {
+  background-position: -112px -80px;
+}
+
+.ui-icon-folder-collapsed {
+  background-position: 0 -96px;
+}
+
+.ui-icon-folder-open {
+  background-position: -16px -96px;
+}
+
+.ui-icon-document {
+  background-position: -32px -96px;
+}
+
+.ui-icon-document-b {
+  background-position: -48px -96px;
+}
+
+.ui-icon-note {
+  background-position: -64px -96px;
+}
+
+.ui-icon-mail-closed {
+  background-position: -80px -96px;
+}
+
+.ui-icon-mail-open {
+  background-position: -96px -96px;
+}
+
+.ui-icon-suitcase {
+  background-position: -112px -96px;
+}
+
+.ui-icon-comment {
+  background-position: -128px -96px;
+}
+
+.ui-icon-person {
+  background-position: -144px -96px;
+}
+
+.ui-icon-print {
+  background-position: -160px -96px;
+}
+
+.ui-icon-trash {
+  background-position: -176px -96px;
+}
+
+.ui-icon-locked {
+  background-position: -192px -96px;
+}
+
+.ui-icon-unlocked {
+  background-position: -208px -96px;
+}
+
+.ui-icon-bookmark {
+  background-position: -224px -96px;
+}
+
+.ui-icon-tag {
+  background-position: -240px -96px;
+}
+
+.ui-icon-home {
+  background-position: 0 -112px;
+}
+
+.ui-icon-flag {
+  background-position: -16px -112px;
+}
+
+.ui-icon-calendar {
+  background-position: -32px -112px;
+}
+
+.ui-icon-cart {
+  background-position: -48px -112px;
+}
+
+.ui-icon-pencil {
+  background-position: -64px -112px;
+}
+
+.ui-icon-clock {
+  background-position: -80px -112px;
+}
+
+.ui-icon-disk {
+  background-position: -96px -112px;
+}
+
+.ui-icon-calculator {
+  background-position: -112px -112px;
+}
+
+.ui-icon-zoomin {
+  background-position: -128px -112px;
+}
+
+.ui-icon-zoomout {
+  background-position: -144px -112px;
+}
+
+.ui-icon-search {
+  background-position: -160px -112px;
+}
+
+.ui-icon-wrench {
+  background-position: -176px -112px;
+}
+
+.ui-icon-gear {
+  background-position: -192px -112px;
+}
+
+.ui-icon-heart {
+  background-position: -208px -112px;
+}
+
+.ui-icon-star {
+  background-position: -224px -112px;
+}
+
+.ui-icon-link {
+  background-position: -240px -112px;
+}
+
+.ui-icon-cancel {
+  background-position: 0 -128px;
+}
+
+.ui-icon-plus {
+  background-position: -16px -128px;
+}
+
+.ui-icon-plusthick {
+  background-position: -32px -128px;
+}
+
+.ui-icon-minus {
+  background-position: -48px -128px;
+}
+
+.ui-icon-minusthick {
+  background-position: -64px -128px;
+}
+
+.ui-icon-close {
+  background-position: -80px -128px;
+}
+
+.ui-icon-closethick {
+  background-position: -96px -128px;
+}
+
+.ui-icon-key {
+  background-position: -112px -128px;
+}
+
+.ui-icon-lightbulb {
+  background-position: -128px -128px;
+}
+
+.ui-icon-scissors {
+  background-position: -144px -128px;
+}
+
+.ui-icon-clipboard {
+  background-position: -160px -128px;
+}
+
+.ui-icon-copy {
+  background-position: -176px -128px;
+}
+
+.ui-icon-contact {
+  background-position: -192px -128px;
+}
+
+.ui-icon-image {
+  background-position: -208px -128px;
+}
+
+.ui-icon-video {
+  background-position: -224px -128px;
+}
+
+.ui-icon-script {
+  background-position: -240px -128px;
+}
+
+.ui-icon-alert {
+  background-position: 0 -144px;
+}
+
+.ui-icon-info {
+  background-position: -16px -144px;
+}
+
+.ui-icon-notice {
+  background-position: -32px -144px;
+}
+
+.ui-icon-help {
+  background-position: -48px -144px;
+}
+
+.ui-icon-check {
+  background-position: -64px -144px;
+}
+
+.ui-icon-bullet {
+  background-position: -80px -144px;
+}
+
+.ui-icon-radio-on {
+  background-position: -96px -144px;
+}
+
+.ui-icon-radio-off {
+  background-position: -112px -144px;
+}
+
+.ui-icon-pin-w {
+  background-position: -128px -144px;
+}
+
+.ui-icon-pin-s {
+  background-position: -144px -144px;
+}
+
+.ui-icon-play {
+  background-position: 0 -160px;
+}
+
+.ui-icon-pause {
+  background-position: -16px -160px;
+}
+
+.ui-icon-seek-next {
+  background-position: -32px -160px;
+}
+
+.ui-icon-seek-prev {
+  background-position: -48px -160px;
+}
+
+.ui-icon-seek-end {
+  background-position: -64px -160px;
+}
+
+.ui-icon-seek-start {
+  background-position: -80px -160px;
+}
+
+.ui-icon-stop {
+  background-position: -96px -160px;
+}
+
+.ui-icon-eject {
+  background-position: -112px -160px;
+}
+
+.ui-icon-volume-off {
+  background-position: -128px -160px;
+}
+
+.ui-icon-volume-on {
+  background-position: -144px -160px;
+}
+
+.ui-icon-power {
+  background-position: 0 -176px;
+}
+
+.ui-icon-signal-diag {
+  background-position: -16px -176px;
+}
+
+.ui-icon-signal {
+  background-position: -32px -176px;
+}
+
+.ui-icon-battery-0 {
+  background-position: -48px -176px;
+}
+
+.ui-icon-battery-1 {
+  background-position: -64px -176px;
+}
+
+.ui-icon-battery-2 {
+  background-position: -80px -176px;
+}
+
+.ui-icon-battery-3 {
+  background-position: -96px -176px;
+}
+
+.ui-icon-circle-plus {
+  background-position: 0 -192px;
+}
+
+.ui-icon-circle-minus {
+  background-position: -16px -192px;
+}
+
+.ui-icon-circle-close {
+  background-position: -32px -192px;
+}
+
+.ui-icon-circle-triangle-e {
+  background-position: -48px -192px;
+}
+
+.ui-icon-circle-triangle-s {
+  background-position: -64px -192px;
+}
+
+.ui-icon-circle-triangle-w {
+  background-position: -80px -192px;
+}
+
+.ui-icon-circle-triangle-n {
+  background-position: -96px -192px;
+}
+
+.ui-icon-circle-arrow-e {
+  background-position: -112px -192px;
+}
+
+.ui-icon-circle-arrow-s {
+  background-position: -128px -192px;
+}
+
+.ui-icon-circle-arrow-w {
+  background-position: -144px -192px;
+}
+
+.ui-icon-circle-arrow-n {
+  background-position: -160px -192px;
+}
+
+.ui-icon-circle-zoomin {
+  background-position: -176px -192px;
+}
+
+.ui-icon-circle-zoomout {
+  background-position: -192px -192px;
+}
+
+.ui-icon-circle-check {
+  background-position: -208px -192px;
+}
+
+.ui-icon-circlesmall-plus {
+  background-position: 0 -208px;
+}
+
+.ui-icon-circlesmall-minus {
+  background-position: -16px -208px;
+}
+
+.ui-icon-circlesmall-close {
+  background-position: -32px -208px;
+}
+
+.ui-icon-squaresmall-plus {
+  background-position: -48px -208px;
+}
+
+.ui-icon-squaresmall-minus {
+  background-position: -64px -208px;
+}
+
+.ui-icon-squaresmall-close {
+  background-position: -80px -208px;
+}
+
+.ui-icon-grip-dotted-vertical {
+  background-position: 0 -224px;
+}
+
+.ui-icon-grip-dotted-horizontal {
+  background-position: -16px -224px;
+}
+
+.ui-icon-grip-solid-vertical {
+  background-position: -32px -224px;
+}
+
+.ui-icon-grip-solid-horizontal {
+  background-position: -48px -224px;
+}
+
+.ui-icon-gripsmall-diagonal-se {
+  background-position: -64px -224px;
+}
+
+.ui-icon-grip-diagonal-se {
+  background-position: -80px -224px;
+}
+
+/* Hive extra icons
+   ========================================================================== */
+/**
+ * Additional handy icons we've added to the standard jQuery UI icon sprite.
+ *
+ * Example HTML:
+ *
+ * <span class="ui-icon ui-extra-icon-code"></span>
+ * <span class="ui-icon ui-extra-icon-download"></span>
+ *
+ * TODO: Use `mask` in future.
+ */
+.ui-extra-icon-code {
+  background-position: 0 -256px;
+}
+
+.ui-extra-icon-list {
+  background-position: -16px -256px;
+}
+
+.ui-extra-icon-grid {
+  background-position: -32px -256px;
+}
+
+.ui-extra-icon-download {
+  background-position: -48px -256px;
+}
+
+.ui-extra-icon-upload {
+  background-position: -64px -256px;
+}
+
+.ui-extra-icon-attach {
+  background-position: -80px -256px;
+}
+
+.ui-extra-icon-new-document {
+  background-position: -96px -256px;
+}
+
+.ui-extra-icon-facebook {
+  background-position: -112px -256px;
+}
+
+.ui-extra-icon-googleplus {
+  background-position: -128px -256px;
+}
+
+.ui-extra-icon-linkedin {
+  background-position: -144px -256px;
+}
+
+.ui-extra-icon-twitter {
+  background-position: -160px -256px;
+}
+
+.ui-extra-icon-github {
+  background-position: -176px -256px;
+}
+
 /* ==========================================================================
    jQuery UI interactions
    ========================================================================== */
 /* ==========================================================================
    jQuery UI widgets
    ========================================================================== */
+/* Button
+   ========================================================================== */
+/**
+ * jQuery UI Button.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/button/
+ *
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 3. The `overflow` property removes extra width in IE.
+ * 4. Remove iOS Safari default styling.
+ *
+ * Example HTML:
+ *
+ * <a class="ui-button ui-button-text-only">
+ *     <span class="ui-button-text">Button</span>
+ * </a>
+ */
+.ui-button {
+  display: inline-block;
+  position: relative;
+  height: 2.1666667em;
+  margin: 0 0.1em 0 0;
+  padding: 0.25em 0.75em;
+  border: 1px solid #dddddd #c7c7c7 #c7c7c7 #dddddd;
+  background-clip: padding-box;
+  background-color: #e2e2e2;
+  color: #333333;
+  font-family: Helvetica, Arial, sans-serif;
+  /* 1 */
+  font-size: 12px;
+  line-height: 1.5em;
+  text-align: center;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  overflow: visible;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  /* 4 */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.ui-button:hover {
+  border-color: #cccccc #b7b7b7 #b7b7b7 #cccccc;
+  background-color: #eeeeee;
+  color: #333333;
+  text-decoration: none;
+}
+
+.ui-button:active {
+  border-color: #cccccc #b7b7b7 #b7b7b7 #cccccc;
+  background-color: #dddddd;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.ui-button:focus {
+  border-color: #5b9dd9;
+  outline-width: 0;
+}
+
+/**
+ * Focus styling for buttons.
+ *
+ * 1. `!important` required to override specificity.
+ */
+.ui-button.ui-state-focus {
+  /* 1 */
+  border-color: #5b9dd9 !important;
+}
+
+/**
+ * Single-icon-only button.
+ *
+ * To make room for the icon, a width needs to be set here.
+ *
+ * Example HTML:
+ *
+ * <a class="ui-button ui-button-icon-only">
+ *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
+ *     <span class="ui-button-text">Button one icon, no text</span>
+ * </a>
+ */
+.ui-button-icon-only {
+  width: 2.1666667em;
+  text-indent: -9999px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/**
+ * No icon support for input elements.
+ */
+input.ui-button.ui-button-icon-only {
+  text-indent: 0;
+}
+
+/**
+ * Button icon element(s).
+ */
+.ui-button-icon-only .ui-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.ui-button.ui-icon-notext .ui-icon {
+  padding: 0;
+  text-indent: -9999px;
+  white-space: nowrap;
+}
+
+input.ui-button.ui-icon-notext .ui-icon {
+  padding: 0.4em 1em;
+  text-indent: 0;
+  white-space: normal;
+}

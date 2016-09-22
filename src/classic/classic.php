@@ -119,7 +119,7 @@ class classic_theme extends \Textpattern\Admin\Theme
     {
         global $txp_user;
 
-        $out[] = href('Textpattern CMS', 'http://textpattern.com', array(
+        $out[] = href('Textpattern CMS'.sp.span(gTxt('opens_external_link'), array('class' => 'ui-icon ui-icon-extlink')), 'http://textpattern.com', array(
                 'class'  => 'mothership',
                 'rel'    => 'external',
                 'target' => '_blank',

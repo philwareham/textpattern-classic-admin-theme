@@ -101,6 +101,10 @@ dd {
         }
 
         &.active {
+            background: $color-highlight-box;
+        }
+
+        &.selected {
             background: $color-selected;
         }
     }

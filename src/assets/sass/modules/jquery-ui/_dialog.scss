@@ -1,0 +1,119 @@
+/* Dialog
+   ========================================================================== */
+
+/**
+ * jQuery UI Dialog.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/dialog/
+ *
+ * Example HTML:
+ *
+ * <div class="ui-dialog ui-front ui-dialog-buttons ui-draggable">
+ *     <div class="ui-dialog-titlebar">
+ *         <span class="ui-dialog-title">Modal dialog example</span>
+ *         <button class="ui-button ui-button-icon-only ui-dialog-titlebar-close">
+ *             <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+ *             <span class="ui-button-text">close</span>
+ *         </button>
+ *     </div>
+ *     <div class="ui-dialog-content">
+ *         Content
+ *     </div>
+ *     <div class="ui-dialog-buttonpane">
+ *         <div class="ui-dialog-buttonset">
+ *             <button class="ui-button ui-button-text-only">
+ *                 <span class="ui-button-text">Cancel</span>
+ *             </button>
+ *             <button class="ui-button ui-button-text-only">
+ *                 <span class="ui-button-text">Ok</span>
+ *             </button>
+ *         </div>
+ *     </div>
+ * </div>
+ */
+
+.ui-dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.2em;
+    outline: 0;
+    @if $flat-theme < 1 {
+        box-shadow: $standard-shadow;
+    }
+    z-index: 1002;
+
+    .ui-dialog-titlebar {
+        position: relative;
+        padding: 0.4em 1em;
+    }
+
+    .ui-dialog-title {
+        width: 90%;
+        margin: 0.1em 0;
+        float: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        [dir="rtl"] & {
+            float: right;
+        }
+    }
+
+    .ui-dialog-titlebar-close {
+        position: absolute;
+        top: 50%;
+        right: 0.3em;
+        width: 20px;
+        height: 20px;
+        margin: -10px 0 0;
+
+        [dir="rtl"] & {
+            right: auto;
+            left: 0.3em;
+        }
+    }
+
+    .ui-dialog-content {
+        position: relative;
+        padding: 0.5em 1em;
+        border: 0;
+        background: none;
+        overflow: auto;
+    }
+
+    .ui-dialog-buttonpane {
+        margin-top: 0.5em;
+        padding: 0.5em;
+        border-width: 1px 0 0;
+        background-image: none;
+        text-align: left;
+    }
+
+    .ui-dialog-buttonpane .ui-dialog-buttonset {
+        float: right;
+
+        [dir="rtl"] & {
+            float: left;
+        }
+    }
+
+    .ui-dialog-buttonpane button {
+        margin: 0.5em 0.4em 0.5em 0;
+        cursor: pointer;
+
+        [dir="rtl"] & {
+            margin: 0.5em 0 0.5em 0.4em;
+        }
+    }
+}
+
+/**
+ * Change cursor when window is being dragged.
+ */
+
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+}
