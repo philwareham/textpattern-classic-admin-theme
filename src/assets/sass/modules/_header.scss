@@ -20,7 +20,7 @@
  */
 
 .txp-header {
-    min-width: 80em; // TODO: check this?
+    min-width: $container-min-width;
     margin-bottom: 1.5em;
 }
 
@@ -30,7 +30,7 @@
     height: 2.5em;
     padding: 0 2.5%;
     border-bottom: 1px solid #f8c225;
-    background-color: #ffda44;
+    background-color: $color-accent-gradient-from;
 }
 
 .txp-branding {

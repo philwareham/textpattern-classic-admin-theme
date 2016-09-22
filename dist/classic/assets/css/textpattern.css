@@ -1879,10 +1879,11 @@ body {
 .txp-body {
   -ms-flex-positive: 1;
       flex-grow: 1;
-  width: 95%;
-  min-width: 80em;
-  max-width: 124em;
+  min-width: 64em;
+  max-width: 110em;
   margin: 0 auto;
+  padding: 0 2.5%;
+  box-sizing: border-box;
 }
 
 /* Layout grid
@@ -2007,7 +2008,7 @@ body {
  * </header>
  */
 .txp-header {
-  min-width: 80em;
+  min-width: 64em;
   margin-bottom: 1.5em;
 }
 
@@ -2051,10 +2052,11 @@ body {
  * </footer>
  */
 .txp-footer {
-  width: 95%;
-  min-width: 80em;
-  margin: 1em auto;
+  min-width: 64em;
+  margin: 1em 0;
+  padding: 0 2.5%;
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* Navigation
@@ -2937,6 +2939,43 @@ span.spinner {
 
 #view_modes ul .active a:focus {
   border-color: #5b9dd9;
+}
+
+/**
+ * Write page excerpt field when in HTML preview.
+ */
+.html .excerpt {
+  margin-bottom: 1em;
+}
+
+/**
+ * Custom font size/weight/colour for elements in write -> main content area.
+ */
+#main_content .text input {
+  font-size: 16px;
+}
+
+#main_content .text textarea {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+#main_content .text .title input {
+  font-weight: bold;
+}
+
+#main_content .author {
+  color: #777777;
+}
+
+/* Content -> Articles panel - additional layout
+   ========================================================================== */
+/**
+ * Grey-out text for unpublished articles/non-modified dates in the list.
+ */
+.unpublished,
+.not-modified {
+  color: #777777;
 }
 
 /* ==========================================================================

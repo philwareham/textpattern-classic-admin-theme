@@ -12,8 +12,9 @@
  */
 
 .txp-footer {
-    width: 95%;
-    min-width: 80em; // TODO: check this?
-    margin: 1em auto;
+    min-width: $container-min-width;
+    margin: 1em 0;
+    padding: 0 2.5%;
     text-align: center;
+    box-sizing: border-box;
 }

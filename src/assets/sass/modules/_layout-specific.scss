@@ -32,6 +32,7 @@
     width: 100%;
 }
 
+
 /* Content -> Categories panel - additional layout
    ========================================================================== */
 
@@ -42,6 +43,7 @@
 #page-category .multi-edit {
     margin-bottom: 1em;
 }
+
 
 /* Content -> Write panel - additional layout
    ========================================================================== */
@@ -105,4 +107,50 @@
             border-color: $color-link-focus;
         }
     }
+}
+
+/**
+ * Write page excerpt field when in HTML preview.
+ */
+
+.html .excerpt {
+    margin-bottom: 1em;
+}
+
+/**
+ * Custom font size/weight/colour for elements in write -> main content area.
+ */
+
+#main_content {
+    .text {
+        input {
+            font-size: 16px;
+        }
+
+        textarea {
+            font-size: 16px;
+            line-height: 1.5em; // 24px / 16px
+        }
+
+        .title input {
+            font-weight: bold;
+        }
+    }
+
+    .author {
+        color: $color-text-footnote;
+    }
+}
+
+
+/* Content -> Articles panel - additional layout
+   ========================================================================== */
+
+/**
+ * Grey-out text for unpublished articles/non-modified dates in the list.
+ */
+
+.unpublished,
+.not-modified {
+    color: $color-text-footnote;
 }
