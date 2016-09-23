@@ -171,6 +171,7 @@ $colors: (
 
 .text-section h1 span,
 h2 span {
+    font-family: $font-body;
     font-size: $base-font-size;
     font-weight: normal;
 }

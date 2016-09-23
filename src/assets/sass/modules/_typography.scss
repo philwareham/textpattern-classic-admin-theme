@@ -38,6 +38,7 @@ h1 {
     line-height: 1.25;
 
     .pophelp {
+        font-family: $font-body;
         font-size: $base-font-size;
     }
 }
@@ -76,6 +77,7 @@ h2 {
     line-height: 1.3333333;
 
     .pophelp {
+        font-family: $font-body;
         font-size: $base-font-size;
     }
 }

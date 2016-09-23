@@ -184,6 +184,7 @@ h1 {
 }
 
 h1 .pophelp {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-size: 12px;
 }
 
@@ -218,6 +219,7 @@ h2 {
 }
 
 h2 .pophelp {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-size: 12px;
 }
 
