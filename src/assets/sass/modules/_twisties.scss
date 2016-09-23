@@ -23,30 +23,10 @@
  * </section>
  */
 
-/**
- * Styling for summary headings.
- */
-
-h3.txp-summary,
-.txp-details > h3 {
-    margin: 1em 0;
-    font-family: $font-body;
-    font-size: 1em; // 12px
-    font-weight: bold;
-}
-
-/**
- * Additonal styling for lever summary headings.
- */
-
 h3.txp-summary a {
-    padding: 0 0 0 1em;
+    padding: 0 0 0 0.8em; // 12px / 15px
     background: url("../img/expand-collapse.svg") no-repeat 0 4px;
 }
-
-/**
- * Additonal styling for lever summary headings - expanded state.
- */
 
 h3.txp-summary.expanded a {
     background-position: 0 -90px;
