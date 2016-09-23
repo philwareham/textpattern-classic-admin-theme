@@ -148,11 +148,11 @@ body {
 }
 
 .design-patterns--color-highlight-box {
-  background: #fff9e1;
+  background: #fff8dd;
 }
 
 .design-patterns--color-highlight-box::after {
-  content: "#fff9e1";
+  content: "#fff8dd";
 }
 
 .design-patterns--color-strong-highlight-box {
@@ -317,7 +317,6 @@ body {
 h2 span {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
   font-size: 12px;
-  font-weight: normal;
 }
 
 /**

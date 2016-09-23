@@ -560,7 +560,7 @@ a:focus .content-image {
  * </table>
  */
 .highlight {
-  background: #fff9e1;
+  background: #fff8dd;
 }
 
 /**
@@ -1366,7 +1366,7 @@ a.publish {
 [type="submit"].publish:hover,
 button.publish:hover,
 a.publish:hover {
-  background-color: #aa0000;
+  background-color: #b70000;
 }
 
 [type="submit"].publish:active,
@@ -1456,7 +1456,15 @@ ul.nav-tertiary li {
 }
 
 .navlink-active {
-  background-color: #eeeeee;
+  background-color: #fff8dd;
+}
+
+.navlink-active:hover {
+  background-color: #fffdf7;
+}
+
+.navlink-active:active {
+  background-color: #fff0b4;
 }
 
 /**
@@ -1571,7 +1579,7 @@ dd {
 }
 
 .switcher-list li.active {
-  background: #fff9e1;
+  background: #fff8dd;
 }
 
 .switcher-list li.selected {
@@ -2111,7 +2119,7 @@ body {
 
 .nav-tabs a:hover {
   border-color: #aaaaaa;
-  background-color: #ffffff;
+  background-color: #fffdf7;
 }
 
 .nav-tabs a:focus {
@@ -2619,6 +2627,7 @@ span.spinner {
   max-width: 60em;
   margin: 0 auto 1em;
   padding: 1em 1em 1px;
+  border: 1px solid #d4d4d4;
   /* 1 */
   background: #ffffff;
 }

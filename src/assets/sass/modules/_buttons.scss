@@ -83,7 +83,7 @@ a.publish {
     font-weight: bold;
 
     &:hover {
-        background-color: #aa0000;
+        background-color: #b70000;
     }
 
     &:active {
@@ -173,7 +173,15 @@ ul.nav-tertiary {
 }
 
 .navlink-active {
-    background-color: #eeeeee;
+    background-color: $color-highlight-box;
+
+    &:hover {
+        background-color: lighten($color-highlight-box, 5%);
+    }
+
+    &:active {
+        background-color: darken($color-highlight-box, 8%);
+    }
 }
 
 /**

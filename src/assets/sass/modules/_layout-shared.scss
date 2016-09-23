@@ -514,6 +514,7 @@ span.spinner {
     max-width: ($text-column - 2em);
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
+    border: 1px solid $color-border-light;
     /* 1 */
     background: $color-background;
 

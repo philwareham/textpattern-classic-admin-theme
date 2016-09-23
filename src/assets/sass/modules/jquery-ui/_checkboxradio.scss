@@ -77,9 +77,8 @@
 
 label.ui-state-active {
     &.ui-button {
-        @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
-
         border-color: $color-button-selected-border;
+        background-color: $color-highlight-box;
     }
 
     &.ui-button:hover {
