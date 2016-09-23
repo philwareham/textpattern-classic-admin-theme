@@ -26,7 +26,8 @@
     height: 2.1666667em; // 26px / 12px
     margin: 0 0.1em 0 0;
     padding: 0.25em 0.75em; // 3px/ 12px + 9px / 12px
-    border: 1px solid $color-button-border;
+    border: 1px solid;
+    border-color: $color-button-border;
     background-clip: padding-box;
     background-color: #e2e2e2;
     color: $color-text-button;

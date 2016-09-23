@@ -35,7 +35,7 @@ h1 {
     font-family: $font-heading;
     font-size: 24px;
     font-weight: normal;
-    line-height: 1.25;
+    line-height: 1.25; // 30px / 24px
 
     .pophelp {
         font-family: $font-body;
@@ -74,7 +74,7 @@ h2 {
     font-family: $font-heading;
     font-size: 18px;
     font-weight: normal;
-    line-height: 1.3333333;
+    line-height: 1.3333333; // 24px / 18px
 
     .pophelp {
         font-family: $font-body;
@@ -87,10 +87,10 @@ h2 {
  */
 
 h3 {
-    margin: 0.8em 0; // 12px / 15px
+    margin: 0.8571429em 0; // 12px / 14px
     font-family: $font-heading;
-    font-size: 15px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.4285714; // 20px / 14px
 
     a {
         font-weight: bold;

@@ -33,7 +33,6 @@
         position: relative;
         margin: 2px 0 0;
         padding: 0.5em 1em;
-        font-size: $base-font-size;
         cursor: pointer;
 
         a {
@@ -57,7 +56,7 @@
 
     .ui-accordion-icons,
     .ui-accordion-icons .ui-accordion-icons {
-        padding-left: 2em;
+        padding-left: 1.7142857em; // 24px / 14px;
     }
 }
 
@@ -73,7 +72,7 @@
 
     .ui-accordion-icons,
     .ui-accordion-icons .ui-accordion-icons {
-        padding-right: 2em;
+        padding-right: 1.7142857em; // 24px / 14px;
         padding-left: 0;
     }
 }
