@@ -662,18 +662,6 @@ a:focus .content-image {
 /*
  * Flash the alert message using CSS animation.
  */
-@-webkit-keyframes messageflash {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  50%,
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes messageflash {
   0% {
     opacity: 0;
@@ -688,8 +676,7 @@ a:focus .content-image {
 }
 
 .messageflash {
-  -webkit-animation: messageflash 1s;
-          animation: messageflash 1s;
+  animation: messageflash 1s;
 }
 
 /* Twisties
@@ -1849,14 +1836,12 @@ td {
  * 2. Remove default margin.
  */
 body {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   /* 1 */
   position: relative;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   min-height: 100vh;
   /* 2 */
   margin: 0;
@@ -1880,9 +1865,8 @@ body {
  * </body>
  */
 .txp-body {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   min-width: 64em;
   max-width: 110em;
   margin: 0 auto;
@@ -1896,12 +1880,10 @@ body {
  * Flex container.
  */
 .txp-layout {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 -1em;
 }
 
@@ -1978,15 +1960,12 @@ body {
  * </div>
  */
 .txp-grid {
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
   margin: -2px;
 }
 
@@ -2022,12 +2001,10 @@ body {
 }
 
 .txp-masthead {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   height: 2.5em;
   padding: 0 2.5%;
   border-bottom: 1px solid #f8c225;
@@ -2225,12 +2202,10 @@ hr {
  * </form>
  */
 .txp-search {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   margin: 1em 0;
 }
 
@@ -2241,9 +2216,8 @@ hr {
 }
 
 .txp-search .ui-controlgroup {
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .txp-search .txp-dropdown input {
@@ -2259,9 +2233,8 @@ hr {
 }
 
 .txp-search-clear {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+      flex: 1;
   margin: auto 0.5em;
   text-align: right;
 }
@@ -2749,12 +2722,10 @@ span.spinner {
 .txp-edit .txp-form-field:not(.txp-form-field-textarea),
 .txp-prefs-group .txp-form-field:not(.txp-form-field-textarea),
 .setup:not(.welcome) .txp-form-field:not(.txp-form-field-textarea) {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+      align-items: baseline;
 }
 
 .txp-edit .txp-form-field-label,
@@ -2763,9 +2734,8 @@ span.spinner {
 .txp-prefs-group .txp-form-field-value,
 .setup:not(.welcome) .txp-form-field-label,
 .setup:not(.welcome) .txp-form-field-value {
-  -webkit-flex: 1 1 0%;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+      flex: 1 1 0%;
   min-height: 2.16666666666667em;
 }
 
@@ -2785,9 +2755,8 @@ span.spinner {
  */
 .txp-form-field-textarea .txp-form-field-label,
 .txp-form-field-textarea .txp-form-field-value {
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  -ms-flex: none;
+      flex: none;
   max-width: inherit;
   min-height: inherit;
 }
@@ -2841,26 +2810,22 @@ span.spinner {
  * Ensure Tag builder vertical footprint doesn't spill out of screen area.
  */
 .txp-tagbuilder-container {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+      flex-flow: column;
   max-height: 90vh;
   overflow: hidden;
 }
 
 .txp-tagbuilder-container .ui-dialog-titlebar {
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  -ms-flex: none;
+      flex: none;
 }
 
 .txp-tagbuilder-content {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
   overflow: scroll;
 }
 
@@ -4424,6 +4389,30 @@ a.ui-state-default:focus {
 /* ==========================================================================
    jQuery UI widgets
    ========================================================================== */
+/* Autocomplete
+   ========================================================================== */
+/**
+ * jQuery UI Autocomplete.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/autocomplete/
+ *
+ * Example HTML:
+ *
+ * <input type="text" class="ui-autocomplete-input">
+ * <ul class="ui-autocomplete">
+ *     <li><a></a></li>
+ *     <li><a></a></li>
+ *     <li><a></a></li>
+ * </ul>
+ */
+.ui-autocomplete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: default;
+}
+
 /* Button
    ========================================================================== */
 /**
@@ -4551,4 +4540,29 @@ input.ui-button.ui-icon-notext .ui-icon {
   padding: 0.4em 1em;
   text-indent: 0;
   white-space: normal;
+}
+
+/* Tooltip
+   ========================================================================== */
+/**
+ * jQuery UI Tooltip.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/tooltip/
+ *
+ * Example HTML:
+ *
+ * <a>Link with a tooltip</a>
+ * <div class="ui-tooltip">
+ *     <div class="ui-tooltip-content">
+ *         Content
+ *     </div>
+ * </div>
+ */
+.ui-tooltip {
+  position: absolute;
+  max-width: 22em;
+  padding: 0.5em 1em;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  z-index: 9999;
 }
