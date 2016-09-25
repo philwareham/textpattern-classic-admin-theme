@@ -66,17 +66,13 @@
     display: block;
     margin: 0;
     padding: 0;
-    @if $flat-theme < 1 {
-        border-color: $color-border-light;
-    }
+    border-color: $color-border-light;
     outline-width: 0;
     /* 1 */
     font-size: $base-font-size;
-    line-height: 1.38461538461538em; // 18px / 13px
+    line-height: 1.5em; // 18px / 12px
     list-style: none;
-    @if $flat-theme < 1 {
-        box-shadow: $standard-shadow;
-    }
+    box-shadow: $standard-shadow;
 
     .ui-menu {
         position: absolute;
@@ -96,12 +92,12 @@
 
     .ui-menu-item-wrapper {
         position: relative;
-        padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em; // 4px / 13px
+        padding: 0.25em 1.25em 0.25em 0.75em; // 15px / 13px + 3px / 12px
     }
 
     .ui-menu-divider {
         height: 0;
-        margin: 0.30769230769231em 0; // 4px / 13px
+        margin: 0.25em 0; // 3px / 12px
         border-width: 1px 0 0;
         font-size: 0;
         line-height: 0;
@@ -148,7 +144,7 @@
     padding: 0;
 
     .ui-menu-item-wrapper {
-        padding: 0.30769230769231em 0.30769230769231em 0.30769230769231em 1em; // 4px / 13px
+        padding: 0.25em 0.75em 0.25em 1.25em; // 3px / 12px + 15px / 13px
     }
 
     // left-aligned (flipped to right)

@@ -4789,6 +4789,160 @@ label.ui-state-active.ui-button:active {
   border-top-style: solid;
 }
 
+/* Menu
+   ========================================================================== */
+/**
+ * jQuery UI Menu.
+ *
+ * Menus are vertical format only. Horizontal format menus are not provided by
+ * jQuery UI.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/menu/
+ *
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Workaround for IE 11 and Edge incorrectly displaying a list marker.
+ *
+ * Example HTML:
+ *
+ * <ul class="ui-menu">
+ *     <li class="ui-state-disabled ui-menu-item">
+ *         <a>Item 1 (disabled)</a>
+ *     </li>
+ *     <li class="ui-menu-item">
+ *         <a>Item 2</a>
+ *     </li>
+ *     <li class="ui-menu-item">
+ *         <a>
+ *             <span class="ui-menu-icon ui-icon ui-icon-caret-1-e"></span>
+ *             Item 3
+ *         </a>
+ *         <ul class="ui-menu">
+ *             <li class="ui-menu-item">
+ *                 <a>Item 3 subitem 1</a>
+ *             </li>
+ *             <li class="ui-menu-item">
+ *                 <a>Item 3 subitem 2</a>
+ *             </li>
+ *         </ul>
+ *     </li>
+ *     <li class="ui-menu-item">
+ *         <a>
+ *             <span class="ui-menu-icon ui-icon ui-icon-caret-1-e"></span>
+ *             Item 4
+ *         </a>
+ *         <ul class="ui-menu">
+ *             <li class="ui-menu-item">
+ *                 <span class="ui-menu-icon ui-icon ui-icon-caret-1-e"></span>
+ *                 <a>Item 4 subitem 1</a>
+ *                 <ul class="ui-menu">
+ *                     <li class="ui-menu-item">
+ *                         <a>Item 4 subitem 1 subsubitem 1</a>
+ *                     </li>
+ *                     <li class="ui-menu-item">
+ *                         <a>Item 4 subitem 1 subsubitem 2</a>
+ *                     </li>
+ *                 </ul>
+ *             </li>
+ *             <li class="ui-menu-item">
+ *                 <a>Item 3 subitem 2</a>
+ *             </li>
+ *         </ul>
+ *     </li>
+ * </ul>
+ */
+.ui-menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-color: #d4d4d4;
+  outline-width: 0;
+  /* 1 */
+  font-size: 12px;
+  line-height: 1.5em;
+  list-style: none;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+}
+
+.ui-menu .ui-menu {
+  position: absolute;
+}
+
+.ui-menu .ui-menu-item {
+  margin: 0;
+  cursor: pointer;
+  /* 2 */
+  list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+
+.ui-menu .ui-menu-item a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  position: relative;
+  padding: 0.25em 1.5em 0.25em 0.75em;
+}
+
+.ui-menu .ui-menu-divider {
+  height: 0;
+  margin: 0.25em 0;
+  border-width: 1px 0 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+  background-color: #e3edfc;
+}
+
+.ui-menu .ui-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.25em;
+  margin: auto 0;
+}
+
+.ui-menu .ui-menu-icon {
+  right: 0;
+  left: auto;
+}
+
+/**
+ * Allow additional icons in menu items.
+ */
+.ui-menu-icons {
+  position: relative;
+}
+
+.ui-menu-icons .ui-menu-item-wrapper {
+  padding-left: 2em;
+}
+
+/**
+ * Menu RTL support.
+ */
+[dir="rtl"] .ui-menu {
+  padding: 0;
+}
+
+[dir="rtl"] .ui-menu .ui-menu-item-wrapper {
+  padding: 0.25em 0.75em 0.25em 1.5em;
+}
+
+[dir="rtl"] .ui-menu .ui-icon {
+  right: 0.25em;
+  left: auto;
+}
+
+[dir="rtl"] .ui-menu .ui-menu-icon {
+  right: auto;
+  left: 0;
+}
+
 /* Progressbar
    ========================================================================== */
 /**
@@ -4843,6 +4997,122 @@ label.ui-state-active.ui-button:active {
   .ui-progressbar-indeterminate .ui-progressbar-value {
     background-image: url("../img/ui-progressbar-indeterminate@2x.gif");
   }
+}
+
+/* Selectmenu
+   ========================================================================== */
+/**
+ * jQuery UI Selectmenu.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/selectmenu/
+ *
+ * 1. Correct font size not being inherited in all browsers.
+ *
+ * Example HTML:
+ *
+ * <p>
+ *     <label>Select a speed</label><br>
+ *     <select class="jquery-ui-selectmenu" style="display:none;">
+ *         <option>Slower</option>
+ *         <option>Slow</option>
+ *         <option selected="selected">Medium</option>
+ *         <option>Fast</option>
+ *         <option>Faster</option>
+ *     </select>
+ *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all">
+ *         <span class="ui-icon ui-icon-triangle-1-s"></span>
+ *         <span class="ui-selectmenu-text">Medium</span>
+ *     </span>
+ * </p>
+ * <div class="ui-selectmenu-menu ui-front ui-selectmenu-open">
+ *     <ul class="ui-menu ui-widget ui-widget-content ui-corner-bottom">
+ *         <li class="ui-menu-item ui-state-focus">Slower</li>
+ *         <li class="ui-menu-item">Slow</li>
+ *         <li class="ui-menu-item">Medium</li>
+ *         <li class="ui-menu-item">Fast</li>
+ *         <li class="ui-menu-item">Faster</li>
+ *     </ul>
+ * </div>
+ */
+.ui-selectmenu-button {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.ui-selectmenu-button:not(.ui-controlgroup-item) {
+  border-radius: 0.5em;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+.ui-selectmenu-icon {
+  -ms-flex: none;
+      flex: none;
+  -ms-flex-order: 2;
+      order: 2;
+  margin: 0 -0.25em 0 0.25em;
+}
+
+.ui-selectmenu-text {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ui-selectmenu-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-selectmenu-menu .ui-menu {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+  height: auto;
+  margin: 0.5em 0 0;
+  padding: 2px 0.25em;
+  border-top: 1px solid #cccccc;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup:first-child {
+  margin: 0;
+  border: 0;
+}
+
+.ui-selectmenu-open {
+  display: block;
+}
+
+/**
+ * Selectmenu RTL support.
+ */
+[dir="rtl"] .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+[dir="rtl"] .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+[dir="rtl"] .ui-selectmenu-icon {
+  margin: 0 0.25em 0 -0.25em;
 }
 
 /* Tooltip
