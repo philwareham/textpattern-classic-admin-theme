@@ -51,30 +51,6 @@ body {
   content: "#777777";
 }
 
-.design-patterns--color-gradient-from {
-  background: #eeeeee;
-}
-
-.design-patterns--color-gradient-from::after {
-  content: "#eeeeee";
-}
-
-.design-patterns--color-gradient-to {
-  background: #dddddd;
-}
-
-.design-patterns--color-gradient-to::after {
-  content: "#dddddd";
-}
-
-.design-patterns--color-gradient-border {
-  background: #cccccc;
-}
-
-.design-patterns--color-gradient-border::after {
-  content: "#cccccc";
-}
-
 .design-patterns--color-border {
   background: #cccccc;
 }
@@ -163,20 +139,12 @@ body {
   content: "#ffefaf";
 }
 
-.design-patterns--color-accent-gradient-from {
+.design-patterns--color-accent {
   background: #ffda44;
 }
 
-.design-patterns--color-accent-gradient-from::after {
+.design-patterns--color-accent::after {
   content: "#ffda44";
-}
-
-.design-patterns--color-accent-gradient-to {
-  background: #f7c600;
-}
-
-.design-patterns--color-accent-gradient-to::after {
-  content: "#f7c600";
 }
 
 .design-patterns--color-success-text {

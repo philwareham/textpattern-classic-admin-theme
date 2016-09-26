@@ -610,31 +610,37 @@ a:focus .content-image {
  */
 #messagepane {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   z-index: 1000;
 }
 
 #messagepane span.success, #messagepane span.warning, #messagepane span.error {
-  display: block;
-  position: relative;
+  display: inline-block;
+  max-width: 60em;
   margin: 0 auto;
-  padding: 0.5em 2em;
+  padding: 0.5em 3em 0.5em 1em;
+  border: 1px solid;
+  border-top: 0;
+  border-radius: 0 0 0.5em 0.5em;
   color: #ffffff;
-  text-align: center;
-  box-shadow: 0 -0.25em 0.4em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 #messagepane span.success {
+  border-color: #a3d48e;
   background: #238c23;
 }
 
 #messagepane span.warning {
+  border-color: #e4c788;
   background: #cc8c00;
 }
 
 #messagepane span.error {
+  border-color: #e1b2b2;
   background: #9d261d;
 }
 
@@ -647,16 +653,16 @@ a:focus .content-image {
  */
 .close {
   position: absolute;
-  top: 0.26666666666667em;
-  right: 1em;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 15px;
+  top: 0.27777777777778em;
+  right: 0.6666667em;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
   font-weight: bold;
   text-decoration: none;
 }
 
 .close:hover {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   cursor: pointer;
 }
@@ -1878,7 +1884,7 @@ body {
   -ms-flex-positive: 1;
       flex-grow: 1;
   min-width: 64em;
-  max-width: 110em;
+  max-width: 114em;
   margin: 0 auto;
   padding: 0 2.5%;
   box-sizing: border-box;

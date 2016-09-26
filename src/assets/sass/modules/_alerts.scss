@@ -94,33 +94,39 @@
 
 #messagepane {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     z-index: 1000;
 
     span {
         &.success,
         &.warning,
         &.error {
-            display: block;
-            position: relative;
+            display: inline-block;
+            max-width: ($text-column - 2em);
             margin: 0 auto;
-            padding: 0.5em 2em;
-            color: #ffffff;
-            text-align: center;
-            box-shadow: 0 -0.25em 0.4em rgba(0, 0, 0, 0.15);
+            padding: 0.5em 3em 0.5em 1em;
+            border: 1px solid;
+            border-top: 0;
+            border-radius: 0 0 $border-radius $border-radius;
+            color: $color-text-inverse;
+            box-shadow: $standard-shadow;
         }
 
         &.success {
+            border-color: $color-success-border;
             background: $color-success-text;
         }
 
         &.warning {
+            border-color: $color-warning-border;
             background: $color-warning-text;
         }
 
         &.error {
+            border-color: $color-error-border;
             background: $color-error-text;
         }
     }
@@ -136,15 +142,15 @@
 
 .close {
     position: absolute;
-    top: 0.26666666666667em; // 4px / 15px
-    right: 1em;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 15px;
+    top: 0.27777777777778em; // 5px / 18px
+    right: 0.6666667em; // 12px / 18px
+    color: transparentize($color-text-inverse, 0.4);
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
 
     &:hover {
-        color: #ffffff;
+        color: transparentize($color-text-inverse, 0.2);
         text-decoration: none;
         cursor: pointer;
     }
