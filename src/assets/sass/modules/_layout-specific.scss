@@ -219,6 +219,14 @@
 }
 
 
+/* Presentation -> all panels - additional layout
+   ========================================================================== */
+
+.presentation textarea.code {
+    height: 64vh;
+}
+
+
 /* Presentation -> Forms panel - additional layout
    ========================================================================== */
 
@@ -242,6 +250,14 @@
 
 #page-form .txp-layout-4col-3span .txp-actions a {
     margin-top: 1.5em;
+}
+
+
+/* Admin -> Preferences panel - additional layout
+   ========================================================================== */
+
+.txp-prefs-group {
+    max-width: 64em; // 768px / 12px
 }
 
 
