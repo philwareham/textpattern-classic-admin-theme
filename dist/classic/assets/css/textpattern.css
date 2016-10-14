@@ -625,18 +625,6 @@ button {
   /*
  * Flash the alert message using CSS animation.
  */
-  @keyframes messageflash {
-    0% {
-      opacity: 0;
-    }
-    75% {
-      opacity: 0.5;
-    }
-    50%,
-    100% {
-      opacity: 1;
-    }
-  }
   .messageflash {
     animation: messageflash 1s;
   }
@@ -5221,6 +5209,31 @@ button {
     padding: 0.5em 1em;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
     z-index: 9999;
+  }
+}
+
+/* ==========================================================================
+   Animation `keyframes` need to appear outside of `screen` rules
+   ========================================================================== */
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes messageflash {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  50%,
+  100% {
+    opacity: 1;
   }
 }
 
