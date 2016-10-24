@@ -251,7 +251,7 @@ select[size="1"] {
  */
 
 optgroup {
-    color: $color-text-form;;
+    color: $color-text-form;
     font-style: normal;
     font-weight: bold;
 }
@@ -385,6 +385,32 @@ input {
     &.input-second {
         width: 2.6666667em; /* 32px / 12px */
         text-align: center;
+    }
+}
+
+/**
+ * Styling for form field validation.
+ */
+
+input,
+select,
+textarea {
+    &:focus:invalid {
+        border-color: $color-error-text;
+        box-shadow: none; // Normalize Firefox styling
+    }
+}
+
+/**
+ * Styling for Firefox-specfic form field validation.
+ */
+
+input,
+select,
+textarea {
+    &:-moz-ui-invalid {
+        border-color: $color-error-text;
+        box-shadow: none;
     }
 }
 
