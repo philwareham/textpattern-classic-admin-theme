@@ -1,8 +1,8 @@
 # Classic admin-side theme for Textpattern CMS
 
-[![Build Status](https://travis-ci.org/philwareham/textpattern-classic-admin-theme.svg?branch=master)](https://travis-ci.org/philwareham/textpattern-classic-admin-theme)
-[![Dependency Status](https://david-dm.org/philwareham/textpattern-classic-admin-theme/status.svg)](https://david-dm.org/philwareham/textpattern-classic-admin-theme#info=dependencies)
-[![devDependency Status](https://david-dm.org/philwareham/textpattern-classic-admin-theme/dev-status.svg)](https://david-dm.org/philwareham/textpattern-classic-admin-theme#info=devDependencies)
+[![Build Status](https://img.shields.io/travis/philwareham/textpattern-classic-admin-theme/master.svg)](https://travis-ci.org/philwareham/textpattern-classic-admin-theme)
+[![Dependency Status](http://img.shields.io/david/philwareham/textpattern-classic-admin-theme.svg)](https://david-dm.org/philwareham/textpattern-classic-admin-theme)
+[![devDependency Status](http://img.shields.io/david/dev/philwareham/textpattern-classic-admin-theme.svg)](https://david-dm.org/philwareham/textpattern-classic-admin-theme?type=dev)
 
 The classic admin theme that ships as standard with [Textpattern CMS](http://textpattern.com).
 
