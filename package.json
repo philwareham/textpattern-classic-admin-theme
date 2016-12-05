@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "autosize": "3.0.20",
-    "prismjs": "1.5.1"
+    "prismjs": "1.6.0"
   },
   "scripts": {
     "test": "grunt travis --verbose"
