@@ -86,18 +86,49 @@
  *         Content
  *     </div>
  * </div>
+ *
+ * <ul class="txp-grid">
+ *     <li>
+ *         Content
+ *     </li>
+ *     <li>
+ *         Content
+ *     </li>
+ *     <li>
+ *         Content
+ *     </li>
+ * </ul>
  */
 
 .txp-grid {
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
     margin: -2px;
+    padding: 0;
+    clear: both;
+    list-style: none;
+
+    > * {
+        position: relative;
+        margin: 2px;
+    }
 }
 
 .txp-grid-cell {
-    margin: 2px;
     padding: 0 1em;
     border: 1px solid $color-border;
     box-sizing: border-box;
+}
+
+.txp-grid-multi-edit {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    padding: 3px 6px;
+    border: 1px solid $color-border-light;
+    border-top: 0;
+    border-left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
 }

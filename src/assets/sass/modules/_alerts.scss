@@ -13,18 +13,34 @@
  */
 
 .success {
+    background: $color-success-background;
+}
+
+.success:not(li) {
     color: $color-success-text;
 }
 
 .warning {
+    background: $color-warning-background;
+}
+
+.warning:not(li) {
     color: $color-warning-text;
 }
 
 .error {
+    background: $color-error-background;
+}
+
+.error:not(li) {
     color: $color-error-text;
 }
 
 .information {
+    background: $color-info-background;
+}
+
+.information:not(li) {
     color: $color-info-text;
 }
 
