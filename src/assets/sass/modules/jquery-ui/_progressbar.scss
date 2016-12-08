@@ -21,9 +21,7 @@
 }
 
 .ui-progressbar-value {
-    @include hires-graphic(ui-progressbar, gif, 16px, 16px);
-
-    height: 16px;
+    height: 8px;
     background-color: $color-selecting;
 }
 
