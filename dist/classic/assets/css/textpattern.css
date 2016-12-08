@@ -996,7 +996,7 @@ button {
  */
   select {
     padding-right: 1.3333333em;
-    background: #f7f7f7 url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMXB4JyBoZWlnaHQ9JzRweCcgdmlld0JveD0nMCAwIDExIDQnPjxwb2x5Z29uIGZpbGw9JyMzMzMnIHBvaW50cz0nMy41LDQgMCwwIDcsMCcvPjwvc3ZnPg==") right center no-repeat;
+    background: #f7f7f7 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMXB4JyBoZWlnaHQ9JzRweCcgdmlld0JveD0nMCAwIDExIDQnPjxwb2x5Z29uIGZpbGw9JyMzMzMnIHBvaW50cz0nMy41LDQgMCwwIDcsMCcvPjwvc3ZnPg==") right center no-repeat;
     background-size: 0.9166667em 0.3333333;
     text-transform: none;
   }
@@ -1906,8 +1906,8 @@ button {
     width: 6.75em;
     height: 1.5em;
     margin: 0.25em 0;
-    background: url("../img/sprite.svg") no-repeat 0 0;
-    background-size: 11.25em 1.5em;
+    background: url("../img/textpattern.svg") no-repeat 0 0;
+    background-size: 9em 1.5em;
     font-size: 16px;
   }
   .navpop {
