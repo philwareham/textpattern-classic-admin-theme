@@ -169,7 +169,7 @@ thead {
     &.desc a {
         margin-right: 0;
         padding-right: 14px;
-        background: url("../img/arrow-up-down.svg") no-repeat;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='48' viewBox='0 0 9 48'%3E%3Cpath fill='%23fabc2b' d='M4.5 0L0 5h2v4h5V5h2M4.5 48L9 43H7v-4H2v4H0'/%3E%3C/svg%3E") no-repeat;
 
         [dir="rtl"] & {
             margin-left: 0;
