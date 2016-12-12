@@ -1257,7 +1257,7 @@ button {
   .navlink-active:active {
     border-color: #cccccc #b7b7b7 #b7b7b7 #cccccc;
     background-color: #dddddd;
-    color: #1a1a1a;
+    color: #1a1919;
     text-decoration: none;
   }
   button:focus,
@@ -2006,7 +2006,8 @@ button {
   /* Globally shared layout
    ========================================================================== */
   /**
- * 1. Prevent text size adjust after mobile device orientation change.
+ * 1. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
   html {
     /* 1 */
@@ -4141,7 +4142,7 @@ button {
   .ui-button:active {
     border-color: #cccccc #b7b7b7 #b7b7b7 #cccccc;
     background-color: #dddddd;
-    color: #1a1a1a;
+    color: #1a1919;
     text-decoration: none;
   }
   .ui-button:focus {
