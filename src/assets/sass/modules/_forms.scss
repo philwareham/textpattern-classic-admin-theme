@@ -63,7 +63,7 @@ textarea,
     font-family: $font-form;
     /* 3 */
     font-size: $base-font-size;
-    line-height: 1.5em; // 18px / 12px
+    line-height: 1.666666666666667em; // 20px / 12px
     vertical-align: baseline;
     box-sizing: border-box;
 }
@@ -112,7 +112,7 @@ button::-moz-focus-inner,
 [type="week"],
 select,
 textarea {
-    height: 2.1666667em; // 26px / 12px
+    height: 2.333333333333333em; // 28px / 12px
     padding: 0.25em; // 3px / 12px
     border: 1px solid;
     border-radius: 0;
@@ -242,7 +242,7 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-    height: 2.1666667em; // 26px / 12px
+    height: 2.333333333333333em; // 28px / 12px
     vertical-align: baseline;
 }
 

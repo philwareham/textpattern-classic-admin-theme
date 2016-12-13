@@ -21,7 +21,7 @@
 .ui-button {
     display: inline-block;
     position: relative;
-    height: 2.1666667em; // 26px / 12px
+    height: 2.333333333333333em; // 28px / 12px
     margin: 0 0.1em 0 0;
     padding: 0.25em 0.75em; // 3px/ 12px + 9px / 12px
     border: 1px solid;
@@ -32,7 +32,7 @@
     font-family: $font-form;
     /* 1 */
     font-size: $base-font-size;
-    line-height: 1.5em; // 18px / 12px
+    line-height: 1.666666666666667em; // 20px / 12px
     text-align: center;
     /* 2 */
     cursor: pointer;

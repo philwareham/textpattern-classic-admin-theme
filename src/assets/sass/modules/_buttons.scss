@@ -29,7 +29,7 @@ input[type="button"],
 .navlink-active {
     display: inline-block;
     width: auto;
-    height: 2.1666667em; // 26px / 12px
+    height: 2.333333333333333em; // 28px / 12px
     padding: 0.25em 0.75em; // 3px/ 12px + 9px / 12px
     border: 1px solid;
     border-color: $color-button-border;
@@ -140,7 +140,7 @@ button.destroy {
 
 .navlink-disabled {
     display: inline-block;
-    height: 2.1666667em; // 26px / 12px
+    height: 2.333333333333333em; // 28px / 12px
     padding: 0.25em 0.75em; // 3px/ 12px + 9px / 12px
     border: 1px solid;
     background-clip: padding-box;
