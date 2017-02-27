@@ -108,3 +108,27 @@ svg:not(:root) {
         border-color: $color-link-focus;
     }
 }
+
+/**
+ * Limit vertical height of fullsize images.
+ */
+
+.fullsize-image .content-image {
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+/**
+ * Admin-side image preview thumbnails.
+ */
+
+.img-preview {
+    &:focus {
+        outline: 0;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+}
