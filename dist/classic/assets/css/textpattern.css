@@ -267,7 +267,7 @@ button {
     text-decoration: underline dotted;
   }
   /**
- * Address styling not present in IE 8/9.
+ * Consistent styling for `mark` and `var` tags.
  */
   mark,
   var {
