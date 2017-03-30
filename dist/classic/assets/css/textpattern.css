@@ -5213,8 +5213,8 @@ button {
     cursor: text;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav .ui-tabs-anchor {
+    display: block;
     padding: 0.1666667em 1.5em;
-    float: left;
     color: #333333;
     text-decoration: none;
   }
@@ -5230,12 +5230,6 @@ button {
  */
   .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
     cursor: pointer;
-  }
-  /**
- * Tabs RTL support.
- */
-  [dir="rtl"] .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-    float: right;
   }
   /**
  * Additonal styling for tabs vertical.

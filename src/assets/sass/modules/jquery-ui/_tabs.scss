@@ -73,8 +73,8 @@
         }
 
         .ui-tabs-anchor {
+            display: block;
             padding: 0.1666667em 1.5em; // 2px / 12px + 18px / 12px
-            float: left;
             color: $color-text;
             text-decoration: none;
         }
@@ -95,14 +95,6 @@
 
 .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
     cursor: pointer;
-}
-
-/**
- * Tabs RTL support.
- */
-
-[dir="rtl"] .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-    float: right;
 }
 
 /**
