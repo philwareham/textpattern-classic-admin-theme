@@ -110,7 +110,26 @@
                             </div>
                             <small class="author">Posted by admin <span role="separator">·</span> 18 Nov 2016 14:34:20 <span role="separator">|</span> Last modified by admin <span role="separator">·</span> 04 Jan 2017 17:06:08</small>
                             <div class="txp-form-field txp-form-field-textarea body">
-                                <div class="txp-form-field-label"><label for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                <div class="txp-form-field-label">
+                                    <label for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                                    <div class="txp-textarea-options txp-textfilter-options">
+                                        <a class="txp-textfilter-options-button" href="#"><span class="ui-icon ui-extra-icon-code"></span> Text format: Textile</a>&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a>
+                                        <ul class="txp-textfilter-options-list txp-dropdown">
+                                            <li>
+                                                <div>Plain text</div>
+                                            </li>
+                                            <li>
+                                                <div>Plain text with linebreaks</div>
+                                            </li>
+                                            <li>
+                                                <div>Textile</div>
+                                            </li>
+                                            <li>
+                                                <div>Markdown (Parsedown)</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="txp-form-field-value"><textarea id="body" name="Body" cols="64" rows="16" spellcheck="true">h3. What do you want to do next?
 
 * Modify or even delete this article? The "article list":/textpattern/index.php?event=list is the place to start.
@@ -129,10 +148,29 @@ There are a host of "Frequently Asked Questions":http://textpattern.com/faq/ to 
 
 "Textpattern tags":http://textpattern.com/textpattern-tag-reference, their attributes and values are explained and sampled within the "Textpattern User Documentation":http://textpattern.net/, where you will also find valuable tips and tutorials.
 
-If all else fails, there's a whole crowd of friendly, helpful people over at the "Textpattern support forum":http://forum.textpattern.com/. Come and pay a visit!</textarea></div>
+If all else fails, there's a whole crowd of friendly, helpful people over at the "Textpattern support forum":https://forum.textpattern.io/. Come and pay a visit!</textarea></div>
                             </div>
                             <div class="txp-form-field txp-form-field-textarea excerpt">
-                                <div class="txp-form-field-label"><label for="excerpt">Excerpt&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                <div class="txp-form-field-label">
+                                    <label for="excerpt">Excerpt&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                                    <div class="txp-textarea-options txp-textfilter-options">
+                                        <a class="txp-textfilter-options-button" href="#"><span class="ui-icon ui-extra-icon-code"></span> Text format: Plain text with linebreaks</a>&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a>
+                                        <ul class="txp-textfilter-options-list txp-dropdown">
+                                            <li>
+                                                <div>Plain text</div>
+                                            </li>
+                                            <li>
+                                                <div>Plain text with linebreaks</div>
+                                            </li>
+                                            <li>
+                                                <div>Textile</div>
+                                            </li>
+                                            <li>
+                                                <div>Markdown (Parsedown)</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="txp-form-field-instructions">
                                     <p>Optional excerpt used as a short summary of the article, and often displayed on landing pages.</p>
                                 </div>
@@ -412,34 +450,6 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     <div class="txp-form-field comment-invite">
                                         <div class="txp-form-field-label"><label for="comment-invite">Invitation</label></div>
                                         <div class="txp-form-field-value"><input type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="txp-details" id="txp-advanced-group" aria-labelledby="txp-advanced-group-label">
-                            <h3 class="txp-summary expanded" id="txp-advanced-group-label">
-                                <a role="button" data-txp-pane="article_advanced" href="#advanced">Advanced options</a>
-                            </h3>
-                            <div class="toggle" id="txp-advanced-group-content" role="group">
-                                <div class="txp-form-field markup markup-body">
-                                    <div class="txp-form-field-label"><label for="markup-body">Article markup</label></div>
-                                    <div class="txp-form-field-value">
-                                        <select id="markup-body" name="textile_body">
-                                            <option value="0">Leave text untouched</option>
-                                            <option value="2">Convert linebreaks</option>
-                                            <option value="1" selected="selected">Use Textile</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="txp-form-field markup markup-excerpt">
-                                    <div class="txp-form-field-label"><label for="markup-excerpt">Excerpt markup</label></div>
-                                    <div class="txp-form-field-value">
-                                        <select id="markup-excerpt" name="textile_excerpt">
-                                            <option value="0">Leave text untouched</option>
-                                            <option value="2">Convert linebreaks</option>
-                                            <option value="1" selected="selected">Use Textile</option>
-                                        </select>
                                     </div>
                                 </div>
                             </div>
