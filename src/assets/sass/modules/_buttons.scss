@@ -172,7 +172,8 @@ ul.nav-tertiary {
     padding: 0;
 }
 
-.navlink-active {
+.navlink-active,
+.filtered button.ui-corner-right {
     background-color: $color-highlight-box;
 
     &:hover {
