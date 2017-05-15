@@ -5025,6 +5025,34 @@ button {
   [dir="rtl"] .ui-selectmenu-icon {
     margin: 0 0.25em 0 -0.25em;
   }
+  /**
+ * Selectmenu plain buttons.
+ */
+  .no-ui-button .ui-selectmenu-button {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #996633;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    cursor: hand;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
+  }
+  .no-ui-button .ui-selectmenu-button:hover, .no-ui-button .ui-selectmenu-button:active {
+    background: transparent;
+    color: #b16f2e;
+    text-decoration: underline;
+  }
+  .no-ui-button .ui-selectmenu-button:focus {
+    outline: thin solid #5b9dd9;
+  }
+  .no-ui-button .ui-selectmenu-icon {
+    margin: 0;
+  }
   /* Slider
    ========================================================================== */
   /**
