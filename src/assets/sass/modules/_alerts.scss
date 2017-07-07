@@ -12,7 +12,7 @@
  * <strong class="error">
  */
 
-.success {
+li.success {
     background: $color-success-background;
 }
 
@@ -20,7 +20,7 @@
     color: $color-success-text;
 }
 
-.warning {
+li.warning {
     background: $color-warning-background;
 }
 
@@ -28,7 +28,7 @@
     color: $color-warning-text;
 }
 
-.error {
+li.error {
     background: $color-error-background;
 }
 
@@ -36,7 +36,7 @@
     color: $color-error-text;
 }
 
-.information {
+li.information {
     background: $color-info-background;
 }
 
