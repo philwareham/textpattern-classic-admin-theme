@@ -60,7 +60,7 @@ a {
  */
 
 .txp-list thead th a.pophelp {
-    display: inline;
+    display: inline-block;
     color: $color-link;
 
     &:hover {
