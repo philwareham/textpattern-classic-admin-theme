@@ -4,6 +4,7 @@
   "keywords": ["textpattern", "admin", "theme"],
   "homepage": "https://github.com/philwareham/txp-classic-admin-theme",
   "license": "GPL-2.0",
+  "type": "textpattern-admin-theme",
   "authors": [{
     "name": "Phil Wareham",
     "homepage": "https://twitter.com/philwareham",
@@ -14,7 +15,7 @@
     "source": "https://github.com/philwareham/textpattern-classic-admin-theme"
   },
   "require": {
-    "textpattern/lock": ">=4.6.0,4.6.*@dev",
+    "textpattern/lock": ">=4.7.0,4.7.*@dev",
     "textpattern/installer": "*"
   }
 }
