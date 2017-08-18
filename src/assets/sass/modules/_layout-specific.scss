@@ -135,6 +135,14 @@
         .title input {
             font-weight: bold;
         }
+
+        .body textarea {
+            height: 48vh;
+        }
+
+        .excerpt textarea {
+            height: 12vh;
+        }
     }
 
     .author small {
