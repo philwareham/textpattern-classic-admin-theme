@@ -13,8 +13,7 @@ module.exports = function (grunt)
             src: {
                 dir: 'src/',
                 sass: 'src/assets/sass/',
-                img: 'src/assets/img/',
-                js: 'src/assets/js/'
+                img: 'src/assets/img/'
             },
             docs: {
                 css: 'docs/assets/css/',
@@ -23,8 +22,7 @@ module.exports = function (grunt)
             dest: { // Classic Yellow theme
                 dir: 'dist/classic/',
                 css: 'dist/classic/assets/css/',
-                img: 'dist/classic/assets/img/',
-                js: 'dist/classic/assets/js/'
+                img: 'dist/classic/assets/img/'
             }
         },
 
@@ -75,7 +73,7 @@ module.exports = function (grunt)
             }
         },
 
-        // Check code quality of Gruntfile.js and theme-specific JavaScript using JSHint.
+        // Check code quality of Gruntfile.js JavaScript using JSHint.
         jshint: {
             options: {
                 bitwise: true,
@@ -100,14 +98,12 @@ module.exports = function (grunt)
                     jQuery: false,
                     $: false,
                     module: true,
-                    autosize: true,
                     prettyPrint: true,
                     require: true
                 }
             },
             files: [
-                'Gruntfile.js',
-                '<%= paths.src.js %>**/*.js'
+                'Gruntfile.js'
             ]
         },
 
@@ -159,27 +155,11 @@ module.exports = function (grunt)
                 },
                 files: [
                     {
-                        '<%= paths.dest.js %>main.js':
-                        [
-                            'node_modules/autosize/dist/autosize.js',
-                            '<%= paths.src.js %>main.js'
-                        ],
                         '<%= paths.docs.js %>prism.js': [
                             'node_modules/prismjs/prism.js',
                             // Add any plugins
                             'node_modules/prismjs/plugins/show-language/prism-show-language.js'
                         ]
-                    }
-                ]
-            },
-            minify: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= paths.dest.js %>',
-                        src: ['*.js', '!*.min.js'],
-                        dest: '<%= paths.dest.js %>',
-                        ext: '.min.js'
                     }
                 ]
             }
@@ -190,17 +170,13 @@ module.exports = function (grunt)
             sass: {
                 files: '<%= paths.src.sass %>**/*.scss',
                 tasks: 'css'
-            },
-            js: {
-                files: '<%= paths.src.js %>**/*.js',
-                tasks: ['jshint', 'copy', 'uglify']
             }
         }
 
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'copy', 'uglify:minify']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'copy']);
     grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'cssmin']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
