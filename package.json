@@ -43,7 +43,7 @@
     "uglify-save-license": "0.4.1"
   },
   "dependencies": {
-    "prismjs": "1.6.0"
+    "prismjs": "1.7.0"
   },
   "browserslist": [
     "last 2 versions",
