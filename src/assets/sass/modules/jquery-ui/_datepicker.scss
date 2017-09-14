@@ -159,13 +159,8 @@
             text-align: center;
         }
 
-        a.ui-state-active {
-            background-color: $color-highlight-box;
-        }
-
         a.ui-state-highlight {
             border-color: $color-border;
-            background-color: $color-success-background;
 
             &:hover {
                 background-color: lighten($color-success-background, 5%);
@@ -179,6 +174,14 @@
         &.ui-datepicker-week-col {
             padding: 0.32em 0;
             text-align: center;
+        }
+
+        &.ui-datepicker-today a {
+            background-color: $color-success-background;
+        }
+
+        &.ui-datepicker-current-day a {
+            background-color: $color-highlight-box;
         }
     }
 
