@@ -38,25 +38,12 @@ a {
  *
  * Example HTML:
  *
- * <a class="pophelp">i</a>
+ * <a class="pophelp"><span class="ui-icon ui-icon-info">Help</span></a>
  */
 
 .pophelp,
 .pophelpsubtle {
     display: inline-block;
-    width: 1.1666667em; // 14px / 12px
-    border: 1px solid;
-    border-radius: 50%;
-    border-color: #dddddd #bbbbbb #bbbbbb #dddddd;
-    font-family: "Segoe UI Symbol", "Cambria Math", "Apple Symbols";
-    font-weight: normal;
-    line-height: 1.1666667em; // 14px / 12px
-    text-align: center;
-
-    &:focus {
-        border-color: $color-link-focus;
-        outline: 2px solid transparent;
-    }
 }
 
 /**
@@ -65,16 +52,6 @@ a {
 
 .txp-list thead th a.pophelp {
     display: inline-block;
-    color: $color-link;
-
-    &:hover {
-        color: $color-link-hover;
-        text-decoration: underline;
-    }
-
-    &:focus {
-        border-color: $color-link-focus;
-    }
 }
 
 /**
