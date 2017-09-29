@@ -214,7 +214,7 @@ EOS;
 
         return array(
             'title'       => 'Classic',
-            'description' => 'Textpattern Classic admin theme',
+            'description' => 'Textpattern CMS Classic admin theme',
             'version'     => '4.7.0-dev',
             'author'      => 'Phil Wareham',
             'author_uri'  => 'https://github.com/philwareham',

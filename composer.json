@@ -1,8 +1,8 @@
 {
   "name": "philwareham/textpattern-classic-admin-theme",
-  "description": "Classic admin-side theme for Textpattern CMS",
+  "description": "Classic admin-side theme for Textpattern CMS.",
   "keywords": ["textpattern", "admin", "theme"],
-  "homepage": "https://github.com/philwareham/txp-classic-admin-theme",
+  "homepage": "https://github.com/philwareham/textpattern-classic-admin-theme",
   "license": "GPL-2.0",
   "type": "textpattern-admin-theme",
   "authors": [{
@@ -11,7 +11,7 @@
     "role": "Developer"
   }],
   "support": {
-  "issues": "https://github.com/philwareham/textpattern-classic-admin-theme/issues",
+    "issues": "https://github.com/philwareham/textpattern-classic-admin-theme/issues",
     "source": "https://github.com/philwareham/textpattern-classic-admin-theme"
   },
   "require": {
