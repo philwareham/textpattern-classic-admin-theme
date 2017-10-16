@@ -301,15 +301,11 @@ hr {
  *
  * Example HTML:
  *
- * <span class="spinner"></span>
+ * <span class="spinner ui-icon ui-icon-refresh"></span>
  */
 
 span.spinner {
-    @include hires-graphic(spinner, gif, 13px, 13px);
-
-    display: inline-block;
-    width: 13px;
-    height: 13px;
+    animation: spinning linear 1s infinite;
 }
 
 /**

@@ -33,38 +33,23 @@
  * </div>
  */
 
-.ui-tabs:not(.ui-tabs-vertical) {
+.ui-tabs {
     border: 0;
 
     .ui-tabs-nav {
-        height: 22px;
-        margin: 0;
-        padding: 0;
         background: none;
 
+        &:not(.switcher-list) .ui-tabs-anchor {
+            color: $color-text;
+            text-decoration: none;
+        }
+
+        .ui-tabs-anchor {
+            display: block;
+            padding: 0.1666667em 1.5em; // 2px / 12px + 18px / 12px
+        }
+
         li {
-            display: inline-block;
-            height: 21px;
-            border-bottom-width: 0;
-            border-top-left-radius: 0.75em 2em;
-            border-top-right-radius: 0.75em 2em;
-            background-color: $color-highlight-box;
-            list-style: none;
-            white-space: nowrap;
-            box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5);
-
-            &:hover {
-                border-color: darken($color-border, 13.5%);
-                background-color: lighten($color-highlight-box, 5%);
-            }
-
-            &.ui-tabs-active {
-                margin-bottom: -1px;
-                padding-bottom: 1px;
-                background-color: $color-background;
-                box-shadow: none;
-            }
-
             &.ui-tabs-active .ui-tabs-anchor,
             &.ui-state-disabled .ui-tabs-anchor,
             &.ui-tabs-loading .ui-tabs-anchor {
@@ -72,11 +57,8 @@
             }
         }
 
-        .ui-tabs-anchor {
-            display: block;
-            padding: 0.1666667em 1.5em; // 2px / 12px + 18px / 12px
-            color: $color-text;
-            text-decoration: none;
+        .ui-state-focus a {
+            outline: thin solid $color-link-focus;
         }
     }
 
@@ -86,6 +68,34 @@
         padding: 1px 0;
         border-width: 1px 0;
         background: none;
+    }
+}
+
+.ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
+    height: 22px;
+
+    li {
+        display: inline-block;
+        height: 21px;
+        border-bottom-width: 0;
+        border-top-left-radius: 0.75em 2em;
+        border-top-right-radius: 0.75em 2em;
+        background-color: $color-highlight-box;
+        list-style: none;
+        white-space: nowrap;
+        box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5);
+
+        &:hover {
+            border-color: darken($color-border, 13.5%);
+            background-color: lighten($color-highlight-box, 5%);
+        }
+
+        &.ui-tabs-active {
+            margin-bottom: -1px;
+            padding-bottom: 1px;
+            background-color: $color-background;
+            box-shadow: none;
+        }
     }
 }
 
@@ -99,14 +109,34 @@
 
 /**
  * Additonal styling for tabs vertical.
- */
+
 
 .ui-tabs-vertical {
-    .ui-tabs-nav .ui-tabs-active {
-        background: $color-highlight-box;
+    .ui-tabs-nav {
+        border-bottom: 1px solid $color-gradient-to;
+
+        li {
+            display: block;
+            border: 1px solid $color-gradient-to;
+            border-bottom: 1px solid transparent;
+        }
     }
 
-    .ui-tabs-nav .ui-state-focus a {
-        outline: thin solid $color-link-focus;
+    .ui-tabs-panel {
+        border-top-width: 0;
     }
 }
+
+.txp-details .ui-tabs-nav {
+    border-bottom: 0;
+
+    li {
+        border-right: 0;
+        border-left: 0;
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+}
+ */

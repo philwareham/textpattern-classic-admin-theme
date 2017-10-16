@@ -160,18 +160,6 @@
             text-align: center;
         }
 
-        a.ui-state-highlight {
-            border-color: $color-border;
-
-            &:hover {
-                background-color: lighten($color-success-background, 5%);
-            }
-        }
-
-        a.ui-state-active:hover {
-            background-color: lighten($color-highlight-box, 5%);
-        }
-
         &.ui-datepicker-week-col {
             padding: 0.32em 0;
             text-align: center;
@@ -212,9 +200,6 @@
         display: block;
         top: 0.3em;
         left: 0.5em;
-        background-repeat: no-repeat;
-        text-indent: -9999px;
-        overflow: hidden;
     }
 }
 

@@ -156,9 +156,7 @@ module.exports = function (grunt)
                 files: [
                     {
                         '<%= paths.docs.js %>prism.js': [
-                            'node_modules/prismjs/prism.js',
-                            // Add any plugins
-                            'node_modules/prismjs/plugins/show-language/prism-show-language.js'
+                            'node_modules/prismjs/prism.js'
                         ]
                     }
                 ]
