@@ -1,10 +1,8 @@
 {
-  "name": "philwareham/textpattern-classic-admin-theme",
-  "description": "Textpattern CMS Classic admin theme.",
-  "version": "4.7.0-dev",
+  "title": "Classic",
   "txp-type": "textpattern-admin-theme",
-  "homepage": "https://github.com/philwareham/textpattern-classic-admin-theme",
-  "authors": {
-    "name": "Phil Wareham"
-  }
+  "version": "4.7.0-dev",
+  "description": "Textpattern CMS Classic admin theme.",
+  "author": "Phil Wareham",
+  "author_uri": "https://github.com/philwareham/textpattern-classic-admin-theme"
 }

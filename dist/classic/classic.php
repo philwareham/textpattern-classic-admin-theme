@@ -217,8 +217,7 @@ EOS;
             'description' => 'Textpattern CMS Classic admin theme',
             'version'     => '4.7.0-dev',
             'author'      => 'Phil Wareham',
-            'author_uri'  => 'https://github.com/philwareham',
-            'help'        => 'https://github.com/philwareham/textpattern-classic-admin-theme',
+            'author_uri'  => 'https://github.com/philwareham/textpattern-classic-admin-theme',
         );
     }
 }
