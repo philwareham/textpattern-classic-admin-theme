@@ -166,11 +166,21 @@
         }
 
         &.ui-datepicker-today a {
+            border-color: $color-success-border;
             background-color: $color-success-background;
+
+            &:hover {
+                border-color: darken($color-border, 13.5%);
+            }
         }
 
         &.ui-datepicker-current-day a {
+            border-color: $color-warning-border;
             background-color: $color-highlight-box;
+
+            &:hover {
+                border-color: darken($color-border, 13.5%);
+            }
         }
     }
 

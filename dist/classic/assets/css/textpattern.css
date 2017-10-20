@@ -4527,10 +4527,18 @@ button {
     text-align: center;
   }
   .ui-datepicker td.ui-datepicker-today a {
+    border-color: #a3d48e;
     background-color: #dff0d8;
   }
+  .ui-datepicker td.ui-datepicker-today a:hover {
+    border-color: #aaaaaa;
+  }
   .ui-datepicker td.ui-datepicker-current-day a {
+    border-color: #e4c788;
     background-color: #fff8dd;
+  }
+  .ui-datepicker td.ui-datepicker-current-day a:hover {
+    border-color: #aaaaaa;
   }
   .ui-datepicker .ui-datepicker-buttonpane {
     margin: 0.7em 0 0;
