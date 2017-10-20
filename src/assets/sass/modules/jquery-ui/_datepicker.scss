@@ -259,7 +259,7 @@
         left: auto;
 
         span {
-            background-position: -48px -192px;
+            transform: rotate(180deg);
         }
     }
 
@@ -268,7 +268,7 @@
         left: 0.25em;
 
         span {
-            background-position: -80px -192px;
+            transform: rotate(180deg);
         }
     }
 
