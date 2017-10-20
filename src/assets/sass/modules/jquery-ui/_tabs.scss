@@ -73,18 +73,17 @@
 }
 
 .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
-    height: 22px;
+    font-weight: normal;
 
     li {
         display: inline-block;
-        height: 21px;
         border-bottom-width: 0;
         border-top-left-radius: 0.75em 2em;
         border-top-right-radius: 0.75em 2em;
         background-color: $color-highlight-box;
         list-style: none;
         white-space: nowrap;
-        box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5);
+        box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5), 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
 
         &:hover {
             border-color: darken($color-border, 13.5%);
@@ -95,7 +94,7 @@
             margin-bottom: -1px;
             padding-bottom: 1px;
             background-color: $color-background;
-            box-shadow: none;
+            box-shadow: 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
         }
     }
 }
@@ -110,15 +109,15 @@
 
 /**
  * Additonal styling for tabs vertical.
-
+ */
 
 .ui-tabs-vertical {
     .ui-tabs-nav {
-        border-bottom: 1px solid $color-gradient-to;
+        border-bottom: 1px solid $color-border;
 
         li {
             display: block;
-            border: 1px solid $color-gradient-to;
+            border: 1px solid $color-border;
             border-bottom: 1px solid transparent;
         }
     }
@@ -140,4 +139,3 @@
         }
     }
 }
- */

@@ -1000,7 +1000,7 @@ button {
   select {
     padding-right: 1.3333333em;
     background: #f7f7f7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 4'%3E%3Cpolygon fill='%23333' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
-    background-size: 0.9166667em 0.3333333;
+    background-size: 0.9166667em 0.3333333em;
     text-transform: none;
   }
   /**
@@ -5252,19 +5252,18 @@ button {
     background: none;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
-    height: 22px;
+    font-weight: normal;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
     display: inline-block;
-    height: 21px;
     border-bottom-width: 0;
     border-top-left-radius: 0.75em 2em;
     border-top-right-radius: 0.75em 2em;
     background-color: #fff8dd;
     list-style: none;
     white-space: nowrap;
-    -webkit-box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5);
-            box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5);
+    -webkit-box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5), 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5), 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li:hover {
     border-color: #aaaaaa;
@@ -5274,8 +5273,8 @@ button {
     margin-bottom: -1px;
     padding-bottom: 1px;
     background-color: #ffffff;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    -webkit-box-shadow: 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
+            box-shadow: 0 -0.15em 0.15em rgba(0, 0, 0, 0.1);
   }
   /**
  * Maintain cursor style when collapsing a collapsible tab.
@@ -5285,37 +5284,28 @@ button {
   }
   /**
  * Additonal styling for tabs vertical.
-
-
-.ui-tabs-vertical {
-    .ui-tabs-nav {
-        border-bottom: 1px solid $color-gradient-to;
-
-        li {
-            display: block;
-            border: 1px solid $color-gradient-to;
-            border-bottom: 1px solid transparent;
-        }
-    }
-
-    .ui-tabs-panel {
-        border-top-width: 0;
-    }
-}
-
-.txp-details .ui-tabs-nav {
-    border-bottom: 0;
-
-    li {
-        border-right: 0;
-        border-left: 0;
-
-        &:first-child {
-            border-top: 0;
-        }
-    }
-}
  */
+  .ui-tabs-vertical .ui-tabs-nav {
+    border-bottom: 1px solid #cccccc;
+  }
+  .ui-tabs-vertical .ui-tabs-nav li {
+    display: block;
+    border: 1px solid #cccccc;
+    border-bottom: 1px solid transparent;
+  }
+  .ui-tabs-vertical .ui-tabs-panel {
+    border-top-width: 0;
+  }
+  .txp-details .ui-tabs-nav {
+    border-bottom: 0;
+  }
+  .txp-details .ui-tabs-nav li {
+    border-right: 0;
+    border-left: 0;
+  }
+  .txp-details .ui-tabs-nav li:first-child {
+    border-top: 0;
+  }
   /* Tooltip
    ========================================================================== */
   /**
