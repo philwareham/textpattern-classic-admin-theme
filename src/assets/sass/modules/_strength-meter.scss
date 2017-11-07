@@ -22,7 +22,7 @@
 .strength-meter {
     position: relative;
     width: 100%;
-    max-width: 28em; // TODO: check this?
+    max-width: 30em;
     height: 1.5em; // 18px / 12px
     background-color: darken($color-border, 16%);
     box-sizing: border-box;
