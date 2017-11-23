@@ -58,7 +58,8 @@ input[type="button"],
         text-decoration: none;
     }
 
-    &:focus {
+    &:focus,
+    &.ui-state-active {
         border-color: $color-link-focus;
         outline: 2px solid transparent;
     }

@@ -1154,6 +1154,13 @@ button {
     /* 2 */
     vertical-align: baseline;
   }
+  /**
+ * Reverse the progress direction in RTL languages.
+ */
+  [dir="rtl"] progress {
+    -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+  }
   /* Buttons
    ========================================================================== */
   /**
@@ -1227,14 +1234,21 @@ button {
     color: #1a1919;
     text-decoration: none;
   }
-  button:focus,
+  button:focus, button.ui-state-active,
   [type="reset"]:focus,
+  [type="reset"].ui-state-active,
   [type="submit"]:focus,
+  [type="submit"].ui-state-active,
   input[type="button"]:focus,
+  input[type="button"].ui-state-active,
   .txp-button:focus,
+  .txp-button.ui-state-active,
   .txp-logout a:focus,
+  .txp-logout a.ui-state-active,
   .navlink:focus,
-  .navlink-active:focus {
+  .navlink.ui-state-active,
+  .navlink-active:focus,
+  .navlink-active.ui-state-active {
     border-color: #5b9dd9;
     outline: 2px solid transparent;
   }
@@ -4787,7 +4801,7 @@ button {
   }
   .ui-menu .ui-menu-item-wrapper {
     position: relative;
-    padding: 0.25em 1.25em 0.25em 0.75em;
+    padding: 0.25em 0.75em;
   }
   .ui-menu .ui-menu-divider {
     height: 0;
@@ -4825,9 +4839,6 @@ button {
  */
   [dir="rtl"] .ui-menu {
     padding: 0;
-  }
-  [dir="rtl"] .ui-menu .ui-menu-item-wrapper {
-    padding: 0.25em 0.75em 0.25em 1.25em;
   }
   [dir="rtl"] .ui-menu .ui-icon {
     right: 0.25em;
@@ -4873,6 +4884,13 @@ button {
  */
   .ui-progressbar-indeterminate .ui-progressbar-value {
     background-color: #cccccc;
+  }
+  /**
+ * Reverse the progressbar direction in RTL languages.
+ */
+  [dir="rtl"] .ui-progressbar-value {
+    -webkit-animation-direction: reverse;
+            animation-direction: reverse;
   }
   /* Selectmenu
    ========================================================================== */
@@ -4987,7 +5005,7 @@ button {
     background: transparent;
     color: #996633;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-    cursor: hand;
+    cursor: pointer;
     -webkit-user-select: auto;
        -moz-user-select: auto;
         -ms-user-select: auto;
@@ -5001,8 +5019,14 @@ button {
   .no-ui-button .ui-selectmenu-button:focus {
     outline: thin solid #5b9dd9;
   }
-  .no-ui-button .ui-selectmenu-icon {
+  .no-ui-button .ui-selectmenu-button .ui-selectmenu-icon {
     margin: 0;
+    opacity: 0.66;
+  }
+  .no-ui-button .ui-selectmenu-button:hover .ui-selectmenu-icon,
+  .no-ui-button .ui-selectmenu-button:active .ui-selectmenu-icon,
+  .no-ui-button .ui-selectmenu-button:focus .ui-selectmenu-icon {
+    opacity: 1;
   }
   /* Slider
    ========================================================================== */

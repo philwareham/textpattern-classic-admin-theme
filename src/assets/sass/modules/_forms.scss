@@ -427,3 +427,11 @@ progress {
     /* 2 */
     vertical-align: baseline;
 }
+
+/**
+ * Reverse the progress direction in RTL languages.
+ */
+
+[dir="rtl"] progress {
+    animation-direction: reverse;
+}

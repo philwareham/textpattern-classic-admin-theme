@@ -93,7 +93,7 @@
 
     .ui-menu-item-wrapper {
         position: relative;
-        padding: 0.25em 1.25em 0.25em 0.75em; // 15px / 13px + 3px / 12px
+        padding: 0.25em 0.75em; // 15px / 13px + 3px / 12px
     }
 
     .ui-menu-divider {
@@ -143,10 +143,6 @@
 
 [dir="rtl"] .ui-menu {
     padding: 0;
-
-    .ui-menu-item-wrapper {
-        padding: 0.25em 0.75em 0.25em 1.25em; // 3px / 12px + 15px / 13px
-    }
 
     // left-aligned (flipped to right)
     .ui-icon {
