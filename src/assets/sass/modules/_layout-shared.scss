@@ -30,6 +30,58 @@ hr {
 }
 
 /**
+ * 1. Add the correct display in IE 11.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+    /* 1 */
+    display: inline-block;
+    /* 2 */
+    vertical-align: baseline;
+}
+
+/**
+ * Reverse the progress direction in RTL languages.
+ */
+
+[dir="rtl"] progress {
+    animation-direction: reverse;
+}
+
+/**
+ * Styled progress indicators.
+ *
+ * Example HTML:
+ *
+ * <progress class="txp-upload-progress"></progress>
+ */
+
+.txp-upload-progress {
+    width: 100%;
+    height: 8px;
+    border: 1px solid $color-border;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+.txp-upload-progress::-webkit-progress-value {
+    background-color: $color-success-text;
+}
+
+.txp-upload-progress::-webkit-progress-bar {
+    background-color: $color-background;
+}
+
+.txp-upload-progress:not([value])::-webkit-progress-bar {
+    background-color: $color-border-light;
+}
+
+.txp-upload-progress::-moz-progress-bar {
+    background-color: $color-success-text;
+}
+
+/**
  * Hide text but still allow screen reader access.
  *
  * Example HTML:

@@ -21,8 +21,8 @@
 }
 
 .ui-progressbar-value {
-    height: 8px;
-    background-color: $color-selecting;
+    height: 6px;
+    background-color: $color-success-text;
 }
 
 /**
@@ -38,13 +38,5 @@
  */
 
 .ui-progressbar-indeterminate .ui-progressbar-value {
-    background-color: $color-border;
-}
-
-/**
- * Reverse the progressbar direction in RTL languages.
- */
-
-[dir="rtl"] .ui-progressbar-value, {
-    animation-direction: reverse;
+    background-color: $color-border-light;
 }
