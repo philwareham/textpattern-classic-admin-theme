@@ -165,8 +165,10 @@ progress {
 
 .txp-search {
     display: flex;
+    position: relative;
     justify-content: flex-end;
     margin: 1em 0;
+    float: right;
 
     .ui-menu {
         position: absolute;
@@ -182,6 +184,10 @@ progress {
     // Ensure search dropdown lays above list options dropdown.
     .txp-dropdown {
         z-index: 101;
+    }
+
+    [dir="rtl"] & {
+        float: left;
     }
 }
 
