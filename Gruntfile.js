@@ -36,7 +36,7 @@ module.exports = function (grunt)
         concurrent: {
             dist: [
                 'css',
-                'uglify:dist'
+                'uglify'
             ]
         },
 
@@ -59,17 +59,6 @@ module.exports = function (grunt)
                     },
                     {'<%= paths.dest.css %>custom-example.css': '<%= paths.src.sass %>custom-example.css'}
                 ]
-            }
-        },
-
-        // Minified versions of CSS files.
-        cssmin: {
-            dist: {
-                expand: true,
-                cwd: '<%= paths.dest.css %>',
-                src: '*.css',
-                dest: '<%= paths.dest.css %>',
-                ext: '.min.css'
             }
         },
 
@@ -111,7 +100,8 @@ module.exports = function (grunt)
         postcss: {
             options: {
                 processors: [
-                    require('autoprefixer')
+                    require('autoprefixer'),
+                    require('cssnano')
                 ]
             },
             dist: {
@@ -175,7 +165,7 @@ module.exports = function (grunt)
 
     // Register tasks.
     grunt.registerTask('build', ['clean', 'concurrent', 'copy']);
-    grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'cssmin']);
+    grunt.registerTask('css', ['sasslint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
 };
