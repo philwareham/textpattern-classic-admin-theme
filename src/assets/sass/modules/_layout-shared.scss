@@ -268,8 +268,9 @@ progress {
     margin: 0.46153846153846em 0 1em; // 6px / 13px, 13px
     float: right;
 
-    > * {
+    > *:not(ul) {
         margin: 0 0 0 1em;
+        user-select: none;
     }
 
     form {
