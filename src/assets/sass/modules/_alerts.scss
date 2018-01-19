@@ -101,8 +101,8 @@ li.information {
  *
  * Example HTML:
  *
- * <div id="messagepane" role="alert" aria-live="assertive">
- *     <span class="messageflash error">
+ * <div id="messagepane">
+ *     <span class="messageflash error" role="alert" aria-live="assertive">
  *         <span class="ui-icon ui-icon-alert"></span>
  *         Username not found.
  *         <a class="close"><span class="ui-icon ui-icon-close">Close</span></a>
@@ -114,24 +114,25 @@ li.information {
     position: fixed;
     top: 0;
     left: 50%;
+    max-width: 100%;
     transform: translateX(-50%);
     text-align: center;
     z-index: 1000;
 
-    span {
-        &.success,
-        &.warning,
-        &.error {
-            display: inline-block;
-            max-width: ($text-column - 2em);
-            margin: 0 auto;
-            padding: 0.5em 3em 0.5em 1em;
-            border: 1px solid;
-            border-top: 0;
-            border-radius: 0 0 $border-radius $border-radius;
-            color: $color-text-inverse;
-            box-shadow: $standard-shadow;
-        }
+    .messageflash {
+        display: inline-block;
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0.5em 3em 0.5em 1em;
+        border: 1px solid;
+        border-top: 0;
+        border-radius: 0 0 $border-radius $border-radius;
+        color: $color-text-inverse;
+        text-align: left;
+        box-shadow: $standard-shadow;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
 
         &.success {
             border-color: $color-success-border;
@@ -155,7 +156,7 @@ li.information {
 }
 
 /*
- * Message close icon.
+ * System message close icon.
  */
 
 .close {
@@ -176,6 +177,27 @@ li.information {
         &:hover {
             opacity: 1;
         }
+    }
+}
+
+/*
+ * System message flipped layout for RTL languages.
+ */
+
+[dir="rtl"] #messagepane .messageflash {
+    padding: 0.5em 1em 0.5em 3em;
+    text-align: right;
+}
+
+[dir="rtl"] .close {
+    right: auto;
+    left: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.66);
+    border-left: 0;
+
+    span {
+        right: auto;
+        left: 0.5em;
     }
 }
 
