@@ -310,6 +310,10 @@ textarea.code {
     cursor: default !important;
     /* 2 */
     opacity: 1;
+
+    .ui-icon {
+        opacity: 0.33;
+    }
 }
 
 /**
