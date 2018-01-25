@@ -93,11 +93,26 @@
         label {
             cursor: pointer;
         }
+
+
+        label {
+            display: block;
+            margin: -0.25em -0.75em;
+            padding: 0.25em 0.75em 0.25em 2em;
+            cursor: pointer;
+
+            [type="checkbox"],
+            [type="radio"] {
+                position: absolute;
+                top: 0.5em;
+                left: 0.5em;
+            }
+        }
     }
 
     .ui-menu-item-wrapper {
         position: relative;
-        padding: 0.25em 0.75em; // 15px / 13px + 3px / 12px
+        padding: 0.25em 0.75em;
     }
 
     .ui-menu-divider {
@@ -147,6 +162,16 @@
 
 [dir="rtl"] .ui-menu {
     padding: 0;
+
+    .ui-menu-item label {
+        padding: 0.25em 2em 0.25em 0.75em;
+
+        [type="checkbox"],
+        [type="radio"] {
+            right: 0.5em;
+            left: auto;
+        }
+    }
 
     // left-aligned (flipped to right)
     .ui-icon {
