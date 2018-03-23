@@ -173,8 +173,24 @@
     outline: 0;
 }
 
-.thumbnail-alter input {
+.image-replace {
+    margin-bottom: 1em;
+}
+
+.edit-alter-thumbnail {
+    margin-bottom: 1.5em;
+}
+
+.edit-alter-thumbnail input {
     margin: 0 0.3333333em 0 0;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+[dir="rtl"] .edit-alter-thumbnail input {
+    margin: 0 0 0 0.3333333em;
 
     &:last-child {
         margin: 0;
@@ -183,14 +199,6 @@
 
 .ui-button.thumbnail-swap-size {
     margin: 0 0.3333333em 0 0;
-}
-
-[dir="rtl"] .thumbnail-alter input {
-    margin: 0 0 0 0.3333333em;
-
-    &:last-child {
-        margin: 0;
-    }
 }
 
 [dir="rtl"] .ui-button.thumbnail-swap-size {

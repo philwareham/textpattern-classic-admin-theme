@@ -55,6 +55,7 @@ progress {
 
 .txp-upload-progress {
     width: 100%;
+    max-width: 30em; // 360px / 12px
     height: 8px;
     border: 1px solid $color-border;
     appearance: none;
@@ -277,10 +278,10 @@ progress {
     }
 }
 
-.txp-form-field.file-uploader .txp-form-field-value {
+.txp-form-field.file-uploader {
     margin-bottom: -0.5em;
 
-    > * {
+    .txp-form-field-value > * {
         margin-bottom: 1em;
     }
 }
