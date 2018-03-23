@@ -656,9 +656,11 @@ span.spinner {
  */
 
 .txp-edit {
+    position: relative;
     max-width: ($text-column - 2em);
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
+    clear: both;
     border: 1px solid $color-border-light;
     /* 1 */
     background: $color-background;
