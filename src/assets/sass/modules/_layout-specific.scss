@@ -308,6 +308,7 @@ tr.active {
 #preview-plugin,
 #preview-help,
 #preview-textpack {
-    max-height: 24em;
+    height: 16vh;
     overflow: auto;
+    resize: vertical;
 }
