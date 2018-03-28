@@ -320,7 +320,7 @@ progress {
     text-align: right;
 
     > ul {
-        text-align: start;
+        text-align: left;
     }
 
     > *:not(ul) {
@@ -342,7 +342,7 @@ progress {
     text-align: left;
 
     > ul {
-        text-align: start;
+        text-align: right;
     }
 
     > * {
