@@ -14,7 +14,49 @@
    ========================================================================== */
 
 body {
-    margin-top: 1em;
+    min-width: 86em;
+    margin: 0;
+    padding: 0 2em 1em;
+}
+
+.design-patterns--section {
+    padding-top: 0.25em;
+}
+
+.design-patterns--menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 27%;
+    min-width: 23em;
+    margin: 0 auto;
+    padding: 2em;
+    border-right: 1px solid $color-border;
+    background-color: $color-background-box;
+    box-shadow: inset -0.25em 0 0.25em -0.25em rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    // Enforce LTR behaviour in nav list.
+    ol {
+        padding: 0 0 0 2em;
+    }
+}
+
+.design-patterns--content {
+    margin-left: 28%;
+}
+
+.design-patterns--content-container {
+    max-width: 80em;
+    margin: 0 auto;
+}
+
+.design-patterns--heading {
+    padding-top: 1em;
 }
 
 /**
@@ -165,34 +207,8 @@ $colors: (
  * <h2>Title <span>new v4.7</span></h2>
  */
 
-.text-section h1 span,
+.design-patterns--section h1 span,
 h2 span {
     font-family: $font-body;
     font-size: $base-font-size;
-}
-
-/**
- * Prism language indicator (plugin).
- */
-
-div.prism-show-language {
-    position: relative;
-}
-
-div.prism-show-language > div.prism-show-language-label {
-    display: inline-block;
-    position: absolute;
-    top: -0.75em;
-    right: 0;
-    bottom: auto;
-    left: auto;
-    width: auto;
-    height: auto;
-    padding: 0 0.3em; // 3px / 10px
-    border-radius: 0 0.3em; // 3px / 10px
-    background-color: $color-text-footnote;
-    color: #ffffff;
-    font-family: $font-body;
-    font-size: $small-font-size;
-    z-index: 1;
 }
