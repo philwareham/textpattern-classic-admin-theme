@@ -2,7 +2,9 @@
    ========================================================================== */
 
 /**
- * Flex container.
+ * Flexbox container.
+ *
+ * TODO: remove this when we drop IE11 and browser CSS Grid support is widespread.
  */
 
 .txp-layout {
@@ -16,6 +18,18 @@
         box-sizing: border-box;
     }
 }
+
+/**
+ * Grid container.
+ *
+ * TODO: use this when we drop IE11 and browser CSS Grid support is widespread.
+ */
+
+//.txp-layout {
+//    display: grid;
+//    grid-template-columns: repeat(12, 1fr);
+//    grid-gap: 2em;
+//}
 
 /**
  * Generate sizes all for grid column cells.
@@ -32,20 +46,24 @@
  */
 
 .txp-layout-1col {
+    //grid-column: span 12;
     width: 100%;
 }
 
 .txp-layout-4col-3span {
+    //grid-column: span 9;
     width: 75%;
 }
 
 .txp-layout-2col,
 .txp-layout-4col-2span {
+    //grid-column: span 6;
     width: 50%;
 }
 
 .txp-layout-4col,
 .txp-layout-4col-alt {
+    //grid-column: span 3;
     width: 25%;
 }
 
