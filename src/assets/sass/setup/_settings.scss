@@ -8,9 +8,9 @@ $font-code:                  Monaco, "Lucida Console", "Bitstream Vera Sans Mono
 // typography grid
 
 $base-font-size:             12px !default;
-$base-line-height:           18px !default;
-$small-font-size:            10px !default;
-$small-line-height:          15px !default;
+$base-line-height:           1.5 !default; // 18px / 12px
+$small-font-size:            0.833333333333333rem !default; // 10px / 12px
+$small-line-height:          1.5 !default; // 15px / 10px
 
 // layout grid (not responsive)
 
