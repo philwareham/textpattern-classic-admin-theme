@@ -19,11 +19,11 @@ body {
     padding: 0 2em 1em;
 }
 
-.design-patterns--section {
+.design-patterns-section {
     padding-top: 0.25em;
 }
 
-.design-patterns--menu {
+.design-patterns-menu {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -46,16 +46,16 @@ body {
     }
 }
 
-.design-patterns--content {
+.design-patterns-content {
     margin-left: 28%;
 }
 
-.design-patterns--content-container {
+.design-patterns-content-container {
     max-width: 80em;
     margin: 0 auto;
 }
 
-.design-patterns--heading {
+.design-patterns-heading {
     padding-top: 1em;
 }
 
@@ -121,7 +121,7 @@ $colors: (
     "info-background":      $color-info-background
 );
 
-.design-patterns--color {
+.design-patterns-color {
     display: block;
     position: relative;
     height: 3em; // 36px / 12px
@@ -138,7 +138,7 @@ $colors: (
 }
 
 @each $name, $color in $colors {
-    .design-patterns--color-#{$name} {
+    .design-patterns-color-#{$name} {
         background: $color;
 
         &::after {
@@ -226,7 +226,7 @@ $colors: (
  * <h2>Title <span>new v4.7</span></h2>
  */
 
-.design-patterns--section h1 span,
+.design-patterns-section h1 span,
 h2 span {
     font-family: $font-body;
     font-size: $base-font-size;
