@@ -2,6 +2,9 @@ module.exports = function (grunt)
 {
     'use strict';
 
+    // Define Sass implmentation (i.e. Node or Dart).
+    const sass = require('dart-sass');
+
     // Load all Grunt tasks.
     require('load-grunt-tasks')(grunt);
 
@@ -66,9 +69,10 @@ module.exports = function (grunt)
         jshint: {
             options: {
                 bitwise: true,
+                browser: true,
                 curly: true,
                 eqeqeq: true,
-                esversion: 5,
+                esversion: 6,
                 forin: true,
                 globals: {
                     module: true,
@@ -77,11 +81,9 @@ module.exports = function (grunt)
                 latedef: true,
                 noarg: true,
                 nonew: true,
-                quotmark: 'single',
-                undef: true,
-                unused: false,
                 strict: false,
-                browser: true
+                undef: true,
+                unused: false
             },
             files: [
                 'Gruntfile.js'
@@ -107,6 +109,7 @@ module.exports = function (grunt)
         // Sass configuration.
         sass: {
             options: {
+                implementation: sass,
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
                 sourceMap: false
             },
