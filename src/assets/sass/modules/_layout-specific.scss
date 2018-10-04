@@ -21,7 +21,20 @@
 
 .txp-login {
     max-width: 26em; // 312px / 12px
-    margin: 1em auto;
+    margin: 3em auto 1em;
+}
+
+/**
+ * Additional styling for 'view site' link on login panel.
+ */
+
+.login-view-site {
+    position: relative;
+    bottom: -0.5em;
+    padding: 1em 0;
+    border-top: 1px solid $color-border;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /**

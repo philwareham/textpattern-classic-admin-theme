@@ -24,6 +24,16 @@
     margin-bottom: 1.5em;
 }
 
+/**
+ * Hide header content area on login panels.
+ */
+
+.login {
+    .txp-header {
+        display: none;
+    }
+}
+
 .txp-masthead {
     display: flex;
     justify-content: space-between;
