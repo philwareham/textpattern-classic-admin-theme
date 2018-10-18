@@ -1,7 +1,7 @@
 # Classic admin-side theme for Textpattern CMS
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/philwareham/textpattern-classic-admin-theme.svg)](https://greenkeeper.io/)
-[![Build Status](https://img.shields.io/travis/philwareham/textpattern-classic-admin-theme.svg)](https://travis-ci.org/philwareham/textpattern-classic-admin-theme)
+[![Greenkeeper](https://badges.greenkeeper.io/philwareham/textpattern-classic-admin-theme.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/philwareham/textpattern-classic-admin-theme.svg)](https://travis-ci.org/philwareham/textpattern-classic-admin-theme)
 
 The classic admin theme that ships as standard with [Textpattern CMS](https://textpattern.com/).
 
