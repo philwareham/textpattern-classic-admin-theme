@@ -2,15 +2,11 @@
    ========================================================================== */
 
 /**
- * 1. Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 2. Address `overflow` set to `hidden` in IE 11.
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
  */
 
 button {
-    /* 1 */
     text-transform: none;
-    /* 2 */
-    overflow: visible;
 }
 
 /**
