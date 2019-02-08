@@ -680,7 +680,6 @@ span.spinner {
     vertical-align: top;
 
     .txp-edit &,
-    .txp-prefs-group &, // TODO: Deprecated 4.7
     .txp-tabs-vertical-group & {
         flex-flow: row wrap;
     }
@@ -723,7 +722,6 @@ span.spinner {
  */
 
 .txp-edit,
-.txp-prefs-group, // TODO: Deprecated 4.7
 .txp-tabs-vertical-group {
     .txp-form-field:not(.txp-form-field-textarea) {
         display: flex;
@@ -793,7 +791,6 @@ span.spinner {
     max-width: 60em; // 600px / 10px
 
     .txp-edit &,
-    .txp-prefs-group &, // TODO: Deprecated 4.7
     .txp-tabs-vertical-group & {
         flex: 0 0 100%;
         order: 3;
@@ -824,7 +821,6 @@ span.spinner {
  * Constrain the width of vertical tab column 2 groups.
  */
 
-.txp-prefs-group, // TODO: Deprecated 4.7
 .txp-tabs-vertical-group {
     max-width: $text-column;
 }
