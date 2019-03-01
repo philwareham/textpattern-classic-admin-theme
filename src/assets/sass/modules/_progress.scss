@@ -30,6 +30,7 @@ progress {
     max-width: 30em; // 360px / 12px
     height: 8px;
     border: 1px solid $color-border;
+    background-color: $color-background;
     appearance: none;
     box-sizing: border-box;
 }
