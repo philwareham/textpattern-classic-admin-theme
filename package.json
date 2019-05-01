@@ -44,7 +44,7 @@
     "uglify-save-license": "0.4.1"
   },
   "dependencies": {
-    "jquery": "3.4.0",
+    "jquery": "3.4.1",
     "jquery-ui-dist": "1.12.1",
     "prismjs": "1.16.0",
     "scrollspy-js": "0.1.3"
