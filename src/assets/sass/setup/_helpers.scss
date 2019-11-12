@@ -5,14 +5,15 @@
     $hdfilename: $hdfile + "@2x." + $hdtype !default;
     background-image: url("../img/" + $filename);
     background-size: $hdwidth $hdheight;
-    @media (min-resolution: 1.25dppx), (min-resolution: 120dpi) {background-image: url("../img/" + $hdfilename);}
+
+    @media (min-resolution: 1.25dppx), (min-resolution: 120dpi) { background-image: url("../img/" + $hdfilename); }
 }
 
 // hide text
 
 @mixin hide-text {
+    overflow: hidden;
     text-indent: 110%;
     text-transform: capitalize;
     white-space: nowrap;
-    overflow: hidden;
 }

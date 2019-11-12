@@ -112,9 +112,9 @@ dd {
     a {
         display: block;
         padding: 0.3333333em 2em 0.3333333em 0;
+        overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        overflow: hidden;
     }
 }
 
@@ -132,11 +132,11 @@ dd {
 
 .switcher-action {
     position: absolute;
+    z-index: 2;
     top: 0.3333333em; // 4px / 12px
     left: 0;
-    z-index: 2;
 
-    & + a {
+    + a {
         padding-right: 0;
         padding-left: 2em;
     }
@@ -146,7 +146,7 @@ dd {
     right: 0;
     left: auto;
 
-    & + a {
+    + a {
         padding-right: 2em;
         padding-left: 0;
     }
@@ -158,9 +158,9 @@ dd {
 
 .switcher-list .destroy {
     position: absolute;
+    z-index: 2;
     top: 0.3333333em; // 4px / 12px
     right: 0;
-    z-index: 2;
 }
 
 [dir="rtl"] .switcher-list .destroy {

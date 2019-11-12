@@ -22,9 +22,9 @@ button::-moz-focus-inner,
 }
 
 /**
- * 1. Improve usability and consistency of cursor style between image-type
+ * 1. Remove iOS Safari default styling.
+ * 2. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
- * 2. Remove iOS Safari default styling.
  */
 
 button,
@@ -47,9 +47,9 @@ input[type="button"],
     font-weight: normal;
     text-align: center;
     /* 1 */
-    cursor: pointer;
-    /* 2 */
     appearance: none;
+    /* 2 */
+    cursor: pointer;
     user-select: none;
 
     &:hover {
@@ -152,11 +152,11 @@ button.destroy {
 
 .navlink-disabled {
     display: inline-block;
+    box-sizing: border-box;
     height: 2.333333333333333em; // 28px / 12px
     padding: 0.25em 0.75em; // 3px/ 12px + 9px / 12px
     border: 1px solid;
     background-clip: padding-box;
-    box-sizing: border-box;
 }
 
 /**

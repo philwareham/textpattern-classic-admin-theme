@@ -11,6 +11,7 @@ body {
     display: flex;
     /* 1 */
     position: relative;
+    box-sizing: border-box;
     flex-direction: column;
     min-height: 100vh;
     /* 2 */
@@ -18,7 +19,6 @@ body {
     padding: 0;
     background: $color-background;
     color: $color-text;
-    box-sizing: border-box;
 }
 
 /**
@@ -36,11 +36,11 @@ body {
  */
 
 .txp-body {
+    box-sizing: border-box;
     flex-grow: 1;
     width: 100%;
     min-width: $container-min-width;
     max-width: $container-max-width;
     margin: 0 auto;
     padding: 0 2.5%;
-    box-sizing: border-box;
 }

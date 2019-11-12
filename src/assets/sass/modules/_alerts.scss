@@ -112,27 +112,27 @@ li.information {
 
 #messagepane {
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 50%;
     max-width: 100%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 1000;
 
     .messageflash {
         display: inline-block;
         position: relative;
+        box-sizing: border-box;
         max-width: 100%;
         margin: 0 auto;
         padding: 0.5em 3em 0.5em 1em;
+        overflow-wrap: break-word;
         border: 1px solid;
         border-top: 0;
         border-radius: 0 0 $border-radius $border-radius;
+        box-shadow: $standard-shadow;
         color: $color-text-inverse;
         text-align: left;
-        box-shadow: $standard-shadow;
-        box-sizing: border-box;
-        overflow-wrap: break-word;
 
         &.success {
             border-color: $color-success-border;

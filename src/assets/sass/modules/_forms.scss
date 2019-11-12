@@ -27,6 +27,8 @@ legend {
     /* 1 */
     display: table;
     /* 1 */
+    box-sizing: border-box;
+    /* 1 */
     max-width: 100%;
     margin: 1em 0;
     /* 2 */
@@ -36,8 +38,6 @@ legend {
     font-weight: bold;
     /* 1 */
     white-space: normal;
-    /* 1 */
-    box-sizing: border-box;
 }
 
 /**
@@ -64,6 +64,7 @@ textarea,
 .navlink,
 .navlink-active,
 .navlink-disabled {
+    box-sizing: border-box;
     /* 1 */
     max-width: 100%;
     /* 2 */
@@ -74,7 +75,6 @@ textarea,
     font-size: 1rem;
     line-height: 1.666666666666667em; // 20px / 12px
     vertical-align: baseline;
-    box-sizing: border-box;
 }
 
 /**
@@ -102,8 +102,8 @@ textarea {
     height: 2.333333333333333em; // 28px / 12px
     padding: 0.25em; // 3px / 12px
     border: 1px solid;
-    border-radius: 0;
     border-color: #c7c7c7 #dddddd #dddddd #c7c7c7;
+    border-radius: 0;
     background: $color-background-form;
     /* 1 */
     appearance: none;
@@ -207,11 +207,11 @@ select::-ms-expand {
 
 select[size],
 select[multiple] {
+    box-sizing: border-box;
     height: auto;
     padding-right: 0.25em; // 3px / 12px
     background-image: none;
     vertical-align: top;
-    box-sizing: border-box;
 }
 
 [dir="rtl"] {
@@ -269,8 +269,8 @@ textarea.code {
 /**
  * Make sure disabled elements really are disabled and styled appropriately.
  *
- * 1. Re-set default cursor for disabled elements.
- * 2. Override default iOS opacity setting.
+ * 1. Override default iOS opacity setting.
+ * 2. Re-set default cursor for disabled elements.
  */
 
 [disabled],
@@ -279,13 +279,13 @@ textarea.code {
 .txp-button.disabled,
 .navlink-disabled {
     border-color: $color-border-light !important;
-    background: $color-background-form-disabled !important;
-    color: $color-text-form-disabled !important;
-    box-shadow: none !important;
-    /* 1 */
-    cursor: default !important;
-    /* 2 */
     opacity: 1;
+    background: $color-background-form-disabled !important;
+    /* 1 */
+    box-shadow: none !important;
+    color: $color-text-form-disabled !important;
+    /* 2 */
+    cursor: default !important;
 
     .ui-icon {
         opacity: 0.33 !important;
@@ -411,7 +411,7 @@ textarea {
  */
 
 ::placeholder {
+    opacity: 1;
     color: $color-text-form-placeholder;
     font: inherit; /* 1 */
-    opacity: 1;
 }

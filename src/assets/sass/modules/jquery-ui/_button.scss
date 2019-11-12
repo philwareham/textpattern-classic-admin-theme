@@ -7,11 +7,11 @@
  * Some classes and HTML elements generally added via JavaScript, more info -
  * https://jqueryui.com/button/
  *
- * 1. Correct font size not being inherited in all browsers.
- * 2. Improve usability and consistency of cursor style between image-type
+ * 1. The `overflow` property removes extra width in IE.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Remove iOS Safari default styling.
+ * 4. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
- * 3. The `overflow` property removes extra width in IE.
- * 4. Remove iOS Safari default styling.
  *
  * Example HTML:
  *
@@ -21,27 +21,27 @@
 .ui-button {
     display: inline-block;
     position: relative;
+    box-sizing: border-box;
     height: 2.333333333333333em; // 28px / 12px
     margin: 0 0.1em 0 0;
     padding: 0.25em 0.75em; // 3px/ 12px + 9px / 12px
+    /* 1 */
+    overflow: visible;
     border: 1px solid;
     border-color: $color-button-border;
     background-clip: padding-box;
     background-color: #e2e2e2;
     color: $color-text-button;
     font-family: $font-form;
-    /* 1 */
+    /* 2 */
     font-size: 1rem;
     line-height: 1.666666666666667em; // 20px / 12px
-    text-align: center;
-    /* 2 */
-    cursor: pointer;
-    /* 3 */
-    overflow: visible;
     vertical-align: baseline;
-    box-sizing: border-box;
-    /* 4 */
+    text-align: center;
+    /* 3 */
     appearance: none;
+    /* 4 */
+    cursor: pointer;
     user-select: none;
 
     &:hover {
@@ -90,10 +90,10 @@
  */
 
 .ui-button-icon-only {
+    box-sizing: border-box;
     width: 2.1666667em; // 26px / 12px
     text-indent: -9999px;
     white-space: nowrap;
-    box-sizing: border-box;
 }
 
 /**

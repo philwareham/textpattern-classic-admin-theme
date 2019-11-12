@@ -68,11 +68,11 @@
     padding: 0;
     border-color: $color-border-light;
     outline: 0;
+    box-shadow: $standard-shadow;
+    list-style: none;
     /* 1 */
     font-size: 1rem;
     line-height: 1.666666666666667em; // 20px / 12px
-    list-style: none;
-    box-shadow: $standard-shadow;
 
     .ui-menu {
         position: absolute;
@@ -81,9 +81,9 @@
     .ui-menu-item {
         display: block;
         margin: 0;
-        cursor: pointer;
         /* 2 */
         list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+        cursor: pointer;
 
         a {
             color: $color-text;
@@ -129,6 +129,7 @@
     }
 
     // left-aligned
+
     .ui-icon {
         position: absolute;
         top: 0;
@@ -138,6 +139,7 @@
     }
 
     // right-aligned
+
     .ui-menu-icon {
         right: 0;
         left: auto;
@@ -174,12 +176,14 @@
     }
 
     // left-aligned (flipped to right)
+
     .ui-icon {
         right: 0.25em;
         left: auto;
     }
 
     // right-aligned (flipped to left)
+
     .ui-menu-icon {
         right: auto;
         left: 0;

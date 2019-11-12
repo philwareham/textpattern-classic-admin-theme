@@ -130,8 +130,6 @@ abbr[title] {
     /* 1 */
     border-bottom: 0;
     /* 2 */
-    text-decoration: underline;
-    /* 2 */
     text-decoration: underline dotted;
 }
 
@@ -169,20 +167,20 @@ samp {
 /**
  * Additional stylng for preformatted text/code.
  *
- * 1. Don't wrap long words.
- * 2. Contain overflow in all browsers.
+ * 1. Contain overflow in all browsers.
+ * 2. Don't wrap long words.
  * 3. Set tab size to 4 spaces.
  */
 
 pre {
     margin: 1em 0;
     padding: 1em;
+    /* 1 */
+    overflow-x: auto;
     border: 1px solid lighten($color-border, 9%);
     background: $color-background-box;
-    /* 1 */
-    word-wrap: normal;
     /* 2 */
-    overflow-x: auto;
+    word-wrap: normal;
     /* 3 */
     tab-size: 4;
 }
@@ -199,13 +197,13 @@ code.excerpt {
     padding: 0;
     border: 0;
     background: none;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
     direction: ltr;
     hyphens: none;
+    text-align: left;
+    word-wrap: normal;
+    word-break: normal;
+    word-spacing: normal;
+    white-space: pre;
 }
 
 /**
