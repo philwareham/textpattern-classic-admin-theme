@@ -9,3 +9,13 @@
         filter: invert(1) brightness(1.2);
     }
 }
+
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+    .messageflash {
+        animation: none;
+    }
+
+    span.spinner {
+        animation: none;;
+    }
+}
