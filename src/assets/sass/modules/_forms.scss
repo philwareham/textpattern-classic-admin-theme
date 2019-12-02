@@ -379,6 +379,18 @@ input {
 }
 
 /**
+ * Styling for required field indicators.
+ *
+ * Example HTML:
+ *
+ * <b class="required" title="Required">*</b>
+ */
+
+.required {
+    color: $color-error-text;
+}
+
+/**
  * Styling for form field validation.
  */
 
