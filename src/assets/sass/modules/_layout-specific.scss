@@ -247,7 +247,6 @@
 
 .txp-control-panel .assign-existing-form {
     display: block;
-    margin-top: 1em;
 }
 
 
@@ -307,6 +306,10 @@
 
 /* Admin -> Plugins panel - additional layout
    ========================================================================== */
+
+.plugin-data {
+    display: block;
+}
 
 tr {
     .manage span,
