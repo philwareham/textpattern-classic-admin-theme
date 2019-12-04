@@ -382,20 +382,30 @@ input {
  * Styling for form field validation.
  */
 
-input:not([type="file"]),
+input,
 select,
 textarea {
-    &:invalid,
     &:focus:invalid {
         border-color: $color-error-text;
         box-shadow: none; // Normalize Firefox styling
     }
 }
 
-input:not([type="file"]),
+/**
+ * Styling for Firefox-specfic form field validation.
+ *
+ * TODO: move to `:user-invalid` pseudo-class if/when has browser support.
+ */
+
+input,
 select,
 textarea {
-    &:hover:invalid {
+    &:-moz-ui-invalid {
+        border-color: $color-error-text;
+        box-shadow: none;
+    }
+
+    &:hover:-moz-ui-invalid {
         border-color: shade($color-error-border, 30%);
     }
 }
