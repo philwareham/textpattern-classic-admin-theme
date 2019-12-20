@@ -254,19 +254,17 @@
    ========================================================================== */
 
 /**
- * Red background highlight for spam comment rows in the list.
+ * Background highlight for spam comment/unmoderated comment rows in the list.
  */
 
-#page-discuss .txp-list tr.spam {
-    background: lighten($color-error-background, 2%);
-}
+.txp-list tbody tr {
+    &.spam {
+        background: lighten($color-error-background, 2%);
+    }
 
-/**
- * Yellow background highlight for unmoderated comment rows in the list.
- */
-
-#page-discuss .txp-list tr.moderate {
-    background: lighten($color-warning-background, 2%);
+    &.moderate {
+        background: lighten($color-warning-background, 3%);
+    }
 }
 
 
