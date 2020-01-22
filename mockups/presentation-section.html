@@ -178,9 +178,10 @@
                                     <th class="txp-list-col-skin" scope="col"><a href="#">Theme</a></th>
                                     <th class="txp-list-col-page" scope="col"><a href="#">Page</a></th>
                                     <th class="txp-list-col-style" scope="col"><a href="#">Style</a></th>
-                                    <th class="txp-list-col-frontpage" scope="col"><a href="#">On front page</a></th>
-                                    <th class="txp-list-col-syndicate" scope="col"><a href="#">Syndicate</a></th>
-                                    <th class="txp-list-col-searchable" scope="col"><a href="#">Include in site search</a></th>
+                                    <th class="txp-list-col-permlink_mode" scope="col"><a href="#">Article URL pattern</a></th>
+                                    <th class="txp-list-col-on_frontpage" scope="col"><a href="#">On default page?</a></th>
+                                    <th class="txp-list-col-syndicate" scope="col"><a href="#">Syndicate articles?</a></th>
+                                    <th class="txp-list-col-searchable" scope="col"><a href="#">Searchable?</a></th>
                                     <th class="txp-list-col-article_count" scope="col"><a href="#">Articles</a></th>
                                 </tr>
                             </thead>
@@ -188,17 +189,21 @@
                             <tbody>
                                 <tr id="txp_section_default">
                                     <td class="txp-list-col-multi-edit"><input type="checkbox" value="default" name="selected[]"></td>
-                                    <th class="txp-list-col-name" scope="row"><a href="secondary/presentation-section_edit.html" title="Edit">default</a><span class="txp-option-link">&#160;<span role="separator">|</span>&#160;<a href="#">View</a></span></th>
+                                    <th class="txp-list-col-name" scope="row">
+                                        <a href="secondary/presentation-section_edit.html" title="Edit">default</a><span class="txp-option-link">&#160;<span role="separator">|</span>&#160;<a href="#">View</a></span>
+                                        <hr class="secondary">
+                                        <small class="alert-block alert-pill warning">Development</small>
+                                    </th>
                                     <td class="txp-list-col-title">default</td>
                                     <td class="txp-list-col-skin">
-                                        bootstrap-blog&nbsp;<small class="alert-block alert-pill warning">Development</small>
+                                        <span class="secondary-text">bootstrap-blog</span>
                                         <hr class="secondary">
                                         four-point-eight
                                     </td>
                                     <td class="txp-list-col-page">
-                                        <a href="#" title="Edit">nowhere</a>&nbsp;<small class="alert-block alert-pill error">Missing</small>
-                                        <hr class="secondary">
                                         <a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+                                        <hr class="secondary">
+                                        <a href="#" title="Edit">nowhere</a>&nbsp;<small class="alert-block alert-pill error">Missing</small>
                                     </td>
                                     <td class="txp-list-col-style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
                                     <td class="txp-list-col-permlink_mode"><span class="secondary-text">/section/title</span></td>
