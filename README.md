@@ -1,7 +1,7 @@
 # Classic admin-side theme for Textpattern CMS
 
 [![Known Vulnerabilities](https://snyk.io/test/github/philwareham/textpattern-classic-admin-theme/badge.svg?targetFile=package.json)](https://snyk.io/test/github/philwareham/textpattern-classic-admin-theme?targetFile=package.json)
-[![Build Status](https://travis-ci.org/philwareham/textpattern-classic-admin-theme.svg)](https://travis-ci.org/philwareham/textpattern-classic-admin-theme)
+[![Build Status](https://travis-ci.org/philwareham/textpattern-classic-admin-theme.svg?branch=master)](https://travis-ci.org/philwareham/textpattern-classic-admin-theme)
 
 The classic admin theme that ships as standard with [Textpattern CMS](https://textpattern.com/).
 
