@@ -2,9 +2,6 @@
 
 [![Build Status](https://travis-ci.org/philwareham/textpattern-classic-admin-theme.svg?branch=master)](https://travis-ci.org/philwareham/textpattern-classic-admin-theme)
 [![Known Vulnerabilities](https://snyk.io/test/github/philwareham/textpattern-classic-admin-theme/badge.svg?targetFile=package.json)](https://snyk.io/test/github/philwareham/textpattern-classic-admin-theme?targetFile=package.json)
-[![Dependencies Status](https://david-dm.org/philwareham/textpattern-classic-admin-theme/status.svg)](https://david-dm.org/philwareham/textpattern-classic-admin-theme)
-[![devDependencies Status](https://david-dm.org/philwareham/textpattern-classic-admin-theme/dev-status.svg)](https://david-dm.org/philwareham/textpattern-classic-admin-theme?type=dev)
-[![optionalDependencies Status](https://david-dm.org/philwareham/textpattern-classic-admin-theme/optional-status.svg)](https://david-dm.org/philwareham/textpattern-classic-admin-theme?type=optional)
 
 The classic admin theme that ships as standard with [Textpattern CMS](https://textpattern.com/).
 
