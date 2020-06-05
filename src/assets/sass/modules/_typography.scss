@@ -1,6 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/settings";
 
 /* Typography
    ========================================================================== */
@@ -10,8 +12,8 @@
  */
 
 html {
-    font-size: settings.$base-font-size;
-    line-height: settings.$base-line-height;
+    font-size: setup.$base-font-size;
+    line-height: setup.$base-line-height;
 }
 
 /**
@@ -19,7 +21,7 @@ html {
  */
 
 body {
-    font-family: settings.$font-body;
+    font-family: setup.$font-body;
 }
 
 /**
@@ -36,13 +38,13 @@ body {
 
 h1 {
     margin: 0 0 0.5em;
-    font-family: settings.$font-heading;
+    font-family: setup.$font-heading;
     font-size: 2rem; // 24px / 12px
     font-weight: normal;
     line-height: 1.25; // 30px / 24px
 
     .pophelp {
-        font-family: settings.$font-body;
+        font-family: setup.$font-body;
         font-size: 1rem;
     }
 }
@@ -61,13 +63,13 @@ h1 {
 
 h2 {
     margin: 0.6666667em 0; // 12px / 18px
-    font-family: settings.$font-heading;
+    font-family: setup.$font-heading;
     font-size: 1.5rem; // 18px / 12px
     font-weight: normal;
     line-height: 1.3333333; // 24px / 18px
 
     .pophelp {
-        font-family: settings.$font-body;
+        font-family: setup.$font-body;
         font-size: 1rem;
     }
 }
@@ -78,7 +80,7 @@ h2 {
 
 h3 {
     margin: 0.8571429em 0; // 12px / 14px
-    font-family: settings.$font-heading;
+    font-family: setup.$font-heading;
     font-size: 1.1666667rem; // 14px / 12px
     line-height: 1.4285714; // 20px / 14px
 
@@ -157,7 +159,7 @@ code,
 kbd,
 samp,
 .code {
-    font-family: settings.$font-code;
+    font-family: setup.$font-code;
 }
 
 code,
@@ -241,8 +243,8 @@ figcaption,
 tfoot,
 .footnote,
 .txp-form-field-instructions {
-    font-size: settings.$small-font-size;
-    line-height: settings.$small-line-height;
+    font-size: setup.$small-font-size;
+    line-height: setup.$small-line-height;
 }
 
 figcaption,

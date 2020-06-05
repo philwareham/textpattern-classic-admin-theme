@@ -1,4 +1,8 @@
-@use "../../setup/settings";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
+@use "../../setup/colours";
 
 /* Tooltip
    ========================================================================== */
@@ -24,5 +28,5 @@
     z-index: 9999;
     max-width: 22em;
     padding: 0.5em 1em;
-    box-shadow: settings.$standard-shadow;
+    box-shadow: setup.$standard-shadow;
 }

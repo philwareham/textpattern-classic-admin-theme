@@ -1,4 +1,8 @@
-@use "../setup/settings";
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
+@use "../setup/colours";
 
 /* Footer
    ========================================================================== */
@@ -15,7 +19,7 @@
 
 .txp-footer {
     box-sizing: border-box;
-    min-width: settings.$container-min-width;
+    min-width: setup.$container-min-width;
     margin: 1em 0;
     padding: 0 2.5%;
     text-align: center;

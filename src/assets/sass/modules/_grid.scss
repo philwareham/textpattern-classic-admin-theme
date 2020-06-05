@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/settings";
 
 /* Layout grid
    ========================================================================== */
@@ -108,7 +111,7 @@
  */
 
 .txp-layout-textbox {
-    max-width: settings.$text-column;
+    max-width: setup.$text-column;
 }
 
 

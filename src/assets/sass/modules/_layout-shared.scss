@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/settings";
 
 /* Globally shared layout
    ========================================================================== */
@@ -616,7 +619,7 @@ span.spinner {
 
 .txp-edit {
     position: relative;
-    max-width: (settings.$text-column - 2em);
+    max-width: (setup.$text-column - 2em);
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
     clear: both;
@@ -865,7 +868,7 @@ span.spinner {
  */
 
 .txp-tabs-vertical-group {
-    max-width: settings.$text-column;
+    max-width: setup.$text-column;
 }
 
 /**

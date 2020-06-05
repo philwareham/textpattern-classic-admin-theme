@@ -1,6 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/settings";
 
 /* Datepicker
    ========================================================================== */
@@ -86,7 +88,7 @@
     display: none;
     width: 17em;
     padding: 0.25em 0.25em 0;
-    box-shadow: settings.$standard-shadow;
+    box-shadow: setup.$standard-shadow;
 
     .ui-datepicker-header {
         position: relative;
@@ -100,7 +102,7 @@
         width: 1.8em;
         height: 1.8em;
         margin-top: -0.9em;
-        border-radius: settings.$border-radius;
+        border-radius: setup.$border-radius;
         background-color: transparent;
     }
 

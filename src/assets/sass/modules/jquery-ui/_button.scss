@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/settings";
 
 /* Button
    ========================================================================== */
@@ -35,7 +38,7 @@
     background-clip: padding-box;
     background-color: #e2e2e2;
     color: colours.$color-text-button;
-    font-family: settings.$font-form;
+    font-family: setup.$font-form;
     /* 2 */
     font-size: 1rem;
     line-height: 1.666666666666667em; // 20px / 12px

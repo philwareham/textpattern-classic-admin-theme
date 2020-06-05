@@ -1,6 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/settings";
 
 /* Layout helpers
    ========================================================================== */
@@ -41,7 +43,7 @@
     outline: 0;
     list-style: none;
     font-size: 1rem;
-    line-height: settings.$base-line-height;
+    line-height: setup.$base-line-height;
     text-decoration: none;
 }
 

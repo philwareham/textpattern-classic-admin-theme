@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/settings";
 
 /* Slider
    ========================================================================== */
@@ -30,7 +33,7 @@
         height: 20px;
         border-radius: 50%;
         background-color: colours.$color-background;
-        box-shadow: settings.$standard-shadow;
+        box-shadow: setup.$standard-shadow;
         cursor: pointer;
         touch-action: manipulation;
     }

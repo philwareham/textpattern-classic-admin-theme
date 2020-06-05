@@ -1,6 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/settings";
 
 /* Setup and login panels - additional layout
    ========================================================================== */
@@ -10,7 +12,7 @@
  */
 
 .txp-setup {
-    max-width: settings.$setup-column;
+    max-width: setup.$setup-column;
     margin: 1em auto;
 
     // Column width of 'welcome' setup panel.
@@ -85,8 +87,8 @@
         margin: 0;
         padding: 0;
         border-bottom: 1px solid colours.$color-border;
-        font-size: settings.$small-font-size;
-        line-height: settings.$small-line-height;
+        font-size: setup.$small-font-size;
+        line-height: setup.$small-line-height;
     }
 
     li {

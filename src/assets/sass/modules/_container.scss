@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/settings";
 
 /* Container
    ========================================================================== */
@@ -42,8 +45,8 @@ body {
     box-sizing: border-box;
     flex-grow: 1;
     width: 100%;
-    min-width: settings.$container-min-width;
-    max-width: settings.$container-max-width;
+    min-width: setup.$container-min-width;
+    max-width: setup.$container-max-width;
     margin: 0 auto;
     padding: 0 2.5%;
 }

@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/settings";
 
 /* Messages
    ========================================================================== */
@@ -146,8 +149,8 @@ li.information {
         overflow-wrap: break-word;
         border: 1px solid;
         border-top: 0;
-        border-radius: 0 0 settings.$border-radius settings.$border-radius;
-        box-shadow: settings.$standard-shadow;
+        border-radius: 0 0 setup.$border-radius setup.$border-radius;
+        box-shadow: setup.$standard-shadow;
         color: colours.$color-text-inverse;
         text-align: left;
 

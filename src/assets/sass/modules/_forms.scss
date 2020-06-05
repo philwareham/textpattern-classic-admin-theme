@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/settings";
 
 /* Forms
    ========================================================================== */
@@ -73,7 +76,7 @@ textarea,
     /* 2 */
     margin: 0;
     color: colours.$color-text-form;
-    font-family: settings.$font-form;
+    font-family: setup.$font-form;
     /* 3 */
     font-size: 1rem;
     line-height: 1.666666666666667em; // 20px / 12px

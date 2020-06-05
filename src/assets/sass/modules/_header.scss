@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Header
    ========================================================================== */
@@ -24,7 +26,7 @@
  */
 
 .txp-header {
-    min-width: settings.$container-min-width;
+    min-width: setup.$container-min-width;
     margin-bottom: 1.5em;
 }
 
@@ -48,7 +50,7 @@
 }
 
 .txp-branding {
-    @include helpers.hide-text;
+    @include setup.hide-text;
 
     width: 6.75em; // 108px
     height: 1.5em; // 24px

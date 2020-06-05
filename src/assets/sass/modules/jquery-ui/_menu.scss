@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/settings";
 
 /* Menu
    ========================================================================== */
@@ -71,7 +74,7 @@
     padding: 0;
     border-color: colours.$color-border-light;
     outline: 0;
-    box-shadow: settings.$standard-shadow;
+    box-shadow: setup.$standard-shadow;
     list-style: none;
     /* 1 */
     font-size: 1rem;

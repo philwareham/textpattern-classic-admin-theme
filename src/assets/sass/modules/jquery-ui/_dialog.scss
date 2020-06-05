@@ -1,4 +1,8 @@
-@use "../../setup/settings";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
+@use "../../setup/colours";
 
 /* Dialog
    ========================================================================== */
@@ -47,7 +51,7 @@
     padding: 0.25em;
     overflow: hidden;
     outline: 0;
-    box-shadow: settings.$standard-shadow;
+    box-shadow: setup.$standard-shadow;
 
     .ui-dialog-titlebar {
         position: relative;
