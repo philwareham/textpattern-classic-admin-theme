@@ -1,3 +1,5 @@
+@use "../../setup/colours";
+
 /* Progressbar
    ========================================================================== */
 
@@ -22,7 +24,7 @@
 
 .ui-progressbar-value {
     height: 6px;
-    background-color: $color-success-text;
+    background-color: colours.$color-success-text;
 }
 
 /**
@@ -38,5 +40,5 @@
  */
 
 .ui-progressbar-indeterminate .ui-progressbar-value {
-    background-color: $color-border-light;
+    background-color: colours.$color-border-light;
 }

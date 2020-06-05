@@ -1,3 +1,5 @@
+@use "../../setup/settings";
+
 /* Dialog
    ========================================================================== */
 
@@ -45,7 +47,7 @@
     padding: 0.25em;
     overflow: hidden;
     outline: 0;
-    box-shadow: $standard-shadow;
+    box-shadow: settings.$standard-shadow;
 
     .ui-dialog-titlebar {
         position: relative;

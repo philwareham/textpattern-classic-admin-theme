@@ -1,3 +1,5 @@
+@use "../setup/colours";
+
 /* Lists
    ========================================================================== */
 
@@ -93,19 +95,19 @@ dd {
 
     li {
         position: relative;
-        border-top: 1px solid $color-border;
+        border-top: 1px solid colours.$color-border;
         border-bottom: 1px solid transparent;
 
         &:last-child {
-            border-bottom-color: $color-border;
+            border-bottom-color: colours.$color-border;
         }
 
         &.active {
-            background: $color-highlight-box;
+            background: colours.$color-highlight-box;
         }
 
         &.selected {
-            background: $color-selected;
+            background: colours.$color-selected;
         }
     }
 

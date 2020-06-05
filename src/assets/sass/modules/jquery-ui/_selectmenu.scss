@@ -1,3 +1,6 @@
+@use "../../setup/colours";
+@use "../../setup/settings";
+
 /* Selectmenu
    ========================================================================== */
 
@@ -41,15 +44,15 @@
 }
 
 .ui-selectmenu-button:not(.ui-controlgroup-item) {
-    border-radius: $border-radius;
+    border-radius: settings.$border-radius;
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-    border-radius: 0 $border-radius $border-radius 0;
+    border-radius: 0 settings.$border-radius settings.$border-radius 0;
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-    border-radius: $border-radius 0 0 $border-radius;
+    border-radius: settings.$border-radius 0 0 settings.$border-radius;
 }
 
 .ui-selectmenu-icon {
@@ -81,10 +84,10 @@
             height: auto;
             margin: 0.5em 0 0;
             padding: 2px 0.75em; // 9px / 12px
-            border-top: 1px solid $color-border;
+            border-top: 1px solid colours.$color-border;
             font-size: 1rem;
             font-weight: bold;
-            line-height: $base-line-height;
+            line-height: settings.$base-line-height;
 
             &:first-child {
                 margin: 0;
@@ -104,11 +107,11 @@
 
 [dir="rtl"] {
     .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-        border-radius: $border-radius 0 0 $border-radius;
+        border-radius: settings.$border-radius 0 0 settings.$border-radius;
     }
 
     .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-        border-radius: 0 $border-radius $border-radius 0;
+        border-radius: 0 settings.$border-radius settings.$border-radius 0;
     }
 
     .ui-selectmenu-icon {
@@ -127,20 +130,20 @@
         padding: 0;
         border: 0;
         background: transparent;
-        color: $color-link;
-        font-family: $font-body;
+        color: colours.$color-link;
+        font-family: settings.$font-body;
         cursor: pointer;
         user-select: auto;
 
         &:hover,
         &:active {
             background: transparent;
-            color: $color-link-hover;
+            color: colours.$color-link-hover;
             text-decoration: underline;
         }
 
         &:focus {
-            outline: thin solid $color-link-focus;
+            outline: thin solid colours.$color-link-focus;
         }
 
         .ui-selectmenu-icon {

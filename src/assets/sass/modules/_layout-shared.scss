@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/settings";
+
 /* Globally shared layout
    ========================================================================== */
 
@@ -26,7 +29,7 @@ hr {
     /* 2 */
     overflow: visible;
     border: 0; // remove the default `hr` border
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid colours.$color-border;
 
     &.secondary {
         margin: 0.33em 0;
@@ -94,7 +97,7 @@ hr {
 }
 
 .txp-dropdown-toggle-all {
-    border-bottom: 1px solid $color-border-light;
+    border-bottom: 1px solid colours.$color-border-light;
 }
 
 /**
@@ -411,8 +414,8 @@ span.spinner {
     bottom: 0;
     margin: 1em 0 0;
     padding: 0.25em 0; // 3px / 12px
-    background: $color-background;
-    box-shadow: 0 -1em 1em -0.5em $color-background;
+    background: colours.$color-background;
+    box-shadow: 0 -1em 1em -0.5em colours.$color-background;
 }
 
 /**
@@ -513,7 +516,7 @@ span.spinner {
 .text-section {
     margin-top: 3em;
     padding-top: 3em;
-    border-top: 2px solid $color-border;
+    border-top: 2px solid colours.$color-border;
 }
 
 /**
@@ -613,13 +616,13 @@ span.spinner {
 
 .txp-edit {
     position: relative;
-    max-width: ($text-column - 2em);
+    max-width: (settings.$text-column - 2em);
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
     clear: both;
-    border: 1px solid $color-border-light;
+    border: 1px solid colours.$color-border-light;
     /* 1 */
-    background: $color-background;
+    background: colours.$color-background;
 
     h2 {
         /* 2 */
@@ -642,7 +645,7 @@ span.spinner {
 .txp-edit .txp-edit-actions {
     margin: 1em -1em;
     padding: 1em 1em 0;
-    border-top: 2px solid $color-background;
+    border-top: 2px solid colours.$color-background;
 }
 
 /**
@@ -862,7 +865,7 @@ span.spinner {
  */
 
 .txp-tabs-vertical-group {
-    max-width: $text-column;
+    max-width: settings.$text-column;
 }
 
 /**

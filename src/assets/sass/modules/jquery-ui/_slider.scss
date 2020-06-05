@@ -1,3 +1,6 @@
+@use "../../setup/colours";
+@use "../../setup/settings";
+
 /* Slider
    ========================================================================== */
 
@@ -26,8 +29,8 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: $color-background;
-        box-shadow: $standard-shadow;
+        background-color: colours.$color-background;
+        box-shadow: settings.$standard-shadow;
         cursor: pointer;
         touch-action: manipulation;
     }

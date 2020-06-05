@@ -1,3 +1,6 @@
+@use "../../setup/colours";
+@use "../../setup/settings";
+
 /* Controlgroup
    ========================================================================== */
 
@@ -40,12 +43,12 @@
         padding: 0.4em 1em;
 
         span {
-            font-size: $small-font-size;
+            font-size: settings.$small-font-size;
         }
     }
 
     .ui-state-highlight {
-        background-color: $color-highlight-box;
+        background-color: colours.$color-highlight-box;
     }
 }
 

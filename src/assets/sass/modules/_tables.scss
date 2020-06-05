@@ -1,3 +1,5 @@
+@use "../setup/colours";
+
 /* Tables
    ========================================================================== */
 
@@ -50,14 +52,14 @@ caption {
  */
 
 tbody {
-    border-top: 1px solid $color-border;
+    border-top: 1px solid colours.$color-border;
 
     th {
-        border-bottom: 1px solid $color-border;
+        border-bottom: 1px solid colours.$color-border;
     }
 
     td {
-        border-bottom: 1px solid $color-border;
+        border-bottom: 1px solid colours.$color-border;
     }
 }
 
@@ -138,7 +140,7 @@ thead {
 
     tbody {
         tr.selected {
-            background: $color-selected;
+            background: colours.$color-selected;
         }
 
         th {

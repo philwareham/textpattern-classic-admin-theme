@@ -1,3 +1,5 @@
+@use "../setup/settings";
+
 /* Footer
    ========================================================================== */
 
@@ -13,7 +15,7 @@
 
 .txp-footer {
     box-sizing: border-box;
-    min-width: $container-min-width;
+    min-width: settings.$container-min-width;
     margin: 1em 0;
     padding: 0 2.5%;
     text-align: center;

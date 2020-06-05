@@ -1,3 +1,5 @@
+@use "../setup/colours";
+
 /* Embedded content
    ========================================================================== */
 
@@ -81,15 +83,15 @@ img {
  */
 
 .content-image {
-    border: solid 1px $color-border;
-    background: $color-background;
+    border: solid 1px colours.$color-border;
+    background: colours.$color-background;
 
     a:hover & {
-        border-color: $color-link-hover;
+        border-color: colours.$color-link-hover;
     }
 
     a:focus & {
-        border-color: $color-link-focus;
+        border-color: colours.$color-link-focus;
     }
 }
 

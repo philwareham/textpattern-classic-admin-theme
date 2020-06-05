@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../../setup/colours";
+@use "../../setup/settings";
+
 /* Layout helpers
    ========================================================================== */
 
@@ -37,7 +41,7 @@
     outline: 0;
     list-style: none;
     font-size: 1rem;
-    line-height: $base-line-height;
+    line-height: settings.$base-line-height;
     text-decoration: none;
 }
 
@@ -90,8 +94,8 @@
  */
 
 .ui-widget-content {
-    border: 1px solid $color-border;
-    background-color: $color-background;
+    border: 1px solid colours.$color-border;
+    background-color: colours.$color-background;
 }
 
 /**
@@ -112,9 +116,9 @@
  */
 
 .ui-state-default {
-    border: 1px solid $color-border;
+    border: 1px solid colours.$color-border;
     background-color: #e2e2e2;
-    color: $color-text;
+    color: colours.$color-text;
 }
 
 /**
@@ -123,7 +127,7 @@
 
 a.ui-state-default:hover,
 a.ui-state-default:focus {
-    color: $color-text;
+    color: colours.$color-text;
     text-decoration: none;
 }
 
@@ -132,7 +136,7 @@ a.ui-state-default:focus {
  */
 
 .ui-state-hover {
-    border-color: darken($color-border, 13.5%);
+    border-color: color.adjust(colours.$color-border, $lightness: -13.5%);
     background-color: #eeeeee;
 }
 
@@ -141,7 +145,7 @@ a.ui-state-default:focus {
  */
 
 .ui-state-focus {
-    border-color: $color-link-focus;
+    border-color: colours.$color-link-focus;
     outline: 0;
 
     a {
@@ -162,7 +166,7 @@ a.ui-state-default:focus {
  */
 
 .ui-selecting {
-    background-color: $color-selecting;
+    background-color: colours.$color-selecting;
 }
 
 /**
@@ -170,7 +174,7 @@ a.ui-state-default:focus {
  */
 
 .ui-selected {
-    background-color: $color-selected;
+    background-color: colours.$color-selected;
 }
 
 
@@ -182,8 +186,8 @@ a.ui-state-default:focus {
  */
 
 .ui-state-highlight {
-    border: 1px solid $color-warning-border;
-    background-color: $color-warning-background;
+    border: 1px solid colours.$color-warning-border;
+    background-color: colours.$color-warning-background;
 }
 
 /**
@@ -191,9 +195,9 @@ a.ui-state-default:focus {
  */
 
 .ui-state-error {
-    border: 1px solid $color-error-border;
-    background-color: $color-error-background;
-    color: $color-error-text;
+    border: 1px solid colours.$color-error-border;
+    background-color: colours.$color-error-background;
+    color: colours.$color-error-text;
 }
 
 /**

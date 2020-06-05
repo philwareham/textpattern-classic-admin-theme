@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../../setup/colours";
+
 /* Checkboxradio
    ========================================================================== */
 
@@ -64,14 +67,14 @@
 
 .ui-checkboxradio-checked {
     &.ui-button {
-        background-color: $color-highlight-box;
+        background-color: colours.$color-highlight-box;
     }
 
     &.ui-button:hover {
-        background-color: lighten($color-highlight-box, 5%);
+        background-color: color.adjust(colours.$color-highlight-box, $lightness: 5%);
     }
 
     &.ui-button:active {
-        background-color: darken($color-highlight-box, 8%);
+        background-color: color.adjust(colours.$color-highlight-box, $lightness: -8%);
     }
 }

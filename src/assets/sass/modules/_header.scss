@@ -1,3 +1,7 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+@use "../setup/settings";
+
 /* Header
    ========================================================================== */
 
@@ -20,7 +24,7 @@
  */
 
 .txp-header {
-    min-width: $container-min-width;
+    min-width: settings.$container-min-width;
     margin-bottom: 1.5em;
 }
 
@@ -40,11 +44,11 @@
     height: 2.5em;
     padding: 0 2.5%;
     border-bottom: 1px solid #f8c225;
-    background-color: $color-accent;
+    background-color: colours.$color-accent;
 }
 
 .txp-branding {
-    @include hide-text;
+    @include helpers.hide-text;
 
     width: 6.75em; // 108px
     height: 1.5em; // 24px

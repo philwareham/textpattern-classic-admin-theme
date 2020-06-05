@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/settings";
+
 /* Messages
    ========================================================================== */
 
@@ -13,35 +16,35 @@
  */
 
 li.success {
-    background: $color-success-background;
+    background: colours.$color-success-background;
 }
 
 .success:not(li) {
-    color: $color-success-text;
+    color: colours.$color-success-text;
 }
 
 li.warning {
-    background: $color-warning-background;
+    background: colours.$color-warning-background;
 }
 
 .warning:not(li) {
-    color: $color-warning-text;
+    color: colours.$color-warning-text;
 }
 
 li.error {
-    background: $color-error-background;
+    background: colours.$color-error-background;
 }
 
 .error:not(li) {
-    color: $color-error-text;
+    color: colours.$color-error-text;
 }
 
 li.information {
-    background: $color-info-background;
+    background: colours.$color-info-background;
 }
 
 .information:not(li) {
-    color: $color-info-text;
+    color: colours.$color-info-text;
 }
 
 /**
@@ -58,7 +61,7 @@ li.information {
  */
 
 .highlight {
-    background: $color-highlight-box;
+    background: colours.$color-highlight-box;
 }
 
 /**
@@ -76,23 +79,23 @@ li.information {
     border: 1px solid;
 
     &.success {
-        border-color: $color-success-border;
-        background: $color-success-background;
+        border-color: colours.$color-success-border;
+        background: colours.$color-success-background;
     }
 
     &.warning {
-        border-color: $color-warning-border;
-        background: $color-warning-background;
+        border-color: colours.$color-warning-border;
+        background: colours.$color-warning-background;
     }
 
     &.error {
-        border-color: $color-error-border;
-        background: $color-error-background;
+        border-color: colours.$color-error-border;
+        background: colours.$color-error-background;
     }
 
     &.information {
-        border-color: $color-info-border;
-        background: $color-info-background;
+        border-color: colours.$color-info-border;
+        background: colours.$color-info-background;
     }
 }
 
@@ -143,29 +146,29 @@ li.information {
         overflow-wrap: break-word;
         border: 1px solid;
         border-top: 0;
-        border-radius: 0 0 $border-radius $border-radius;
-        box-shadow: $standard-shadow;
-        color: $color-text-inverse;
+        border-radius: 0 0 settings.$border-radius settings.$border-radius;
+        box-shadow: settings.$standard-shadow;
+        color: colours.$color-text-inverse;
         text-align: left;
 
         &.success {
-            border-color: $color-success-border;
-            background: $color-success-text;
+            border-color: colours.$color-success-border;
+            background: colours.$color-success-text;
         }
 
         &.warning {
-            border-color: $color-warning-border;
-            background: $color-warning-text;
+            border-color: colours.$color-warning-border;
+            background: colours.$color-warning-text;
         }
 
         &.error {
-            border-color: $color-error-border;
-            background: $color-error-text;
+            border-color: colours.$color-error-border;
+            background: colours.$color-error-text;
         }
     }
 
     a {
-        color: $color-text-inverse;
+        color: colours.$color-text-inverse;
     }
 
     code {

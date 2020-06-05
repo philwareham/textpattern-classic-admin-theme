@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../../setup/colours";
+@use "../../setup/settings";
+
 /* Datepicker
    ========================================================================== */
 
@@ -82,7 +86,7 @@
     display: none;
     width: 17em;
     padding: 0.25em 0.25em 0;
-    box-shadow: $standard-shadow;
+    box-shadow: settings.$standard-shadow;
 
     .ui-datepicker-header {
         position: relative;
@@ -96,7 +100,7 @@
         width: 1.8em;
         height: 1.8em;
         margin-top: -0.9em;
-        border-radius: $border-radius;
+        border-radius: settings.$border-radius;
         background-color: transparent;
     }
 
@@ -120,7 +124,7 @@
 
     .ui-datepicker-prev-hover,
     .ui-datepicker-next-hover {
-        background-color: $color-background-box;
+        background-color: colours.$color-background-box;
     }
 
     .ui-datepicker-title {
@@ -166,20 +170,20 @@
         }
 
         &.ui-datepicker-today a {
-            border-color: $color-success-border;
-            background-color: $color-success-background;
+            border-color: colours.$color-success-border;
+            background-color: colours.$color-success-background;
 
             &:hover {
-                border-color: darken($color-border, 13.5%);
+                border-color: color.adjust(colours.$color-border, $lightness: -13.5%);
             }
         }
 
         &.ui-datepicker-current-day a {
-            border-color: $color-warning-border;
-            background-color: $color-highlight-box;
+            border-color: colours.$color-warning-border;
+            background-color: colours.$color-highlight-box;
 
             &:hover {
-                border-color: darken($color-border, 13.5%);
+                border-color: color.adjust(colours.$color-border, $lightness: -13.5%);
             }
         }
     }

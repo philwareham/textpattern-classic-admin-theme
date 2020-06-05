@@ -1,3 +1,6 @@
+@use "../../setup/colours";
+@use "../../setup/settings";
+
 /* Button
    ========================================================================== */
 
@@ -28,11 +31,11 @@
     /* 1 */
     overflow: visible;
     border: 1px solid;
-    border-color: $color-button-border;
+    border-color: colours.$color-button-border;
     background-clip: padding-box;
     background-color: #e2e2e2;
-    color: $color-text-button;
-    font-family: $font-form;
+    color: colours.$color-text-button;
+    font-family: settings.$font-form;
     /* 2 */
     font-size: 1rem;
     line-height: 1.666666666666667em; // 20px / 12px
@@ -45,21 +48,21 @@
     user-select: none;
 
     &:hover {
-        border-color: $color-button-border-hover;
+        border-color: colours.$color-button-border-hover;
         background-color: #eeeeee;
-        color: $color-text-button-hover;
+        color: colours.$color-text-button-hover;
         text-decoration: none;
     }
 
     &:active {
-        border-color: $color-button-border-hover;
+        border-color: colours.$color-button-border-hover;
         background-color: #dddddd;
-        color: $color-text-button-active;
+        color: colours.$color-text-button-active;
         text-decoration: none;
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: colours.$color-link-focus;
         outline: 2px solid transparent;
     }
 }
@@ -72,7 +75,7 @@
 
 .ui-button.ui-state-focus {
     /* 1 */
-    border-color: $color-link-focus !important;
+    border-color: colours.$color-link-focus !important;
 }
 
 /**

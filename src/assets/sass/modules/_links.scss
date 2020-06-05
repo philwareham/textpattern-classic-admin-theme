@@ -1,3 +1,5 @@
+@use "../setup/colours";
+
 /* Links
    ========================================================================== */
 
@@ -10,18 +12,18 @@
  */
 
 a {
-    color: $color-link; /* 1 */
+    color: colours.$color-link; /* 1 */
     text-decoration: none; /* 2 */
     text-decoration-skip-ink: auto; /* 3 */
 
     &:hover,
     &:active {
-        color: $color-link-hover;
+        color: colours.$color-link-hover;
         text-decoration: underline;
     }
 
     &:focus {
-        outline: thin solid $color-link-focus;
+        outline: thin solid colours.$color-link-focus;
     }
 
     &.busy {
@@ -75,7 +77,7 @@ a {
     padding: 0.25em 0.5em;
     transform: translateY(-5em);
     transition: transform 0.2s ease-in-out;
-    background-color: $color-background-box;
+    background-color: colours.$color-background-box;
 
     &:focus,
     &:active {

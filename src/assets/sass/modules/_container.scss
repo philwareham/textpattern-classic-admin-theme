@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/settings";
+
 /* Container
    ========================================================================== */
 
@@ -17,8 +20,8 @@ body {
     /* 2 */
     margin: 0;
     padding: 0;
-    background: $color-background;
-    color: $color-text;
+    background: colours.$color-background;
+    color: colours.$color-text;
 }
 
 /**
@@ -39,8 +42,8 @@ body {
     box-sizing: border-box;
     flex-grow: 1;
     width: 100%;
-    min-width: $container-min-width;
-    max-width: $container-max-width;
+    min-width: settings.$container-min-width;
+    max-width: settings.$container-max-width;
     margin: 0 auto;
     padding: 0 2.5%;
 }
