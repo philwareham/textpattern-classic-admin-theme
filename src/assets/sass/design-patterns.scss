@@ -106,14 +106,14 @@ $colors: (
     "highlight-box":        colours.$color-highlight-box,
     "strong-highlight-box": colours.$color-strong-highlight-box,
     "accent":               colours.$color-accent,
-    "success-text":         colours.$color-success-text,
-    "success-background":   colours.$color-success-background,
-    "warning-text":         colours.$color-warning-text,
-    "warning-background":   colours.$color-warning-background,
-    "error-text":           colours.$color-error-text,
-    "error-background":     colours.$color-error-background,
-    "info-text":            colours.$color-info-text,
-    "info-background":      colours.$color-info-background
+    "success-text":         var(--color-success-text),
+    "success-background":   var(--color-success-background),
+    "warning-text":         var(--color-warning-text),
+    "warning-background":   var(--color-warning-background),
+    "error-text":           var(--color-error-text),
+    "error-background":     var(--color-error-background),
+    "info-text":            var(--color-info-text),
+    "info-background":      var(--color-info-background)
 );
 
 .design-patterns-color {

@@ -53,18 +53,3 @@ $color-strong-highlight-box:          #ffefaf !default;
 
 $color-button-border:                 #dddddd #c7c7c7 #c7c7c7 #dddddd !default;
 $color-button-border-hover:           #cccccc #b7b7b7 #b7b7b7 #cccccc !default;
-
-// alert colours
-
-$color-success-text:                  #238c23 !default;
-$color-success-background:            #dff0d8 !default;
-$color-success-border:                color.adjust($color-success-background, $lightness: -20%) !default;
-$color-warning-text:                  #c88800 !default;
-$color-warning-background:            #f8eedc !default;
-$color-warning-border:                color.adjust($color-warning-background, $lightness: -20%) !default;
-$color-error-text:                    #ac261d !default;
-$color-error-background:              #f2dede !default;
-$color-error-border:                  color.adjust($color-error-background, $lightness: -12%) !default;
-$color-info-text:                     #3a87ad !default;
-$color-info-background:               #e7f6fc !default;
-$color-info-border:                   color.adjust($color-info-background, $lightness: -12%) !default;

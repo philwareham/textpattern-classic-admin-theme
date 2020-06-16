@@ -257,11 +257,11 @@
 
 .txp-list tbody tr {
     &.spam {
-        background: color.adjust(colours.$color-error-background, $lightness: 2%);
+        background: color.adjust(var(--color-error-background), $lightness: 2%);
     }
 
     &.moderate {
-        background: color.adjust(colours.$color-warning-background, $lightness: 3%);
+        background: color.adjust(var(--color-warning-background), $lightness: 3%);
     }
 }
 

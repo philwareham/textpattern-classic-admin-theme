@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Progressbar
    ========================================================================== */
@@ -23,12 +19,13 @@
 .ui-progressbar {
     margin-bottom: 1em;
     overflow: hidden;
+    background-color: var(--color-background-box);
     text-align: left;
 }
 
 .ui-progressbar-value {
     height: 6px;
-    background-color: colours.$color-success-text;
+    background-color: var(--color-success-text);
 }
 
 /**
@@ -44,5 +41,5 @@
  */
 
 .ui-progressbar-indeterminate .ui-progressbar-value {
-    background-color: colours.$color-border-light;
+    background-color: var(--color-border);
 }

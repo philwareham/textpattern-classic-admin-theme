@@ -392,7 +392,7 @@ input,
 select,
 textarea {
     &:focus:invalid {
-        border-color: colours.$color-error-text;
+        border-color: var(--color-error-text);
         box-shadow: none; // Normalize Firefox styling
     }
 }
@@ -407,12 +407,12 @@ input,
 select,
 textarea {
     &:-moz-ui-invalid {
-        border-color: colours.$color-error-text;
+        border-color: var(--color-error-text);
         box-shadow: none;
     }
 
     &:hover:-moz-ui-invalid {
-        border-color: colours.shade(colours.$color-error-border, 30%);
+        border-color: colours.shade(var(--color-error-border), 30%);
     }
 }
 

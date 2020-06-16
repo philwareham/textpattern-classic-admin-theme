@@ -48,7 +48,7 @@ progress {
 }
 
 .txp-upload-progress::-webkit-progress-value {
-    background-color: colours.$color-success-text;
+    background-color: var(--color-success-text);
 }
 
 .txp-upload-progress:indeterminate::-webkit-progress-bar {
@@ -58,7 +58,7 @@ progress {
 // Gecko/Quantum.
 
 .txp-upload-progress::-moz-progress-bar {
-    background-color: colours.$color-success-text;
+    background-color: var(--color-success-text);
 }
 
 .txp-upload-progress:indeterminate::-moz-progress-bar {
@@ -68,5 +68,5 @@ progress {
 // Trident/EdgeHTML.
 
 .txp-upload-progress::-ms-fill {
-    background-color: colours.$color-success-text;
+    background-color: var(--color-success-text);
 }
