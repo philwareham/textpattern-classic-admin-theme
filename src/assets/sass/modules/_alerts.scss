@@ -121,7 +121,7 @@ li.information {
  *
  * Example HTML:
  *
- * <div id="messagepane">
+ * <div class="messagepane">
  *     <span class="messageflash error" role="alert" aria-live="assertive">
  *         <span class="ui-icon ui-icon-alert"></span>
  *         Username not found.
@@ -130,7 +130,7 @@ li.information {
  * </div>
  */
 
-#messagepane {
+.messagepane {
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -209,7 +209,7 @@ li.information {
  * System message flipped layout for RTL languages.
  */
 
-[dir="rtl"] #messagepane .messageflash {
+[dir="rtl"] .messagepane .messageflash {
     padding: 0.5em 1em 0.5em 3em;
     text-align: right;
 }

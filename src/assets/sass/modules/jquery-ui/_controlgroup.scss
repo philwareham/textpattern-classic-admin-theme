@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Controlgroup
    ========================================================================== */
@@ -51,7 +47,7 @@
     }
 
     .ui-state-highlight {
-        background-color: colours.$color-highlight-box;
+        background-color: var(--color-highlight-box);
     }
 }
 

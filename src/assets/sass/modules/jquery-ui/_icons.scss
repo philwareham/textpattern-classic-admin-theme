@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Icons
    ========================================================================== */
@@ -76,7 +72,7 @@ button:not(.ui-button):focus .ui-icon {
 
 .success .ui-icon,
 .success.ui-icon {
-    filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(90%);
+    filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(100%);
 }
 
 /**
@@ -93,7 +89,7 @@ button:not(.ui-button):focus .ui-icon {
 .ui-state-highlight .ui-icon,
 .warning .ui-icon,
 .warning.ui-icon {
-    filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(112%);
+    filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(115%);
 }
 
 /**
@@ -137,7 +133,7 @@ button:not(.ui-button):focus .ui-icon {
  */
 
 .ui-icon-inversed,
-#messagepane .ui-icon {
+.messagepane .ui-icon {
     filter: brightness(5);
 }
 
