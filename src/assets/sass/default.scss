@@ -18,14 +18,32 @@
     --color-text:                          hsl(0, 0%, 20%);
     --color-text-footnote:                 hsl(0, 0%, 35%);
     --color-text-inversed:                 hsl(0, 0%, 100%);
-    --color-text-enforced-white:           hsl(0, 0%, 100%);
     --color-text-form:                     hsl(0, 0%, 0%);
     --color-text-form-placeholder:         hsl(0, 0%, 60%);
     --color-text-button:                   hsl(0, 0%, 0%);
     --color-text-button-hover:             hsl(0, 0%, 0%);
     --color-text-button-active:            hsl(0, 0%, 0%);
-
-
+    // neutral colours
+    --color-background:                    hsl(0, 0%, 100%);
+    --color-background-box:                hsl(0, 0%, 97%);
+    --color-background-form:               hsl(0, 0%, 97%);
+    --color-background-form-disabled:      hsl(0, 0%, 89%);
+    // accent colours
+    --color-accent:                        hsl(48, 100%, 63%);
+    --color-highlight-box:                 hsl(48, 100%, 93%);
+    --color-strong-highlight-box:          hsl(48, 100%, 84%);
+    // border colours
+    --color-border:                        hsl(0, 0%, 80%);
+    --color-border-light:                  hsl(0, 0%, 83%);
+    // interaction colours
+    --color-link:                          hsl(30, 50%, 40%);
+    --color-link-hover:                    hsl(30, 59%, 44%);
+    --color-link-focus:                    hsl(209, 62%, 60%);
+    --color-selecting:                     hsl(216, 100%, 90%);
+    --color-selected:                      hsl(216, 100%, 95%);
+    // button colours
+    --color-button-background:             TBC;
+    --color-button-border:                 #dddddd #c7c7c7 #c7c7c7 #dddddd;
     // alert colours
     --color-success-text:                  hsl(120, 60%, 34%);
     --color-success-background:            hsl(120, 40%, 90%);

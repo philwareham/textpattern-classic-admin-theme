@@ -1,14 +1,10 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Reset
    ========================================================================== */
 
 /**
- * Add the correct display in Edge, IE 11, and Firefox.
+ * Add the correct display in Firefox.
  */
 
 details,
@@ -22,18 +18,6 @@ main {
 
 summary {
     display: list-item;
-}
-
-/**
- * Add the correct display in IE 11.
- */
-
-canvas {
-    display: inline-block;
-}
-
-template {
-    display: none;
 }
 
 /**
@@ -52,8 +36,6 @@ button {
 
 /**
  * Clearfix using the 'A new micro clearfix hack' method.
- *
- * More info: http://nicolasgallagher.com/micro-clearfix-hack/
  */
 
 .clearfix {
