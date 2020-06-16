@@ -1,100 +1,17 @@
-@use "sass:meta";
+@use "setup";
+@forward "modules";
 
-/* ==========================================================================
-   Styling and layout for all media
+/* CSS variables
    ========================================================================== */
 
-@include meta.load-css("modules/base");
+/* stylelint-disable declaration-colon-space-after */
 
-
-
-/* ==========================================================================
-   Styling and layout for screen media
-   ========================================================================== */
-
-@media screen {
-
-    // Global
-
-    @include meta.load-css("modules/links");
-    @include meta.load-css("modules/typography");
-    @include meta.load-css("modules/internationalization");
-    @include meta.load-css("modules/embedded-content");
-    @include meta.load-css("modules/alerts");
-    @include meta.load-css("modules/twisties");
-    @include meta.load-css("modules/code-highlighting");
-    @include meta.load-css("modules/forms");
-    @include meta.load-css("modules/buttons");
-    @include meta.load-css("modules/progress");
-    @include meta.load-css("modules/lists");
-    @include meta.load-css("modules/tables");
-    //@import "modules/uploader";
-
-    // Layout modules
-
-    @include meta.load-css("modules/container");
-    @include meta.load-css("modules/grid");
-    @include meta.load-css("modules/header");
-    @include meta.load-css("modules/footer");
-    @include meta.load-css("modules/navigation");
-    @include meta.load-css("modules/layout-shared");
-    @include meta.load-css("modules/layout-specific");
-
-    // jQuery UI core
-
-    @include meta.load-css("modules/jquery-ui/core");
-
-    // jQuery UI icons
-
-    @include meta.load-css("modules/jquery-ui/icons");
-
-    // jQuery UI interactions
-
-    @include meta.load-css("modules/jquery-ui/draggable");
-    @include meta.load-css("modules/jquery-ui/resizable");
-    @include meta.load-css("modules/jquery-ui/selectable");
-    @include meta.load-css("modules/jquery-ui/sortable");
-
-    // jQuery UI widgets
-
-    @include meta.load-css("modules/jquery-ui/accordion");
-    @include meta.load-css("modules/jquery-ui/autocomplete");
-    @include meta.load-css("modules/jquery-ui/button");
-    @include meta.load-css("modules/jquery-ui/checkboxradio");
-    @include meta.load-css("modules/jquery-ui/controlgroup");
-    @include meta.load-css("modules/jquery-ui/datepicker");
-    @include meta.load-css("modules/jquery-ui/dialog");
-    @include meta.load-css("modules/jquery-ui/menu");
-    @include meta.load-css("modules/jquery-ui/progressbar");
-    @include meta.load-css("modules/jquery-ui/selectmenu");
-    @include meta.load-css("modules/jquery-ui/slider");
-    @include meta.load-css("modules/jquery-ui/spinner");
-    @include meta.load-css("modules/jquery-ui/tabs");
-    @include meta.load-css("modules/jquery-ui/tooltip");
-}
-
-
-
-/* ==========================================================================
-   Additional accessibility for screen media
-   ========================================================================== */
-
-@include meta.load-css("modules/accessibility");
-
-
-
-/* ==========================================================================
-   Animation `keyframes` need to appear outside of `screen` rules
-   ========================================================================== */
-
-@include meta.load-css("modules/animation-keyframes");
-
-
-
-/* ==========================================================================
-   Styling and layout for print media
-   ========================================================================== */
-
-@media print {
-    @include meta.load-css("modules/print");
+:root {
+    // font families
+    --font-heading: Cambria, Georgia, serif;
+    --font-body:    "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+    --font-form:    Helvetica, Arial, sans-serif !default;
+    --font-code:    Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+    // shadows
+    --standard-shadow: 0 0 0.5em rgba(#000000, 0.2) !default;
 }

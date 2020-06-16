@@ -1,32 +1,17 @@
-// font families
-
-$font-heading:               Cambria, Georgia, serif;
-$font-body:                  "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-form:                  Helvetica, Arial, sans-serif !default;
-$font-code:                  Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
-
 // typography grid
 
-$base-font-size:             12px !default;
-$base-line-height:           1.5 !default; // 18px / 12px
-$small-font-size:            0.833333333333333rem !default; // 10px / 12px
-$small-line-height:          1.5 !default; // 15px / 10px
+$base-font-size:      12px !default;
+$base-line-height:    1.5 !default; // 18px / 12px
+$small-font-size:     0.833333333333333rem !default; // 10px / 12px
+$small-line-height:   1.5 !default; // 15px / 10px
 
 // layout grid (not responsive)
 
-$container-min-width:        64em !default; // 768px / 12px
-$container-max-width:        114em !default; // 1368px / 12px
-$setup-column:               44em !default; // 528px / 12px
-$text-column:                62em !default; // 744px / 12px
+$container-min-width: 64em !default; // 768px / 12px
+$container-max-width: 114em !default; // 1368px / 12px
+$setup-column:        44em !default; // 528px / 12px
+$text-column:         62em !default; // 744px / 12px
 
 // borders
 
-$border-radius:              0.5em !default;
-
-// shadows
-
-$standard-shadow:            0 0 0.5em rgba(#000000, 0.2) !default;
-$inset-highlighting:         inset 0 1px 0 rgba(#ffffff, 0.25) !default;
-$inset-lowlighting:          inset 0 0.2em 0.25em rgba(#000000, 0.15) !default;
-$text-shadow-light:          1px 1px 0 rgba(#ffffff, 0.5) !default;
-$text-shadow-dark:           -1px -1px 0 rgba(#000000, 0.1) !default;
+$border-radius:       0.5em !default;

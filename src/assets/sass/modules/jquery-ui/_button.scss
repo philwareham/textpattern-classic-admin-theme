@@ -33,7 +33,7 @@
     background-clip: padding-box;
     background-color: #e2e2e2;
     color: var(--color-text-button);
-    font-family: setup.$font-form;
+    font-family: var(--font-form);
     /* 2 */
     font-size: 1rem;
     line-height: 1.666666666666667em; // 20px / 12px

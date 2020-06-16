@@ -150,7 +150,7 @@ li.information {
         border: 1px solid;
         border-top: 0;
         border-radius: 0 0 setup.$border-radius setup.$border-radius;
-        box-shadow: setup.$standard-shadow;
+        box-shadow: var(--standard-shadow);
         color: colours.$color-text-inverse;
         text-align: left;
 

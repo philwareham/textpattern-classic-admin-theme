@@ -128,7 +128,7 @@ $colors: (
         top: 0.75em; // 9px / 12px
         padding: 1px 0.23076923076923em; // 3px / 13px
         background-color: rgba(#ffffff, 0.66);
-        font-family: setup.$font-code;
+        font-family: var(--font-code);
     }
 }
 
@@ -223,6 +223,6 @@ $colors: (
 
 .design-patterns-section h1 span,
 h2 span {
-    font-family: setup.$font-body;
+    font-family: var(--font-body);
     font-size: setup.$base-font-size;
 }

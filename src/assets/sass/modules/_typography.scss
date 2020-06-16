@@ -21,7 +21,7 @@ html {
  */
 
 body {
-    font-family: setup.$font-body;
+    font-family: var(--font-body);
 }
 
 /**
@@ -38,13 +38,13 @@ body {
 
 h1 {
     margin: 0 0 0.5em;
-    font-family: setup.$font-heading;
+    font-family: var(--font-heading);
     font-size: 2rem; // 24px / 12px
     font-weight: normal;
     line-height: 1.25; // 30px / 24px
 
     .pophelp {
-        font-family: setup.$font-body;
+        font-family: var(--font-body);
         font-size: 1rem;
     }
 }
@@ -63,13 +63,13 @@ h1 {
 
 h2 {
     margin: 0.6666667em 0; // 12px / 18px
-    font-family: setup.$font-heading;
+    font-family: var(--font-heading);
     font-size: 1.5rem; // 18px / 12px
     font-weight: normal;
     line-height: 1.3333333; // 24px / 18px
 
     .pophelp {
-        font-family: setup.$font-body;
+        font-family: var(--font-body);
         font-size: 1rem;
     }
 }
@@ -80,7 +80,7 @@ h2 {
 
 h3 {
     margin: 0.8571429em 0; // 12px / 14px
-    font-family: setup.$font-heading;
+    font-family: var(--font-heading);
     font-size: 1.1666667rem; // 14px / 12px
     line-height: 1.4285714; // 20px / 14px
 
@@ -159,7 +159,7 @@ code,
 kbd,
 samp,
 .code {
-    font-family: setup.$font-code;
+    font-family: var(--font-code);
 }
 
 code,
