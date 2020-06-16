@@ -1,8 +1,5 @@
 @use "setup";
 
-// import colourscheme TEMP
-@use "setup/colours";
-
 /* ==========================================================================
    ONLY for use in design patterns - classes NOT USED in actual theme distro.
    ========================================================================== */
@@ -77,7 +74,7 @@ body {
         width: 1.5em;
         height: 1.5em;
         border-radius: 0.25em;
-        background: rgba(colours.$color-link-focus, 0.25);
+        background: hsla(209, 62%, 60%, 0.25);
     }
 }
 
@@ -92,20 +89,24 @@ body {
  */
 
 $colors: (
-    "text":                 colours.$color-text,
-    "text-footnote":        colours.$color-text-footnote,
-    "border":               colours.$color-border,
-    "link":                 colours.$color-link,
-    "link-hover":           colours.$color-link-hover,
-    "link-focus":           colours.$color-link-focus,
-    "link-visited":         colours.$color-link-visited,
-    "link-selecting":       colours.$color-selecting,
-    "link-selected":        colours.$color-selected,
-    "background":           colours.$color-background,
-    "background-box":       colours.$color-background-box,
-    "highlight-box":        colours.$color-highlight-box,
-    "strong-highlight-box": colours.$color-strong-highlight-box,
-    "accent":               colours.$color-accent,
+    "text":                 var(--color-text),
+    "text-footnote":        var(--color-text-footnote),
+    "text-form":            var(--color-text-form),
+    "border":               var(--color-border),
+    "border-light":         var(--color-border-light),
+    "border-dark":          var(--color-border-dark),
+    "background":           var(--color-background),
+    "background-box":       var(--color-background-box),
+    "background-form":      var(--color-background-form),
+    "link":                 var(--color-link),
+    "link-hover":           var(--color-link-hover),
+    "link-focus":           var(--color-link-focus),
+    "link-selecting":       var(--color-selecting),
+    "link-selected":        var(--color-selected),
+    "highlight-box":        var(--color-highlight-box),
+    "strong-highlight-box": var(--color-strong-highlight-box),
+    "accent":               var(--color-accent),
+    "accent-dark":          var(--color-accent-dark),
     "success-text":         var(--color-success-text),
     "success-background":   var(--color-success-background),
     "warning-text":         var(--color-warning-text),
@@ -119,26 +120,14 @@ $colors: (
 .design-patterns-color {
     display: block;
     position: relative;
-    height: 3em; // 36px / 12px
+    height: 3em; // 39px / 13px
     margin: 1em 0;
     border: 1px solid var(--color-border);
-
-    &::after {
-        position: absolute;
-        top: 0.75em; // 9px / 12px
-        padding: 1px 0.23076923076923em; // 3px / 13px
-        background-color: rgba(#ffffff, 0.66);
-        font-family: var(--font-code);
-    }
 }
 
 @each $name, $color in $colors {
     .design-patterns-color-#{$name} {
         background: $color;
-
-        &::after {
-            content: "#{$color}";
-        }
     }
 }
 
@@ -149,7 +138,7 @@ $colors: (
 .design-patterns-box {
     margin-top: 0;
     padding: 1em;
-    background: #aaaaaa;
+    background: hsla(0, 0%, 0%, 0.33);
 }
 
 
@@ -224,5 +213,6 @@ $colors: (
 .design-patterns-section h1 span,
 h2 span {
     font-family: var(--font-body);
-    font-size: setup.$base-font-size;
+    font-size: 1rem;
+    font-weight: normal;
 }

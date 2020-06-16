@@ -35,9 +35,9 @@ body {
 h1 {
     margin: 0 0 0.5em;
     font-family: var(--font-heading);
-    font-size: 2rem; // 24px / 12px
+    font-size: 2rem; // 26px / 13px
     font-weight: normal;
-    line-height: 1.25; // 30px / 24px
+    line-height: 1.23076923076923; // 32px / 26px
 
     .pophelp {
         font-family: var(--font-body);
@@ -58,11 +58,11 @@ h1 {
  */
 
 h2 {
-    margin: 0.6666667em 0; // 12px / 18px
+    margin: 0.5em 0 0.72222222222222em; // 9px / 18px + 13px / 18px
     font-family: var(--font-heading);
-    font-size: 1.5rem; // 18px / 12px
+    font-size: 1.384615384615385rem; // 18px / 13px
     font-weight: normal;
-    line-height: 1.3333333; // 24px / 18px
+    line-height: 1.33333333333333; // 24px / 18px
 
     .pophelp {
         font-family: var(--font-body);
@@ -75,10 +75,10 @@ h2 {
  */
 
 h3 {
-    margin: 0.8571429em 0; // 12px / 14px
+    margin: 0.86666666666667em 0; // 13px / 15px
     font-family: var(--font-heading);
-    font-size: 1.1666667rem; // 14px / 12px
-    line-height: 1.4285714; // 20px / 14px
+    font-size: 1.153846153846154rem; // 15px / 13px
+    line-height: 1.4; // 21px / 15px
 
     a {
         font-weight: bold;
@@ -141,7 +141,7 @@ abbr[title] {
 
 mark,
 var {
-    padding: 0 0.2em;
+    padding: 1px 0.23076923076923em; // 3px / 13px
     background: var(--color-selected);
     color: var(--color-text);
 }
@@ -161,7 +161,7 @@ samp,
 code,
 kbd,
 samp {
-    padding: 0 0.2em;
+    padding: 1px 0.23076923076923em; // 3px / 13px
     border: 1px solid var(--color-border-light);
     background: var(--color-background-box);
 }
@@ -176,7 +176,7 @@ samp {
 
 pre {
     margin: 1em 0;
-    padding: 1em;
+    padding: 1em; // 13px
     /* 1 */
     overflow-x: auto;
     border: 1px solid var(--color-border-light);
@@ -217,7 +217,7 @@ sub,
 sup.footnote,
 sup {
     position: relative;
-    font-size: 0.75em; // 9px / 12px
+    font-size: 0.75em;
     line-height: 0;
     vertical-align: baseline;
 }

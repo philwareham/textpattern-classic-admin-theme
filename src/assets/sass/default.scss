@@ -36,6 +36,8 @@
     // border colours
     --color-border:                        hsl(0, 0%, 80%);
     --color-border-light:                  hsl(0, 0%, 83%);
+    --color-border-dark:                   hsl(0, 0%, 70%);
+    --color-border-form:                   #c7c7c7 #dddddd #dddddd #c7c7c7;
     // interaction colours
     --color-link:                          hsl(30, 50%, 40%);
     --color-link-hover:                    hsl(30, 59%, 44%);
@@ -43,8 +45,10 @@
     --color-selecting:                     hsl(216, 100%, 90%);
     --color-selected:                      hsl(216, 100%, 95%);
     // button colours
-    --color-button-background:             TBC;
+    --color-button-background:             hsl(0, 0%, 90%);
     --color-button-border:                 #dddddd #c7c7c7 #c7c7c7 #dddddd;
+    --color-button-primary-background:     hsl(0, 100%, 30%);
+    --color-button-primary-border:         #bb0000 #660000 #660000 #bb0000;
     // alert colours
     --color-success-text:                  hsl(120, 60%, 34%);
     --color-success-background:            hsl(120, 40%, 90%);

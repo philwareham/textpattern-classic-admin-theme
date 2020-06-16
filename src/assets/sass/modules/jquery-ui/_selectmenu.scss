@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Selectmenu
    ========================================================================== */
@@ -61,7 +57,7 @@
 .ui-selectmenu-icon {
     flex: none;
     order: 2;
-    margin: 0 -0.25em 0 0.25em;
+    margin: 0.2em -0.230769230769231em 0 0.230769230769231em;
 }
 
 .ui-selectmenu-text {
@@ -86,8 +82,8 @@
         .ui-selectmenu-optgroup {
             height: auto;
             margin: 0.5em 0 0;
-            padding: 2px 0.75em; // 9px / 12px
-            border-top: 1px solid colours.$color-border;
+            padding: 2px 0.61538461538462em; // 8px / 13px
+            border-top: 1px solid var(--color-border);
             font-size: 1rem;
             font-weight: bold;
             line-height: setup.$base-line-height;
@@ -118,7 +114,7 @@
     }
 
     .ui-selectmenu-icon {
-        margin: 0 0.25em 0 -0.25em;
+        margin: 0.2em 0.230769230769231em 0 -0.230769230769231em;
     }
 }
 
@@ -133,20 +129,21 @@
         padding: 0;
         border: 0;
         background: transparent;
-        color: colours.$color-link;
-        font-family: setup.$font-body;
+        color: var(--color-link);
+        font-family: var(--font-body);
         cursor: pointer;
         user-select: auto;
 
         &:hover,
         &:active {
             background: transparent;
-            color: colours.$color-link-hover;
+            box-shadow: none;
+            color: var(--color-link-hover);
             text-decoration: underline;
         }
 
         &:focus {
-            outline: thin solid colours.$color-link-focus;
+            outline: thin solid var(--color-link-focus);
         }
 
         .ui-selectmenu-icon {

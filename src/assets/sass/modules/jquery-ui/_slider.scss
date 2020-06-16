@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Slider
    ========================================================================== */
@@ -24,18 +20,36 @@
 
 .ui-slider {
     position: relative;
+    box-sizing: border-box;
+    border-color: var(--color-border);
+    background-color: var(--color-background-box);
     text-align: left;
+
+    &:hover {
+        border-color: var(--color-border-dark);
+    }
 
     .ui-slider-handle {
         position: absolute;
         z-index: 2;
+        box-sizing: border-box;
         width: 20px;
         height: 20px;
+        border: 1px solid var(--color-border-dark);
         border-radius: 50%;
-        background-color: colours.$color-background;
-        box-shadow: setup.$standard-shadow;
+        background-color: var(--color-background);
+        box-shadow: var(--standard-shadow);
         cursor: pointer;
         touch-action: manipulation;
+
+        &:hover {
+            border-color: var(--color-border-dark);
+            filter: brightness(1.05);
+        }
+
+        &:active {
+            filter: brightness(0.95);
+        }
     }
 
     .ui-slider-range {
@@ -43,6 +57,7 @@
         position: absolute;
         z-index: 1;
         border: 0;
+        background: var(--color-success-text);
         font-size: 10px;
     }
 }

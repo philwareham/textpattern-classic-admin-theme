@@ -73,7 +73,7 @@ li.information {
  */
 
 .alert-block {
-    padding: 0.5em 1em; // 6px / 12px
+    padding: 0.53846153846154em 1em; // 7px / 13px
     clear: both;
     border: 1px solid;
 
@@ -141,7 +141,7 @@ li.information {
         box-sizing: border-box;
         max-width: 100%;
         margin: 0 auto;
-        padding: 0.5em 3em 0.5em 1em;
+        padding: 0.53846153846154em 3.53846153846154em 0.53846153846154em 0.75em;
         overflow-wrap: break-word;
         border: 1px solid;
         border-top: 0;
@@ -185,13 +185,13 @@ li.information {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 2.25em;
+    width: 2.53846153846154em;
     border-left: 1px solid hsla(0, 0%, 100%, 0.66);
 
     span {
         position: absolute;
         top: 50%;
-        right: 0.5em;
+        right: 0.692307692307692em; // 9px / 13px
         margin-top: -9px;
         opacity: 0.66;
 
@@ -206,7 +206,7 @@ li.information {
  */
 
 [dir="rtl"] .messagepane .messageflash {
-    padding: 0.5em 1em 0.5em 3em;
+    padding: 0.53846153846154em 0.75em 0.53846153846154em 3.53846153846154em;
     text-align: right;
 }
 
@@ -218,7 +218,7 @@ li.information {
 
     span {
         right: auto;
-        left: 0.5em;
+        left: 0.692307692307692em; // 9px / 13px
     }
 }
 

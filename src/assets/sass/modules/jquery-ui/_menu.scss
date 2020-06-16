@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Menu
    ========================================================================== */
@@ -17,7 +13,7 @@
  * https://jqueryui.com/menu/
  *
  * 1. Correct font size not being inherited in all browsers.
- * 2. Workaround for IE 11 and Edge incorrectly displaying a list marker.
+ * 2. Workaround for Edge 12/13 incorrectly displaying a list marker.
  *
  * Example HTML:
  *
@@ -72,13 +68,13 @@
     display: block;
     margin: 0;
     padding: 0;
-    border-color: colours.$color-border-light;
+    border-color: var(--color-border-light);
     outline: 0;
-    box-shadow: setup.$standard-shadow;
+    box-shadow: var(--standard-shadow);
     list-style: none;
     /* 1 */
     font-size: 1rem;
-    line-height: 1.666666666666667em; // 20px / 12px
+    line-height: setup.$base-line-height;
 
     .ui-menu {
         position: absolute;
@@ -92,19 +88,14 @@
         cursor: pointer;
 
         a {
-            color: colours.$color-text;
+            color: var(--color-text);
             text-decoration: none;
         }
 
         label {
-            cursor: pointer;
-        }
-
-
-        label {
             display: block;
-            margin: -0.25em -0.75em;
-            padding: 0.25em 0.75em 0.25em 2em;
+            margin: -0.3076923em -0.6153846em; // 4px / 13px + 8px / 13px
+            padding: 0.3076923em 0.6153846em 0.3076923em 2em; // 4px / 13px + 8px / 13px
             cursor: pointer;
 
             [type="checkbox"],
@@ -118,12 +109,12 @@
 
     .ui-menu-item-wrapper {
         position: relative;
-        padding: 0.25em 0.75em;
+        padding: 0.3076923em 0.6153846em; // 4px / 13px + 8px / 13px
     }
 
     .ui-menu-divider {
         height: 0;
-        margin: 0.25em 0; // 3px / 12px
+        margin: 0.3076923em 0; // 4px / 13px
         border-width: 1px 0 0;
         font-size: 0;
         line-height: 0;
@@ -131,7 +122,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        background-color: colours.$color-selected;
+        background-color: var(--color-selected);
     }
 
     // left-aligned
@@ -140,7 +131,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 0.25em;
+        left: 0.3076923em;
         margin: auto 0;
     }
 
@@ -172,11 +163,11 @@
     padding: 0;
 
     .ui-menu-item label {
-        padding: 0.25em 2em 0.25em 0.75em;
+        padding: 0.3076923em 2em 0.3076923em 0.6153846em; // 4px / 13px + 8px / 13px
 
         [type="checkbox"],
         [type="radio"] {
-            right: 0.5em;
+            right: 0.3076923em;
             left: auto;
         }
     }
@@ -184,7 +175,7 @@
     // left-aligned (flipped to right)
 
     .ui-icon {
-        right: 0.25em;
+        right: 0.3076923em;
         left: auto;
     }
 

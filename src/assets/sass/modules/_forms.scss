@@ -1,4 +1,3 @@
-@use "sass:color"; // TEMP
 @use "../setup";
 
 /* Forms
@@ -10,37 +9,25 @@
  */
 
 fieldset {
-    /* 1 */
-    min-width: 0;
-    /* 2 */
-    margin: 0 0 0.25em;
-    padding: 1px 0.5em;
-    border: 1px solid var(--color-border);
+    min-width: 0; /* 1 */
+    margin: 1em 0; /* 2 */
+    padding: 1px 1em; /* 2 */
+    border: 1px solid var(--color-border); /* 2 */
 }
 
 /**
  * Normalize styling of `legend`.
  *
- * 1. Correct wrapping not present in IE 11 and Edge 12/13.
+ * 1. Correct wrapping not present in Edge 12/13.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- * 3. Correct `color` not being inherited from fieldset in IE 11.
  */
 
 legend {
-    /* 1 */
-    display: table;
-    /* 1 */
-    box-sizing: border-box;
-    /* 1 */
-    max-width: 100%;
-    margin: 1em 0;
-    /* 2 */
-    padding: 0;
-    /* 3 */
-    color: var(--color-text);
-    font-weight: bold;
-    /* 1 */
-    white-space: normal;
+    display: table; /* 1 */
+    box-sizing: border-box; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 2 */
+    white-space: normal; /* 1 */
 }
 
 /**
@@ -68,15 +55,12 @@ textarea,
 .navlink-active,
 .navlink-disabled {
     box-sizing: border-box;
-    /* 1 */
-    max-width: 100%;
-    /* 2 */
-    margin: 0;
+    max-width: 100%; /* 1 */
+    margin: 0; /* 2 */
     color: var(--color-text-form);
     font-family: var(--font-form);
-    /* 3 */
-    font-size: 1rem;
-    line-height: 1.666666666666667em; // 20px / 12px
+    font-size: 1rem; /* 3 */
+    line-height: setup.$base-line-height;
     vertical-align: baseline;
 }
 
@@ -102,10 +86,10 @@ textarea,
 [type="week"],
 select,
 textarea {
-    height: 2.333333333333333em; // 28px / 12px
-    padding: 0.25em; // 3px / 12px
+    height: 2.307692307692308em; // 30px / 13px
+    padding: 0.30769230769231em; // 4px / 13px
     border: 1px solid;
-    border-color: #c7c7c7 #dddddd #dddddd #c7c7c7;
+    border-color: var(--color-border-form);
     border-radius: 0;
     background: var(--color-background-form);
     /* 1 */
@@ -113,7 +97,7 @@ textarea {
 
     &:focus {
         border-color: var(--color-link-focus);
-        outline: 2px solid transparent;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
 
@@ -156,6 +140,46 @@ textarea {
 }
 
 /**
+ * Styling for file inputs.
+ */
+
+[type="file"] {
+    box-sizing: border-box;
+    height: auto;
+    min-height: 2.307692307692308em; // 30px / 13px
+    padding: 0.30769230769231em; // 4px / 13px
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+    background: var(--color-background-form);
+    appearance: none;
+    cursor: pointer;
+
+    &:focus {
+        border-color: var(--color-link-focus);
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}
+
+::-webkit-file-upload-button {
+    padding: 0 0.25em;
+    border: 0;
+    background: var(--color-background-form);
+    color: var(--color-text-button);
+    font: inherit;
+    /* autoprefixer: off */
+    appearance: none;
+    cursor: pointer;
+}
+
+[type="file"]:hover::-webkit-file-upload-button {
+    filter: brightness(1.05);
+}
+
+[type="file"]:active::-webkit-file-upload-button {
+    filter: brightness(0.95);
+}
+
+/**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
@@ -178,10 +202,14 @@ textarea {
  */
 
 select {
-    padding-right: 1.3333333em; // 16px / 12px
-    background: var(--color-background-form) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 4'%3E%3Cpolygon fill='%23333' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
-    background-size: 0.9166667em 0.3333333em; // 11px / 12px + 4px / 12px
+    padding-right: 1.30769230769231em; // 17px / 13px
+    background: var(--color-background-form) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23777' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
+    background-size: 1em 0.30769230769231em;
     text-transform: none;
+
+    &:hover {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23000' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E");
+    }
 }
 
 /**
@@ -190,18 +218,10 @@ select {
 
 [dir="rtl"] {
     select {
-        padding-right: 0.25em; // 3px / 12px
-        padding-left: 1.3333333em; // 16px / 12px
-        background-position: 0.5em center; // 6px / 12px
+        padding-right: 0.30769230769231em; // 4px / 13px
+        padding-left: 1.30769230769231em; // 17px / 13px
+        background-position: 0.46153846153846em center; // 6px / 13px
     }
-}
-
-/**
- * Remove browser-specific `select` UI in IE 11.
- */
-
-select::-ms-expand {
-    opacity: 0;
 }
 
 /**
@@ -212,7 +232,7 @@ select[size],
 select[multiple] {
     box-sizing: border-box;
     height: auto;
-    padding-right: 0.25em; // 3px / 12px
+    padding-right: 0.30769230769231em; // 4px / 13px
     background-image: none;
     vertical-align: top;
 }
@@ -220,7 +240,7 @@ select[multiple] {
 [dir="rtl"] {
     select[size],
     select[multiple] {
-        padding-left: 0.25em; // 3px / 12px
+        padding-left: 0.30769230769231em; // 4px / 13px
     }
 }
 
@@ -230,8 +250,7 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-    height: 2.333333333333333em; // 28px / 12px
-    vertical-align: baseline;
+    height: 2.307692307692308em; // 30px / 13px
 }
 
 /**
@@ -244,21 +263,16 @@ optgroup {
 }
 
 /**
- * 1. Remove default vertical scrollbar in IE 11.
- * 2. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
- * 3. Restrict to vertical resizing to prevent layout breakage.
+ * 1. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
+ * 2. Restrict to vertical resizing to prevent layout breakage.
  */
 
 textarea {
     width: 100%;
     height: auto;
     min-height: 3em;
-    /* 1 */
-    overflow: auto;
-    /* 2 */
-    vertical-align: top;
-    /* 3 */
-    resize: vertical;
+    vertical-align: top; /* 1 */
+    resize: vertical; /* 2 */
 }
 
 /**
@@ -272,27 +286,20 @@ textarea.code {
 /**
  * Make sure disabled elements really are disabled and styled appropriately.
  *
- * 1. Override default iOS opacity setting.
- * 2. Re-set default cursor for disabled elements.
+ * 1. Re-set default cursor for disabled elements.
  */
 
 [disabled],
 [disabled] option,
 [disabled] optgroup,
 .txp-button.disabled,
-.navlink-disabled {
-    border-color: colours.$color-border-light !important;
-    opacity: 1;
-    background: colours.$color-background-form-disabled !important;
-    /* 1 */
+.navlink-disabled,
+.ui-checkboxradio-disabled {
+    border: 1px solid var(--color-border) !important;
+    opacity: 0.33 !important;
+    background-color: var(--color-background-form-disabled) !important;
     box-shadow: none !important;
-    color: var(--color-text-form)-disabled !important;
-    /* 2 */
-    cursor: default !important;
-
-    .ui-icon {
-        opacity: 0.33 !important;
-    }
+    cursor: default !important; /* 1 */
 }
 
 /**
@@ -309,7 +316,7 @@ textarea.code {
 
 input[size="32"] {
     width: 100%;
-    max-width: 30em; // 360px / 12px
+    max-width: 30em; // 390px / 13px
 }
 
 input.input-large {
@@ -318,17 +325,17 @@ input.input-large {
 
 input.input-medium {
     width: 50%;
-    max-width: 15em; // 180px / 12px
+    max-width: 14.46153846153846em; // 188px / 13px
 }
 
 input.input-small {
     width: 25%;
-    max-width: 7.5em; // 90px / 12px
+    max-width: 7.61538461538462em; // 99px / 13px
 }
 
 input.input-xsmall {
-    width: 18%;
-    max-width: 4.5em; // 54px / 12px
+    width: 16%;
+    max-width: 4.23076923076923em; // 55px / 13px
 }
 
 /**
@@ -367,7 +374,7 @@ input.input-xsmall {
 
 input {
     &.input-year {
-        width: 4.5em; // 54px / 12px
+        width: 4.07692307692308em; // 53px / 13px
         text-align: center;
     }
 
@@ -376,7 +383,7 @@ input {
     &.input-hour,
     &.input-minute,
     &.input-second {
-        width: 2.6666667em; /* 32px / 12px */
+        width: 2.46153846153846em; // 32px / 13px
         text-align: center;
     }
 }
@@ -406,10 +413,6 @@ textarea {
     &:-moz-ui-invalid {
         border-color: var(--color-error-text);
         box-shadow: none;
-    }
-
-    &:hover:-moz-ui-invalid {
-        border-color: colours.shade(var(--color-error-border), 30%);
     }
 }
 

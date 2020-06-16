@@ -1,16 +1,16 @@
 // typography grid
 
-$base-font-size:      12px !default;
-$base-line-height:    1.5 !default; // 18px / 12px
-$small-font-size:     0.833333333333333rem !default; // 10px / 12px
-$small-line-height:   1.5 !default; // 15px / 10px
+$base-font-size:      13px !default;
+$base-line-height:    1.538461538461538 !default; // 20px / 13px
+$small-font-size:     11px !default;
+$small-line-height:   1.454545454545455 !default; // 16px / 11px
 
 // layout grid (not responsive)
 
-$container-min-width: 64em !default; // 768px / 12px
-$container-max-width: 114em !default; // 1368px / 12px
-$setup-column:        44em !default; // 528px / 12px
-$text-column:         62em !default; // 744px / 12px
+$container-min-width: 60em !default; // 780px / 13px
+$container-max-width: 114em !default; // 1482px / 13px
+$setup-column:        44em !default; // 573px / 13px
+$text-column:         62em !default; // 806px / 13px
 
 // borders
 

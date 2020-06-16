@@ -62,7 +62,7 @@ hr {
  */
 
 .txp-contain {
-    max-width: 30em; // 360px / 12px
+    max-width: 30em; // 390px / 13px
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -412,7 +412,7 @@ span.spinner {
     z-index: 20;
     bottom: 0;
     margin: 1em 0 0;
-    padding: 0.25em 0; // 3px / 12px
+    padding: 0.3076923em 0; // 4px / 13px
     background: var(--color-background);
     box-shadow: 0 -1em 1em -0.5em var(--color-background);
 }
@@ -721,7 +721,7 @@ span.spinner {
 
 .txp-form-field-label,
 .txp-form-field-value {
-    max-width: 30em; // 360px / 12px
+    max-width: 30em; // 390px / 13px
 }
 
 /**
@@ -763,7 +763,7 @@ span.spinner {
     .txp-form-field-label,
     .txp-form-field-value {
         flex: 1 1 0%;
-        min-height: 2.16666666666667em; // 26px / 12px
+        min-height: 2.307692307692308em; // 30px / 13px
     }
 }
 
@@ -820,7 +820,7 @@ span.spinner {
 
 .txp-form-field-instructions {
     /* 1 */
-    max-width: 60em; // 600px / 10px
+    max-width: 55em; // 605px / 11px
 
     .txp-edit &,
     .txp-tabs-vertical-group & {

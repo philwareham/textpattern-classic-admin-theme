@@ -178,7 +178,7 @@
 
 .txp-grid-cell {
     box-sizing: border-box;
-    width: 10.166666666666667em; // 122px / 12px
+    width: 9.384615384615385em; // 122px / 13px
     padding: 0 1em;
     border: 1px solid var(--color-border);
 }
@@ -190,7 +190,7 @@
 }
 
 .txp-grid-cell-2span {
-    min-width: 20.666666666666667em; // 248px / 12px
+    min-width: 19.076923076923077em; // 248px / 13px
 }
 
 @supports (display: grid) {
@@ -201,7 +201,7 @@
 }
 
 .txp-grid-cell-3span {
-    min-width: 31.166666666666667em; // 374px / 12px
+    min-width: 28.769230769230769em; // 374px / 13px
 }
 
 @supports (display: grid) {

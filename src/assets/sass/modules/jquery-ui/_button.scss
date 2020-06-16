@@ -24,19 +24,20 @@
     display: inline-block;
     position: relative;
     box-sizing: border-box;
-    height: 2.333333333333333em; // 28px / 12px
+    height: 2.307692307692308em; // 30px / 13px
     margin: 0;
-    padding: 0.25em 0.75em; // 3px/ 12px + 9px / 12px
+    padding: 0.3846154em 0.61538461538462em; // 5px / 13px + 8px / 13px
     /* 1 */
     overflow: visible;
-    border: 1px solid var(--color-button-border);
+    border: 1px solid;
+    border-color: var(--color-button-border);
     background-clip: padding-box;
-    background-color: #e2e2e2;
+    background-color: var(--color-button-background);
     color: var(--color-text-button);
     font-family: var(--font-form);
     /* 2 */
     font-size: 1rem;
-    line-height: 1.666666666666667em; // 20px / 12px
+    line-height: setup.$base-line-height;
     vertical-align: baseline;
     text-align: center;
     /* 3 */
@@ -99,7 +100,7 @@ a.ui-button {
 
 .ui-button-icon-only {
     box-sizing: border-box;
-    width: 2.1666667em; // 26px / 12px
+    width: 2.1538462em; // 28px / 13px
     text-indent: -9999px;
     white-space: nowrap;
 }

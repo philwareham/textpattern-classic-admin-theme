@@ -101,7 +101,7 @@
  */
 
 .ui-widget-header {
-    background-color: #e2e2e2;
+    background-color: var(--color-background-box);
     font-weight: bold;
 }
 
@@ -138,7 +138,7 @@ a.ui-state-default:focus {
  */
 
 .ui-state-hover {
-    border-color: var(--color-border-extra-dark);
+    border-color: var(--color-border-dark);
     background-color: var(--color-background-box);
 }
 
