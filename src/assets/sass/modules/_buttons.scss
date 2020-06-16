@@ -49,7 +49,7 @@ input[type="button"],
     border-color: colours.$color-button-border;
     background-clip: padding-box;
     background-color: #e2e2e2;
-    color: colours.$color-text-button;
+    color: var(--color-text-button);
     font-weight: normal;
     text-align: center;
     /* 1 */
@@ -61,14 +61,14 @@ input[type="button"],
     &:hover {
         border-color: colours.$color-button-border-hover;
         background-color: #eeeeee;
-        color: colours.$color-text-button-hover;
+        color: var(--color-text-button-hover);
         text-decoration: none;
     }
 
     &:active {
         border-color: colours.$color-button-border-hover;
         background-color: #dddddd;
-        color: colours.$color-text-button-active;
+        color: var(--color-text-button-active);
         text-decoration: none;
     }
 
@@ -94,7 +94,7 @@ a.publish {
     padding: 0.5em 0.75em; // 6px/ 12px + 9px / 12px
     border-color: #bb0000 #660000 #660000 #bb0000;
     background-color: #990000;
-    color: colours.$color-text-inverse;
+    color: var(--color-text-inversed);
     font-weight: bold;
 
     &:hover {

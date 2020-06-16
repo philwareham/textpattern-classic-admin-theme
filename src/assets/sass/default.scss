@@ -14,6 +14,18 @@
     --font-code:    Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
     // shadows
     --standard-shadow: 0 0 0.5em rgba(#000000, 0.2) !default;
+    // text colours
+    --color-text:                          hsl(0, 0%, 20%);
+    --color-text-footnote:                 hsl(0, 0%, 35%);
+    --color-text-inversed:                 hsl(0, 0%, 100%);
+    --color-text-enforced-white:           hsl(0, 0%, 100%);
+    --color-text-form:                     hsl(0, 0%, 0%);
+    --color-text-form-placeholder:         hsl(0, 0%, 60%);
+    --color-text-button:                   hsl(0, 0%, 0%);
+    --color-text-button-hover:             hsl(0, 0%, 0%);
+    --color-text-button-active:            hsl(0, 0%, 0%);
+
+
     // alert colours
     --color-success-text:                  hsl(120, 60%, 34%);
     --color-success-background:            hsl(120, 40%, 90%);

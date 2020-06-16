@@ -40,7 +40,7 @@
     bottom: -0.5em;
     padding: 1em 0;
     overflow: hidden;
-    border-top: 1px solid colours.$color-border;
+    border-top: 1px solid var(--color-border);
     text-overflow: ellipsis;
 }
 
@@ -86,7 +86,7 @@
     ul {
         margin: 0;
         padding: 0;
-        border-bottom: 1px solid colours.$color-border;
+        border-bottom: 1px solid var(--color-border);
         font-size: setup.$small-font-size;
         line-height: setup.$small-line-height;
     }
@@ -106,7 +106,7 @@
         border-top-right-radius: 0.75em 2em;
         background-color: colours.$color-highlight-box;
         box-shadow: inset 0 -0.2em 0.4em rgba(219, 203, 141, 0.5), 0 -0.1em 0.1em rgba(0, 0, 0, 0.1);
-        color: colours.$color-text;
+        color: var(--color-text);
         text-decoration: none;
 
         &:hover {
@@ -163,7 +163,7 @@
     .author small {
         display: block;
         margin-top: -1em;
-        color: colours.$color-text-footnote;
+        color: var(--color-text-footnote);
     }
 }
 
@@ -186,7 +186,7 @@
 
 .unpublished,
 .not-modified {
-    color: colours.$color-text-footnote;
+    color: var(--color-text-footnote);
 }
 
 

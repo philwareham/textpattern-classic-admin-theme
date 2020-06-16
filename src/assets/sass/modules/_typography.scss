@@ -124,7 +124,7 @@ address {
 blockquote {
     margin: 1em 0;
     padding: 0 0 0 1em;
-    border-left: 3px solid colours.$color-border;
+    border-left: 3px solid var(--color-border);
 }
 
 /**
@@ -146,8 +146,8 @@ abbr[title] {
 mark,
 var {
     padding: 0 0.2em;
-    background: colours.$color-selected;
-    color: colours.$color-text;
+    background: var(--color-selected);
+    color: var(--color-text);
 }
 
 /**
@@ -167,7 +167,7 @@ kbd,
 samp {
     padding: 0 0.2em;
     border: 1px solid color.adjust(colours.$color-border, $lightness: 9%);
-    background: colours.$color-background-box;
+    background: var(--color-background-box);
 }
 
 /**
@@ -184,7 +184,7 @@ pre {
     /* 1 */
     overflow-x: auto;
     border: 1px solid color.adjust(colours.$color-border, $lightness: 9%);
-    background: colours.$color-background-box;
+    background: var(--color-background-box);
     /* 2 */
     word-wrap: normal;
     /* 3 */
@@ -251,7 +251,7 @@ figcaption,
 tfoot,
 .footnote,
 .txp-form-field-instructions {
-    color: colours.$color-text-footnote;
+    color: var(--color-text-footnote);
 }
 
 figcaption {

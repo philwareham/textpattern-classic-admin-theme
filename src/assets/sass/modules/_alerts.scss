@@ -151,7 +151,7 @@ li.information {
         border-top: 0;
         border-radius: 0 0 setup.$border-radius setup.$border-radius;
         box-shadow: var(--standard-shadow);
-        color: colours.$color-text-inverse;
+        color: var(--color-text-inversed);
         text-align: left;
 
         &.success {
@@ -171,7 +171,7 @@ li.information {
     }
 
     a {
-        color: colours.$color-text-inverse;
+        color: var(--color-text-inversed);
     }
 
     code {

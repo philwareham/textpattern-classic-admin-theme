@@ -24,7 +24,7 @@ body {
     margin: 0;
     padding: 0;
     background: colours.$color-background;
-    color: colours.$color-text;
+    color: var(--color-text);
 }
 
 /**

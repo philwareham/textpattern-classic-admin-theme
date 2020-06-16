@@ -10,18 +10,6 @@
     @return color.mix(black, $color, $percentage);
 }
 
-// text colours
-
-$color-text:                          #333333 !default;
-$color-text-button:                   $color-text !default;
-$color-text-button-hover:             $color-text-button !default;
-$color-text-button-active:            color.adjust($color-text-button, $lightness: -10%) !default;
-$color-text-form:                     #000000 !default;
-$color-text-form-placeholder:         #999999 !default;
-$color-text-form-disabled:            #aaaaaa !default;
-$color-text-footnote:                 #585858 !default;
-$color-text-inverse:                  #ffffff !default;
-
 // interaction colours
 
 $color-link:                          #996633 !default;
