@@ -10,7 +10,7 @@
 *::after {
     background: transparent !important;
     box-shadow: none !important;
-    color: #000000 !important;
+    color: black !important;
     text-shadow: none !important;
 }
 
@@ -90,7 +90,7 @@ pre {
 
 pre,
 blockquote {
-    border: 1px solid #000000;
+    border: 1px solid black;
     page-break-inside: avoid;
 }
 
@@ -109,7 +109,7 @@ img {
 table,
 input,
 textarea {
-    border: 1px solid #000000;
+    border: 1px solid black;
 }
 
 /**

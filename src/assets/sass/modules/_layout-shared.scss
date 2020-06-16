@@ -1,4 +1,3 @@
-@use "sass:color"; // TEMP
 @use "../setup";
 
 /* Globally shared layout
@@ -29,7 +28,7 @@ hr {
     /* 2 */
     overflow: visible;
     border: 0; // remove the default `hr` border
-    border-bottom: 1px solid colours.$color-border;
+    border-bottom: 1px solid var(--color-border);
 
     &.secondary {
         margin: 0.33em 0;
@@ -97,7 +96,7 @@ hr {
 }
 
 .txp-dropdown-toggle-all {
-    border-bottom: 1px solid colours.$color-border-light;
+    border-bottom: 1px solid var(--color-border-light);
 }
 
 /**
@@ -414,8 +413,8 @@ span.spinner {
     bottom: 0;
     margin: 1em 0 0;
     padding: 0.25em 0; // 3px / 12px
-    background: colours.$color-background;
-    box-shadow: 0 -1em 1em -0.5em colours.$color-background;
+    background: var(--color-background);
+    box-shadow: 0 -1em 1em -0.5em var(--color-background);
 }
 
 /**
@@ -516,7 +515,7 @@ span.spinner {
 .text-section {
     margin-top: 3em;
     padding-top: 3em;
-    border-top: 2px solid colours.$color-border;
+    border-top: 2px solid var(--color-border);
 }
 
 /**
@@ -620,9 +619,9 @@ span.spinner {
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
     clear: both;
-    border: 1px solid colours.$color-border-light;
+    border: 1px solid var(--color-border-light);
     /* 1 */
-    background: colours.$color-background;
+    background: var(--color-background);
 
     h2 {
         /* 2 */
@@ -645,7 +644,7 @@ span.spinner {
 .txp-edit .txp-edit-actions {
     margin: 1em -1em;
     padding: 1em 1em 0;
-    border-top: 2px solid colours.$color-background;
+    border-top: 2px solid var(--color-background);
 }
 
 /**

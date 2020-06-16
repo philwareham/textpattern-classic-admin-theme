@@ -1,4 +1,3 @@
-@use "sass:color"; // TEMP
 @use "../setup";
 
 /* Container
@@ -20,7 +19,7 @@ body {
     /* 2 */
     margin: 0;
     padding: 0;
-    background: colours.$color-background;
+    background: var(--color-background);
     color: var(--color-text);
 }
 

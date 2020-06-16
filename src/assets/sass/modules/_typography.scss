@@ -1,4 +1,3 @@
-@use "sass:color"; // TEMP
 @use "../setup";
 
 /* Typography
@@ -163,7 +162,7 @@ code,
 kbd,
 samp {
     padding: 0 0.2em;
-    border: 1px solid color.adjust(colours.$color-border, $lightness: 9%);
+    border: 1px solid var(--color-border-light);
     background: var(--color-background-box);
 }
 
@@ -180,7 +179,7 @@ pre {
     padding: 1em;
     /* 1 */
     overflow-x: auto;
-    border: 1px solid color.adjust(colours.$color-border, $lightness: 9%);
+    border: 1px solid var(--color-border-light);
     background: var(--color-background-box);
     /* 2 */
     word-wrap: normal;
