@@ -181,6 +181,15 @@ select {
     text-transform: none;
 }
 
+.txp-reduced-ui select {
+    border-color: $color-background;
+    background-color: $color-background;
+
+    &:focus {
+        border-color: $color-link-focus;
+    }
+}
+
 /**
  * Swap `select` icon position in RTL languages.
  */
