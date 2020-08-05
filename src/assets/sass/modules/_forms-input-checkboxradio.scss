@@ -1,0 +1,42 @@
+@use "../setup";
+
+/* Forms - input type checkbox/radio
+   ========================================================================== */
+
+/**
+ * 1. Remove any excess padding.
+ * 2. Correct margins for inline checkbox/radio labels.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+    /* 1 */
+    padding: 0;
+
+    + label:not(.ui-controlgroup-item) {
+        /* 2 */
+        margin: 0 0.5em 0 0;
+
+        &:last-of-type {
+            /* 2 */
+            margin: 0;
+        }
+    }
+}
+
+/**
+ * Swap margin positions in RTL languages.
+ */
+
+[dir="rtl"] {
+    [type="checkbox"],
+    [type="radio"] {
+        + label:not(.ui-controlgroup-item) {
+            margin: 0 0 0 0.5em;
+
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+    }
+}

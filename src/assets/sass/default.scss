@@ -9,11 +9,11 @@
 :root {
     // font families
     --font-heading: Cambria, Georgia, serif;
-    --font-body:    "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-    --font-form:    Helvetica, Arial, sans-serif !default;
+    --font-body:    "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-form:    Helvetica, Arial, sans-serif;
     --font-code:    Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
     // shadows
-    --standard-shadow: 0 0 0.5em rgba(#000000, 0.2) !default;
+    --standard-shadow: 0 0 0.5em rgba(#000000, 0.2);
     // text colours
     --color-text:                          hsl(0, 0%, 20%);
     --color-text-footnote:                 hsl(0, 0%, 35%);
