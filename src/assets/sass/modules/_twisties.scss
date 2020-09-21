@@ -8,35 +8,58 @@
  *
  * Example HTML:
  *
- * <section class="txp-details">
- *     <h3 class="txp-summary expanded">
- *         <a>Heading (lever)</a>
- *     </h3>
- *     <div class="toggle">
- *         Content
- *     </div>
- * </section>
- *
- * <section class="txp-details">
- *     <h3>Heading</h3>
- *     <div>
- *         Content
- *     </div>
- * </section>
+ * <details class="txp-details">
+   *     <summary="txp-summary">Heading (lever)</summary>
+   *     <div>
+   *         Content
+   *     </div>
+   * </details>
+   *
+   * <section class="txp-details">
+   *     <h3 class="txp-summary expanded">
+   *         <a>Heading (lever)</a>
+   *     </h3>
+   *     <div class="toggle">
+   *         Content
+   *     </div>
+   * </section>
+   *
+   * <section class="txp-details">
+   *     <h3>Heading</h3>
+   *     <div>
+   *         Content
+   *     </div>
+   * </section>
  */
 
-.txp-details {
-    clear: both;
+/**
+ * 1. Add the correct display in Edge and Firefox.
+ */
+
+details {
+    /* 1 */
+    display: block;
+}
+
+/**
+ * 1. Add the correct display in all browsers.
+ */
+
+summary {
+    /* 1 */
+    display: list-item;
+    cursor: pointer;
+
+    &:focus {
+        outline: 1px solid var(--color-link-focus);
+    }
 }
 
 h3.txp-summary a {
-    padding: 0 0 0 0.8666667em; // 13px / 15px
+    padding: 0;
+    padding-inline-start: 0.8666667em; // 13px / 15px
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 100'%3E%3Cpath fill='%23963' d='M1 7V0l4 3.5M0 96h7l-3.5 4'/%3E%3C/svg%3E") no-repeat 0 4px;
     background-size: 7px 100px;
-}
-
-[dir="rtl"] h3.txp-summary a {
-    padding: 0 0.8666667em 0 0; // 13px / 15px
 }
 
 h3.txp-summary.expanded a {
@@ -63,11 +86,6 @@ h3.txp-summary.expanded a {
     }
 
     &.date {
-        margin-right: 1em;
+        margin-inline-end: 1em;
     }
-}
-
-[dir="rtl"] .txp-details .txp-form-field.date {
-    margin-right: 0;
-    margin-left: 1em;
 }

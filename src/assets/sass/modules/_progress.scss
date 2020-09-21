@@ -12,14 +12,6 @@ progress {
 }
 
 /**
- * Reverse the progress direction in RTL languages.
- */
-
-[dir="rtl"] progress {
-    animation-direction: reverse;
-}
-
-/**
  * Styled progress indicators.
  *
  * Example HTML:

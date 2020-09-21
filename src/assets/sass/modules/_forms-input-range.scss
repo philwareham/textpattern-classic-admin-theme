@@ -19,14 +19,7 @@
 }
 
 [type="range"] + input.input-number-max100 {
-    margin-left: 0.5em;
-}
-
-[dir="rtl"] {
-    [type="range"] + input.input-number-max100 {
-        margin-right: 0.5em;
-        margin-left: 0;
-    }
+    margin-inline-start: 0.5em;
 }
 
 /**
@@ -36,7 +29,8 @@
 [type="range"] {
     width: 100%;
     max-width: 30em; // 390px / 13px
-    background-color: transparent; /* 1 */
+    /* 1 */
+    background-color: transparent;
     vertical-align: baseline;
     appearance: none;
 

@@ -10,19 +10,7 @@
 menu,
 ol,
 ul {
-    padding: 0 0 0 2em;
-}
-
-/**
- * Swap padding positions in RTL languages.
- */
-
-[dir="rtl"] {
-    menu,
-    ol,
-    ul {
-        padding: 0 2em 0 0;
-    }
+    padding-inline-start: 2em;
 }
 
 /**
@@ -41,15 +29,7 @@ li {
  */
 
 dd {
-    margin: 0 0 0 2em;
-}
-
-/**
- * Swap margin positions in RTL languages.
- */
-
-[dir="rtl"] dd {
-    margin: 0 2em 0 0;
+    margin-inline-start: 2em;
 }
 
 /**
@@ -64,16 +44,6 @@ dd {
 .plain-list {
     padding: 0;
     list-style: none;
-}
-
-/**
- * Ensure padding stays removed in RTL languages.
- *
- * Required for specificity.
- */
-
-[dir="rtl"] .plain-list {
-    padding: 0;
 }
 
 /**
@@ -113,18 +83,11 @@ dd {
 
     a {
         display: block;
-        padding: 0.38461538461538em 2.5em 0.38461538461538em 1em;
+        padding: 0.38461538461538em 1em;
+        padding-inline-end: 2.5em;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    }
-}
-
-[dir="rtl"] .switcher-list {
-    padding: 0;
-
-    a {
-        padding: 0.38461538461538em 1em 0.38461538461538em 2.5em;
     }
 }
 
@@ -139,19 +102,14 @@ dd {
     left: 0;
 
     + a {
-        padding-right: 0;
-        padding-left: 2em;
+        padding-inline-start: 2em;
+        padding-inline-end: 0;
     }
 }
 
 [dir="rtl"] .switcher-action {
     right: 0;
     left: auto;
-
-    + a {
-        padding-right: 2em;
-        padding-left: 0;
-    }
 }
 
 /**

@@ -141,14 +141,15 @@ li.information {
         box-sizing: border-box;
         max-width: 100%;
         margin: 0 auto;
-        padding: 0.53846153846154em 3.53846153846154em 0.53846153846154em 0.75em;
+        padding: 0.53846153846154em 3.53846153846154em;
+        padding-inline-start: 0.75em;
         overflow-wrap: break-word;
         border: 1px solid;
         border-top: 0;
         border-radius: 0 0 setup.$border-radius setup.$border-radius;
         box-shadow: var(--standard-shadow);
         color: var(--color-text-inversed);
-        text-align: left;
+        text-align: start;
 
         &.success {
             border-color: var(--color-success-border);
@@ -186,7 +187,7 @@ li.information {
     right: 0;
     bottom: 0;
     width: 2.53846153846154em;
-    border-left: 1px solid hsla(0, 0%, 100%, 0.66);
+    border-inline-start: 1px solid hsla(0, 0%, 100%, 0.66);
 
     span {
         position: absolute;
@@ -205,16 +206,9 @@ li.information {
  * System message flipped layout for RTL languages.
  */
 
-[dir="rtl"] .messagepane .messageflash {
-    padding: 0.53846153846154em 0.75em 0.53846153846154em 3.53846153846154em;
-    text-align: right;
-}
-
 [dir="rtl"] .close {
     right: auto;
     left: 0;
-    border-right: 1px solid hsla(0, 0%, 100%, 0.66);
-    border-left: 0;
 
     span {
         right: auto;

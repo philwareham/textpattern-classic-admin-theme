@@ -1,17 +1,30 @@
 @use "../setup";
 
-/* Globally shared layout
+/* Float clearing
    ========================================================================== */
 
 /**
- * 1. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
+ * Clearfix using the 'A new micro clearfix hack' method.
  */
 
-html {
-    /* 1 */
-    text-size-adjust: 100%;
+.clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
+
+/**
+ * Basic float clearer.
+ */
+
+.clear {
+    clear: both;
+}
+
+/* Globally shared layout
+   ========================================================================== */
 
 /**
  * Hide content during 'not ready'.
@@ -131,7 +144,7 @@ hr {
     position: relative;
     justify-content: flex-end;
     margin: 1em 0;
-    float: right;
+    float: right; // TODO: Use `float: inline-end` when browser support is better.
 
     .ui-menu {
         position: absolute;
@@ -159,11 +172,7 @@ hr {
 .txp-search-clear {
     flex: 1;
     margin: auto 0.5em;
-    text-align: right;
-
-    [dir="rtl"] & {
-        text-align: left;
-    }
+    text-align: end;
 }
 
 /**
@@ -184,10 +193,11 @@ hr {
     margin-bottom: 1em;
 
     > * {
-        margin: 0 1em 0 0;
+        margin: 0;
+        margin-inline-end: 1em;
 
         &:last-child {
-            margin-right: 0;
+            margin-inline-end: 0;
         }
     }
 
@@ -258,14 +268,6 @@ hr {
 }
 
 /**
- * Swap float/margin positions in RTL languages.
- */
-
-[dir="rtl"] .txp-control-panel > * {
-    margin: 0 0 0 1em;
-}
-
-/**
  * List display options at top of listings.
  *
  * Appears on:
@@ -285,14 +287,15 @@ hr {
     position: relative;
     flex-grow: 1;
     margin: 1em 0;
-    text-align: right;
+    text-align: end;
 
     > ul {
-        text-align: left;
+        text-align: start;
     }
 
     > *:not(ul) {
-        margin: 0 0 0 1em;
+        margin: 0;
+        margin-inline-start: 1em;
         white-space: nowrap;
         user-select: none;
     }
@@ -303,23 +306,7 @@ hr {
 }
 
 /**
- * Swap float/margin positions in RTL languages.
- */
-
-[dir="rtl"] .txp-list-options {
-    text-align: left;
-
-    > ul {
-        text-align: right;
-    }
-
-    > * {
-        margin: 0 1em 0 0;
-    }
-}
-
-/**
- * Additonal action links ('Duplicate', 'View', etc.) on some panels.
+ * Additional action links ('Duplicate', 'View', etc.) on some panels.
  *
  * Appears on:
  *
@@ -336,22 +323,11 @@ hr {
 
 .txp-actions a {
     display: inline-block;
-    margin: 0.5em 1em 0 0;
+    margin: 0.5em 0 0;
+    margin-inline-end: 1em;
 
     &:last-child {
-        margin: 0.5em 0 0;
-    }
-}
-
-/**
- * Swap margin positions in RTL languages.
- */
-
-[dir="rtl"] .txp-actions a {
-    margin: 0.5em 0 0 1em;
-
-    &:last-child {
-        margin: 0.5em 0 0;
+        margin-inline-end: 0;
     }
 }
 
@@ -373,7 +349,7 @@ hr {
 
 .txp-actions-inline {
     margin-top: 1.30769230769231em; // 17px / 13px
-    float: right;
+    float: right; // TODO: Use `float: inline-end` when browser support is better.
 }
 
 /**
@@ -491,7 +467,7 @@ span.spinner {
 
 .multi-option.multi-step {
     display: inline-block;
-    margin-left: 0.30769230769231em; // 4px / 13px
+    margin-inline-start: 0.30769230769231em; // 4px / 13px
 }
 
 /**
@@ -642,10 +618,10 @@ span.spinner {
  */
 
 .txp-edit-actions {
-    text-align: right;
+    text-align: end;
 
     > * {
-        margin: 0 0 0 1em;
+        margin-inline-start: 1em;
     }
 }
 
@@ -654,19 +630,6 @@ span.spinner {
     padding: 1em 1em 0;
     border-top: 2px solid var(--color-background);
 }
-
-/**
- * Swap alignment and margin positions in RTL languages.
- */
-
-[dir="rtl"] .txp-edit-actions {
-    text-align: left;
-
-    > * {
-        margin: 0 1em 0 0;
-    }
-}
-
 
 /* Form fields.
    ========================================================================== */
@@ -737,14 +700,7 @@ span.spinner {
  */
 
 .txp-form-field-shim {
-    margin-left: 50%;
-}
-
-[dir="rtl"] {
-    .txp-form-field-shim {
-        margin-right: 50%;
-        margin-left: 0;
-    }
+    margin-inline-start: 50%;
 }
 
 /**
@@ -846,25 +802,19 @@ span.spinner {
     position: relative;
     z-index: 2;
     margin: 0 1px;
-    float: right;
+    float: right; // TODO: Use `float: inline-end` when browser support is better.
 }
 
 .txp-textarea-preview {
-    margin: 0 0 0 1em;
+    margin-inline-start: 1em;
 }
 
 /**
  * Swap alignment of textarea options in RTL languages.
  */
 
-[dir="rtl"] {
-    .txp-textarea-options {
-        float: left;
-    }
-
-    .txp-textarea-preview {
-        margin: 0 1em 0 0;
-    }
+[dir="rtl"] .txp-textarea-options {
+    float: left;
 }
 
 /**

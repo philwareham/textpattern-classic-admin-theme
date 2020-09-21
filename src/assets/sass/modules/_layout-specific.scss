@@ -204,27 +204,17 @@
 }
 
 .edit-alter-thumbnail input {
-    margin: 0 0.3333333em 0 0;
+    margin: 0;
+    margin-inline-end: 0.3333333em;
 
     &:last-child {
-        margin: 0;
-    }
-}
-
-[dir="rtl"] .edit-alter-thumbnail input {
-    margin: 0 0 0 0.3333333em;
-
-    &:last-child {
-        margin: 0;
+        margin-inline-end: 0;
     }
 }
 
 .ui-button.thumbnail-swap-size {
-    margin: 0 0.3333333em 0 0;
-}
-
-[dir="rtl"] .ui-button.thumbnail-swap-size {
-    margin: 0 0 0 0.3333333em;
+    margin: 0;
+    margin-inline-end: 0.3333333em;
 }
 
 .thumbnail-image form {
@@ -277,15 +267,12 @@
 
 #page-form .name {
     display: inline-block;
-    margin: 1em 1em 0 0;
+    margin: 1em 0 0;
+    margin-inline-end: 1em;
 
     input {
         width: 14.46153846153846em; // 188px / 13px
     }
-}
-
-[dir="rtl"] #page-form .name {
-    margin: 1em 0 0 1em;
 }
 
 #page-form .type {

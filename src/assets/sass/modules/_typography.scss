@@ -5,11 +5,15 @@
 
 /**
  * Establish baseline.
+ *
+ * 1. Prevent adjustments of font size after orientation changes in iOS.
  */
 
 html {
     font-size: setup.$base-font-size;
     line-height: setup.$base-line-height;
+    /* 1 */
+    text-size-adjust: 100%;
 }
 
 /**
@@ -119,8 +123,9 @@ address {
 
 blockquote {
     margin: 1em 0;
-    padding: 0 0 0 1em;
-    border-left: 3px solid var(--color-border);
+    padding: 0;
+    padding-inline-start: 1em;
+    border-inline-start: 3px solid var(--color-border);
 }
 
 /**
@@ -155,7 +160,10 @@ code,
 kbd,
 samp,
 .code {
+    direction: ltr;
     font-family: var(--font-code);
+    text-align: left;
+    unicode-bidi: isolate;
 }
 
 code,
@@ -199,7 +207,6 @@ code.excerpt {
     padding: 0;
     border: 0;
     background: none;
-    direction: ltr;
     hyphens: none;
     text-align: left;
     word-wrap: normal;
