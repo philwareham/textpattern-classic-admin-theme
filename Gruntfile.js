@@ -37,6 +37,7 @@ module.exports = function (grunt)
             dist: [
                 'css',
                 'jshint',
+                'replace',
                 'uglify'
             ]
         },
@@ -48,7 +49,7 @@ module.exports = function (grunt)
                     {
                         expand: true,
                         cwd: '<%= paths.src.dir %>classic',
-                        src: '**',
+                        src: ['**', '!manifest.json'],
                         dest: '<%= paths.dest.dir %>',
                         filter: 'isFile'
                     },
@@ -102,6 +103,23 @@ module.exports = function (grunt)
                 files: [
                     {'<%= paths.dest.css %>textpattern.css': '<%= paths.dest.css %>textpattern.css'},
                     {'<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'}
+                ]
+            }
+        },
+
+        // Generate version number automatically in theme manifest.json file.
+        replace: {
+            theme: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'version',
+                            replacement: '<%= pkg.version %>'
+                        }
+                    ]
+                },
+                files: [
+                    {'<%= paths.dest.dir %>manifest.json': '<%= paths.src.dir %>classic/manifest.json'}
                 ]
             }
         },
