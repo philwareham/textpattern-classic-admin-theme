@@ -846,7 +846,22 @@ hr {
 }
 
 /**
- * Save button with AJAX spinner.
+ * Save export checkbox region on certain presentation panels.
+ */
+
+.txp-save {
+    display: flex;
+    align-items: center;
+}
+
+.txp-save-export {
+    display: inline-block;
+    order: 2;
+    margin-inline-start: 1em;
+}
+
+/**
+ * Save buttons with AJAX spinners.
  */
 
 .txp-save-button {
@@ -874,19 +889,4 @@ hr {
 
 span.spinner {
     animation: spinning linear 1s infinite;
-}
-
-/**
- * Save export checkbox region on certain presentation panels.
- */
-
-.txp-save {
-    display: flex;
-    align-items: center;
-}
-
-.txp-save-export {
-    display: inline-block;
-    order: 2;
-    margin-inline-start: 1em;
 }
