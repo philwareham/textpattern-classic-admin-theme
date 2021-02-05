@@ -74,15 +74,15 @@ img {
  */
 
 .content-image {
-    border: solid 1px var(--color-border);
-    background: var(--color-background);
+    border: solid 1px var(--clr-brdr);
+    background: var(--clr-bkgd);
 
     a:hover & {
-        border-color: var(--color-link-hover);
+        border-color: var(--clr-a-interact);
     }
 
     a:focus & {
-        border-color: var(--color-link-focus);
+        border-color: var(--clr-focus);
     }
 }
 

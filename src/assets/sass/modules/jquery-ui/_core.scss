@@ -92,8 +92,8 @@
  */
 
 .ui-widget-content {
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background);
+    border: 1px solid var(--clr-brdr);
+    background-color: var(--clr-bkgd);
 }
 
 /**
@@ -101,7 +101,7 @@
  */
 
 .ui-widget-header {
-    background-color: var(--color-background-box);
+    background-color: var(--clr-bkgd-box);
     font-weight: bold;
 }
 
@@ -114,9 +114,9 @@
  */
 
 .ui-state-default {
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background-box);
-    color: var(--color-text);
+    border: 1px solid var(--clr-brdr);
+    background-color: var(--clr-bkgd-box);
+    color: var(--clr-text);
 
     &.ui-state-hover {
         filter: brightness(1.05);
@@ -129,7 +129,7 @@
 
 a.ui-state-default:hover,
 a.ui-state-default:focus {
-    color: var(--color-text);
+    color: var(--clr-text);
     text-decoration: none;
 }
 
@@ -138,8 +138,8 @@ a.ui-state-default:focus {
  */
 
 .ui-state-hover {
-    border-color: var(--color-border-dark);
-    background-color: var(--color-background-box);
+    border-color: var(--clr-brdr-dark);
+    background-color: var(--clr-bkgd-box);
 }
 
 /**
@@ -147,7 +147,7 @@ a.ui-state-default:focus {
  */
 
 .ui-state-focus {
-    border-color: var(--color-link-focus);
+    border-color: var(--clr-focus);
     outline: 0;
 
     a {
@@ -160,7 +160,7 @@ a.ui-state-default:focus {
  */
 
 .ui-selecting {
-    background-color: var(--color-selecting);
+    background-color: var(--clr-selecting);
 }
 
 /**
@@ -168,7 +168,7 @@ a.ui-state-default:focus {
  */
 
 .ui-selected {
-    background-color: var(--color-selected);
+    background-color: var(--clr-selected);
 }
 
 
@@ -180,11 +180,11 @@ a.ui-state-default:focus {
  */
 
 .ui-state-highlight {
-    border: 1px solid var(--color-warning-border);
-    background-color: var(--color-warning-background);
+    border: 1px solid var(--clr-warning-brdr);
+    background-color: var(--clr-warning-bkgd);
 
     &.ui-state-hover {
-        border-color: var(--color-warning-text);
+        border-color: var(--clr-warning-text);
     }
 }
 
@@ -193,11 +193,11 @@ a.ui-state-default:focus {
  */
 
 .ui-state-active {
-    border-color: var(--color-link);
-    background-color: var(--color-selected);
+    border-color: var(--clr-a);
+    background-color: var(--clr-selected);
 
     &.ui-state-hover {
-        border-color: var(--color-link-hover);
+        border-color: var(--clr-a-interact);
     }
 }
 
@@ -206,12 +206,12 @@ a.ui-state-default:focus {
  */
 
 .ui-state-error {
-    border: 1px solid var(--color-error-border);
-    background-color: var(--color-error-background);
-    color: var(--color-error-text);
+    border: 1px solid var(--clr-error-brdr);
+    background-color: var(--clr-error-bkgd);
+    color: var(--clr-error-text);
 
     &.ui-state-hover {
-        border-color: var(--color-error-text);
+        border-color: var(--clr-error-text);
     }
 }
 

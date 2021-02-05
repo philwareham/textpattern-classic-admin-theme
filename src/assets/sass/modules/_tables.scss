@@ -21,7 +21,7 @@
     overflow-x: auto;
 
     &:focus {
-        outline: thin solid var(--color-link-focus);
+        outline: thin solid var(--clr-focus);
     }
 }
 
@@ -48,14 +48,14 @@ caption {
  */
 
 tbody {
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--clr-brdr);
 
     th {
-        border-bottom: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--clr-brdr);
     }
 
     td {
-        border-bottom: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--clr-brdr);
     }
 }
 
@@ -125,7 +125,7 @@ thead {
 
     tbody {
         tr.selected {
-            background: var(--color-selected);
+            background: var(--clr-selected);
         }
 
         th {

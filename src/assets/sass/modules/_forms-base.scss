@@ -12,7 +12,7 @@ fieldset {
     min-width: 0; /* 1 */
     margin: 1em 0; /* 2 */
     padding: 1px 1em; /* 2 */
-    border: 1px solid var(--color-border); /* 2 */
+    border: 1px solid var(--clr-brdr); /* 2 */
 }
 
 /**
@@ -61,7 +61,7 @@ textarea,
     box-sizing: border-box;
     max-width: 100%; /* 1 */
     margin: 0; /* 2 */
-    color: var(--color-text-form);
+    color: var(--clr-text-form);
     font-family: var(--font-form);
     font-size: 1rem; /* 3 */
     line-height: setup.$base-line-height;
@@ -93,14 +93,14 @@ textarea {
     height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em; // 4px / 13px
     border: 1px solid;
-    border-color: var(--color-border-form);
+    border-color: var(--clr-brdr-form);
     border-radius: 0;
-    background: var(--color-background-form);
+    background: var(--clr-bkgd-form);
     /* 1 */
     appearance: none;
 
     &:focus {
-        border-color: var(--color-link-focus);
+        border-color: var(--clr-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
@@ -129,7 +129,7 @@ textarea {
 
 select {
     padding-inline-end: 1.30769230769231em; // 17px / 13px
-    background: var(--color-background-form) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23777' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
+    background: var(--clr-bkgd-form) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23777' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
     background-size: 1em 0.30769230769231em;
     text-overflow: ellipsis;
     text-transform: none;
@@ -140,11 +140,11 @@ select {
 }
 
 .txp-reduced-ui select {
-    border-color: var(--color-background);
-    background-color: var(--color-background);
+    border-color: var(--clr-bkgd);
+    background-color: var(--clr-bkgd);
 
     &:focus {
-        border-color: var(--color-link-focus);
+        border-color: var(--clr-focus);
     }
 }
 
@@ -302,7 +302,7 @@ input,
 select,
 textarea {
     &:focus:invalid {
-        border-color: var(--color-error-text);
+        border-color: var(--clr-error-text);
         box-shadow: none; // Normalize Firefox styling
     }
 }
@@ -317,7 +317,7 @@ input,
 select,
 textarea {
     &:-moz-ui-invalid {
-        border-color: var(--color-error-text);
+        border-color: var(--clr-error-text);
         box-shadow: none;
     }
 }
@@ -330,7 +330,7 @@ textarea {
 
 ::placeholder {
     opacity: 1;
-    color: var(--color-text-form-placeholder);
+    color: var(--clr-text-placeholder);
     font: inherit; /* 1 */
     font-weight: normal;
 }

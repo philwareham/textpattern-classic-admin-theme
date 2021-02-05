@@ -10,11 +10,11 @@ body {
     padding: 0 2em 1em;
 }
 
-.design-patterns-section {
+.design-patterns--section {
     padding-top: 0.25em;
 }
 
-.design-patterns-menu {
+.design-patterns--menu {
     position: fixed;
     z-index: 2000;
     top: 0;
@@ -27,8 +27,8 @@ body {
     padding: 2em;
     overflow-x: hidden;
     overflow-y: auto;
-    border-right: 1px solid var(--color-border);
-    background-color: var(--color-background-box);
+    border-right: 1px solid var(--clr-brdr);
+    background-color: var(--clr-bkgd-box);
     box-shadow: inset -0.25em 0 0.25em -0.25em rgba(0, 0, 0, 0.2);
 
     // Enforce LTR behaviour in nav list.
@@ -38,16 +38,16 @@ body {
     }
 }
 
-.design-patterns-content {
+.design-patterns--content {
     margin-left: 28%;
 }
 
-.design-patterns-content-container {
+.design-patterns--content-container {
     max-width: 80em;
     margin: 0 auto;
 }
 
-.design-patterns-heading {
+.design-patterns--heading {
     padding-top: 1em;
 }
 
@@ -56,7 +56,7 @@ body {
  */
 
 .information code {
-    color: var(--color-text);
+    color: var(--clr-text);
 }
 
 /**
@@ -89,44 +89,44 @@ body {
  */
 
 $colors: (
-    "text":                 var(--color-text),
-    "text-footnote":        var(--color-text-footnote),
-    "text-form":            var(--color-text-form),
-    "border":               var(--color-border),
-    "border-light":         var(--color-border-light),
-    "border-dark":          var(--color-border-dark),
-    "background":           var(--color-background),
-    "background-box":       var(--color-background-box),
-    "background-form":      var(--color-background-form),
-    "link":                 var(--color-link),
-    "link-hover":           var(--color-link-hover),
-    "link-focus":           var(--color-link-focus),
-    "link-selecting":       var(--color-selecting),
-    "link-selected":        var(--color-selected),
-    "highlight-box":        var(--color-highlight-box),
-    "strong-highlight-box": var(--color-strong-highlight-box),
-    "accent":               var(--color-accent),
-    "accent-dark":          var(--color-accent-dark),
-    "success-text":         var(--color-success-text),
-    "success-background":   var(--color-success-background),
-    "warning-text":         var(--color-warning-text),
-    "warning-background":   var(--color-warning-background),
-    "error-text":           var(--color-error-text),
-    "error-background":     var(--color-error-background),
-    "info-text":            var(--color-info-text),
-    "info-background":      var(--color-info-background)
+    "text":              var(--clr-text),
+    "text-demoted":      var(--clr-text-demoted),
+    "text-form":         var(--clr-text-form),
+    "brdr":              var(--clr-brdr),
+    "brdr-lite":         var(--clr-brdr-lite),
+    "brdr-dark":         var(--clr-brdr-dark),
+    "bkgd":              var(--clr-bkgd),
+    "bkgd-box":          var(--clr-bkgd-box),
+    "bkgd-form":         var(--clr-bkgd-form),
+    "a":                 var(--clr-a),
+    "a-interact":        var(--clr-a-interact),
+    "focus":             var(--clr-focus),
+    "selecting":         var(--clr-selecting),
+    "selected":          var(--clr-selected),
+    "hilite-box":        var(--clr-hilite-box),
+    "strong-hilite-box": var(--clr-strong-hilite-box),
+    "accent":            var(--clr-accent),
+    "accent-dark":       var(--clr-accent-dark),
+    "success-text":      var(--clr-success-text),
+    "success-bkgd":      var(--clr-success-bkgd),
+    "warning-text":      var(--clr-warning-text),
+    "warning-bkgd":      var(--clr-warning-bkgd),
+    "error-text":        var(--clr-error-text),
+    "error-bkgd":        var(--clr-error-bkgd),
+    "info-text":         var(--clr-info-text),
+    "info-bkgd":         var(--clr-info-bkgd)
 );
 
-.design-patterns-color {
+.design-patterns--clr {
     display: block;
     position: relative;
     height: 3em; // 39px / 13px
     margin: 1em 0;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--clr-brdr);
 }
 
 @each $name, $color in $colors {
-    .design-patterns-color-#{$name} {
+    .design-patterns--clr-#{$name} {
         background: $color;
     }
 }
@@ -135,7 +135,7 @@ $colors: (
 /* Layout grid examples.
    ========================================================================== */
 
-.design-patterns-box {
+.design-patterns--box {
     margin-top: 0;
     padding: 1em;
     background: hsla(0, 0%, 0%, 0.33);
@@ -210,7 +210,7 @@ $colors: (
  * <h2>Title <span>new v4.7</span></h2>
  */
 
-.design-patterns-section h1 span,
+.design-patterns--section h1 span,
 h2 span {
     font-family: var(--font-body);
     font-size: 1rem;

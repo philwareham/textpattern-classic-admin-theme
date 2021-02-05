@@ -19,13 +19,13 @@
 .ui-progressbar {
     margin-bottom: 1em;
     overflow: hidden;
-    background-color: var(--color-background-box);
+    background-color: var(--clr-bkgd-box);
     text-align: left;
 }
 
 .ui-progressbar-value {
     height: 6px;
-    background-color: var(--color-success-text);
+    background-color: var(--clr-success-text);
 }
 
 /**
@@ -41,5 +41,5 @@
  */
 
 .ui-progressbar-indeterminate .ui-progressbar-value {
-    background-color: var(--color-border);
+    background-color: var(--clr-brdr);
 }

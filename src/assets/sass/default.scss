@@ -10,56 +10,56 @@
     // font families
     --font-heading: Cambria, Georgia, serif;
     --font-body:    "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-form:    Helvetica, Arial, sans-serif;
+    --font-body:    system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-code:    Monaco, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+    // text colours
+    --clr-text:               hsl(0, 0%, 20%);
+    --clr-text-demoted:       hsl(0, 0%, 35%);
+    --clr-text-inversed:      hsl(0, 0%, 100%);
+    --clr-text-form:          hsl(0, 0%, 0%);
+    --clr-text-placeholder:   hsl(0, 0%, 60%);
+    --clr-text-btn:           hsl(0, 0%, 0%);
+    --clr-text-btn-hover:     hsl(0, 0%, 0%);
+    --clr-text-btn-active:    hsl(0, 0%, 0%);
+    // neutral colours
+    --clr-bkgd:               hsl(0, 0%, 100%);
+    --clr-bkgd-box:           hsl(0, 0%, 97%);
+    --clr-bkgd-form:          hsl(0, 0%, 97%);
+    --clr-bkgd-form-disabled: hsl(0, 0%, 89%);
+    // accent colours
+    --clr-accent:             hsl(48, 100%, 63%);
+    --clr-accent-dark:        hsl(48, 100%, 42%);
+    --clr-hilite-box:         hsl(48, 100%, 93%);
+    --clr-strong-hilite-box:  hsl(48, 100%, 84%);
+    // border colours
+    --clr-brdr:               hsl(0, 0%, 80%);
+    --clr-brdr-lite:          hsl(0, 0%, 83%);
+    --clr-brdr-dark:          hsl(0, 0%, 70%);
+    --clr-brdr-form:          #c7c7c7 #dddddd #dddddd #c7c7c7;
+    // interaction colours
+    --clr-a:                  hsl(30, 50%, 40%);
+    --clr-a-interact:            hsl(30, 59%, 44%);
+    --clr-focus:              hsl(209, 62%, 60%);
+    --clr-selecting:          hsl(216, 100%, 90%);
+    --clr-selected:           hsl(216, 100%, 95%);
+    // button colours
+    --clr-btn-bkgd:           hsl(0, 0%, 90%);
+    --clr-btn-brdr:           #dddddd #c7c7c7 #c7c7c7 #dddddd;
+    --clr-btn-primary-bkgd:   hsl(0, 100%, 30%);
+    --clr-btn-primary-brdr:   #bb0000 #660000 #660000 #bb0000;
+    // alert colours
+    --clr-success-text:       hsl(120, 60%, 34%);
+    --clr-success-bkgd:       hsl(120, 40%, 90%);
+    --clr-success-brdr:       hsl(102, 40%, 68%);
+    --clr-warning-text:       hsl(41, 100%, 40%);
+    --clr-warning-bkgd:       hsl(41, 64%, 91%);
+    --clr-warning-brdr:       hsl(41, 64%, 71%);
+    --clr-error-text:         hsl(4, 69%, 36%);
+    --clr-error-bkgd:         hsl(4, 43%, 91%);
+    --clr-error-brdr:         hsl(4, 43%, 78%);
+    --clr-info-text:          hsl(200, 50%, 45%);
+    --clr-info-bkgd:          hsl(200, 78%, 95%);
+    --clr-info-brdr:          hsl(200, 78%, 82%);
     // shadows
     --standard-shadow: 0 0 0.5em rgba(#000000, 0.2);
-    // text colours
-    --color-text:                          hsl(0, 0%, 20%);
-    --color-text-footnote:                 hsl(0, 0%, 35%);
-    --color-text-inversed:                 hsl(0, 0%, 100%);
-    --color-text-form:                     hsl(0, 0%, 0%);
-    --color-text-form-placeholder:         hsl(0, 0%, 60%);
-    --color-text-button:                   hsl(0, 0%, 0%);
-    --color-text-button-hover:             hsl(0, 0%, 0%);
-    --color-text-button-active:            hsl(0, 0%, 0%);
-    // neutral colours
-    --color-background:                    hsl(0, 0%, 100%);
-    --color-background-box:                hsl(0, 0%, 97%);
-    --color-background-form:               hsl(0, 0%, 97%);
-    --color-background-form-disabled:      hsl(0, 0%, 89%);
-    // accent colours
-    --color-accent:                        hsl(48, 100%, 63%);
-    --color-accent-dark:                   hsl(48, 100%, 42%);
-    --color-highlight-box:                 hsl(48, 100%, 93%);
-    --color-strong-highlight-box:          hsl(48, 100%, 84%);
-    // border colours
-    --color-border:                        hsl(0, 0%, 80%);
-    --color-border-light:                  hsl(0, 0%, 83%);
-    --color-border-dark:                   hsl(0, 0%, 70%);
-    --color-border-form:                   #c7c7c7 #dddddd #dddddd #c7c7c7;
-    // interaction colours
-    --color-link:                          hsl(30, 50%, 40%);
-    --color-link-hover:                    hsl(30, 59%, 44%);
-    --color-link-focus:                    hsl(209, 62%, 60%);
-    --color-selecting:                     hsl(216, 100%, 90%);
-    --color-selected:                      hsl(216, 100%, 95%);
-    // button colours
-    --color-button-background:             hsl(0, 0%, 90%);
-    --color-button-border:                 #dddddd #c7c7c7 #c7c7c7 #dddddd;
-    --color-button-primary-background:     hsl(0, 100%, 30%);
-    --color-button-primary-border:         #bb0000 #660000 #660000 #bb0000;
-    // alert colours
-    --color-success-text:                  hsl(120, 60%, 34%);
-    --color-success-background:            hsl(120, 40%, 90%);
-    --color-success-border:                hsl(102, 40%, 68%);
-    --color-warning-text:                  hsl(41, 100%, 40%);
-    --color-warning-background:            hsl(41, 64%, 91%);
-    --color-warning-border:                hsl(41, 64%, 71%);
-    --color-error-text:                    hsl(4, 69%, 36%);
-    --color-error-background:              hsl(4, 43%, 91%);
-    --color-error-border:                  hsl(4, 43%, 78%);
-    --color-info-text:                     hsl(200, 50%, 45%);
-    --color-info-background:               hsl(200, 78%, 95%);
-    --color-info-border:                   hsl(200, 78%, 82%);
 }

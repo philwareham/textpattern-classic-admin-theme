@@ -21,12 +21,12 @@
 .ui-slider {
     position: relative;
     box-sizing: border-box;
-    border-color: var(--color-border);
-    background-color: var(--color-background-box);
+    border-color: var(--clr-brdr);
+    background-color: var(--clr-bkgd-box);
     text-align: start;
 
     &:hover {
-        border-color: var(--color-border-dark);
+        border-color: var(--clr-brdr-dark);
     }
 
     .ui-slider-handle {
@@ -35,15 +35,15 @@
         box-sizing: border-box;
         width: 20px;
         height: 20px;
-        border: 1px solid var(--color-border-dark);
+        border: 1px solid var(--clr-brdr-dark);
         border-radius: 50%;
-        background-color: var(--color-background);
+        background-color: var(--clr-bkgd);
         box-shadow: var(--standard-shadow);
         cursor: pointer;
         touch-action: manipulation;
 
         &:hover {
-            border-color: var(--color-border-dark);
+            border-color: var(--clr-brdr-dark);
             filter: brightness(1.05);
         }
 
@@ -57,7 +57,7 @@
         position: absolute;
         z-index: 1;
         border: 0;
-        background: var(--color-success-text);
+        background: var(--clr-success-text);
         font-size: 10px;
     }
 }
