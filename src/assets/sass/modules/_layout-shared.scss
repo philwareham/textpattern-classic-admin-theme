@@ -879,7 +879,7 @@ hr {
     border: 2px solid var(--clr-bkgd);
     border-radius: 50%;
     background-color: var(--clr-bkgd);
-    box-shadow: 0 0 0.5em hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 0 0.5em hsl(0 0% 0% / 0.5);
     font-size: 13px;
 
     .ui-icon {

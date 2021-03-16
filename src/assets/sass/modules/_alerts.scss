@@ -172,7 +172,7 @@ li.information {
     }
 
     code {
-        border-color: hsla(0, 0%, 100%, 0.66);
+        border-color: hsl(0 0% 100% / 0.66);
         background: transparent;
     }
 }
@@ -187,7 +187,7 @@ li.information {
     right: 0;
     bottom: 0;
     width: 2.53846153846154em;
-    border-inline-start: 1px solid hsla(0, 0%, 100%, 0.66);
+    border-inline-start: 1px solid hsl(0 0% 100% / 0.66);
 
     span {
         position: absolute;

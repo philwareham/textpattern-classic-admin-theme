@@ -29,7 +29,7 @@ body {
     overflow-y: auto;
     border-right: 1px solid var(--clr-brdr);
     background-color: var(--clr-bkgd-box);
-    box-shadow: inset -0.25em 0 0.25em -0.25em rgba(0, 0, 0, 0.2);
+    box-shadow: inset -0.25em 0 0.25em -0.25em hsl(0 0% 0% / 0.2);
 
     // Enforce LTR behaviour in nav list.
 
@@ -74,7 +74,7 @@ body {
         width: 1.5em;
         height: 1.5em;
         border-radius: 0.25em;
-        background: hsla(209, 62%, 60%, 0.25);
+        background: hsl(209 62% 60% / 0.25);
     }
 }
 
@@ -138,7 +138,7 @@ $colors: (
 .design-patterns--box {
     margin-top: 0;
     padding: 1em;
-    background: hsla(0, 0%, 0%, 0.33);
+    background: hsl(0 0% 0% / 0.33);
 }
 
 
