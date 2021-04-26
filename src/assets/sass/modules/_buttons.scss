@@ -46,7 +46,7 @@ input[type="button"],
     background-clip: padding-box;
     background-color: var(--clr-btn-bkgd);
     color: var(--clr-text-btn);
-    font-weight: normal;
+    font-weight: 400;
     text-align: center;
     /* 1 */
     appearance: none;
@@ -88,7 +88,7 @@ a.publish {
     border-color: var(--clr-btn-primary-brdr);
     background-color: var(--clr-btn-primary-bkgd);
     color: var(--clr-text-inversed);
-    font-weight: bold;
+    font-weight: 700;
 
     &:focus {
         border-color: var(--clr-focus);

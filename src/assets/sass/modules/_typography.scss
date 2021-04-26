@@ -40,7 +40,7 @@ h1 {
     margin: 0 0 0.5em;
     font-family: var(--font-heading);
     font-size: 2rem; // 26px / 13px
-    font-weight: normal;
+    font-weight: 400;
     line-height: 1.23076923076923; // 32px / 26px
 
     .pophelp {
@@ -65,7 +65,7 @@ h2 {
     margin: 0.5em 0 0.72222222222222em; // 9px / 18px + 13px / 18px
     font-family: var(--font-heading);
     font-size: 1.384615384615385rem; // 18px / 13px
-    font-weight: normal;
+    font-weight: 400;
     line-height: 1.33333333333333; // 24px / 18px
 
     .pophelp {
@@ -85,7 +85,7 @@ h3 {
     line-height: 1.4; // 21px / 15px
 
     a {
-        font-weight: bold;
+        font-weight: 700;
     }
 }
 
@@ -106,7 +106,7 @@ h6 {
 
 b,
 strong {
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 /**
