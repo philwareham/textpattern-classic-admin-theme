@@ -4,7 +4,7 @@
    ========================================================================== */
 
 /**
- * 1. Make sure list tables clear any preceeding grid cell floats.
+ * 1. Make sure list tables clear any preceding grid cell floats.
  * 2. Allow overflow scroll on tables.
  *
  * Example HTML:
@@ -15,10 +15,8 @@
  */
 
 .txp-listtables {
-    /* 1 */
-    clear: both;
-    /* 2 */
-    overflow-x: auto;
+    clear: both; /* 1 */
+    overflow-x: auto; /* 2 */
 
     &:focus {
         outline: thin solid var(--clr-focus);
