@@ -1097,8 +1097,5 @@ rules:
   # Disallow unspaced operators in Sass operations.
   scss/operator-no-unspaced: true
 
-  # Disallow non-CSS `@import`s in partial files.
-  scss/partial-no-import: true
-
   # Prevents unneeded nesting selectors.
   scss/selector-no-redundant-nesting-selector: true
