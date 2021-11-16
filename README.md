@@ -1,7 +1,5 @@
 # Classic admin-side theme for Textpattern CMS
 
-[![Build Status](https://travis-ci.com/philwareham/textpattern-classic-admin-theme.svg)](https://travis-ci.com/philwareham/textpattern-classic-admin-theme)
-
 The classic admin theme that ships as standard with [Textpattern CMS](https://textpattern.com/).
 
 ## Demos
