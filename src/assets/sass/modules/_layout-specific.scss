@@ -261,6 +261,9 @@
     height: 64vh;
 }
 
+.txp-form-field-set {
+    display: inline-block;
+}
 
 /* Presentation -> Forms panel - additional layout
    ========================================================================== */
@@ -292,17 +295,9 @@
     display: block;
 }
 
-tr {
-    .manage span,
+tr:not(.active) {
     .plugin-prefs {
-        visibility: hidden;
-    }
-}
-
-tr.active {
-    .manage span,
-    .plugin-prefs {
-        visibility: visible;
+        display: none;
     }
 }
 
