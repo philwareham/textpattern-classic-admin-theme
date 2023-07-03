@@ -7,12 +7,14 @@
  * Establish baseline.
  *
  * 1. Prevent adjustments of font size after orientation changes in iOS.
+ * 2. Avoid content shift when scrollbars appear.
  */
 
 html {
     font-size: setup.$base-font-size;
     line-height: setup.$base-line-height;
     text-size-adjust: 100%; /* 1 */
+    scrollbar-gutter: stable both-edges; /* 2 */
 }
 
 /**
