@@ -48,7 +48,6 @@
     width: 100%;
 }
 
-
 /* Content -> Categories panel - additional layout
    ========================================================================== */
 
@@ -59,7 +58,6 @@
 #page-category .multi-edit {
     margin-bottom: 1em;
 }
-
 
 /* Content -> Write panel - additional layout
    ========================================================================== */
@@ -101,7 +99,8 @@
         border-top-left-radius: 0.75em 2em;
         border-top-right-radius: 0.75em 2em;
         background-color: var(--clr-hilite-box);
-        box-shadow: inset 0 -0.2em 0.4em hsl(48 52% 71% / 0.5), 0 -0.1em 0.1em hsl(0 0% 0% / 0.1);
+        box-shadow: inset 0 -0.2em 0.4em hsl(48 52% 71% / 0.5),
+            0 -0.1em 0.1em hsl(0 0% 0% / 0.1);
         color: var(--clr-text-btn);
         text-decoration: none;
 
@@ -136,11 +135,11 @@
 #main_content {
     .text {
         input {
-            font-size: 1.230769230769231rem; // 16px / 13px
+            font-size: 1.2307692rem; // 16px / 13px
         }
 
         textarea {
-            font-size: 1.230769230769231rem; // 16px / 13px
+            font-size: 1.2307692rem; // 16px / 13px
             line-height: 1.5; // 24px / 16px
         }
 
@@ -174,7 +173,6 @@
     margin-top: 0;
 }
 
-
 /* Content -> Articles panel - additional layout
    ========================================================================== */
 
@@ -186,7 +184,6 @@
 .not-modified {
     color: var(--clr-text-demoted);
 }
-
 
 /* Content -> Images panel - additional layout
    ========================================================================== */
@@ -223,7 +220,6 @@
     vertical-align: top;
 }
 
-
 /* Content -> Files panel - additional layout
    ========================================================================== */
 
@@ -234,7 +230,6 @@
 .txp-control-panel .assign-existing-form {
     display: block;
 }
-
 
 /* Content -> Comments panel - additional layout
    ========================================================================== */
@@ -253,14 +248,12 @@
     }
 }
 
-
 /* Presentation -> all panels - additional layout
    ========================================================================== */
 
 .presentation textarea.code {
     height: 64vh;
 }
-
 
 /* Presentation -> Forms panel - additional layout
    ========================================================================== */
@@ -271,7 +264,7 @@
     margin-inline-end: 1em;
 
     input {
-        width: 14.46153846153846em; // 188px / 13px
+        width: 14.4615385em; // 188px / 13px
     }
 }
 
@@ -283,7 +276,6 @@
 #page-form .txp-layout-4col-3span .txp-actions a {
     margin-top: 1.5em;
 }
-
 
 /* Admin -> Plugins panel - additional layout
    ========================================================================== */

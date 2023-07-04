@@ -40,7 +40,7 @@ input[type="button"],
     display: inline-block;
     width: auto;
     height: auto;
-    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
+    padding: 0.3076923em 0.6153846em; // 4px / 13px + 8px / 13px
     border: 1px solid;
     border-color: var(--clr-btn-brdr);
     background-clip: padding-box;
@@ -82,7 +82,7 @@ input[type="button"],
 [type="submit"].publish,
 button.publish,
 a.publish {
-    padding: 0.61538461538462em 1em; // 8px / 13px + 13px
+    padding: 0.6153846em 1em; // 8px / 13px + 13px
     border-color: var(--clr-btn-primary-brdr);
     background-color: var(--clr-btn-primary-bkgd);
     color: var(--clr-text-inversed);
@@ -104,7 +104,7 @@ a.publish {
  */
 
 button.destroy {
-    padding: 0.07692307692308em 0 0; // 1px / 13px
+    padding: 0.0769231em 0 0; // 1px / 13px
     border: 0;
     background: none;
 
@@ -141,7 +141,7 @@ button.destroy {
 .navlink-disabled {
     display: inline-block;
     box-sizing: border-box;
-    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
+    padding: 0.3076923em 0.6153846em; // 4px / 13px + 8px / 13px
     border: 1px solid;
     background-clip: padding-box;
 }

@@ -78,7 +78,6 @@ body {
     }
 }
 
-
 /* Colour palette.
    ========================================================================== */
 
@@ -87,34 +86,33 @@ body {
  *
  * More info: http://www.guyroutledge.co.uk/blog/style-guide-colours-with-sass/
  */
-
 $colors: (
-    "text":              var(--clr-text),
-    "text-demoted":      var(--clr-text-demoted),
-    "text-form":         var(--clr-text-form),
-    "brdr":              var(--clr-brdr),
-    "brdr-lite":         var(--clr-brdr-lite),
-    "brdr-dark":         var(--clr-brdr-dark),
-    "bkgd":              var(--clr-bkgd),
-    "bkgd-box":          var(--clr-bkgd-box),
-    "bkgd-form":         var(--clr-bkgd-form),
-    "a":                 var(--clr-a),
-    "a-interact":        var(--clr-a-interact),
-    "focus":             var(--clr-focus),
-    "selecting":         var(--clr-selecting),
-    "selected":          var(--clr-selected),
-    "hilite-box":        var(--clr-hilite-box),
+    "text": var(--clr-text),
+    "text-demoted": var(--clr-text-demoted),
+    "text-form": var(--clr-text-form),
+    "brdr": var(--clr-brdr),
+    "brdr-lite": var(--clr-brdr-lite),
+    "brdr-dark": var(--clr-brdr-dark),
+    "bkgd": var(--clr-bkgd),
+    "bkgd-box": var(--clr-bkgd-box),
+    "bkgd-form": var(--clr-bkgd-form),
+    "a": var(--clr-a),
+    "a-interact": var(--clr-a-interact),
+    "focus": var(--clr-focus),
+    "selecting": var(--clr-selecting),
+    "selected": var(--clr-selected),
+    "hilite-box": var(--clr-hilite-box),
     "strong-hilite-box": var(--clr-strong-hilite-box),
-    "accent":            var(--clr-accent),
-    "accent-dark":       var(--clr-accent-dark),
-    "success-text":      var(--clr-success-text),
-    "success-bkgd":      var(--clr-success-bkgd),
-    "warning-text":      var(--clr-warning-text),
-    "warning-bkgd":      var(--clr-warning-bkgd),
-    "error-text":        var(--clr-error-text),
-    "error-bkgd":        var(--clr-error-bkgd),
-    "info-text":         var(--clr-info-text),
-    "info-bkgd":         var(--clr-info-bkgd)
+    "accent": var(--clr-accent),
+    "accent-dark": var(--clr-accent-dark),
+    "success-text": var(--clr-success-text),
+    "success-bkgd": var(--clr-success-bkgd),
+    "warning-text": var(--clr-warning-text),
+    "warning-bkgd": var(--clr-warning-bkgd),
+    "error-text": var(--clr-error-text),
+    "error-bkgd": var(--clr-error-bkgd),
+    "info-text": var(--clr-info-text),
+    "info-bkgd": var(--clr-info-bkgd),
 );
 
 .design-patterns--clr {
@@ -131,7 +129,6 @@ $colors: (
     }
 }
 
-
 /* Layout grid examples.
    ========================================================================== */
 
@@ -140,7 +137,6 @@ $colors: (
     padding: 1em;
     background: hsl(0 0% 0% / 0.33);
 }
-
 
 /* jQuery UI styling specific to design patterns.
    ========================================================================== */

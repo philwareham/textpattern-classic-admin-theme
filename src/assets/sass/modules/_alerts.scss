@@ -73,7 +73,7 @@ li.information {
  */
 
 .alert-block {
-    padding: 0.53846153846154em 1em; // 7px / 13px
+    padding: 0.5384615em 1em; // 7px / 13px
     clear: both;
     border: 1px solid;
 
@@ -141,7 +141,7 @@ li.information {
         box-sizing: border-box;
         max-width: 100%;
         margin: 0 auto;
-        padding: 0.53846153846154em 3.53846153846154em;
+        padding: 0.5384615em 3.5384615em;
         padding-inline-start: 0.75em;
         overflow-wrap: break-word;
         border: 1px solid;
@@ -186,13 +186,13 @@ li.information {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 2.53846153846154em;
+    width: 2.5384615em;
     border-inline-start: 1px solid hsl(0 0% 100% / 0.66);
 
     span {
         position: absolute;
         top: 50%;
-        right: 0.692307692307692em; // 9px / 13px
+        right: 0.6923077em; // 9px / 13px
         margin-top: -9px;
         opacity: 0.66;
 
@@ -212,7 +212,7 @@ li.information {
 
     span {
         right: auto;
-        left: 0.692307692307692em; // 9px / 13px
+        left: 0.6923077em; // 9px / 13px
     }
 }
 
