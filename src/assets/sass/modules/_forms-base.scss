@@ -298,16 +298,19 @@ textarea {
     }
 }
 
-/**
- * Styling for Firefox-specfic form field validation.
- *
- * TODO: move to `:user-invalid` pseudo-class if/when has browser support.
- */
+input,
+select,
+textarea {
+    &:user-invalid {
+        border-color: var(--clr-error-text);
+        box-shadow: none;
+    }
+}
 
 input,
 select,
 textarea {
-    &:-moz-ui-invalid {
+    &:out-of-range {
         border-color: var(--clr-error-text);
         box-shadow: none;
     }
