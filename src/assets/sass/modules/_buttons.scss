@@ -72,6 +72,26 @@ input[type="button"],
 }
 
 /**
+ * Additional styling for buttons that have impactful results.
+ *
+ * Example HTML:
+ *
+ * <input type="submit" class="caution">
+ */
+
+[type="submit"].caution,
+ button.caution {
+     border: 1px solid var(--clr-error-brdr);
+     background-color: var(--clr-btn-caution-bkgd);
+     color: var(--clr-error-text);
+     font-weight: 700;
+
+     &:focus {
+         border-color: var(--clr-focus);
+     }
+ }
+
+/**
  * Additional styling for primary buttons.
  *
  * Example HTML:
@@ -80,8 +100,7 @@ input[type="button"],
  */
 
 [type="submit"].publish,
-button.publish,
-a.publish {
+button.publish {
     padding: 0.6153846em 1em; // 8px / 13px + 13px
     border-color: var(--clr-btn-primary-brdr);
     background-color: var(--clr-btn-primary-bkgd);

@@ -611,18 +611,21 @@ hr {
  * Styling of edit panel cancel/submit button combinations.
  */
 
-.txp-edit-actions {
-    text-align: end;
-
-    > * {
-        margin-inline-start: 1em;
-    }
+.txp-edit-actions > * {
+    margin-inline-start: 1em;
 }
 
 .txp-edit .txp-edit-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     margin: 1em -1em;
     padding: 1em 1em 0;
     border-top: 2px solid var(--clr-bkgd);
+
+    .caution {
+        margin-inline: 0 auto;
+    }
 }
 
 /* Form fields.
