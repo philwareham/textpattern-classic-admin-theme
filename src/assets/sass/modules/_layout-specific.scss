@@ -284,17 +284,10 @@
     display: block;
 }
 
-tr {
+tr:not(.active) {
     .manage span,
     .plugin-prefs {
-        visibility: hidden;
-    }
-}
-
-tr.active {
-    .manage span,
-    .plugin-prefs {
-        visibility: visible;
+        display: none;
     }
 }
 
