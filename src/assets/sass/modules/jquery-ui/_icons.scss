@@ -146,7 +146,7 @@ button:not(.ui-button):focus .ui-icon {
 
 .ui-icon-inversed,
 .messagepane .ui-icon {
-    filter: brightness(5);
+    filter: brightness(5) !important;
 }
 
 /**
