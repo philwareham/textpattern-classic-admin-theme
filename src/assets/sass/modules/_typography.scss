@@ -176,18 +176,18 @@ samp {
 /**
  * Additional stylng for preformatted text/code.
  *
- * 1. Contain overflow in all browsers.
- * 2. Don't wrap long words.
+ * 1. Don't wrap long words.
+ * 2. Contain overflow in all browsers.
  * 3. Set tab size to 4 spaces.
  */
 
 pre {
     margin: 1em 0;
     padding: 1em; // 13px
-    overflow-x: auto; /* 1 */
+    overflow-wrap: normal; /* 1 */
+    overflow-x: auto; /* 2 */
     border: 1px solid var(--clr-brdr-lite);
     background: var(--clr-bkgd-box);
-    word-wrap: normal; /* 2 */
     tab-size: 4; /* 3 */
 }
 
@@ -201,11 +201,11 @@ pre code,
 code.body,
 code.excerpt {
     padding: 0;
+    overflow-wrap: normal;
     border: 0;
     background: none;
     hyphens: none;
     text-align: left;
-    word-wrap: normal;
     word-break: normal;
     word-spacing: normal;
     white-space: pre;
