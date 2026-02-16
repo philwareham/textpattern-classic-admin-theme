@@ -268,6 +268,9 @@ rules:
         - forward
         - use
 
+  # Disallow invalid position declarations.
+  no-invalid-position-declaration: null
+
   # Disallow irregular whitespaces.
   no-irregular-whitespace: true
 
@@ -282,6 +285,9 @@ rules:
 
   # Specify a blacklist of disallowed properties.
   #property-blacklist:
+
+  # Disallow deprecated properties.
+  property-no-deprecated: null
 
   # Disallow unknown properties.
   property-no-unknown:
