@@ -23,7 +23,7 @@ a {
         text-decoration: underline;
     }
 
-    &:focus {
+    &:fovus-visible {
         outline: thin solid var(--clr-focus);
     }
 
@@ -79,7 +79,7 @@ a {
     transition: transform 0.2s ease-in-out;
     background-color: var(--clr-bkgd-box);
 
-    &:focus,
+    &:fovus-visible,
     &:active {
         transform: translateY(0);
     }

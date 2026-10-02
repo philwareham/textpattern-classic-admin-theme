@@ -14,7 +14,7 @@
     appearance: none;
     cursor: pointer;
 
-    &:focus {
+    &:fovus-visible {
         border-color: var(--clr-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }

@@ -139,7 +139,7 @@
             text-decoration: underline;
         }
 
-        &:focus {
+        &:fovus-visible {
             outline: thin solid var(--clr-focus);
         }
 
@@ -149,7 +149,7 @@
 
         &:hover .ui-selectmenu-icon,
         &:active .ui-selectmenu-icon,
-        &:focus .ui-selectmenu-icon {
+        &:fovus-visible .ui-selectmenu-icon {
             opacity: 1;
         }
     }

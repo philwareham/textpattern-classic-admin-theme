@@ -67,7 +67,7 @@
             text-decoration: none;
         }
 
-        &:focus {
+        &:fovus-visible {
             border-color: var(--clr-focus);
             outline: 0;
         }
@@ -78,7 +78,7 @@
         background-color: var(--clr-bkgd);
         box-shadow: 0 -0.15em 0.15em hsl(0 0% 0% / 0.1);
 
-        &:focus {
+        &:fovus-visible {
             border-color: var(--clr-focus);
         }
     }
