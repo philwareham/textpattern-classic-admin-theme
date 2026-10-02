@@ -1,72 +1,52 @@
-module.exports = function (grunt)
-{
+module.exports = function (grunt) {
     'use strict';
 
-    // Load all Grunt tasks.
+    // Load all Grunt tasks automatically.
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // Set up paths.
+        // ---------------------------------------------------------------------
+        // Paths
+        // ---------------------------------------------------------------------
+
         paths: {
             src: {
                 dir: 'src/',
                 sass: 'src/assets/sass/',
                 img: 'src/assets/img/'
             },
+
             docs: {
                 css: 'docs/assets/css/',
                 js: 'docs/assets/js/'
             },
+
             dest: { // Classic Yellow theme
                 dir: 'dist/classic/',
                 css: 'dist/classic/assets/css/',
                 img: 'dist/classic/assets/img/'
+            },
+
+            dist: {
+                dir: 'dist/'
             }
         },
 
-        // Clean distribution and temporary directories to start afresh.
+        // ---------------------------------------------------------------------
+        // Clean
+        // ---------------------------------------------------------------------
+
         clean: [
-            'dist/',
-            'docs/assets/css/'
+            '<%= paths.dist.dir %>',
+            '<%= paths.docs.css %>'
         ],
 
-        // Run some tasks in parallel to speed up the build process.
-        concurrent: {
-            dist: [
-                'css',
-                'jshint',
-                'replace',
-                'uglify'
-            ]
-        },
+        // ---------------------------------------------------------------------
+        // JavaScript linting
+        // ---------------------------------------------------------------------
 
-        // Copy files from `src/` to `dist/classic/assets/`.
-        copy: {
-            dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.dir %>classic',
-                        src: ['**', '!manifest.json'],
-                        dest: '<%= paths.dest.dir %>',
-                        filter: 'isFile'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.img %>',
-                        src: '**',
-                        dest: '<%= paths.dest.img %>'
-                    },
-                    {'<%= paths.dest.css %>custom-example.css': '<%= paths.src.sass %>custom-example.css'},
-                    {'<%= paths.docs.js %>jquery.js': 'node_modules/jquery/dist/jquery.min.js'},
-                    {'<%= paths.docs.js %>jquery-ui.js': 'node_modules/jquery-ui-dist/jquery-ui.min.js'}
-                ]
-            }
-        },
-
-        // Check code quality of Gruntfile.js JavaScript using JSHint.
         jshint: {
             options: {
                 bitwise: true,
@@ -91,7 +71,34 @@ module.exports = function (grunt)
             ]
         },
 
-        // Add vendor prefixed styles and other post-processing transformations.
+        // ---------------------------------------------------------------------
+        // Sass
+        // ---------------------------------------------------------------------
+
+        sass: {
+            options: {
+                implementation: require('sass'),
+                outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
+                sourceMap: false
+            },
+            dist: {
+                files: {
+                    '<%= paths.dest.css %>textpattern.css':
+                        '<%= paths.src.sass %>default.scss',
+
+                    '<%= paths.dest.css %>print.css':
+                        '<%= paths.src.sass %>print.scss',
+
+                    '<%= paths.docs.css %>design-patterns.css':
+                        '<%= paths.src.sass %>design-patterns.scss'
+                }
+            }
+        },
+
+        // ---------------------------------------------------------------------
+        // CSS post-processing
+        // ---------------------------------------------------------------------
+
         postcss: {
             options: {
                 processors: [
@@ -100,15 +107,70 @@ module.exports = function (grunt)
                 ]
             },
             dist: {
+                files: {
+                    '<%= paths.dest.css %>textpattern.css':
+                        '<%= paths.dest.css %>textpattern.css',
+
+                    '<%= paths.dest.css %>print.css':
+                        '<%= paths.dest.css %>print.css',
+
+                    '<%= paths.docs.css %>design-patterns.css':
+                        '<%= paths.docs.css %>design-patterns.css'
+                }
+            }
+        },
+
+        // ---------------------------------------------------------------------
+        // CSS linting
+        // ---------------------------------------------------------------------
+
+        stylelint: {
+            options: {
+                configFile: '.stylelintrc.yml'
+            },
+            src: [
+                '<%= paths.src.sass %>**/*.{css,scss}'
+            ]
+        },
+
+        // ---------------------------------------------------------------------
+        // Copy assets
+        // ---------------------------------------------------------------------
+
+        copy: {
+            dist: {
                 files: [
-                    {'<%= paths.dest.css %>textpattern.css': '<%= paths.dest.css %>textpattern.css'},
-                    {'<%= paths.dest.css %>print.css': '<%= paths.dest.css %>print.css'},
-                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'}
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.dir %>classic',
+                        src: ['**', '!manifest.json'],
+                        dest: '<%= paths.dest.dir %>',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.img %>',
+                        src: '**',
+                        dest: '<%= paths.dest.img %>'
+                    },
+                    {
+                        '<%= paths.dest.css %>custom-example.css':
+                            '<%= paths.src.sass %>custom-example.css',
+
+                        '<%= paths.docs.js %>jquery.js':
+                            'node_modules/jquery/dist/jquery.min.js',
+
+                        '<%= paths.docs.js %>jquery-ui.js':
+                            'node_modules/jquery-ui-dist/jquery-ui.min.js'
+                    }
                 ]
             }
         },
 
-        // Generate version number automatically in theme manifest.json file.
+        // ---------------------------------------------------------------------
+        // Replace theme version numbers
+        // ---------------------------------------------------------------------
+
         replace: {
             theme: {
                 options: {
@@ -119,56 +181,37 @@ module.exports = function (grunt)
                         }
                     ]
                 },
-                files: [
-                    {'<%= paths.dest.dir %>manifest.json': '<%= paths.src.dir %>classic/manifest.json'}
-                ]
+                files: {
+                    '<%= paths.dest.dir %>manifest.json':
+                        '<%= paths.src.dir %>classic/manifest.json'
+                }
             }
         },
 
-        // Sass configuration.
-        sass: {
-            options: {
-                implementation: require('sass'),
-                outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
-                sourceMap: false
-            },
-            dist: {
-                files: [
-                    {'<%= paths.dest.css %>textpattern.css': '<%= paths.src.sass %>default.scss'},
-                    {'<%= paths.dest.css %>print.css': '<%= paths.src.sass %>print.scss'},
-                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
-                ]
-            }
-        },
+        // ---------------------------------------------------------------------
+        // JavaScript bundling/minification
+        // ---------------------------------------------------------------------
 
-        // Validate CSS files via stylelint.
-        stylelint: {
-            options: {
-                configFile: '.stylelintrc.yml'
-            },
-            src: ['<%= paths.src.sass %>**/*.{css,scss}']
-        },
-
-        // Uglify and copy JavaScript files from `node_modules`.
         uglify: {
+            options: {
+                output: {
+                    comments: require('uglify-save-license')
+                }
+            },
+
             dist: {
-                // Preserve all comments that start with a bang (!) or include a closure compiler style.
-                options: {
-                    output: {
-                        comments: require('uglify-save-license')
-                    }
-                },
-                files: [
-                    {
-                        '<%= paths.docs.js %>prism.js': [
-                            'node_modules/prismjs/prism.js'
-                        ]
-                    }
-                ]
+                files: {
+                    '<%= paths.docs.js %>prism.js': [
+                        'node_modules/prismjs/prism.js'
+                    ]
+                }
             }
         },
 
-        // Directories watched and tasks performed by invoking `grunt watch`.
+        // ---------------------------------------------------------------------
+        // Watch
+        // ---------------------------------------------------------------------
+
         watch: {
             sass: {
                 files: '<%= paths.src.sass %>**/*.scss',
@@ -178,8 +221,26 @@ module.exports = function (grunt)
 
     });
 
-    // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'copy']);
-    grunt.registerTask('css', ['stylelint', 'sass', 'postcss']);
-    grunt.registerTask('default', ['watch']);
+    // -------------------------------------------------------------------------
+    // Registered tasks
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask('css', [
+        'stylelint',
+        'sass',
+        'postcss'
+    ]);
+
+    grunt.registerTask('build', [
+        'clean',
+        'css',
+        'jshint',
+        'uglify',
+        'replace',
+        'copy'
+    ]);
+
+    grunt.registerTask('default', [
+        'watch'
+    ]);
 };
