@@ -4,6 +4,8 @@ module.exports = function (grunt) {
     // Load all Grunt tasks automatically.
     require('load-grunt-tasks')(grunt);
 
+    var fs = require('fs');
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -33,15 +35,6 @@ module.exports = function (grunt) {
                 dir: 'dist/'
             }
         },
-
-        // ---------------------------------------------------------------------
-        // Clean
-        // ---------------------------------------------------------------------
-
-        clean: [
-            '<%= paths.dist.dir %>',
-            '<%= paths.docs.css %>'
-        ],
 
         // ---------------------------------------------------------------------
         // JavaScript linting
@@ -218,6 +211,24 @@ module.exports = function (grunt) {
                 tasks: 'css'
             }
         }
+    });
+
+    // -------------------------------------------------------------------------
+    // Clean
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask('clean', 'Remove generated files.', function () {
+        var paths = [
+            grunt.config.get('paths.dist.dir'),
+            grunt.config.get('paths.docs.css')
+        ];
+
+        paths.forEach(function (path) {
+            fs.rmSync(path, {
+                recursive: true,
+                force: true
+            });
+        });
     });
 
     // -------------------------------------------------------------------------
