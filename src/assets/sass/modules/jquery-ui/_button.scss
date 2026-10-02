@@ -53,7 +53,7 @@
         text-decoration: none;
     }
 
-    &:fovus-visible {
+    &:focus-visible {
         border-color: var(--clr-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         color: var(--clr-text-btn-active);

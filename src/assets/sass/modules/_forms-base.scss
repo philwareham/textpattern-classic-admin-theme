@@ -87,7 +87,7 @@ textarea {
     background: var(--clr-bkgd-form);
     appearance: none; /* 1 */
 
-    &:fovus-visible {
+    &:focus-visible {
         border-color: var(--clr-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
@@ -124,7 +124,7 @@ select {
     border-color: var(--clr-bkgd);
     background-color: var(--clr-bkgd);
 
-    &:fovus-visible {
+    &:focus-visible {
         border-color: var(--clr-focus);
     }
 }
