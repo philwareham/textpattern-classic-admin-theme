@@ -181,17 +181,6 @@ module.exports = function (grunt) {
                         '<%= paths.src.dir %>classic/manifest.json'
                 }
             }
-        },
-
-        // ---------------------------------------------------------------------
-        // Watch
-        // ---------------------------------------------------------------------
-
-        watch: {
-            sass: {
-                files: '<%= paths.src.sass %>**/*.scss',
-                tasks: 'css'
-            }
         }
     });
 
@@ -279,9 +268,5 @@ module.exports = function (grunt) {
         'js',
         'replace',
         'copy'
-    ]);
-
-    grunt.registerTask('default', [
-        'watch'
     ]);
 };
