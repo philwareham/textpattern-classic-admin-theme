@@ -5,6 +5,8 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     const fs = require('fs');
+    const path = require('path');
+    const terser = require('terser');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -71,7 +73,7 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 implementation: require('sass'),
-                outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
+                outputStyle: 'expanded',
                 sourceMap: false
             },
             dist: {
@@ -182,26 +184,6 @@ module.exports = function (grunt) {
         },
 
         // ---------------------------------------------------------------------
-        // JavaScript bundling/minification
-        // ---------------------------------------------------------------------
-
-        uglify: {
-            options: {
-                output: {
-                    comments: require('uglify-save-license')
-                }
-            },
-
-            dist: {
-                files: {
-                    '<%= paths.docs.js %>prism.js': [
-                        'node_modules/prismjs/prism.js'
-                    ]
-                }
-            }
-        },
-
-        // ---------------------------------------------------------------------
         // Watch
         // ---------------------------------------------------------------------
 
@@ -210,6 +192,51 @@ module.exports = function (grunt) {
                 files: '<%= paths.src.sass %>**/*.scss',
                 tasks: 'css'
             }
+        }
+    });
+
+    // -------------------------------------------------------------------------
+    // JavaScript bundling/minification
+    // -------------------------------------------------------------------------
+
+    const jsBundles = {
+        'docs/assets/js/prism.js': [
+            'node_modules/prismjs/prism.js'
+        ]
+    };
+
+    grunt.registerTask('js:build', 'Minify JavaScript with Terser.', async function () {
+        const done = this.async();
+
+        try {
+            for (const [output, inputs] of Object.entries(jsBundles)) {
+                const source = inputs
+                    .map(function (file) {
+                        return fs.readFileSync(file, 'utf8');
+                    })
+                    .join('\n;\n');
+
+                const result = await terser.minify(source, {
+                    format: {
+                        // Preserve licence comments such as /*! ... */.
+                        comments: /^!/
+                    }
+                });
+
+                if (result.error) {
+                    throw result.error;
+                }
+
+                grunt.file.mkdir(path.dirname(output));
+                fs.writeFileSync(output, result.code + '\n');
+
+                grunt.log.ok(`Created ${output}`);
+            }
+
+            done();
+        } catch (error) {
+            grunt.log.error(error);
+            done(false);
         }
     });
 
@@ -241,11 +268,15 @@ module.exports = function (grunt) {
         'postcss'
     ]);
 
+    grunt.registerTask('js', [
+        'jshint',
+        'js:build'
+    ]);
+
     grunt.registerTask('build', [
         'clean',
         'css',
-        'jshint',
-        'uglify',
+        'js',
         'replace',
         'copy'
     ]);
