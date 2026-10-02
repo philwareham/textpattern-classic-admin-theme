@@ -20,7 +20,7 @@
     }
 }
 
-::-webkit-file-upload-button {
+::file-selector-button {
     padding: 0 0.25em;
     border: 0;
     background: var(--clr-bkgd-form);
@@ -32,10 +32,10 @@
     cursor: pointer;
 }
 
-[type="file"]:hover::-webkit-file-upload-button {
+[type="file"]:hover::file-selector-button {
     filter: brightness(1.05);
 }
 
-[type="file"]:active::-webkit-file-upload-button {
+[type="file"]:active::file-selector-button {
     filter: brightness(0.95);
 }
