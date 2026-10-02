@@ -1,11 +1,18 @@
 module.exports = function (grunt) {
     'use strict';
 
-    // Load all Grunt tasks automatically.
-    require('load-grunt-tasks')(grunt);
+    // Load Grunt tasks.
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-replace-regex');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-stylelint');
 
     const fs = require('fs');
     const path = require('path');
+    const postcss = require('postcss');
+    const autoprefixer = require('autoprefixer');
+    const cssnano = require('cssnano');
     const terser = require('terser');
 
     grunt.initConfig({
@@ -91,31 +98,6 @@ module.exports = function (grunt) {
         },
 
         // ---------------------------------------------------------------------
-        // CSS post-processing
-        // ---------------------------------------------------------------------
-
-        postcss: {
-            options: {
-                processors: [
-                    require('autoprefixer'),
-                    require('cssnano')
-                ]
-            },
-            dist: {
-                files: {
-                    '<%= paths.dest.css %>textpattern.css':
-                        '<%= paths.dest.css %>textpattern.css',
-
-                    '<%= paths.dest.css %>print.css':
-                        '<%= paths.dest.css %>print.css',
-
-                    '<%= paths.docs.css %>design-patterns.css':
-                        '<%= paths.docs.css %>design-patterns.css'
-                }
-            }
-        },
-
-        // ---------------------------------------------------------------------
         // CSS linting
         // ---------------------------------------------------------------------
 
@@ -181,17 +163,43 @@ module.exports = function (grunt) {
                         '<%= paths.src.dir %>classic/manifest.json'
                 }
             }
-        },
+        }
+    });
 
-        // ---------------------------------------------------------------------
-        // Watch
-        // ---------------------------------------------------------------------
+    // -------------------------------------------------------------------------
+    // CSS post-processing
+    // -------------------------------------------------------------------------
 
-        watch: {
-            sass: {
-                files: '<%= paths.src.sass %>**/*.scss',
-                tasks: 'css'
+    grunt.registerTask('postcss', 'Autoprefix and minify CSS.', async function () {
+        const done = this.async();
+
+        try {
+            const files = [
+                'dist/classic/assets/css/textpattern.css',
+                'dist/classic/assets/css/print.css',
+                'docs/assets/css/design-patterns.css'
+            ];
+
+            for (const file of files) {
+                const css = fs.readFileSync(file, 'utf8');
+
+                const result = await postcss([
+                    autoprefixer(),
+                    cssnano()
+                ]).process(css, {
+                    from: file,
+                    to: file
+                });
+
+                fs.writeFileSync(file, result.css);
+
+                grunt.log.ok(`Processed ${file}`);
             }
+
+            done();
+        } catch (error) {
+            grunt.log.error(error);
+            done(false);
         }
     });
 
@@ -279,9 +287,5 @@ module.exports = function (grunt) {
         'js',
         'replace',
         'copy'
-    ]);
-
-    grunt.registerTask('default', [
-        'watch'
     ]);
 };
