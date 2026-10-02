@@ -6,6 +6,9 @@ module.exports = function (grunt) {
 
     const fs = require('fs');
     const path = require('path');
+    const postcss = require('postcss');
+    const autoprefixer = require('autoprefixer');
+    const cssnano = require('cssnano');
     const terser = require('terser');
 
     grunt.initConfig({
@@ -91,31 +94,6 @@ module.exports = function (grunt) {
         },
 
         // ---------------------------------------------------------------------
-        // CSS post-processing
-        // ---------------------------------------------------------------------
-
-        postcss: {
-            options: {
-                processors: [
-                    require('autoprefixer'),
-                    require('cssnano')
-                ]
-            },
-            dist: {
-                files: {
-                    '<%= paths.dest.css %>textpattern.css':
-                        '<%= paths.dest.css %>textpattern.css',
-
-                    '<%= paths.dest.css %>print.css':
-                        '<%= paths.dest.css %>print.css',
-
-                    '<%= paths.docs.css %>design-patterns.css':
-                        '<%= paths.docs.css %>design-patterns.css'
-                }
-            }
-        },
-
-        // ---------------------------------------------------------------------
         // CSS linting
         // ---------------------------------------------------------------------
 
@@ -181,6 +159,43 @@ module.exports = function (grunt) {
                         '<%= paths.src.dir %>classic/manifest.json'
                 }
             }
+        }
+    });
+
+    // -------------------------------------------------------------------------
+    // CSS post-processing
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask('postcss', 'Autoprefix and minify CSS.', async function () {
+        const done = this.async();
+
+        try {
+            const files = [
+                'dist/classic/assets/css/textpattern.css',
+                'dist/classic/assets/css/print.css',
+                'docs/assets/css/design-patterns.css'
+            ];
+
+            for (const file of files) {
+                const css = fs.readFileSync(file, 'utf8');
+
+                const result = await postcss([
+                    autoprefixer(),
+                    cssnano()
+                ]).process(css, {
+                    from: file,
+                    to: file
+                });
+
+                fs.writeFileSync(file, result.css);
+
+                grunt.log.ok(`Processed ${file}`);
+            }
+
+            done();
+        } catch (error) {
+            grunt.log.error(error);
+            done(false);
         }
     });
 
