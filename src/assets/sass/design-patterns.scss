@@ -148,22 +148,14 @@ $colors: (
     position: relative;
     margin: 2px;
     padding: 4px 0;
-    float: left;
+    float: inline-start;
     list-style: none;
     cursor: pointer;
 }
 
-[dir="rtl"] .jquery-ui-icons li {
-    float: right;
-}
-
 .jquery-ui-icons .ui-icon {
     margin: 0 4px;
-    float: left;
-}
-
-[dir="rtl"] .jquery-ui-icons .ui-icon {
-    float: right;
+    float: inline-start;
 }
 
 /**
@@ -173,11 +165,7 @@ $colors: (
 .jquery-ui-slider-vertical span {
     height: 120px;
     margin: 15px;
-    float: left;
-}
-
-[dir="rtl"] .jquery-ui-slider-vertical span {
-    float: right;
+    float: inline-start;
 }
 
 /**
