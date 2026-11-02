@@ -183,9 +183,10 @@ li.information {
 
 .close {
     position: absolute;
+    top: 0;
     right: 0;
-    bottom: 0.5em;
     width: 2.5384615em;
+    height: 100%;
     border-inline-start: 1px solid hsl(0 0% 100% / 0.66);
 
     span {
